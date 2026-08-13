@@ -2215,6 +2215,7 @@ section{
     align-items:center;
     justify-content:center;
     font-size:18px;
+    left:5px;
     font-weight:700;
     flex-shrink:0;
     position:relative;
@@ -7744,7 +7745,7 @@ body.dark-mode .journey-step p{
 body.dark-mode .journey-step{
     
     border-radius:18px;
-    padding:18px;
+    
 }
 
 body.dark-mode .journey-step .step-content{
@@ -7759,6 +7760,7 @@ body.dark-mode .journey-step .step-content{
 body.dark-mode .journey-step .step-number{
     background:#7CC4FA;
     color:#0F172A;
+    
 }
 
 body.dark-mode .journey-floating-card{
