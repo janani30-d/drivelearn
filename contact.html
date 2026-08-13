@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DriveLearn - Driving Instructor & Lesson Booking</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/logo.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+    <!-- ==================== HEADER START ==================== -->
+<header class="header">
+
+    <div class="container">
+
+        <!--========== Logo ==========-->
+        <a href="index.html" class="logo">
+            <img src="images/logo.png" alt="DriveLearn">
+        </a>
+
+        <!--========== Navigation ==========-->
+        <nav class="navbar" id="navbar">
+
+            <ul class="nav-menu">
+
+                <li class="dropdown">
+                    <a href="#" class="nav-link">
+                        Home
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </a>
+
+                    <ul class="dropdown-menu">
+                        <li><a href="index.html">Home 1</a></li>
+                        <li><a href="home2.html">Home 2</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="about.html" class="nav-link">
+                        About
+                    </a>
+                </li>
+
+                <li>
+                    <a href="lessons.html" class="nav-link">
+                        Lessons
+                    </a>
+                </li>
+
+                <li>
+                    <a href="booking.html" class="nav-link">
+                        Booking
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html" class="nav-link active">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+            <!-- Mobile Buttons -->
+            <div class="mobile-btn">
+
+                <button class="theme-toggle" id="theme-toggle-mobile">
+                    <i class="fa-solid fa-moon"></i>
+                    <span>Dark Mode</span>
+                </button>
+
+                <button class="rtl-toggle" id="rtl-toggle-mobile">
+                    <i class="fa-solid fa-right-left"></i>
+                    <span>RTL / LTR</span>
+                </button>
+
+                <a href="dashboard.html" class="dashboard-btn">
+                    Dashboard
+                </a>
+
+                <a href="login.html" class="login-btn">
+                    Login
+                </a>
+
+            </div>
+
+        </nav>
+
+        <!-- Desktop Buttons -->
+        <div class="desktop-btn">
+
+            <button class="theme-toggle" id="theme-toggle">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+
+            <button class="rtl-toggle" id="rtl-toggle">
+                <i class="fa-solid fa-right-left"></i>
+            </button>
+
+            <a href="dashboard.html" class="dashboard-btn">
+                Dashboard
+            </a>
+
+            <a href="login.html" class="login-btn">
+                Login
+            </a>
+
+        </div>
+
+        <!-- Hamburger Menu -->
+        <div class="menu-toggle" id="menu-toggle">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+    </div>
+
+</header>
+<!-- ==================== HEADER END ==================== -->
+
+<!-- ==================== CONTACT BANNER START ==================== -->
+<section class="contact-banner">
+
+    <div class="container">
+
+        <div class="contact-banner-content">
+
+            <span class="banner-subtitle">
+                Get In Touch
+            </span>
+
+            <h1>
+                Contact Our Driving School
+            </h1>
+
+            <p>
+                Have questions about driving lessons, booking availability,
+                lesson packages, or test preparation? Our friendly team is
+                here to help you start your driving journey with confidence.
+            </p>
+
+            <div class="banner-buttons">
+
+                <a href="booking.html" class="btn btn-primary">
+                    Book a Lesson
+                </a>
+
+                <a href="tel:+15551234567" class="btn btn-outline">
+                    Call Now
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ==================== CONTACT BANNER END ==================== -->
+<!-- ==================== CONTACT INFO START ==================== -->
+<section class="contact-info section">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <span class="section-subtitle">
+                Contact Information
+            </span>
+
+            <h2 class="section-title">
+                We’re Here to Help
+            </h2>
+
+            <p class="section-description">
+                Reach out to our driving instructors for lesson bookings,
+                pricing information, schedule availability, or any questions
+                about learning to drive with confidence.
+            </p>
+
+        </div>
+
+        <div class="contact-info-grid">
+
+            <!-- Call Us -->
+            <div class="contact-info-card">
+
+                <div class="contact-info-icon">
+                    <i class="fa-solid fa-phone"></i>
+                </div>
+
+                <h3>Call Us</h3>
+
+                <p>Speak directly with our team for bookings and inquiries.</p>
+
+                <a href="tel:+15551234567">+1 (555) 123-4567</a>
+
+            </div>
+
+            <!-- Email Us -->
+            <div class="contact-info-card">
+
+                <div class="contact-info-icon">
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+
+                <h3>Email Us</h3>
+
+                <p>Send us your questions and we’ll respond promptly.</p>
+
+                <a href="mailto:info@drivelearn.com">info@drivelearn.com</a>
+
+            </div>
+
+            <!-- Office Hours -->
+            <div class="contact-info-card">
+
+                <div class="contact-info-icon">
+                    <i class="fa-solid fa-clock"></i>
+                </div>
+
+                <h3>Office Hours</h3>
+
+                <p>Available throughout the week for lesson scheduling.</p>
+
+                <a href="#">Mon - Sat, 8:00 AM - 7:00 PM</a>
+
+            </div>
+
+            <!-- Training Area -->
+            <div class="contact-info-card">
+
+                <div class="contact-info-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+
+                <h3>Training Area</h3>
+
+                <p>Serving local learners across our driving practice areas.</p>
+
+                <a href="#">Downtown & Surrounding Areas</a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ==================== CONTACT INFO END ==================== -->
+<!-- ==================== CONTACT FORM START ==================== -->
+<section class="contact-form-section section">
+
+    <div class="container">
+
+        <div class="contact-wrapper">
+
+            <!-- Contact Form -->
+            <div class="contact-form-card">
+
+                <div class="contact-form-header">
+
+                    <span class="section-subtitle">
+                        Send Us a Message
+                    </span>
+
+                    <h2 class="section-title">
+                        We’d Love to Hear from You
+                    </h2>
+
+                    <p class="section-description">
+                        Whether you’re ready to book your first driving lesson,
+                        need help choosing a lesson package, or have questions
+                        about test preparation, our team is here to help.
+                    </p>
+
+                </div>
+
+                <form class="contact-form-grid">
+
+                    <div class="contact-group">
+                        <label>Full Name</label>
+                        <input type="text" placeholder="Enter your full name" required>
+                    </div>
+
+                    <div class="contact-group">
+                        <label>Email Address</label>
+                        <input type="email" placeholder="Enter your email address" required>
+                    </div>
+
+                    <div class="contact-group">
+                        <label>Phone Number</label>
+                        <input type="tel" placeholder="Enter your phone number">
+                    </div>
+
+                    <div class="contact-group">
+                        <label>Subject</label>
+                        <select required>
+                            <option value="">Select a subject</option>
+                            <option>Lesson Booking</option>
+                            <option>Lesson Packages</option>
+                            <option>Driving Test Preparation</option>
+                            <option>Reschedule or Cancellation</option>
+                            <option>General Inquiry</option>
+                        </select>
+                    </div>
+
+                    <div class="contact-group full-width">
+                        <label>Preferred Contact Method</label>
+                        <select>
+                            <option>Email</option>
+                            <option>Phone Call</option>
+                            <option>WhatsApp</option>
+                        </select>
+                    </div>
+
+                    <div class="contact-group full-width">
+                        <label>Message</label>
+                        <textarea rows="6"
+                                  placeholder="Tell us about your inquiry, preferred lesson schedule, or any questions you have..."></textarea>
+                    </div>
+
+                    <div class="full-width">
+                        <button type="submit" class="btn btn-primary contact-submit-btn">
+                            Send Message
+                        </button>
+                    </div>
+
+                </form>
+
+            </div>
+
+            <!-- Office Information -->
+            <div class="office-info-card">
+
+                <h3>Office Information</h3>
+
+                <p>
+                    Our instructors are available throughout the week to
+                    answer questions, schedule lessons, and provide guidance
+                    for learner drivers.
+                </p>
+
+                <div class="office-info-list">
+
+                    <div class="office-info-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <h4>Office Address</h4>
+                            <p>123 Driving Academy Road<br>Downtown City, CA 90001</p>
+                        </div>
+                    </div>
+
+                    <div class="office-info-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <div>
+                            <h4>Phone Number</h4>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+
+                    <div class="office-info-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <div>
+                            <h4>Email Address</h4>
+                            <p>info@drivelearn.com</p>
+                        </div>
+                    </div>
+
+                    <div class="office-info-item">
+                        <i class="fa-solid fa-clock"></i>
+                        <div>
+                            <h4>Office Hours</h4>
+                            <p>Monday - Saturday<br>8:00 AM - 7:00 PM</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="response-box">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <div>
+                        <h4>Quick Response</h4>
+                        <p>
+                            We typically respond to all inquiries within
+                            24 hours during business days.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ==================== CONTACT FORM END ==================== -->
+
+<!-- ==================== MAP & SERVICE AREAS START ==================== -->
+<section class="service-area section">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <span class="section-subtitle">
+                Our Location
+            </span>
+
+            <h2 class="section-title">
+                Find Our Location & Lesson Coverage Areas
+            </h2>
+
+            <p class="section-description">
+                We provide driving lessons across multiple local areas with
+                flexible pickup and drop-off options for learner drivers.
+            </p>
+
+        </div>
+
+        <div class="service-area-wrapper">
+
+            <!-- Google Map -->
+            <div class="service-map">
+
+                <iframe
+                    src="https://www.google.com/maps?q=Los+Angeles+CA&output=embed"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+
+            </div>
+
+            <!-- Service Area Information -->
+            <div class="service-info-card">
+
+                <h3>Driving Lesson Coverage</h3>
+
+                <p>
+                    Our certified driving instructors cover a wide range of
+                    residential and test centre locations, making it easy to
+                    schedule lessons close to your home, school, or workplace.
+                </p>
+
+                <div class="service-list">
+
+                    <div class="service-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <h4>Primary Training Area</h4>
+                            <p>Downtown City and surrounding neighborhoods</p>
+                        </div>
+                    </div>
+
+                    <div class="service-item">
+                        <i class="fa-solid fa-car"></i>
+                        <div>
+                            <h4>Pickup & Drop-Off</h4>
+                            <p>Available from home, school, college, or workplace</p>
+                        </div>
+                    </div>
+
+                    <div class="service-item">
+                        <i class="fa-solid fa-road"></i>
+                        <div>
+                            <h4>Road Test Routes</h4>
+                            <p>Practice on local DMV and driving test centre routes</p>
+                        </div>
+                    </div>
+
+                    <div class="service-item">
+                        <i class="fa-solid fa-route"></i>
+                        <div>
+                            <h4>Travel Coverage</h4>
+                            <p>Lessons available within a 25-mile service radius</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="service-note">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <p>
+                        Not sure if we cover your area? Contact us and we’ll
+                        confirm lesson availability for your location.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ==================== MAP & SERVICE AREAS END ==================== -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ==================== FOOTER START ==================== -->
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <!-- About -->
+            <div class="footer-about">
+
+                <a href="index.html" class="footer-logo">
+                    <img src="images/logo.png" alt="DriveLearn Logo">
+                </a>
+
+                <p>
+                    Professional driving lessons with certified instructors,
+                    flexible scheduling, and a simple booking system to help
+                    you become a confident and safe driver.
+                </p>
+
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-links">
+
+                <h4>Quick Links</h4>
+
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="lessons.html">Driving Lessons</a></li>
+                    <li><a href="booking.html">Booking</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+
+            </div>
+
+            <!-- Services -->
+            <div class="footer-services">
+
+                <h4>Our Services</h4>
+
+                <ul>
+                    <li><a href="#">Automatic Lessons</a></li>
+                    <li><a href="#">Manual Lessons</a></li>
+                    <li><a href="#">Intensive Courses</a></li>
+                    <li><a href="#">Refresher Lessons</a></li>
+                    <li><a href="#">Test Preparation</a></li>
+                </ul>
+
+            </div>
+
+            <!-- Contact -->
+            <div class="footer-contact">
+
+                <h4>Contact Info</h4>
+
+                <ul>
+
+                    <li>
+                        <i class="fas fa-location-dot"></i>
+                        Madurai, Tamil Nadu, India
+                    </li>
+
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        +91 98765 43210
+                    </li>
+
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        info@drivelearn.com
+                    </li>
+
+                    <li>
+                        <i class="fas fa-clock"></i>
+                        Mon - Sat : 8:00 AM - 7:00 PM
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+<!-- ==================== FOOTER END ==================== -->
+
+
+<!-- Scroll to Top Button -->
+<button id="scrollTopBtn" class="scroll-top-btn">
+    <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+
+<script src="js/script.js"></script>
+</body>
+</html>

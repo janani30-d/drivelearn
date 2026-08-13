@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DriveLearn Student Dashboard</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/logo.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Dashboard CSS -->
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/dash-res.css">
+</head>
+<body>
+
+    <div class="dashboard-layout">
+
+        <!-- ==================== SIDEBAR ==================== -->
+        <aside class="dashboard-sidebar">
+
+            <div class="sidebar-logo">
+    <a href="index.html">
+        <img src="images/logo.png" alt="DriveLearn Logo" class="logo-image">
+    </a>
+</div>
+
+            <nav class="sidebar-nav">
+
+                <a href="dashboard.html" class="nav-item">
+                    <i class="fa-solid fa-table-columns"></i>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="my-lessons.html" class="nav-item">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <span>My Lessons</span>
+                </a>
+
+                <a href="book-lesson.html" class="nav-item">
+                    <i class="fa-solid fa-calendar-plus"></i>
+                    <span>Book Lesson</span>
+                </a>
+
+                <a href="progress.html" class="nav-item active">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <span>Progress</span>
+                </a>
+
+                <a href="payments.html" class="nav-item">
+                    <i class="fa-solid fa-credit-card"></i>
+                    <span>Payments</span>
+                </a>
+
+                
+
+            </nav>
+
+            <div class="sidebar-footer">
+    <a href="#" id="logoutBtn" class="logout-btn">
+        <i class="fa-solid fa-right-from-bracket"></i>
+        <span>Logout</span>
+    </a>
+</div>
+
+        </aside>
+
+        <!-- ==================== MAIN CONTENT ==================== -->
+        <main class="dashboard-main">
+
+            <!-- Header -->
+            <header class="dashboard-header">
+
+                <div class="header-left">
+                    <button class="sidebar-toggle" id="sidebar-toggle">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+
+                    <div>
+                        <p class="header-label">Student Dashboard</p>
+                        <h1>Dashboard</h1>
+                    </div>
+                </div>
+
+                <div class="header-right">
+
+                    <button class="header-icon">
+                        <i class="fa-regular fa-bell"></i>
+                        <span class="notification-badge">3</span>
+                    </button>
+
+                    <button class="header-icon">
+                        <i class="fa-solid fa-gear"></i>
+                    </button>
+
+                    <button class="header-icon" id="theme-toggle">
+                        <i class="fa-solid fa-moon"></i>
+                    </button>
+
+                    <button class="header-icon" id="rtl-toggle">
+                        <i class="fa-solid fa-right-left"></i>
+                    </button>
+
+                    <div class="user-profile">
+                        <img src="images/avatar.jpg" alt="Student">
+                        <div class="user-info">
+                            <h4>Priya</h4>
+                            <span>Student Account</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </header>
+            <!-- ==================== Progress Hero ==================== -->
+<section class="progress-hero">
+
+    <div class="progress-hero-content">
+        <span class="hero-badge">DriveLearn Progress</span>
+        <h2>Track Priya’s driving skills and learning progress.</h2>
+        <p>
+            Monitor completed lessons, skill development, instructor feedback,
+            and driving test readiness in one place.
+        </p>
+    </div>
+
+    <div class="progress-hero-action">
+        <a href="my-lessons.html" class="btn btn-primary">
+            <i class="fa-solid fa-chart-line"></i>
+            View Detailed Report
+        </a>
+    </div>
+
+</section>
+
+<!-- ==================== Progress Summary ==================== -->
+<section class="progress-summary">
+
+    <div class="summary-card">
+        <div class="summary-icon blue">
+            <i class="fa-solid fa-circle-check"></i>
+        </div>
+
+        <div class="summary-content">
+            <span>Course Completion</span>
+            <h3>72%</h3>
+            <p>18 of 25 lessons completed</p>
+        </div>
+    </div>
+
+    <div class="summary-card">
+        <div class="summary-icon green">
+            <i class="fa-solid fa-star"></i>
+        </div>
+
+        <div class="summary-content">
+            <span>Average Rating</span>
+            <h3>4.8</h3>
+            <p>Based on instructor evaluations</p>
+        </div>
+    </div>
+
+    <div class="summary-card">
+        <div class="summary-icon orange">
+            <i class="fa-solid fa-award"></i>
+        </div>
+
+        <div class="summary-content">
+            <span>Test Readiness</span>
+            <h3>82%</h3>
+            <p>Ready for mock driving test</p>
+        </div>
+    </div>
+
+</section>
+<!-- ==================== Overall Course Progress ==================== -->
+<section class="overall-progress-section">
+
+    <div class="section-header">
+
+        <div>
+            <h3>Overall Course Progress</h3>
+            <p>Track Priya’s driving course completion and skill development</p>
+        </div>
+
+        <span class="section-count progress">72% Complete</span>
+
+    </div>
+
+    <div class="overall-progress-card">
+
+        <div class="progress-overview">
+
+            <!-- Circular Progress -->
+            <div class="progress-circle-wrapper">
+
+                <div class="progress-circle large">
+                    <div class="progress-inner">
+                        <h2>72%</h2>
+                        <span>Completed</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Progress Stats -->
+            <div class="progress-stats">
+
+                <div class="stat-item">
+                    <h4>18 / 25</h4>
+                    <span>Lessons Completed</span>
+                </div>
+
+                <div class="stat-item">
+                    <h4>18h</h4>
+                    <span>Driving Hours Completed</span>
+                </div>
+
+                <div class="stat-item">
+                    <h4>7</h4>
+                    <span>Lessons Remaining</span>
+                </div>
+
+                <div class="stat-item">
+                    <h4>2 Weeks</h4>
+                    <span>Estimated Completion</span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="progress-divider"></div>
+
+        <!-- Skill Progress -->
+        <div class="skill-progress-section">
+
+            <h4>Skill Assessment</h4>
+
+            <div class="skill-progress-list">
+
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span>Practical Driving</span>
+                        <span>100%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-fill skill-100"></div>
+                    </div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span>Parking Skills</span>
+                        <span>85%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-fill skill-85"></div>
+                    </div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span>Highway Driving</span>
+                        <span>60%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-fill skill-60"></div>
+                    </div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span>Night Driving</span>
+                        <span>45%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-fill skill-45"></div>
+                    </div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span>Test Preparation</span>
+                        <span>30%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-fill skill-30"></div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==================== Test Readiness ==================== -->
+<section class="test-readiness-section">
+
+    <div class="section-header">
+
+        <div>
+            <h3>Driving Test Readiness</h3>
+            <p>Check Priya’s readiness score and the remaining skills before the driving test</p>
+        </div>
+
+        <span class="section-count readiness">82% Ready</span>
+
+    </div>
+
+    <div class="readiness-card">
+
+        <div class="readiness-overview">
+
+            <div class="readiness-score">
+                <div class="score-circle">
+                    <div class="score-inner">
+                        <h2>82%</h2>
+                        <span>Ready</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="readiness-details">
+
+                <h4>Excellent Progress Toward Your Driving Test</h4>
+
+                <p>
+                    Priya has completed most practical driving requirements and
+                    demonstrates strong vehicle control, parking accuracy, and
+                    traffic awareness. Additional highway driving practice is
+                    recommended before the final driving test.
+                </p>
+
+                <div class="readiness-checklist">
+
+                    <div class="check-item success">
+                        <i class="fa-solid fa-circle-check"></i>
+                        Practical Driving Completed
+                    </div>
+
+                    <div class="check-item success">
+                        <i class="fa-solid fa-circle-check"></i>
+                        Parking Assessment Passed
+                    </div>
+
+                    <div class="check-item success">
+                        <i class="fa-solid fa-circle-check"></i>
+                        Traffic Rules Evaluation Completed
+                    </div>
+
+                    <div class="check-item pending">
+                        <i class="fa-solid fa-circle-minus"></i>
+                        Highway Driving Practice (2 Lessons Remaining)
+                    </div>
+
+                    <div class="check-item pending">
+                        <i class="fa-solid fa-circle-minus"></i>
+                        Mock Driving Test Pending
+                    </div>
+
+                </div>
+
+                <div class="readiness-actions">
+
+                    <a href="book-lesson.html" class="btn btn-primary">
+                        <i class="fa-solid fa-calendar-check"></i>
+                        Schedule Mock Test
+                    </a>
+
+                    <a href="my-lessons.html" class="btn btn-outline">
+                        <i class="fa-solid fa-list-check"></i>
+                        View Improvement Plan
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+            </main>
+
+    </div>
+<!-- Logout Confirmation Modal -->
+<div class="logout-modal" id="logoutModal">
+    <div class="logout-modal-content">
+
+        <div class="logout-icon">
+            <i class="fa-solid fa-right-from-bracket"></i>
+        </div>
+
+        <h3>Are you sure you want to logout?</h3>
+
+        <div class="logout-actions">
+            <button class="btn btn-danger" id="confirmLogout">Yes</button>
+            <button class="btn btn-outline" id="cancelLogout">No</button>
+        </div>
+
+    </div>
+</div>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

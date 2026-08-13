@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DriveLearn Student Dashboard</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/logo.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Dashboard CSS -->
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/dash-res.css">
+</head>
+<body>
+
+    <div class="dashboard-layout">
+
+        <!-- ==================== SIDEBAR ==================== -->
+        <aside class="dashboard-sidebar">
+
+            <div class="sidebar-logo">
+    <a href="index.html">
+        <img src="images/logo.png" alt="DriveLearn Logo" class="logo-image">
+    </a>
+</div>
+
+            <nav class="sidebar-nav">
+
+                <a href="dashboard.html" class="nav-item active">
+                    <i class="fa-solid fa-table-columns"></i>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="my-lessons.html" class="nav-item">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <span>My Lessons</span>
+                </a>
+
+                <a href="book-lesson.html" class="nav-item">
+                    <i class="fa-solid fa-calendar-plus"></i>
+                    <span>Book Lesson</span>
+                </a>
+
+                <a href="progress.html" class="nav-item">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <span>Progress</span>
+                </a>
+
+                <a href="payments.html" class="nav-item">
+                    <i class="fa-solid fa-credit-card"></i>
+                    <span>Payments</span>
+                </a>
+
+                
+
+            </nav>
+
+            <div class="sidebar-footer">
+    <a href="#" id="logoutBtn" class="logout-btn">
+        <i class="fa-solid fa-right-from-bracket"></i>
+        <span>Logout</span>
+    </a>
+</div>
+
+        </aside>
+
+        <!-- ==================== MAIN CONTENT ==================== -->
+        <main class="dashboard-main">
+
+            <!-- Header -->
+            <header class="dashboard-header">
+
+                <div class="header-left">
+                    <button class="sidebar-toggle" id="sidebar-toggle">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+
+                    <div>
+                        <p class="header-label">Student Dashboard</p>
+                        <h1>Dashboard</h1>
+                    </div>
+                </div>
+
+                <div class="header-right">
+
+                    <button class="header-icon">
+                        <i class="fa-regular fa-bell"></i>
+                        <span class="notification-badge">3</span>
+                    </button>
+
+                    <button class="header-icon">
+                        <i class="fa-solid fa-gear"></i>
+                    </button>
+
+                    <button class="header-icon" id="theme-toggle">
+                        <i class="fa-solid fa-moon"></i>
+                    </button>
+
+                    <button class="header-icon" id="rtl-toggle">
+                        <i class="fa-solid fa-right-left"></i>
+                    </button>
+
+                    <div class="user-profile">
+                        <img src="images/avatar.jpg" alt="Student">
+                        <div class="user-info">
+                            <h4>Priya</h4>
+                            <span>Student Account</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </header>
+
+            <!-- Hero Card -->
+            <section class="dashboard-hero">
+                <div class="hero-content">
+                    <span class="hero-badge">DriveLearn Student Portal</span>
+                    <h2>Manage your driving lessons in one premium dashboard.</h2>
+                    <p>
+                        Track upcoming lessons, completed hours, instructor feedback,
+                        and driving progress from one place.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="book-lesson.html" class="btn btn-primary">
+                            <i class="fa-solid fa-calendar-plus"></i>
+                            Book Lesson
+                        </a>
+
+                        <a href="my-lessons.html" class="btn btn-outline">
+                            <i class="fa-solid fa-clock"></i>
+                            View Schedule
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-image">
+                    <img src="images/dashboard-hero.jpg" alt="Driving Lesson">
+
+                    <div class="hero-card top-card">
+                        <span>Next Lesson</span>
+                        <strong>Tomorrow, 10:00 AM</strong>
+                    </div>
+
+                    <div class="hero-card bottom-card">
+                        <span>Completed Hours</span>
+                        <strong>18 Hours</strong>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Stats cards will come in Part 2 -->
+             <!-- ==================== Dashboard Overview ==================== -->
+<section class="dashboard-overview">
+
+    <div class="section-header">
+        <div>
+            <h2>Dashboard Overview</h2>
+            <p>Your driving progress and lesson activity at a glance</p>
+        </div>
+
+        <a href="progress.html" class="section-link">
+            View Report
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+    </div>
+
+    <div class="overview-grid">
+
+        <!-- Card 1 -->
+        <div class="overview-card">
+
+            <div class="overview-icon blue">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+
+            <div class="overview-content">
+                <span>Completed Lessons</span>
+                <h3>18</h3>
+
+                <div class="overview-trend positive">
+                    <i class="fa-solid fa-arrow-trend-up"></i>
+                    +3 this month
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Card 2 -->
+        <div class="overview-card">
+
+            <div class="overview-icon orange">
+                <i class="fa-solid fa-calendar-days"></i>
+            </div>
+
+            <div class="overview-content">
+                <span>Upcoming Lessons</span>
+                <h3>4</h3>
+
+                <div class="overview-trend neutral">
+                    <i class="fa-solid fa-clock"></i>
+                    Next tomorrow
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Card 3 -->
+        <div class="overview-card">
+
+            <div class="overview-icon green">
+                <i class="fa-solid fa-road"></i>
+            </div>
+
+            <div class="overview-content">
+                <span>Hours Completed</span>
+                <h3>18h</h3>
+
+                <div class="overview-trend positive">
+                    <i class="fa-solid fa-arrow-trend-up"></i>
+                    72% completed
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Card 4 -->
+        <div class="overview-card">
+
+            <div class="overview-icon purple">
+                <i class="fa-solid fa-chart-line"></i>
+            </div>
+
+            <div class="overview-content">
+                <span>Test Readiness</span>
+                <h3>86%</h3>
+
+                <div class="overview-trend positive">
+                    <i class="fa-solid fa-arrow-trend-up"></i>
+                    Excellent progress
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ==================== Dashboard Activity ==================== -->
+<!-- ==================== Dashboard Lesson Section ==================== -->
+<section class="dashboard-lesson-section">
+
+    <div class="dashboard-lesson-container">
+
+        <div class="dashboard-lesson-card">
+
+            <div class="dashboard-lesson-header">
+
+                <div>
+                    <h3>Upcoming Lesson</h3>
+                    <p>Your next scheduled driving session</p>
+                </div>
+
+                <span class="dashboard-lesson-status confirmed">
+                    Confirmed
+                </span>
+
+            </div>
+
+            <div class="dashboard-lesson-body">
+
+                <div class="dashboard-lesson-date">
+                    <span class="dashboard-lesson-day">13</span>
+                    <span class="dashboard-lesson-month">Aug</span>
+                </div>
+
+                <div class="dashboard-lesson-info">
+
+                    <h4>Practical Driving Lesson</h4>
+
+                    <div class="dashboard-lesson-meta">
+
+                        <div class="dashboard-meta-item">
+                            <i class="fa-regular fa-clock"></i>
+                            <span>Tomorrow, 10:00 AM - 11:30 AM</span>
+                        </div>
+
+                        <div class="dashboard-meta-item">
+                            <i class="fa-solid fa-user"></i>
+                            <span>Instructor: Sarah Johnson</span>
+                        </div>
+
+                        <div class="dashboard-meta-item">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>DriveLearn Training Center</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="dashboard-lesson-divider"></div>
+
+            <div class="dashboard-lesson-footer">
+
+                <div class="dashboard-lesson-note">
+                    <i class="fa-solid fa-circle-info"></i>
+                    Please arrive 15 minutes early and bring your learner's permit.
+                </div>
+
+                <div class="dashboard-lesson-actions">
+
+                    <a href="book-lesson.html" class="btn btn-primary">
+                        <i class="fa-solid fa-calendar-plus"></i>
+                        Reschedule
+                    </a>
+
+                    <a href="my-lessons.html" class="btn btn-outline">
+                        <i class="fa-solid fa-eye"></i>
+                        View Details
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- Learning Progress -->
+<div class="learning-progress-card">
+
+    <div class="card-header">
+        <h3>Learning Progress</h3>
+        <span class="progress-status">72% Complete</span>
+    </div>
+
+    <div class="progress-circle-wrapper">
+
+        <div class="progress-circle">
+            <div class="progress-inner">
+                <h2>72%</h2>
+                <span>Completed</span>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="skill-progress-list">
+
+        <div class="skill-item">
+            <div class="skill-info">
+                <span>Basic Driving</span>
+                <span>100%</span>
+            </div>
+            <div class="skill-bar">
+                <div class="skill-fill skill-100"></div>
+            </div>
+        </div>
+
+        <div class="skill-item">
+            <div class="skill-info">
+                <span>Parking Skills</span>
+                <span>85%</span>
+            </div>
+            <div class="skill-bar">
+                <div class="skill-fill skill-85"></div>
+            </div>
+        </div>
+
+        <div class="skill-item">
+            <div class="skill-info">
+                <span>Highway Driving</span>
+                <span>60%</span>
+            </div>
+            <div class="skill-bar">
+                <div class="skill-fill skill-60"></div>
+            </div>
+        </div>
+
+        <div class="skill-item">
+            <div class="skill-info">
+                <span>Test Preparation</span>
+                <span>45%</span>
+            </div>
+            <div class="skill-bar">
+                <div class="skill-fill skill-45"></div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<!-- ==================== Recent Bookings ==================== -->
+<section class="recent-bookings">
+
+    <div class="bookings-card">
+
+        <div class="card-header">
+
+            <div>
+                <h3>Recent Bookings</h3>
+                <p>Your latest lesson bookings and payment status</p>
+            </div>
+
+            <a href="my-lessons.html" class="section-link">
+                View All
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+        <div class="bookings-table-wrapper">
+
+            <table class="bookings-table">
+
+                <thead>
+                    <tr>
+                        <th>Lesson</th>
+                        <th>Date & Time</th>
+                        <th>Instructor</th>
+                        <th>Payment</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+
+                        <td>
+                            <div class="lesson-cell">
+                                <div class="lesson-icon blue">
+                                    <i class="fa-solid fa-car"></i>
+                                </div>
+
+                                <div>
+                                    <h4>Practical Driving</h4>
+                                    <span>90 Minutes</span>
+                                </div>
+                            </div>
+                        </td>
+
+                        <td>12 Aug 2026, 10:00 AM</td>
+
+                        <td>Sarah Johnson</td>
+
+                        <td>
+                            <span class="payment-badge paid">
+                                Paid
+                            </span>
+                        </td>
+
+                        <td>
+                            <span class="status-badge completed">
+                                Completed
+                            </span>
+                        </td>
+
+                        <td>
+                            <a href="#" class="table-action">
+                                View Details
+                            </a>
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>
+                            <div class="lesson-cell">
+                                <div class="lesson-icon orange">
+                                    <i class="fa-solid fa-square-parking"></i>
+                                </div>
+
+                                <div>
+                                    <h4>Parking Practice</h4>
+                                    <span>60 Minutes</span>
+                                </div>
+                            </div>
+                        </td>
+
+                        <td>15 Aug 2026, 02:00 PM</td>
+
+                        <td>Michael Lee</td>
+
+                        <td>
+                            <span class="payment-badge paid">
+                                Paid
+                            </span>
+                        </td>
+
+                        <td>
+                            <span class="status-badge upcoming">
+                                Upcoming
+                            </span>
+                        </td>
+
+                        <td>
+                            <a href="#" class="table-action">
+                                View Details
+                            </a>
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>
+                            <div class="lesson-cell">
+                                <div class="lesson-icon purple">
+                                    <i class="fa-solid fa-road"></i>
+                                </div>
+
+                                <div>
+                                    <h4>Highway Driving</h4>
+                                    <span>120 Minutes</span>
+                                </div>
+                            </div>
+                        </td>
+
+                        <td>08 Aug 2026, 09:00 AM</td>
+
+                        <td>Sarah Johnson</td>
+
+                        <td>
+                            <span class="payment-badge refunded">
+                                Refunded
+                            </span>
+                        </td>
+
+                        <td>
+                            <span class="status-badge cancelled">
+                                Cancelled
+                            </span>
+                        </td>
+
+                        <td>
+                            <a href="#" class="table-action">
+                                View Details
+                            </a>
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</section>
+
+        </main>
+
+    </div>
+<!-- Logout Confirmation Modal -->
+<div class="logout-modal" id="logoutModal">
+    <div class="logout-modal-content">
+
+        <div class="logout-icon">
+            <i class="fa-solid fa-right-from-bracket"></i>
+        </div>
+
+        <h3>Are you sure you want to logout?</h3>
+
+        <div class="logout-actions">
+            <button class="btn btn-danger" id="confirmLogout">Yes</button>
+            <button class="btn btn-outline" id="cancelLogout">No</button>
+        </div>
+
+    </div>
+</div>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DriveLearn - Driving Instructor & Lesson Booking</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/logo.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+    <!-- ==================== HEADER START ==================== -->
+<header class="header">
+
+    <div class="container">
+
+        <!--========== Logo ==========-->
+        <a href="index.html" class="logo">
+            <img src="images/logo.png" alt="DriveLearn">
+        </a>
+
+        <!--========== Navigation ==========-->
+        <nav class="navbar" id="navbar">
+
+            <ul class="nav-menu">
+
+                <li class="dropdown">
+                    <a href="#" class="nav-link">
+                        Home
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </a>
+
+                    <ul class="dropdown-menu">
+                        <li><a href="index.html">Home 1</a></li>
+                        <li><a href="home2.html">Home 2</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="about.html" class="nav-link">
+                        About
+                    </a>
+                </li>
+
+                <li>
+                    <a href="lessons.html" class="nav-link">
+                        Lessons
+                    </a>
+                </li>
+
+                <li>
+                    <a href="booking.html" class="nav-link active">
+                        Booking
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html" class="nav-link">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+            <!-- Mobile Buttons -->
+            <div class="mobile-btn">
+
+                <button class="theme-toggle" id="theme-toggle-mobile">
+                    <i class="fa-solid fa-moon"></i>
+                    <span>Dark Mode</span>
+                </button>
+
+                <button class="rtl-toggle" id="rtl-toggle-mobile">
+                    <i class="fa-solid fa-right-left"></i>
+                    <span>RTL / LTR</span>
+                </button>
+
+                <a href="dashboard.html" class="dashboard-btn">
+                    Dashboard
+                </a>
+
+                <a href="login.html" class="login-btn">
+                    Login
+                </a>
+
+            </div>
+
+        </nav>
+
+        <!-- Desktop Buttons -->
+        <div class="desktop-btn">
+
+            <button class="theme-toggle" id="theme-toggle">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+
+            <button class="rtl-toggle" id="rtl-toggle">
+                <i class="fa-solid fa-right-left"></i>
+            </button>
+
+            <a href="dashboard.html" class="dashboard-btn">
+                Dashboard
+            </a>
+
+            <a href="login.html" class="login-btn">
+                Login
+            </a>
+
+        </div>
+
+        <!-- Hamburger Menu -->
+        <div class="menu-toggle" id="menu-toggle">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+    </div>
+
+</header>
+<!-- ==================== HEADER END ==================== -->
+<!-- ==================== BOOKING BANNER START ==================== -->
+<section class="page-banner booking-banner">
+
+    <div class="banner-overlay"></div>
+
+    <div class="container">
+
+        <div class="banner-content">
+
+            <span class="banner-subtitle">
+                Book Your Driving Lesson
+            </span>
+
+            <h1>
+                Schedule Your Driving Lesson in Minutes
+            </h1>
+
+            <p>
+                Choose your lesson package, select manual or automatic
+                training, pick a convenient date and time, and reserve your
+                driving lesson with our certified instructors.
+            </p>
+
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <i class="fa-solid fa-angle-right"></i>
+                <span>Booking</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ==================== BOOKING BANNER END ==================== -->
+
+<!-- ==================== BOOKING FORM START ==================== -->
+<section class="booking-form section">
+
+    <div class="container">
+
+        <div class="booking-wrapper">
+
+            <!-- Booking Form -->
+            <div class="booking-form-card">
+
+                <div class="booking-header">
+
+                    <span class="section-subtitle">
+                        Reserve Your Lesson
+                    </span>
+
+                    <h2 class="section-title">
+                        Book Your Driving Lesson
+                    </h2>
+
+                    <p class="section-description">
+                        Fill in your details below and choose your preferred
+                        lesson package, vehicle type, and lesson schedule.
+                    </p>
+
+                </div>
+
+                <form class="booking-form-grid">
+
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" placeholder="Enter your full name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" placeholder="Enter your email address" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="tel" placeholder="Enter your phone number" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Lesson Package</label>
+                        <select required>
+                            <option value="">Select a package</option>
+                            <option>Single Driving Lesson</option>
+                            <option>5-Lesson Package</option>
+                            <option>10-Lesson Package</option>
+                            <option>Intensive Test Preparation</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Vehicle Type</label>
+                        <select required>
+                            <option value="">Choose vehicle type</option>
+                            <option>Manual Transmission</option>
+                            <option>Automatic Transmission</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Preferred Instructor (Optional)</label>
+                        <select>
+                            <option value="">No preference</option>
+                            <option>Sarah Johnson</option>
+                            <option>David Miller</option>
+                            <option>Emma Wilson</option>
+                            <option>Michael Brown</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label>Pickup Location</label>
+                        <input type="text" placeholder="Enter your pickup address">
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label>Additional Notes</label>
+                        <textarea rows="5"
+                                  placeholder="Tell us about your driving experience, preferred schedule, or any special requirements..."></textarea>
+                    </div>
+
+                    <div class="full-width">
+                        <button type="submit" class="btn btn-primary booking-submit">
+                            Confirm Booking
+                        </button>
+                    </div>
+
+                </form>
+
+            </div>
+
+            <!-- Booking Information -->
+            <div class="booking-info-card">
+
+                <h3>Booking Information</h3>
+
+                <p>
+                    Our team will confirm your booking within 24 hours and
+                    help you schedule the most suitable lesson time.
+                </p>
+
+                <div class="booking-info-list">
+
+                    <div class="booking-info-item">
+                        <i class="fa-solid fa-clock"></i>
+                        <div>
+                            <h4>Lesson Hours</h4>
+                            <p>Monday - Saturday<br>8:00 AM - 7:00 PM</p>
+                        </div>
+                    </div>
+
+                    <div class="booking-info-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <div>
+                            <h4>Phone Support</h4>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+
+                    <div class="booking-info-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <div>
+                            <h4>Email Support</h4>
+                            <p>bookings@drivelearn.com</p>
+                        </div>
+                    </div>
+
+                    <div class="booking-info-item">
+                        <i class="fa-solid fa-calendar-check"></i>
+                        <div>
+                            <h4>Response Time</h4>
+                            <p>Within 24 hours</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="booking-note">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <p>
+                        You can reschedule or cancel your lesson up to
+                        24 hours before the scheduled time through the
+                        student portal.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ==================== BOOKING FORM END ==================== -->
+
+<!-- ==================== LESSON SCHEDULE START ==================== -->
+<section class="lesson-schedule section">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <span class="section-subtitle">
+                Lesson Schedule
+            </span>
+
+            <h2 class="section-title">
+                Select Your Preferred Lesson Date & Time
+            </h2>
+
+            <p class="section-description">
+                Choose a convenient lesson date and time from our available
+                schedule. Morning, afternoon, and evening driving lessons
+                are available throughout the week.
+            </p>
+
+        </div>
+
+        <div class="schedule-wrapper">
+
+            <!-- Calendar Card -->
+            <div class="schedule-calendar">
+
+                <div class="calendar-header">
+                    <button type="button">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+
+                    <h3>September 2026</h3>
+
+                    <button type="button">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+
+                <div class="calendar-weekdays">
+                    <span>Sun</span>
+                    <span>Mon</span>
+                    <span>Tue</span>
+                    <span>Wed</span>
+                    <span>Thu</span>
+                    <span>Fri</span>
+                    <span>Sat</span>
+                </div>
+
+                <div class="calendar-days">
+                    <button class="disabled">30</button>
+                    <button class="disabled">31</button>
+                    <button>1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <button>4</button>
+                    <button>5</button>
+                    <button>6</button>
+                    <button>7</button>
+                    <button class="active">8</button>
+                    <button>9</button>
+                    <button>10</button>
+                    <button>11</button>
+                    <button>12</button>
+                    <button>13</button>
+                    <button>14</button>
+                    <button>15</button>
+                    <button>16</button>
+                    <button>17</button>
+                    <button>18</button>
+                    <button>19</button>
+                    <button>20</button>
+                    <button>21</button>
+                    <button>22</button>
+                    <button>23</button>
+                    <button>24</button>
+                    <button>25</button>
+                    <button>26</button>
+                    <button>27</button>
+                    <button>28</button>
+                    <button>29</button>
+                    <button>30</button>
+                </div>
+
+                <div class="calendar-legend">
+                    <div>
+                        <span class="available"></span>
+                        Available
+                    </div>
+                    <div>
+                        <span class="selected"></span>
+                        Selected
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Time Slots -->
+            <div class="schedule-slots">
+
+                <div class="slots-section">
+
+                    <h3>Morning Lessons</h3>
+
+                    <div class="time-slots">
+                        <button class="slot-btn">8:00 AM</button>
+                        <button class="slot-btn active">9:00 AM</button>
+                        <button class="slot-btn">10:00 AM</button>
+                        <button class="slot-btn disabled">11:00 AM</button>
+                    </div>
+
+                </div>
+
+                <div class="slots-section">
+
+                    <h3>Afternoon Lessons</h3>
+
+                    <div class="time-slots">
+                        <button class="slot-btn">1:00 PM</button>
+                        <button class="slot-btn">2:00 PM</button>
+                        <button class="slot-btn">3:00 PM</button>
+                        <button class="slot-btn">4:00 PM</button>
+                    </div>
+
+                </div>
+
+                <div class="slots-section">
+
+                    <h3>Evening Lessons</h3>
+
+                    <div class="time-slots">
+                        <button class="slot-btn">5:00 PM</button>
+                        <button class="slot-btn">6:00 PM</button>
+                        <button class="slot-btn disabled">7:00 PM</button>
+                    </div>
+
+                </div>
+
+                <div class="schedule-summary">
+
+                    <h4>Selected Schedule</h4>
+
+                    <p>
+                        <strong>Date:</strong> Tuesday, September 8, 2026
+                    </p>
+
+                    <p>
+                        <strong>Time:</strong> 9:00 AM
+                    </p>
+
+                    <a href="#booking-summary" class="btn btn-primary">
+                        Continue to Booking Summary
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ==================== LESSON SCHEDULE END ==================== -->
+
+<!-- ==================== BOOKING SUMMARY START ==================== -->
+<section class="booking-summary section" id="booking-summary">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <span class="section-subtitle">
+                Booking Confirmation
+            </span>
+
+            <h2 class="section-title">
+                Review Your Booking Before Confirmation
+            </h2>
+
+            <p class="section-description">
+                Please review your selected lesson package, schedule,
+                and booking details before confirming your reservation.
+            </p>
+
+        </div>
+
+        <div class="summary-wrapper">
+
+            <!-- Booking Details -->
+            <div class="summary-details-card">
+
+                <h3>Booking Details</h3>
+
+                <div class="summary-list">
+
+                    <div class="summary-item">
+                        <span>Lesson Package</span>
+                        <strong>10-Lesson Package</strong>
+                    </div>
+
+                    <div class="summary-item">
+                        <span>Vehicle Type</span>
+                        <strong>Automatic Transmission</strong>
+                    </div>
+
+                    <div class="summary-item">
+                        <span>Instructor</span>
+                        <strong>Sarah Johnson</strong>
+                    </div>
+
+                    <div class="summary-item">
+                        <span>Lesson Date</span>
+                        <strong>Tuesday, September 8, 2026</strong>
+                    </div>
+
+                    <div class="summary-item">
+                        <span>Lesson Time</span>
+                        <strong>9:00 AM</strong>
+                    </div>
+
+                    <div class="summary-item">
+                        <span>Lesson Duration</span>
+                        <strong>60 Minutes</strong>
+                    </div>
+
+                    <div class="summary-item">
+                        <span>Pickup Location</span>
+                        <strong>Downtown Training Center</strong>
+                    </div>
+
+                </div>
+
+                <div class="summary-note">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <p>
+                        You can modify your booking details through the
+                        student portal up to 24 hours before your lesson.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Payment Summary -->
+            <div class="payment-summary-card">
+
+                <h3>Payment Summary</h3>
+
+                <div class="payment-row">
+                    <span>10-Lesson Package</span>
+                    <strong>$390</strong>
+                </div>
+
+                <div class="payment-row">
+                    <span>Booking Fee</span>
+                    <strong>$10</strong>
+                </div>
+
+                <div class="payment-row">
+                    <span>Discount Applied</span>
+                    <strong class="discount">-$20</strong>
+                </div>
+
+                <div class="payment-divider"></div>
+
+                <div class="payment-row total">
+                    <span>Total Amount</span>
+                    <strong>$380</strong>
+                </div>
+
+                <div class="deposit-box">
+                    <h4>Deposit Required Today</h4>
+                    <div class="deposit-amount">$50</div>
+                    <p>
+                        The remaining balance can be paid before your
+                        first driving lesson.
+                    </p>
+                </div>
+
+                <a href="payment.html" class="btn btn-primary payment-btn">
+                    Confirm & Proceed to Payment
+                </a>
+
+                <div class="secure-payment">
+                    <i class="fa-solid fa-lock"></i>
+                    Secure online payment and encrypted booking confirmation.
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ==================== BOOKING SUMMARY END ==================== -->
+
+<!-- ==================== BOOKING POLICY START ==================== -->
+<section class="booking-policy section">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <span class="section-subtitle">
+                Booking Protection
+            </span>
+
+            <h2 class="section-title">
+                Book with Confidence and Flexibility
+            </h2>
+
+            <p class="section-description">
+                We make booking simple, secure, and flexible. Our transparent
+                booking and cancellation policies ensure a smooth experience
+                from your first lesson to your driving test.
+            </p>
+
+        </div>
+
+        <div class="policy-grid">
+
+            <!-- Policy 1 -->
+            <div class="policy-card">
+
+                <div class="policy-icon">
+                    <i class="fa-solid fa-calendar-check"></i>
+                </div>
+
+                <h3>Free Rescheduling</h3>
+
+                <p>
+                    Reschedule your lesson up to 24 hours before
+                    the scheduled time without additional charges.
+                </p>
+
+            </div>
+
+            <!-- Policy 2 -->
+            <div class="policy-card">
+
+                <div class="policy-icon">
+                    <i class="fa-solid fa-lock"></i>
+                </div>
+
+                <h3>Secure Online Payments</h3>
+
+                <p>
+                    All payments are processed through encrypted
+                    and secure payment systems for your protection.
+                </p>
+
+            </div>
+
+            <!-- Policy 3 -->
+            <div class="policy-card">
+
+                <div class="policy-icon">
+                    <i class="fa-solid fa-envelope-circle-check"></i>
+                </div>
+
+                <h3>Instant Booking Confirmation</h3>
+
+                <p>
+                    Receive a confirmation email with your lesson
+                    details immediately after completing your booking.
+                </p>
+
+            </div>
+
+            <!-- Policy 4 -->
+            <div class="policy-card">
+
+                <div class="policy-icon">
+                    <i class="fa-solid fa-shield-heart"></i>
+                </div>
+
+                <h3>Flexible Cancellation Policy</h3>
+
+                <p>
+                    Cancel eligible bookings according to our
+                    transparent cancellation and refund policy safely.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="policy-note-box">
+
+            <i class="fa-solid fa-circle-info"></i>
+
+            <p>
+                Need to change your booking? Existing students can manage
+                lesson bookings, cancellations, and schedule updates through
+                the secure student portal at any time.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ==================== BOOKING POLICY END ==================== -->
+
+
+<!-- ==================== BOOKING CTA START ==================== -->
+<section class="booking-cta section">
+
+    <div class="container">
+
+        <div class="booking-cta-box">
+
+            <div class="booking-cta-content">
+
+                <span class="booking-cta-subtitle">
+                    Start Your Driving Journey
+                </span>
+
+                <h2>
+                    Ready to Book Your First Driving Lesson?
+                </h2>
+
+                <p>
+                    Take the first step toward becoming a confident and safe
+                    driver. Choose a lesson package, select your preferred
+                    schedule, and start learning with our certified driving
+                    instructors today.
+                </p>
+
+                <div class="booking-cta-buttons">
+
+                    <a href="booking.html" class="btn btn-primary">
+                        Book Your First Lesson
+                    </a>
+
+                    <a href="contact.html" class="btn btn-outline">
+                        Contact Our Team
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="booking-cta-image">
+
+                <img src="images/booking-cta.jpg"
+                     alt="Driving lesson booking and instructor">
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ==================== BOOKING CTA END ==================== -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ==================== FOOTER START ==================== -->
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <!-- About -->
+            <div class="footer-about">
+
+                <a href="index.html" class="footer-logo">
+                    <img src="images/logo.png" alt="DriveLearn Logo">
+                </a>
+
+                <p>
+                    Professional driving lessons with certified instructors,
+                    flexible scheduling, and a simple booking system to help
+                    you become a confident and safe driver.
+                </p>
+
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-links">
+
+                <h4>Quick Links</h4>
+
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="lessons.html">Driving Lessons</a></li>
+                    <li><a href="booking.html">Booking</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+
+            </div>
+
+            <!-- Services -->
+            <div class="footer-services">
+
+                <h4>Our Services</h4>
+
+                <ul>
+                    <li><a href="#">Automatic Lessons</a></li>
+                    <li><a href="#">Manual Lessons</a></li>
+                    <li><a href="#">Intensive Courses</a></li>
+                    <li><a href="#">Refresher Lessons</a></li>
+                    <li><a href="#">Test Preparation</a></li>
+                </ul>
+
+            </div>
+
+            <!-- Contact -->
+            <div class="footer-contact">
+
+                <h4>Contact Info</h4>
+
+                <ul>
+
+                    <li>
+                        <i class="fas fa-location-dot"></i>
+                        Madurai, Tamil Nadu, India
+                    </li>
+
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        +91 98765 43210
+                    </li>
+
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        info@drivelearn.com
+                    </li>
+
+                    <li>
+                        <i class="fas fa-clock"></i>
+                        Mon - Sat : 8:00 AM - 7:00 PM
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+<!-- ==================== FOOTER END ==================== -->
+
+
+<!-- Scroll to Top Button -->
+<button id="scrollTopBtn" class="scroll-top-btn">
+    <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+
+<script src="js/script.js"></script>
+</body>
+</html>

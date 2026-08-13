@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DriveLearn - Driving Instructor & Lesson Booking</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/logo.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+    <!-- Dark Mode & RTL Controls -->
+    <div class="auth-controls">
+        <button class="theme-toggle" id="theme-toggle">
+            <i class="fa-solid fa-moon"></i>
+        </button>
+
+        <button class="rtl-toggle" id="rtl-toggle">
+            <i class="fa-solid fa-right-left"></i>
+        </button>
+    </div>
+
+    <!-- ==================== STUDENT REGISTER PORTAL ==================== -->
+
+<section class="register-portal">
+
+<div class="register-card">
+
+    <!-- Logo -->
+    <div class="register-logo">
+        <a href="index.html" class="register-logo-link">
+            <img src="images/logo.png" alt="DriveLearn Logo">
+            <h2>DriveLearn Portal</h2>
+        </a>
+    </div>
+
+    <!-- Header -->
+    <div class="register-header">
+        <h1>Create Your Account</h1>
+        <p>
+            Register to book driving lessons, manage your lesson schedule,
+            track completed hours, and monitor your driving progress.
+        </p>
+    </div>
+
+    <!-- Registration Form -->
+    <form class="register-form">
+
+        <div class="register-group">
+            <label>Full Name</label>
+            <input
+                type="text"
+                placeholder="Enter your full name"
+                required
+            >
+        </div>
+
+        <div class="register-group">
+            <label>Email Address</label>
+            <input
+                type="email"
+                placeholder="Enter your email address"
+                required
+            >
+        </div>
+
+        <div class="register-group">
+            <label>Phone Number</label>
+            <input
+                type="tel"
+                placeholder="Enter your phone number"
+                required
+            >
+        </div>
+
+        <div class="register-group">
+            <label>Create Password</label>
+            <input
+                type="password"
+                placeholder="Create a password"
+                required
+            >
+        </div>
+
+        <div class="register-group">
+            <label>Confirm Password</label>
+            <input
+                type="password"
+                placeholder="Confirm your password"
+                required
+            >
+        </div>
+
+        <div class="register-group">
+            <label>Learner Permit Number (Optional)</label>
+            <input
+                type="text"
+                placeholder="Enter your learner permit number"
+            >
+        </div>
+
+        <label class="register-terms">
+            <input type="checkbox" required>
+            <span>
+                I agree to the
+                <a href="#">Terms & Conditions</a>
+                and
+                <a href="#">Privacy Policy</a>
+            </span>
+        </label>
+
+        <button type="submit" class="btn btn-primary register-btn">
+            Create Account
+        </button>
+
+    </form>
+
+    <!-- Divider -->
+    <div class="register-divider">
+        <span>Or continue with</span>
+    </div>
+
+    <!-- Social Login -->
+    <div class="register-social">
+
+        <!-- Google -->
+        <a href="#" class="social-btn google">
+
+            <svg width="20" height="20" viewBox="0 0 48 48" aria-hidden="true">
+                <path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.3 36 24 36c-6.6 0-12-5.4-12-12S17.4 12 24 12c3 0 5.7 1.1 7.8 3l5.7-5.7C34.1 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/>
+                <path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 16.1 19 12 24 12c3 0 5.7 1.1 7.8 3l5.7-5.7C34.1 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/>
+                <path fill="#4CAF50" d="M24 44c5.2 0 10-2 13.6-5.2l-6.3-5.3C29.2 35.1 26.7 36 24 36c-5.3 0-9.7-3.3-11.3-8l-6.6 5.1C9.5 39.6 16.2 44 24 44z"/>
+                <path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-1.1 3.1-3.3 5.5-6.3 7.1l6.3 5.3C39.9 36.8 44 30.9 44 24c0-1.3-.1-2.4-.4-3.5z"/>
+            </svg>
+
+            Continue with Google
+
+        </a>
+
+        <!-- Facebook -->
+        <a href="#" class="social-btn facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+            Continue with Facebook
+        </a>
+
+        <!-- Apple -->
+        <a href="#" class="social-btn apple">
+            <i class="fa-brands fa-apple"></i>
+            Continue with Apple
+        </a>
+
+    </div>
+
+    <!-- Footer -->
+    <div class="register-footer">
+        <p>
+            Already have a student account?
+            <a href="login.html">Sign In</a>
+        </p>
+    </div>
+
+</div>
+
+
+</section>
+<!-- ==================== STUDENT REGISTER PORTAL END ==================== -->
+
+<script src="js/script.js"></script>
+</body>
+</html>

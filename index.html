@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DriveLearn - Driving Instructor & Lesson Booking</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/logo.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+    <!-- ==================== HEADER START ==================== -->
+<header class="header">
+
+    <div class="container">
+
+        <!--========== Logo ==========-->
+        <a href="index.html" class="logo">
+            <img src="images/logo.png" alt="DriveLearn">
+        </a>
+
+        <!--========== Navigation ==========-->
+        <nav class="navbar" id="navbar">
+
+            <ul class="nav-menu">
+
+                <li class="dropdown">
+                    <a href="#" class="nav-link active">
+                        Home
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </a>
+
+                    <ul class="dropdown-menu">
+                        <li><a href="index.html">Home 1</a></li>
+                        <li><a href="home2.html">Home 2</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="about.html" class="nav-link">
+                        About
+                    </a>
+                </li>
+
+                <li>
+                    <a href="lessons.html" class="nav-link">
+                        Lessons
+                    </a>
+                </li>
+
+                <li>
+                    <a href="booking.html" class="nav-link">
+                        Booking
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html" class="nav-link">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+            <!-- Mobile Buttons -->
+            <div class="mobile-btn">
+
+                <button class="theme-toggle" id="theme-toggle-mobile">
+                    <i class="fa-solid fa-moon"></i>
+                    <span>Dark Mode</span>
+                </button>
+
+                <button class="rtl-toggle" id="rtl-toggle-mobile">
+                    <i class="fa-solid fa-right-left"></i>
+                    <span>RTL / LTR</span>
+                </button>
+
+                <a href="dashboard.html" class="dashboard-btn">
+                    Dashboard
+                </a>
+
+                <a href="login.html" class="login-btn">
+                    Login
+                </a>
+
+            </div>
+
+        </nav>
+
+        <!-- Desktop Buttons -->
+        <div class="desktop-btn">
+
+            <button class="theme-toggle" id="theme-toggle">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+
+            <button class="rtl-toggle" id="rtl-toggle">
+                <i class="fa-solid fa-right-left"></i>
+            </button>
+
+            <a href="dashboard.html" class="dashboard-btn">
+                Dashboard
+            </a>
+
+            <a href="login.html" class="login-btn">
+                Login
+            </a>
+
+        </div>
+
+        <!-- Hamburger Menu -->
+        <div class="menu-toggle" id="menu-toggle">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+    </div>
+
+</header>
+<!-- ==================== HEADER END ==================== -->
+ <!-- ==================== HERO SECTION START ==================== -->
+<section class="hero">
+
+    <div class="hero-slider">
+
+        <!-- Slide 1 -->
+        <div class="hero-slide active"
+             style="background-image: url('images/hero1.jpg');">
+
+            <div class="container hero-container">
+                <div class="hero-content">
+
+                    <span class="hero-badge">
+                        <i class="fa-solid fa-car"></i>
+                        Trusted Driving Academy
+                    </span>
+
+                    <h1>
+                        Learn to Drive with
+                        <span>Confidence & Safety</span>
+                    </h1>
+
+                    <p>
+                        Professional driving lessons with certified instructors,
+                        flexible schedules, and easy online booking.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="booking.html" class="btn btn-primary">
+                            Book a Lesson
+                        </a>
+
+                        <a href="about.html" class="btn btn-outline">
+                            Learn More
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="hero-slide"
+             style="background-image: url('images/hero2.jpg');">
+
+            <div class="container hero-container">
+                <div class="hero-content">
+
+                    <span class="hero-badge">
+                        <i class="fa-solid fa-circle-check"></i>
+                        Certified Driving Instructors
+                    </span>
+
+                    <h1>
+                        Pass Your Driving Test
+                        <span>on the First Attempt</span>
+                    </h1>
+
+                    <p>
+                        Personalized driving lessons, modern training cars,
+                        and expert guidance for every learner.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="booking.html" class="btn btn-primary">
+                            Start Learning
+                        </a>
+
+                        <a href="lessons.html" class="btn btn-outline">
+                            View Pricing
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Navigation Arrows -->
+    <button class="hero-prev">
+        <i class="fa-solid fa-chevron-left"></i>
+    </button>
+
+    <button class="hero-next">
+        <i class="fa-solid fa-chevron-right"></i>
+    </button>
+
+    <!-- Dots -->
+    <div class="hero-dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+    </div>
+
+</section>
+<!-- ==================== HERO SECTION END ==================== -->
+<!-- ==================== WHY CHOOSE US START ==================== -->
+<section class="why-choose section">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <span class="section-subtitle">
+                Why Choose Us
+            </span>
+
+            <h2 class="section-title">
+                The Smarter Way to Learn Driving
+            </h2>
+
+            <p class="section-description">
+                We provide professional driving lessons, experienced instructors,
+                and flexible schedules to help you become a safe and confident
+                driver.
+            </p>
+
+        </div>
+
+        <div class="choose-grid">
+
+            <!-- Card 1 -->
+            <div class="choose-card">
+
+                <div class="choose-icon">
+                    <i class="fa-solid fa-user-check"></i>
+                </div>
+
+                <h3>Certified Instructors</h3>
+
+                <p>
+                    Learn from licensed and experienced driving instructors
+                    who provide personalized guidance user.
+                </p>
+
+            </div>
+
+            <!-- Card 2 -->
+            <div class="choose-card">
+
+                <div class="choose-icon">
+                    <i class="fa-solid fa-calendar-check"></i>
+                </div>
+
+                <h3>Flexible Scheduling</h3>
+
+                <p>
+                    Book lessons at your preferred time with easy online
+                    scheduling and flexible availability timing.
+                </p>
+
+            </div>
+
+            <!-- Card 3 -->
+            <div class="choose-card">
+
+                <div class="choose-icon">
+                    <i class="fa-solid fa-car-side"></i>
+                </div>
+
+                <h3>Modern Training Cars</h3>
+
+                <p>
+                    Practice in safe, well-maintained, and dual-control vehicles
+                    designed for learner drivers for safety.
+                </p>
+
+            </div>
+
+            <!-- Card 4 -->
+            <div class="choose-card">
+
+                <div class="choose-icon">
+                    <i class="fa-solid fa-award"></i>
+                </div>
+
+                <h3>High Pass Rate</h3>
+
+                <p>
+                    Our proven training methods help students pass their driving
+                    test with confidence and success.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ==================== WHY CHOOSE US END ==================== -->
+<!-- ==================== DRIVING COURSES START ==================== -->
+<section class="courses section">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <span class="section-subtitle">
+                Our Driving Courses
+            </span>
+
+            <h2 class="section-title">
+                Choose the Right Course for You
+            </h2>
+
+            <p class="section-description">
+                Whether you are a beginner or preparing for your driving test,
+                we offer professional training programs designed for every
+                learning stage.
+            </p>
+
+        </div>
+
+        <div class="courses-grid">
+
+            <!-- Course 1 -->
+            <div class="course-card">
+
+                <div class="course-image">
+                    <img src="images/course-1.jpg" alt="Automatic Driving Lessons">
+                </div>
+
+                <div class="course-content">
+
+                    <h3>Automatic Driving Lessons</h3>
+
+                    <p>
+                        Learn driving with modern automatic vehicles and gain
+                        confidence through step-by-step professional training.
+                    </p>
+
+                    <ul class="course-features">
+                        <li><i class="fa-solid fa-check"></i> Certified Instructor</li>
+                        <li><i class="fa-solid fa-check"></i> Flexible Schedule</li>
+                        <li><i class="fa-solid fa-check"></i> Dual-Control Car</li>
+                    </ul>
+
+                    <div class="course-footer">
+                        <span class="course-price">₹4,999</span>
+                        <a href="booking.html" class="course-btn">
+                            Book Now
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Course 2 -->
+            <div class="course-card featured">
+
+                <div class="course-badge">Most Popular</div>
+
+                <div class="course-image">
+                    <img src="images/course-2.jpg" alt="Manual Driving Lessons">
+                </div>
+
+                <div class="course-content">
+
+                    <h3>Manual Driving Lessons</h3>
+
+                    <p>
+                        Master clutch control, gear shifting, and complete road
+                        driving techniques with expert instructors.
+                    </p>
+
+                    <ul class="course-features">
+                        <li><i class="fa-solid fa-check"></i> Road Test Preparation</li>
+                        <li><i class="fa-solid fa-check"></i> Practical Driving Sessions</li>
+                        <li><i class="fa-solid fa-check"></i> Confidence Building</li>
+                    </ul>
+
+                    <div class="course-footer">
+                        <span class="course-price">₹5,999</span>
+                        <a href="booking.html" class="course-btn">
+                            Book Now
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Course 3 -->
+            <div class="course-card">
+
+                <div class="course-image">
+                    <img src="images/course-3.jpg" alt="Test Preparation Course">
+                </div>
+
+                <div class="course-content">
+
+                    <h3>Test Preparation Course</h3>
+
+                    <p>
+                        Focused training sessions, mock driving tests, and
+                        personalized guidance to help you pass with confidence.
+                    </p>
+
+                    <ul class="course-features">
+                        <li><i class="fa-solid fa-check"></i> Mock Driving Test</li>
+                        <li><i class="fa-solid fa-check"></i> Exam Strategies</li>
+                        <li><i class="fa-solid fa-check"></i> Personal Assessment</li>
+                    </ul>
+
+                    <div class="course-footer">
+                        <span class="course-price">₹3,999</span>
+                        <a href="booking.html" class="course-btn">
+                            Book Now
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ==================== DRIVING COURSES END ==================== -->
+<!-- ==================== HOW IT WORKS START ==================== -->
+<section class="how-it-works section">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <span class="section-subtitle">
+                How It Works
+            </span>
+
+            <h2 class="section-title">
+                Start Your Driving Journey in 3 Simple Steps
+            </h2>
+
+            <p class="section-description">
+                Our learning process is simple, structured, and designed to
+                help you become a confident and safe driver from your very
+                first lesson.
+            </p>
+
+        </div>
+
+        <div class="steps-grid">
+
+            <!-- Step 1 -->
+            <div class="step-card">
+
+                <div class="step-number">01</div>
+
+                <div class="step-icon">
+                    <i class="fa-solid fa-calendar-check"></i>
+                </div>
+
+                <h3>Book Your Lesson</h3>
+
+                <p>
+                    Choose your preferred driving course, instructor, and
+                    schedule through our easy online booking system.
+                </p>
+
+            </div>
+
+            <!-- Step 2 -->
+            <div class="step-card">
+
+                <div class="step-number">02</div>
+
+                <div class="step-icon">
+                    <i class="fa-solid fa-car-side"></i>
+                </div>
+
+                <h3>Start Practical Training</h3>
+
+                <p>
+                    Learn with certified instructors using modern dual-control
+                    vehicles and personalized driving lessons.
+                </p>
+
+            </div>
+
+            <!-- Step 3 -->
+            <div class="step-card">
+
+                <div class="step-number">03</div>
+
+                <div class="step-icon">
+                    <i class="fa-solid fa-award"></i>
+                </div>
+
+                <h3>Pass Your Driving Test</h3>
+
+                <p>
+                    Build confidence through mock tests, expert guidance,
+                    and complete preparation for your driving examination.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ==================== HOW IT WORKS END ==================== -->
+<!-- ==================== ACHIEVEMENTS START ==================== -->
+<section class="achievements section">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <span class="section-subtitle">
+                Our Achievements
+            </span>
+
+            <h2 class="section-title">
+                Trusted by Thousands of Learners
+            </h2>
+
+            <p class="section-description">
+                Our commitment to quality driving education has helped thousands
+                of students become confident, skilled, and responsible drivers.
+            </p>
+
+        </div>
+
+        <div class="stats-grid">
+
+            <!-- Stat 1 -->
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    <i class="fa-solid fa-user-graduate"></i>
+                </div>
+
+                <h3 class="counter" data-target="5000">0</h3>
+                <span>+</span>
+
+                <p>Students Trained</p>
+
+            </div>
+
+            <!-- Stat 2 -->
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+
+                <h3 class="counter" data-target="98">0</h3>
+                <span>%</span>
+
+                <p>First-Time Pass Rate</p>
+
+            </div>
+
+            <!-- Stat 3 -->
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    <i class="fa-solid fa-road"></i>
+                </div>
+
+                <h3 class="counter" data-target="10">0</h3>
+                <span>+</span>
+
+                <p>Years of Experience</p>
+
+            </div>
+
+            <!-- Stat 4 -->
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    <i class="fa-solid fa-id-card"></i>
+                </div>
+
+                <h3 class="counter" data-target="15">0</h3>
+                <span>+</span>
+
+                <p>Certified Instructors</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ==================== ACHIEVEMENTS END ==================== -->
+ <!-- ==================== VEHICLES & FACILITIES START ==================== -->
+<section class="vehicles section">
+
+    <div class="container">
+
+        <div class="vehicles-wrapper">
+
+            <!-- Left Images -->
+            <div class="vehicles-images">
+
+                <div class="main-image">
+                    <img src="images/vehicle-1.jpg" alt="Driving Training Car">
+                </div>
+
+                <div class="small-images">
+                    <img src="images/vehicle-2.jpg" alt="Driving Lesson">
+                    <img src="images/vehicle-3.jpg" alt="Instructor Training">
+                </div>
+
+            </div>
+
+            <!-- Right Content -->
+            <div class="vehicles-content">
+
+                <span class="section-subtitle">
+                    Training Vehicles & Facilities
+                </span>
+
+                <h2 class="section-title">
+                    Learn with Modern Cars in a Safe Training Environment
+                </h2>
+
+                <p class="section-description">
+                    We provide modern dual-control vehicles, experienced instructors,
+                    and structured practical training to help every student learn
+                    safely and confidently.
+                </p>
+
+                <div class="facility-list">
+
+                    <div class="facility-item">
+                        <div class="facility-icon">
+                            <i class="fa-solid fa-car-side"></i>
+                        </div>
+
+                        <div>
+                            <h4>Dual-Control Training Cars</h4>
+                            <p>
+                                Safe learning vehicles equipped with dual controls
+                                for maximum safety during lessons.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="facility-item">
+                        <div class="facility-icon">
+                            <i class="fa-solid fa-shield-heart"></i>
+                        </div>
+
+                        <div>
+                            <h4>Safety-Focused Training</h4>
+                            <p>
+                                Practical driving lessons with road safety awareness,
+                                defensive driving techniques, and real-road practice.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="facility-item">
+                        <div class="facility-icon">
+                            <i class="fa-solid fa-gauge-high"></i>
+                        </div>
+
+                        <div>
+                            <h4>Modern Learning Facilities</h4>
+                            <p>
+                                Comfortable training environment with flexible lesson
+                                scheduling and personalized instructor support.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <a href="booking.html" class="btn">
+                    Book Your First Lesson
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ==================== VEHICLES & FACILITIES END ==================== -->
+<!-- ==================== TESTIMONIALS START ==================== -->
+<section class="testimonials section">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <span class="section-subtitle">
+                Student Testimonials
+            </span>
+
+            <h2 class="section-title">
+                What Our Students Say
+            </h2>
+
+            <p class="section-description">
+                Real experiences from students who learned with our certified
+                instructors and successfully passed their driving tests.
+            </p>
+
+        </div>
+
+        <div class="testimonial-grid">
+
+            <!-- Testimonial 1 -->
+            <div class="testimonial-card">
+
+                <div class="testimonial-rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+
+                <p class="testimonial-text">
+                    The instructors were incredibly patient and supportive.
+                    Every lesson was well structured, and I passed my driving
+                    test on the first attempt with confidence.
+                </p>
+
+                <div class="testimonial-user">
+                    <img src="images/student-1.jpg" alt="Aishwarya">
+
+                    <div>
+                        <h4>Aishwarya R.</h4>
+                        <span>Automatic Driving Course</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="testimonial-card featured">
+
+                <div class="testimonial-rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+
+                <p class="testimonial-text">
+                    The mock driving tests and instructor feedback helped me
+                    improve quickly. I felt fully prepared for my driving exam
+                    and passed with confidence.
+                </p>
+
+                <div class="testimonial-user">
+                    <img src="images/student-2.jpg" alt="Karthik">
+
+                    <div>
+                        <h4>Karthik S.</h4>
+                        <span>Manual Driving Course</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="testimonial-card">
+
+                <div class="testimonial-rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+
+                <p class="testimonial-text">
+                    I was nervous before starting my lessons, but the instructors
+                    made learning enjoyable and easy. The flexible schedule
+                    worked perfectly with my college timings.
+                </p>
+
+                <div class="testimonial-user">
+                    <img src="images/student-3.jpg" alt="Priya">
+
+                    <div>
+                        <h4>Priya M.</h4>
+                        <span>Test Preparation Course</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ==================== TESTIMONIALS END ==================== -->
+<!-- ==================== CTA START ==================== -->
+<section class="cta section">
+
+    <div class="container">
+
+        <div class="cta-box">
+
+            <span class="cta-subtitle">
+                Book Your Lesson
+            </span>
+
+            <h2 class="cta-title">
+                Start Your Driving Journey Today
+            </h2>
+
+            <p class="cta-description">
+                Learn with certified instructors, modern training vehicles,
+                and flexible lesson schedules designed to help you become a
+                safe and confident driver.
+            </p>
+
+            <div class="cta-buttons">
+
+                <a href="booking.html" class="btn btn-primary">
+                    Book a Lesson
+                </a>
+
+                <a href="contact.html" class="btn btn-outline">
+                    Contact Us
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ==================== CTA END ==================== -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <!-- ==================== FOOTER START ==================== -->
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <!-- About -->
+            <div class="footer-about">
+
+                <a href="index.html" class="footer-logo">
+                    <img src="images/logo.png" alt="DriveLearn Logo">
+                </a>
+
+                <p>
+                    Professional driving lessons with certified instructors,
+                    flexible scheduling, and a simple booking system to help
+                    you become a confident and safe driver.
+                </p>
+
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-links">
+
+                <h4>Quick Links</h4>
+
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="lessons.html">Driving Lessons</a></li>
+                    <li><a href="booking.html">Booking</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+
+            </div>
+
+            <!-- Services -->
+            <div class="footer-services">
+
+                <h4>Our Services</h4>
+
+                <ul>
+                    <li><a href="#">Automatic Lessons</a></li>
+                    <li><a href="#">Manual Lessons</a></li>
+                    <li><a href="#">Intensive Courses</a></li>
+                    <li><a href="#">Refresher Lessons</a></li>
+                    <li><a href="#">Test Preparation</a></li>
+                </ul>
+
+            </div>
+
+            <!-- Contact -->
+            <div class="footer-contact">
+
+                <h4>Contact Info</h4>
+
+                <ul>
+
+                    <li>
+                        <i class="fas fa-location-dot"></i>
+                        Madurai, Tamil Nadu, India
+                    </li>
+
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        +91 98765 43210
+                    </li>
+
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        info@drivelearn.com
+                    </li>
+
+                    <li>
+                        <i class="fas fa-clock"></i>
+                        Mon - Sat : 8:00 AM - 7:00 PM
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+<!-- ==================== FOOTER END ==================== -->
+
+<!-- Scroll to Top Button -->
+<button id="scrollTopBtn" class="scroll-top-btn">
+    <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+
+
+<script src="js/script.js"></script>
+</body>
+</html>

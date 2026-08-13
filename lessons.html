@@ -1,0 +1,1215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DriveLearn - Driving Instructor & Lesson Booking</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/logo.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+    <!-- ==================== HEADER START ==================== -->
+<header class="header">
+
+    <div class="container">
+
+        <!--========== Logo ==========-->
+        <a href="index.html" class="logo">
+            <img src="images/logo.png" alt="DriveLearn">
+        </a>
+
+        <!--========== Navigation ==========-->
+        <nav class="navbar" id="navbar">
+
+            <ul class="nav-menu">
+
+                <li class="dropdown">
+                    <a href="#" class="nav-link">
+                        Home
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </a>
+
+                    <ul class="dropdown-menu">
+                        <li><a href="index.html">Home 1</a></li>
+                        <li><a href="home2.html">Home 2</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="about.html" class="nav-link">
+                        About
+                    </a>
+                </li>
+
+                <li>
+                    <a href="lessons.html" class="nav-link active">
+                        Lessons
+                    </a>
+                </li>
+
+                <li>
+                    <a href="booking.html" class="nav-link">
+                        Booking
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html" class="nav-link">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+            <!-- Mobile Buttons -->
+            <div class="mobile-btn">
+
+                <button class="theme-toggle" id="theme-toggle-mobile">
+                    <i class="fa-solid fa-moon"></i>
+                    <span>Dark Mode</span>
+                </button>
+
+                <button class="rtl-toggle" id="rtl-toggle-mobile">
+                    <i class="fa-solid fa-right-left"></i>
+                    <span>RTL / LTR</span>
+                </button>
+
+                <a href="dashboard.html" class="dashboard-btn">
+                    Dashboard
+                </a>
+
+                <a href="login.html" class="login-btn">
+                    Login
+                </a>
+
+            </div>
+
+        </nav>
+
+        <!-- Desktop Buttons -->
+        <div class="desktop-btn">
+
+            <button class="theme-toggle" id="theme-toggle">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+
+            <button class="rtl-toggle" id="rtl-toggle">
+                <i class="fa-solid fa-right-left"></i>
+            </button>
+
+            <a href="dashboard.html" class="dashboard-btn">
+                Dashboard
+            </a>
+
+            <a href="login.html" class="login-btn">
+                Login
+            </a>
+
+        </div>
+
+        <!-- Hamburger Menu -->
+        <div class="menu-toggle" id="menu-toggle">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+    </div>
+
+</header>
+<!-- ==================== HEADER END ==================== -->
+<!-- ==================== LESSONS BANNER START ==================== -->
+<section class="page-banner lessons-banner">
+
+    <div class="banner-overlay"></div>
+
+    <div class="container">
+
+        <div class="banner-content">
+
+            <span class="banner-subtitle">
+                Professional Driving Lessons
+            </span>
+
+            <h1>
+                Driving Lessons Designed for Every Skill Level
+            </h1>
+
+            <p>
+                Choose from beginner, manual, automatic, and refresher driving
+                lessons with certified instructors, flexible scheduling, and
+                structured training programs that prepare you for a confident
+                and successful driving test.
+            </p>
+
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <i class="fa-solid fa-angle-right"></i>
+                <span>Lessons</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ==================== LESSONS BANNER END ==================== -->
+
+<!-- ==================== LESSON PACKAGES START ==================== -->
+<section class="lesson-packages section">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <span class="section-subtitle">
+                Lesson Packages
+            </span>
+
+            <h2 class="section-title">
+                Choose the Right Driving Package for You
+            </h2>
+
+            <p class="section-description">
+                Whether you are a complete beginner or preparing for your
+                driving test, our structured lesson packages are designed to
+                help you learn with confidence and achieve your driving goals.
+            </p>
+
+        </div>
+
+        <div class="packages-grid">
+
+            <!-- Package 1 -->
+            <div class="package-card">
+
+                <div class="package-badge">
+                    Beginner
+                </div>
+
+                <h3>Beginner Driving Package</h3>
+
+                <div class="package-price">
+                    $350
+                </div>
+
+                <ul class="package-features">
+                    <li><i class="fa-solid fa-check"></i> 10 Driving Lessons</li>
+                    <li><i class="fa-solid fa-check"></i> 60 Minutes Per Lesson</li>
+                    <li><i class="fa-solid fa-check"></i> Manual or Automatic Vehicle</li>
+                    <li><i class="fa-solid fa-check"></i> Beginner-Friendly Training</li>
+                    <li><i class="fa-solid fa-check"></i> Instructor Progress Assessment</li>
+                </ul>
+
+                <a href="booking.html" class="btn btn-outline">
+                    Book Package
+                </a>
+
+            </div>
+
+            <!-- Package 2 -->
+            <div class="package-card featured">
+
+                <div class="package-badge">
+                    Most Popular
+                </div>
+
+                <h3>Manual Driving Course</h3>
+
+                <div class="package-price">
+                    $520
+                </div>
+
+                <ul class="package-features">
+                    <li><i class="fa-solid fa-check"></i> 15 Driving Lessons</li>
+                    <li><i class="fa-solid fa-check"></i> 60 Minutes Per Lesson</li>
+                    <li><i class="fa-solid fa-check"></i> Manual Transmission Vehicle</li>
+                    <li><i class="fa-solid fa-check"></i> Test Preparation Included</li>
+                    <li><i class="fa-solid fa-check"></i> Mock Driving Test Session</li>
+                </ul>
+
+                <a href="booking.html" class="btn btn-primary">
+                    Book Package
+                </a>
+
+            </div>
+
+            <!-- Package 3 -->
+            <div class="package-card">
+
+                <div class="package-badge">
+                    Automatic
+                </div>
+
+                <h3>Automatic Driving Course</h3>
+
+                <div class="package-price">
+                    $450
+                </div>
+
+                <ul class="package-features">
+                    <li><i class="fa-solid fa-check"></i> 12 Driving Lessons</li>
+                    <li><i class="fa-solid fa-check"></i> 60 Minutes Per Lesson</li>
+                    <li><i class="fa-solid fa-check"></i> Automatic Transmission Vehicle</li>
+                    <li><i class="fa-solid fa-check"></i> Flexible Scheduling</li>
+                    <li><i class="fa-solid fa-check"></i> Driving Test Guidance</li>
+                </ul>
+
+                <a href="booking.html" class="btn btn-outline">
+                    Book Package
+                </a>
+
+            </div>
+
+            <!-- Package 4 -->
+            <div class="package-card">
+
+                <div class="package-badge">
+                    Refresher
+                </div>
+
+                <h3>Refresher Driving Course</h3>
+
+                <div class="package-price">
+                    $180
+                </div>
+
+                <ul class="package-features">
+                    <li><i class="fa-solid fa-check"></i> 5 Driving Lessons</li>
+                    <li><i class="fa-solid fa-check"></i> 60 Minutes Per Lesson</li>
+                    <li><i class="fa-solid fa-check"></i> Manual or Automatic Vehicle</li>
+                    <li><i class="fa-solid fa-check"></i> Confidence-Building Sessions</li>
+                    <li><i class="fa-solid fa-check"></i> Parking & Road Skills Practice</li>
+                </ul>
+
+                <a href="booking.html" class="btn btn-outline">
+                    Book Package
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ==================== LESSON PACKAGES END ==================== -->
+
+<!-- ==================== VEHICLE TYPES START ==================== -->
+<section class="vehicle-types section">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <span class="section-subtitle">
+                Our Training Vehicles
+            </span>
+
+            <h2 class="section-title">
+                Choose Between Manual and Automatic Training
+            </h2>
+
+            <p class="section-description">
+                We provide both manual and automatic driving lessons using
+                modern dual-control vehicles, allowing you to choose the
+                training option that best suits your confidence level,
+                driving goals, and future driving needs.
+            </p>
+
+        </div>
+
+        <div class="vehicle-grid">
+
+            <!-- Manual Vehicle -->
+            <div class="vehicle-card">
+
+                <div class="vehicle-image">
+                    <img src="images/vehicle1.jpg"
+                         alt="Manual training vehicle">
+                </div>
+
+                <div class="vehicle-content">
+
+                    <span class="vehicle-badge">
+                        Manual Transmission
+                    </span>
+
+                    <h3>Manual Training Vehicle</h3>
+
+                    <p>
+                        Ideal for students who want complete driving skills,
+                        including clutch control, gear shifting, and advanced
+                        vehicle handling techniques.
+                    </p>
+
+                    <ul class="vehicle-features">
+                        <li><i class="fa-solid fa-check"></i> Clutch control training</li>
+                        <li><i class="fa-solid fa-check"></i> Gear shifting techniques</li>
+                        <li><i class="fa-solid fa-check"></i> Hill start practice</li>
+                        <li><i class="fa-solid fa-check"></i> Better long-term driving flexibility</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <!-- Automatic Vehicle -->
+            <div class="vehicle-card">
+
+                <div class="vehicle-image">
+                    <img src="images/vehicle2.jpg"
+                         alt="Automatic training vehicle">
+                </div>
+
+                <div class="vehicle-content">
+
+                    <span class="vehicle-badge">
+                        Automatic Transmission
+                    </span>
+
+                    <h3>Automatic Training Vehicle</h3>
+
+                    <p>
+                        Perfect for beginners and city drivers who want a
+                        simpler learning experience with faster confidence
+                        building and easier vehicle control.
+                    </p>
+
+                    <ul class="vehicle-features">
+                        <li><i class="fa-solid fa-check"></i> No clutch control required</li>
+                        <li><i class="fa-solid fa-check"></i> Easier for first-time learners</li>
+                        <li><i class="fa-solid fa-check"></i> Smoother city driving</li>
+                        <li><i class="fa-solid fa-check"></i> Faster confidence building</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ==================== VEHICLE TYPES END ==================== -->
+<!-- ==================== LESSON FEATURES START ==================== -->
+<section class="lesson-features section">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <span class="section-subtitle">
+                Every Lesson Includes
+            </span>
+
+            <h2 class="section-title">
+                Everything You Need to Learn with Confidence
+            </h2>
+
+            <p class="section-description">
+                Every driving lesson is designed to help you build practical
+                driving skills, improve road awareness, and prepare for your
+                driving test through structured one-to-one instruction.
+            </p>
+
+        </div>
+
+        <div class="lesson-features-grid">
+
+            <!-- Feature 1 -->
+            <div class="lesson-feature-card">
+
+                <div class="lesson-feature-icon">
+                    <i class="fa-regular fa-clock"></i>
+                </div>
+
+                <h3>60-Minute Driving Sessions</h3>
+
+                <p>
+                    Full one-hour lessons that provide enough time
+                    for practical driving and instructor feedback.
+                </p>
+
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="lesson-feature-card">
+
+                <div class="lesson-feature-icon">
+                    <i class="fa-solid fa-user-check"></i>
+                </div>
+
+                <h3>One-to-One Instructor Guidance</h3>
+
+                <p>
+                    Personalized instruction focused on your
+                    confidence level, strengths, and areas for improvement.
+                </p>
+
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="lesson-feature-card">
+
+                <div class="lesson-feature-icon">
+                    <i class="fa-solid fa-car-side"></i>
+                </div>
+
+                <h3>Dual-Control Training Vehicles</h3>
+
+                <p>
+                    Safe, modern training cars equipped with
+                    dual controls for added learner protection.
+                </p>
+
+            </div>
+
+            <!-- Feature 4 -->
+            <div class="lesson-feature-card">
+
+                <div class="lesson-feature-icon">
+                    <i class="fa-solid fa-chart-line"></i>
+                </div>
+
+                <h3>Progress Tracking & Feedback</h3>
+
+                <p>
+                    Receive regular progress assessments and
+                    constructive feedback after every lesson.
+                </p>
+
+            </div>
+
+            <!-- Feature 5 -->
+            <div class="lesson-feature-card">
+
+                <div class="lesson-feature-icon">
+                    <i class="fa-solid fa-clipboard-check"></i>
+                </div>
+
+                <h3>Mock Driving Test Preparation</h3>
+
+                <p>
+                    Practice with realistic test scenarios to
+                    improve confidence and increase your pass rate.
+                </p>
+
+            </div>
+
+            <!-- Feature 6 -->
+            <div class="lesson-feature-card">
+
+                <div class="lesson-feature-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+
+                <h3>Pickup & Drop-Off Options</h3>
+
+                <p>
+                    Convenient lesson scheduling with pickup and
+                    drop-off services available in selected areas.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ==================== LESSON FEATURES END ==================== -->
+<!-- ==================== LESSON PRICING START ==================== -->
+<section class="lesson-pricing section">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <span class="section-subtitle">
+                Lesson Pricing
+            </span>
+
+            <h2 class="section-title">
+                Flexible Lesson Options and Transparent Pricing
+            </h2>
+
+            <p class="section-description">
+                Choose the lesson option that fits your schedule and learning
+                goals. All packages include professional instruction, modern
+                training vehicles, and structured progress tracking.
+            </p>
+
+        </div>
+
+        <div class="pricing-grid">
+
+            <!-- Plan 1 -->
+            <div class="pricing-card">
+
+                <div class="pricing-image">
+                    <img src="images/pricing-1.jpg"
+                         alt="Single driving lesson">
+                </div>
+
+                <div class="pricing-content">
+
+                    <span class="pricing-badge">
+                        Single Lesson
+                    </span>
+
+                    <h3>Single Driving Lesson</h3>
+
+                    <div class="pricing-price">
+                        $45
+                    </div>
+
+                    <ul class="pricing-features">
+                        <li><i class="fa-solid fa-check"></i> 60-Minute Lesson</li>
+                        <li><i class="fa-solid fa-check"></i> Manual or Automatic Vehicle</li>
+                        <li><i class="fa-solid fa-check"></i> One-to-One Instruction</li>
+                        <li><i class="fa-solid fa-check"></i> Instructor Feedback</li>
+                    </ul>
+
+                    <a href="booking.html" class="btn btn-outline">
+                        Book Lesson
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- Plan 2 -->
+            <div class="pricing-card">
+
+                <div class="pricing-image">
+                    <img src="images/pricing-2.jpg"
+                         alt="Five lesson package">
+                </div>
+
+                <div class="pricing-content">
+
+                    <span class="pricing-badge">
+                        Starter Pack
+                    </span>
+
+                    <h3>5-Lesson Package</h3>
+
+                    <div class="pricing-price">
+                        $210
+                    </div>
+
+                    <ul class="pricing-features">
+                        <li><i class="fa-solid fa-check"></i> 5 x 60-Minute Lessons</li>
+                        <li><i class="fa-solid fa-check"></i> Manual or Automatic Vehicle</li>
+                        <li><i class="fa-solid fa-check"></i> Beginner Lesson Plan</li>
+                        <li><i class="fa-solid fa-check"></i> Progress Assessment</li>
+                    </ul>
+
+                    <a href="booking.html" class="btn btn-outline">
+                        Book Package
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- Plan 3 -->
+            <div class="pricing-card featured">
+
+                <div class="pricing-image">
+                    <img src="images/pricing-3.jpg"
+                         alt="Ten lesson package">
+                </div>
+
+                <div class="pricing-content">
+
+                    <span class="pricing-badge">
+                        Most Popular
+                    </span>
+
+                    <h3>10-Lesson Package</h3>
+
+                    <div class="pricing-price">
+                        $390
+                    </div>
+
+                    <ul class="pricing-features">
+                        <li><i class="fa-solid fa-check"></i> 10 x 60-Minute Lessons</li>
+                        <li><i class="fa-solid fa-check"></i> Manual or Automatic Vehicle</li>
+                        <li><i class="fa-solid fa-check"></i> Mock Driving Test</li>
+                        <li><i class="fa-solid fa-check"></i> Test Preparation Included</li>
+                    </ul>
+
+                    <a href="booking.html" class="btn btn-primary">
+                        Book Package
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- Plan 4 -->
+            <div class="pricing-card">
+
+                <div class="pricing-image">
+                    <img src="images/pricing-4.jpg"
+                         alt="Intensive driving course">
+                </div>
+
+                <div class="pricing-content">
+
+                    <span class="pricing-badge">
+                        Intensive
+                    </span>
+
+                    <h3>Intensive Test Prep</h3>
+
+                    <div class="pricing-price">
+                        $280
+                    </div>
+
+                    <ul class="pricing-features">
+                        <li><i class="fa-solid fa-check"></i> 5 x 90-Minute Lessons</li>
+                        <li><i class="fa-solid fa-check"></i> Manual or Automatic Vehicle</li>
+                        <li><i class="fa-solid fa-check"></i> Intensive Test Preparation</li>
+                        <li><i class="fa-solid fa-check"></i> Priority Booking Support</li>
+                    </ul>
+
+                    <a href="booking.html" class="btn btn-outline">
+                        Book Course
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ==================== LESSON PRICING END ==================== -->
+
+<!-- ==================== PASS RATE START ==================== -->
+<section class="pass-rate section">
+
+    <div class="container">
+
+        <div class="pass-rate-wrapper">
+
+            <div class="pass-rate-image">
+                <img src="images/pass-rate.jpg"
+                     alt="Student passing driving test">
+            </div>
+
+            <div class="pass-rate-content">
+
+                <span class="section-subtitle">
+                    Student Success
+                </span>
+
+                <h2 class="section-title">
+                    Our Students Pass with Confidence
+                </h2>
+
+                <p class="pass-rate-description">
+                    Our structured lesson plans, experienced instructors,
+                    and personalized training approach have helped thousands
+                    of learners build confidence and successfully pass their
+                    driving test on the first attempt.
+                </p>
+
+                <div class="pass-stats-grid">
+
+                    <div class="pass-stat-card featured">
+                        <h3>
+                            <span class="counter" data-target="98">0</span>%
+                        </h3>
+                        <p>First-Time Pass Rate</p>
+                    </div>
+
+                    <div class="pass-stat-card">
+                        <h3>
+                            <span class="counter" data-target="5000">0</span>+
+                        </h3>
+                        <p>Lessons Completed</p>
+                    </div>
+
+                    <div class="pass-stat-card">
+                        <h3>
+                            <span class="counter" data-target="12">0</span>+
+                        </h3>
+                        <p>Years of Experience</p>
+                    </div>
+
+                    <div class="pass-stat-card">
+                        <h3>
+                            <span class="counter" data-target="25">0</span>+
+                        </h3>
+                        <p>Certified Instructors</p>
+                    </div>
+
+                </div>
+
+                <a href="booking.html" class="btn btn-primary">
+                    Start Your Driving Journey
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ==================== PASS RATE END ==================== -->
+
+<!-- ==================== STUDENT PORTAL START ==================== -->
+<section class="student-portal section">
+
+    <div class="container">
+
+        <div class="portal-wrapper">
+
+            <div class="portal-content">
+
+                <span class="section-subtitle">
+                    Student Portal
+                </span>
+
+                <h2 class="section-title">
+                    Track Your Driving Progress Anytime
+                </h2>
+
+                <p class="portal-description">
+                    Our secure student portal allows you to manage lesson
+                    bookings, monitor completed driving hours, and stay on
+                    track toward your driving test with real-time progress
+                    updates and instructor feedback.
+                </p>
+
+                <div class="portal-features">
+
+                    <div class="portal-feature">
+                        <i class="fa-solid fa-calendar-check"></i>
+                        <div>
+                            <h4>Manage Lesson Bookings</h4>
+                            <p>Book, reschedule, or cancel lessons easily.</p>
+                        </div>
+                    </div>
+
+                    <div class="portal-feature">
+                        <i class="fa-solid fa-road"></i>
+                        <div>
+                            <h4>Track Driving Hours</h4>
+                            <p>Monitor completed and remaining required hours.</p>
+                        </div>
+                    </div>
+
+                    <div class="portal-feature">
+                        <i class="fa-solid fa-chart-line"></i>
+                        <div>
+                            <h4>Monitor Your Progress</h4>
+                            <p>View skill improvements and lesson performance.</p>
+                        </div>
+                    </div>
+
+                    <div class="portal-feature">
+                        <i class="fa-solid fa-comments"></i>
+                        <div>
+                            <h4>Instructor Feedback</h4>
+                            <p>Receive personalized comments after each lesson.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="portal-buttons">
+                    <a href="login.html" class="btn btn-primary">
+                        Student Login
+                    </a>
+                    <a href="booking.html" class="btn btn-outline">
+                        Book a Lesson
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="portal-dashboard">
+
+                <div class="dashboard-card">
+
+                    <div class="dashboard-header">
+                        <h3>Student Dashboard</h3>
+                        <span>Week 4</span>
+                    </div>
+
+                    <div class="progress-circle">
+                        <div class="progress-inner">
+                            <strong>72%</strong>
+                            <span>Completed</span>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-stats">
+
+                        <div class="dashboard-stat">
+                            <h4>18h</h4>
+                            <p>Completed Hours</p>
+                        </div>
+
+                        <div class="dashboard-stat">
+                            <h4>7h</h4>
+                            <p>Remaining Hours</p>
+                        </div>
+
+                    </div>
+
+                    <div class="next-lesson">
+                        <h4>Next Lesson</h4>
+                        <p>Tuesday, 10:00 AM</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ==================== STUDENT PORTAL END ==================== -->
+
+<!-- ==================== LESSONS FAQ START ==================== -->
+<section class="lessons-faq section">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <span class="section-subtitle">
+                Lessons FAQ
+            </span>
+
+            <h2 class="section-title">
+                Frequently Asked Questions About Driving Lessons
+            </h2>
+
+            <p class="section-description">
+                Find answers to the most common questions about our driving
+                lessons, booking process, lesson packages, and student portal.
+            </p>
+
+        </div>
+
+        <div class="lessons-faq-wrapper">
+
+            <!-- FAQ Item 1 -->
+            <div class="lessons-faq-item">
+
+                <button class="lessons-faq-question">
+                    <span>How long is each driving lesson?</span>
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+
+                <div class="lessons-faq-answer">
+                    <p>
+                        Most driving lessons are 60 minutes long, while
+                        intensive packages may include 90-minute sessions
+                        for more advanced training and test preparation.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- FAQ Item 2 -->
+            <div class="lessons-faq-item">
+
+                <button class="lessons-faq-question">
+                    <span>Can I switch between manual and automatic lessons?</span>
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+
+                <div class="lessons-faq-answer">
+                    <p>
+                        Yes. You can switch between manual and automatic
+                        training depending on your learning goals, confidence,
+                        and vehicle preference.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- FAQ Item 3 -->
+            <div class="lessons-faq-item">
+
+                <button class="lessons-faq-question">
+                    <span>How do I book or reschedule a lesson?</span>
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+
+                <div class="lessons-faq-answer">
+                    <p>
+                        You can book or reschedule lessons through our
+                        student portal or by contacting our team directly.
+                        Advance notice is recommended for schedule changes.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- FAQ Item 4 -->
+            <div class="lessons-faq-item">
+
+                <button class="lessons-faq-question">
+                    <span>Can I track my completed driving hours?</span>
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+
+                <div class="lessons-faq-answer">
+                    <p>
+                        Yes. The student portal allows you to view completed
+                        lesson hours, remaining required hours, instructor
+                        feedback, and overall learning progress.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- FAQ Item 5 -->
+            <div class="lessons-faq-item">
+
+                <button class="lessons-faq-question">
+                    <span>What happens if I miss a scheduled lesson?</span>
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+
+                <div class="lessons-faq-answer">
+                    <p>
+                        Missed lessons may be subject to our cancellation
+                        policy. Please notify us as early as possible if
+                        you need to cancel or reschedule.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- FAQ Item 6 -->
+            <div class="lessons-faq-item">
+
+                <button class="lessons-faq-question">
+                    <span>Do I need a learner’s permit before starting lessons?</span>
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+
+                <div class="lessons-faq-answer">
+                    <p>
+                        Requirements vary by location. Our team can guide
+                        you through the learner’s permit process and help
+                        you understand the local licensing requirements.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ==================== LESSONS FAQ END ==================== -->
+
+<!-- ==================== LESSONS CTA START ==================== -->
+<section class="lessons-cta section">
+
+    <div class="container">
+
+        <div class="lessons-cta-box">
+
+            <div class="lessons-cta-content">
+
+                <span class="lessons-cta-subtitle">
+                    Book Your First Lesson
+                </span>
+
+                <h2>
+                    Ready to Start Your Driving Lessons?
+                </h2>
+
+                <p>
+                    Begin your driving journey with certified instructors,
+                    modern dual-control vehicles, flexible scheduling, and
+                    personalized lessons designed to help you pass your
+                    driving test with confidence.
+                </p>
+
+                <div class="lessons-cta-buttons">
+
+                    <a href="booking.html" class="btn btn-primary">
+                        Book Your First Lesson
+                    </a>
+
+                    <a href="login.html" class="btn btn-outline">
+                        Student Login
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="lessons-cta-image">
+
+                <img src="images/lesson-cta.jpg"
+                     alt="Driving lesson with instructor and student">
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ==================== LESSONS CTA END ==================== -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ==================== FOOTER START ==================== -->
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <!-- About -->
+            <div class="footer-about">
+
+                <a href="index.html" class="footer-logo">
+                    <img src="images/logo.png" alt="DriveLearn Logo">
+                </a>
+
+                <p>
+                    Professional driving lessons with certified instructors,
+                    flexible scheduling, and a simple booking system to help
+                    you become a confident and safe driver.
+                </p>
+
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-links">
+
+                <h4>Quick Links</h4>
+
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="lessons.html">Driving Lessons</a></li>
+                    <li><a href="booking.html">Booking</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+
+            </div>
+
+            <!-- Services -->
+            <div class="footer-services">
+
+                <h4>Our Services</h4>
+
+                <ul>
+                    <li><a href="#">Automatic Lessons</a></li>
+                    <li><a href="#">Manual Lessons</a></li>
+                    <li><a href="#">Intensive Courses</a></li>
+                    <li><a href="#">Refresher Lessons</a></li>
+                    <li><a href="#">Test Preparation</a></li>
+                </ul>
+
+            </div>
+
+            <!-- Contact -->
+            <div class="footer-contact">
+
+                <h4>Contact Info</h4>
+
+                <ul>
+
+                    <li>
+                        <i class="fas fa-location-dot"></i>
+                        Madurai, Tamil Nadu, India
+                    </li>
+
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        +91 98765 43210
+                    </li>
+
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        info@drivelearn.com
+                    </li>
+
+                    <li>
+                        <i class="fas fa-clock"></i>
+                        Mon - Sat : 8:00 AM - 7:00 PM
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+<!-- ==================== FOOTER END ==================== -->
+
+
+<!-- Scroll to Top Button -->
+<button id="scrollTopBtn" class="scroll-top-btn">
+    <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+
+<script src="js/script.js"></script>
+</body>
+</html>

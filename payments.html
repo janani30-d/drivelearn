@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DriveLearn Student Dashboard</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/logo.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Dashboard CSS -->
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/dash-res.css">
+</head>
+<body>
+
+
+
+
+<div class="dashboard-layout">
+
+        <!-- ==================== SIDEBAR ==================== -->
+        <aside class="dashboard-sidebar">
+
+            <div class="sidebar-logo">
+    <a href="index.html">
+        <img src="images/logo.png" alt="DriveLearn Logo" class="logo-image">
+    </a>
+</div>
+
+            <nav class="sidebar-nav">
+
+                <a href="dashboard.html" class="nav-item">
+                    <i class="fa-solid fa-table-columns"></i>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="my-lessons.html" class="nav-item">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <span>My Lessons</span>
+                </a>
+
+                <a href="book-lesson.html" class="nav-item">
+                    <i class="fa-solid fa-calendar-plus"></i>
+                    <span>Book Lesson</span>
+                </a>
+
+                <a href="progress.html" class="nav-item">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <span>Progress</span>
+                </a>
+
+                <a href="payments.html" class="nav-item active">
+                    <i class="fa-solid fa-credit-card"></i>
+                    <span>Payments</span>
+                </a>
+
+                
+
+            </nav>
+
+            <div class="sidebar-footer">
+    <a href="#" id="logoutBtn" class="logout-btn">
+        <i class="fa-solid fa-right-from-bracket"></i>
+        <span>Logout</span>
+    </a>
+</div>
+
+        </aside>
+
+        <!-- ==================== MAIN CONTENT ==================== -->
+        <main class="dashboard-main">
+
+            <!-- Header -->
+            <header class="dashboard-header">
+
+                <div class="header-left">
+                    <button class="sidebar-toggle" id="sidebar-toggle">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+
+                    <div>
+                        <p class="header-label">Student Dashboard</p>
+                        <h1>Dashboard</h1>
+                    </div>
+                </div>
+
+                <div class="header-right">
+
+                    <button class="header-icon">
+                        <i class="fa-regular fa-bell"></i>
+                        <span class="notification-badge">3</span>
+                    </button>
+
+                    <button class="header-icon">
+                        <i class="fa-solid fa-gear"></i>
+                    </button>
+
+                    <button class="header-icon" id="theme-toggle">
+                        <i class="fa-solid fa-moon"></i>
+                    </button>
+
+                    <button class="header-icon" id="rtl-toggle">
+                        <i class="fa-solid fa-right-left"></i>
+                    </button>
+
+                    <div class="user-profile">
+                        <img src="images/avatar.jpg" alt="Student">
+                        <div class="user-info">
+                            <h4>Priya</h4>
+                            <span>Student Account</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </header>
+            <!-- ==================== Payments Hero ==================== -->
+<section class="payments-hero">
+
+    <div class="payments-hero-content">
+
+        <span class="hero-badge">DriveLearn Payments</span>
+
+        <h2>Manage your driving lesson payments securely in one place.</h2>
+
+        <p>
+            Track completed lesson payments, upcoming dues, invoices,
+            wallet balance, and payment history with a secure and
+            organized billing dashboard.
+        </p>
+
+    </div>
+
+    <div class="payments-hero-action">
+
+        <a href="#payment-history" class="btn btn-primary">
+            <i class="fa-solid fa-download"></i>
+            Download Receipt
+        </a>
+
+    </div>
+
+</section>
+
+<!-- ==================== Payment Overview ==================== -->
+<section class="payment-overview-section">
+
+    <div class="section-header">
+
+        <div>
+            <h3>Payment Overview</h3>
+            <p>A quick summary of Priya’s lesson payments and billing status</p>
+        </div>
+
+        <span class="section-count payment">Updated Today</span>
+
+    </div>
+
+    <div class="payment-overview-grid">
+
+        <!-- Total Paid -->
+        <div class="payment-card">
+
+            <div class="payment-icon green">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+
+            <div class="payment-info">
+                <span>Total Paid</span>
+                <h3>₹18,450</h3>
+                <p>18 successful lesson payments</p>
+            </div>
+
+        </div>
+
+        <!-- Outstanding Balance -->
+        <div class="payment-card">
+
+            <div class="payment-icon orange">
+                <i class="fa-solid fa-wallet"></i>
+            </div>
+
+            <div class="payment-info">
+                <span>Outstanding Balance</span>
+                <h3>₹1,200</h3>
+                <p>Due for upcoming driving lessons</p>
+            </div>
+
+        </div>
+
+        <!-- Wallet Balance -->
+        <div class="payment-card">
+
+            <div class="payment-icon blue">
+                <i class="fa-solid fa-credit-card"></i>
+            </div>
+
+            <div class="payment-info">
+                <span>Wallet Balance</span>
+                <h3>₹850</h3>
+                <p>Available for future lesson bookings</p>
+            </div>
+
+        </div>
+
+        <!-- Next Payment Due -->
+        <div class="payment-card">
+
+            <div class="payment-icon purple">
+                <i class="fa-solid fa-calendar-days"></i>
+            </div>
+
+            <div class="payment-info">
+                <span>Next Payment Due</span>
+                <h3>16 Aug</h3>
+                <p>Automatic reminder enabled</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==================== Recent Payment History ==================== -->
+<section class="payment-history-section" id="payment-history">
+
+    <div class="section-header">
+
+        <div>
+            <h3>Recent Payment History</h3>
+            <p>View Priya’s recent lesson payments, invoices, and transaction status</p>
+        </div>
+
+        <a href="#" class="section-link">
+            View All Transactions
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+    </div>
+
+    <div class="payment-history-card">
+
+        <div class="payment-table-wrapper">
+
+            <table class="payment-table">
+
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Lesson</th>
+                        <th>Payment Method</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                        <th>Invoice</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>12 Aug 2026</td>
+                        <td>Practical Driving Lesson</td>
+                        <td>
+                            <div class="payment-method">
+                                <i class="fa-solid fa-mobile-screen-button"></i>
+                                UPI
+                            </div>
+                        </td>
+                        <td class="amount">₹1,200</td>
+                        <td>
+                            <span class="status-badge paid">Paid</span>
+                        </td>
+                        <td>
+                            <a href="#" class="invoice-link">
+                                <i class="fa-solid fa-download"></i>
+                                Receipt
+                            </a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>08 Aug 2026</td>
+                        <td>Parking Practice Session</td>
+                        <td>
+                            <div class="payment-method">
+                                <i class="fa-regular fa-credit-card"></i>
+                                Card
+                            </div>
+                        </td>
+                        <td class="amount">₹850</td>
+                        <td>
+                            <span class="status-badge paid">Paid</span>
+                        </td>
+                        <td>
+                            <a href="#" class="invoice-link">
+                                <i class="fa-solid fa-download"></i>
+                                Receipt
+                            </a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>03 Aug 2026</td>
+                        <td>Highway Driving Lesson</td>
+                        <td>
+                            <div class="payment-method">
+                                <i class="fa-solid fa-wallet"></i>
+                                Wallet
+                            </div>
+                        </td>
+                        <td class="amount">₹1,500</td>
+                        <td>
+                            <span class="status-badge paid">Paid</span>
+                        </td>
+                        <td>
+                            <a href="#" class="invoice-link">
+                                <i class="fa-solid fa-download"></i>
+                                Receipt
+                            </a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>30 Jul 2026</td>
+                        <td>Mock Driving Test</td>
+                        <td>
+                            <div class="payment-method">
+                                <i class="fa-regular fa-credit-card"></i>
+                                Card
+                            </div>
+                        </td>
+                        <td class="amount">₹1,000</td>
+                        <td>
+                            <span class="status-badge pending">Pending</span>
+                        </td>
+                        <td>
+                            <a href="#" class="invoice-link">
+                                <i class="fa-solid fa-eye"></i>
+                                View
+                            </a>
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+            </main>
+
+    </div>
+<!-- Logout Confirmation Modal -->
+<div class="logout-modal" id="logoutModal">
+    <div class="logout-modal-content">
+
+        <div class="logout-icon">
+            <i class="fa-solid fa-right-from-bracket"></i>
+        </div>
+
+        <h3>Are you sure you want to logout?</h3>
+
+        <div class="logout-actions">
+            <button class="btn btn-danger" id="confirmLogout">Yes</button>
+            <button class="btn btn-outline" id="cancelLogout">No</button>
+        </div>
+
+    </div>
+</div>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

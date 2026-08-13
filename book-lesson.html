@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DriveLearn Student Dashboard</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/logo.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Dashboard CSS -->
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/dash-res.css">
+</head>
+<body>
+
+    <div class="dashboard-layout">
+
+        <!-- ==================== SIDEBAR ==================== -->
+        <aside class="dashboard-sidebar">
+
+            <div class="sidebar-logo">
+    <a href="index.html">
+        <img src="images/logo.png" alt="DriveLearn Logo" class="logo-image">
+    </a>
+</div>
+
+            <nav class="sidebar-nav">
+
+                <a href="dashboard.html" class="nav-item">
+                    <i class="fa-solid fa-table-columns"></i>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="my-lessons.html" class="nav-item">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <span>My Lessons</span>
+                </a>
+
+                <a href="book-lesson.html" class="nav-item active">
+                    <i class="fa-solid fa-calendar-plus"></i>
+                    <span>Book Lesson</span>
+                </a>
+
+                <a href="progress.html" class="nav-item">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <span>Progress</span>
+                </a>
+
+                <a href="payments.html" class="nav-item">
+                    <i class="fa-solid fa-credit-card"></i>
+                    <span>Payments</span>
+                </a>
+
+                
+
+            </nav>
+
+            <div class="sidebar-footer">
+    <a href="#" id="logoutBtn" class="logout-btn">
+        <i class="fa-solid fa-right-from-bracket"></i>
+        <span>Logout</span>
+    </a>
+</div>
+
+        </aside>
+
+        <!-- ==================== MAIN CONTENT ==================== -->
+        <main class="dashboard-main">
+
+            <!-- Header -->
+            <header class="dashboard-header">
+
+                <div class="header-left">
+                    <button class="sidebar-toggle" id="sidebar-toggle">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+
+                    <div>
+                        <p class="header-label">Student Dashboard</p>
+                        <h1>Dashboard</h1>
+                    </div>
+                </div>
+
+                <div class="header-right">
+
+                    <button class="header-icon">
+                        <i class="fa-regular fa-bell"></i>
+                        <span class="notification-badge">3</span>
+                    </button>
+
+                    <button class="header-icon">
+                        <i class="fa-solid fa-gear"></i>
+                    </button>
+
+                    <button class="header-icon" id="theme-toggle">
+                        <i class="fa-solid fa-moon"></i>
+                    </button>
+
+                    <button class="header-icon" id="rtl-toggle">
+                        <i class="fa-solid fa-right-left"></i>
+                    </button>
+
+                    <div class="user-profile">
+                        <img src="images/avatar.jpg" alt="Student">
+                        <div class="user-info">
+                            <h4>Priya</h4>
+                            <span>Student Account</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </header>
+            <!-- ==================== Book Lesson Hero ==================== -->
+<section class="booking-hero">
+
+    <div class="booking-hero-content">
+        <span class="hero-badge">DriveLearn Booking</span>
+        <h2>Book your next driving lesson with a certified instructor.</h2>
+        <p>
+            Choose your preferred instructor, lesson type, date, and time.
+            Flexible scheduling is available throughout the week.
+        </p>
+    </div>
+
+    <div class="booking-hero-action">
+        <a href="#booking-form" class="btn btn-primary">
+            <i class="fa-solid fa-calendar-plus"></i>
+            Schedule Lesson
+        </a>
+    </div>
+
+</section>
+
+<!-- ==================== Booking Summary ==================== -->
+<section class="booking-summary">
+
+    <div class="summary-card">
+        <div class="summary-icon blue">
+            <i class="fa-solid fa-user-tie"></i>
+        </div>
+
+        <div class="summary-content">
+            <span>Available Instructors</span>
+            <h3>6</h3>
+            <p>Certified instructors available</p>
+        </div>
+    </div>
+
+    <div class="summary-card">
+        <div class="summary-icon green">
+            <i class="fa-solid fa-calendar-check"></i>
+        </div>
+
+        <div class="summary-content">
+            <span>Available Time Slots</span>
+            <h3>24</h3>
+            <p>This week availability</p>
+        </div>
+    </div>
+
+    <div class="summary-card">
+        <div class="summary-icon orange">
+            <i class="fa-solid fa-clock"></i>
+        </div>
+
+        <div class="summary-content">
+            <span>Remaining Driving Hours</span>
+            <h3>12h</h3>
+            <p>Based on Priya’s lesson plan</p>
+        </div>
+    </div>
+
+</section>
+<!-- ==================== Book Lesson Form ==================== -->
+<section class="booking-form-section" id="booking-form">
+
+    <div class="booking-layout">
+
+        <!-- Left: Booking Form -->
+        <div class="booking-form-card">
+
+            <div class="section-header">
+                <div>
+                    <h3>Book a Driving Lesson</h3>
+                    <p>Select your preferred lesson type, instructor, date, and time</p>
+                </div>
+            </div>
+
+            <form class="booking-form">
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label>Lesson Type</label>
+                        <select>
+                            <option>Practical Driving Lesson</option>
+                            <option>Parking Practice</option>
+                            <option>Highway Driving</option>
+                            <option>Night Driving</option>
+                            <option>Mock Driving Test</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Instructor</label>
+                        <select>
+                            <option>Sarah Johnson</option>
+                            <option>Michael Lee</option>
+                            <option>Emma Brown</option>
+                            <option>David Wilson</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Preferred Date</label>
+                        <input type="date">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Preferred Time</label>
+                        <select>
+                            <option>09:00 AM</option>
+                            <option>10:00 AM</option>
+                            <option>11:30 AM</option>
+                            <option>02:00 PM</option>
+                            <option>04:00 PM</option>
+                            <option>06:00 PM</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Vehicle Type</label>
+                        <select>
+                            <option>Automatic</option>
+                            <option>Manual</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Lesson Duration</label>
+                        <select>
+                            <option>60 Minutes</option>
+                            <option>90 Minutes</option>
+                            <option>120 Minutes</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="form-group full-width">
+                    <label>Pickup Location</label>
+                    <input type="text" placeholder="Enter your pickup location">
+                </div>
+
+                <div class="form-group full-width">
+                    <label>Additional Notes</label>
+                    <textarea rows="4" placeholder="Any special requests or learning goals for this lesson?"></textarea>
+                </div>
+
+                <div class="booking-submit">
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fa-solid fa-calendar-check"></i>
+                        Confirm Booking
+                    </button>
+                </div>
+
+            </form>
+
+        </div>
+
+        <!-- Right: Booking Summary -->
+        <aside class="booking-summary-card">
+
+            <h3>Booking Summary</h3>
+
+            <div class="summary-item">
+                <span>Student</span>
+                <strong>Priya</strong>
+            </div>
+
+            <div class="summary-item">
+                <span>Lesson Type</span>
+                <strong>Practical Driving</strong>
+            </div>
+
+            <div class="summary-item">
+                <span>Duration</span>
+                <strong>90 Minutes</strong>
+            </div>
+
+            <div class="summary-item">
+                <span>Instructor</span>
+                <strong>Sarah Johnson</strong>
+            </div>
+
+            <div class="summary-item">
+                <span>Vehicle</span>
+                <strong>Automatic</strong>
+            </div>
+
+            <div class="summary-divider"></div>
+
+            <div class="summary-item total">
+                <span>Lesson Fee</span>
+                <strong>$45.00</strong>
+            </div>
+
+            <div class="booking-note">
+                <i class="fa-solid fa-circle-info"></i>
+                Free rescheduling up to 24 hours before the lesson.
+            </div>
+
+        </aside>
+
+    </div>
+
+</section>
+<!-- ==================== Available Time Slots ==================== -->
+<section class="time-slots-section">
+
+    <div class="section-header">
+
+        <div>
+            <h3>Available Time Slots</h3>
+            <p>Select an available time slot for your driving lesson</p>
+        </div>
+
+        <span class="section-count available">24 Slots Available</span>
+
+    </div>
+
+    <div class="time-slots-card">
+
+        <!-- Wednesday -->
+        <div class="day-slots">
+
+            <div class="day-header">
+                <h4>Wednesday</h4>
+                <span>13 Aug 2026</span>
+            </div>
+
+            <div class="slots-grid">
+                <button class="slot-btn available">09:00 AM</button>
+                <button class="slot-btn available">10:00 AM</button>
+                <button class="slot-btn selected">11:30 AM</button>
+                <button class="slot-btn booked">01:00 PM</button>
+                <button class="slot-btn available">02:00 PM</button>
+                <button class="slot-btn available">04:00 PM</button>
+            </div>
+
+        </div>
+
+        <!-- Thursday -->
+        <div class="day-slots">
+
+            <div class="day-header">
+                <h4>Thursday</h4>
+                <span>14 Aug 2026</span>
+            </div>
+
+            <div class="slots-grid">
+                <button class="slot-btn available">09:30 AM</button>
+                <button class="slot-btn available">11:00 AM</button>
+                <button class="slot-btn available">12:30 PM</button>
+                <button class="slot-btn booked">02:30 PM</button>
+                <button class="slot-btn available">04:30 PM</button>
+                <button class="slot-btn available">06:00 PM</button>
+            </div>
+
+        </div>
+
+        <!-- Friday -->
+        <div class="day-slots">
+
+            <div class="day-header">
+                <h4>Friday</h4>
+                <span>15 Aug 2026</span>
+            </div>
+
+            <div class="slots-grid">
+                <button class="slot-btn available">08:30 AM</button>
+                <button class="slot-btn available">10:30 AM</button>
+                <button class="slot-btn available">01:30 PM</button>
+                <button class="slot-btn available">03:30 PM</button>
+                <button class="slot-btn available">05:00 PM</button>
+                <button class="slot-btn booked">06:30 PM</button>
+            </div>
+
+        </div>
+
+        <!-- Legend -->
+        <div class="slots-legend">
+
+            <div class="legend-item">
+                <span class="legend-color available"></span>
+                Available
+            </div>
+
+            <div class="legend-item">
+                <span class="legend-color selected"></span>
+                Selected
+            </div>
+
+            <div class="legend-item">
+                <span class="legend-color booked"></span>
+                Booked
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+            </main>
+
+    </div>
+<!-- Logout Confirmation Modal -->
+<div class="logout-modal" id="logoutModal">
+    <div class="logout-modal-content">
+
+        <div class="logout-icon">
+            <i class="fa-solid fa-right-from-bracket"></i>
+        </div>
+
+        <h3>Are you sure you want to logout?</h3>
+
+        <div class="logout-actions">
+            <button class="btn btn-danger" id="confirmLogout">Yes</button>
+            <button class="btn btn-outline" id="cancelLogout">No</button>
+        </div>
+
+    </div>
+</div>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

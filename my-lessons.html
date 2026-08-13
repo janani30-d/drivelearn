@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DriveLearn Student Dashboard</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/logo.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Dashboard CSS -->
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/dash-res.css">
+</head>
+<body>
+
+
+
+
+<div class="dashboard-layout">
+
+        <!-- ==================== SIDEBAR ==================== -->
+        <aside class="dashboard-sidebar">
+
+            <div class="sidebar-logo">
+    <a href="index.html">
+        <img src="images/logo.png" alt="DriveLearn Logo" class="logo-image">
+    </a>
+</div>
+
+            <nav class="sidebar-nav">
+
+                <a href="dashboard.html" class="nav-item">
+                    <i class="fa-solid fa-table-columns"></i>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="my-lessons.html" class="nav-item active">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <span>My Lessons</span>
+                </a>
+
+                <a href="book-lesson.html" class="nav-item">
+                    <i class="fa-solid fa-calendar-plus"></i>
+                    <span>Book Lesson</span>
+                </a>
+
+                <a href="progress.html" class="nav-item">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <span>Progress</span>
+                </a>
+
+                <a href="payments.html" class="nav-item">
+                    <i class="fa-solid fa-credit-card"></i>
+                    <span>Payments</span>
+                </a>
+
+                
+
+            </nav>
+
+            <div class="sidebar-footer">
+    <a href="#" id="logoutBtn" class="logout-btn">
+        <i class="fa-solid fa-right-from-bracket"></i>
+        <span>Logout</span>
+    </a>
+</div>
+
+        </aside>
+
+        <!-- ==================== MAIN CONTENT ==================== -->
+        <main class="dashboard-main">
+
+            <!-- Header -->
+            <header class="dashboard-header">
+
+                <div class="header-left">
+                    <button class="sidebar-toggle" id="sidebar-toggle">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+
+                    <div>
+                        <p class="header-label">Student Dashboard</p>
+                        <h1>Dashboard</h1>
+                    </div>
+                </div>
+
+                <div class="header-right">
+
+                    <button class="header-icon">
+                        <i class="fa-regular fa-bell"></i>
+                        <span class="notification-badge">3</span>
+                    </button>
+
+                    <button class="header-icon">
+                        <i class="fa-solid fa-gear"></i>
+                    </button>
+
+                    <button class="header-icon" id="theme-toggle">
+                        <i class="fa-solid fa-moon"></i>
+                    </button>
+
+                    <button class="header-icon" id="rtl-toggle">
+                        <i class="fa-solid fa-right-left"></i>
+                    </button>
+
+                    <div class="user-profile">
+                        <img src="images/avatar.jpg" alt="Student">
+                        <div class="user-info">
+                            <h4>Priya</h4>
+                            <span>Student Account</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </header>
+            <!-- ==================== My Lessons Hero ==================== -->
+<section class="lessons-hero">
+
+    <div class="lessons-hero-content">
+        <span class="hero-badge">DriveLearn Schedule</span>
+        <h2>Your driving lessons and upcoming schedule.</h2>
+        <p>
+            View upcoming lessons, completed sessions, instructor details,
+            and manage your driving schedule from one place.
+        </p>
+    </div>
+
+    <div class="lessons-hero-action">
+        <a href="book-lesson.html" class="btn btn-primary">
+            <i class="fa-solid fa-calendar-plus"></i>
+            Book New Lesson
+        </a>
+    </div>
+
+</section>
+
+<!-- ==================== Lesson Summary ==================== -->
+<section class="lesson-summary">
+
+    <div class="summary-card">
+        <div class="summary-icon blue">
+            <i class="fa-solid fa-calendar-days"></i>
+        </div>
+
+        <div class="summary-content">
+            <span>Upcoming Lessons</span>
+            <h3>4</h3>
+            <p>Next lesson tomorrow</p>
+        </div>
+    </div>
+
+    <div class="summary-card">
+        <div class="summary-icon green">
+            <i class="fa-solid fa-circle-check"></i>
+        </div>
+
+        <div class="summary-content">
+            <span>Completed Lessons</span>
+            <h3>18</h3>
+            <p>72% course completed</p>
+        </div>
+    </div>
+
+    <div class="summary-card">
+        <div class="summary-icon orange">
+            <i class="fa-solid fa-clock"></i>
+        </div>
+
+        <div class="summary-content">
+            <span>Total Driving Hours</span>
+            <h3>18h</h3>
+            <p>12 hours remaining</p>
+        </div>
+    </div>
+
+</section>
+<!-- ==================== Upcoming Lessons ==================== -->
+<section class="upcoming-lessons-section">
+
+    <div class="section-header">
+
+        <div>
+            <h3>Upcoming Lessons</h3>
+            <p>Manage your scheduled driving lessons and upcoming sessions</p>
+        </div>
+
+        <span class="section-count">4 Scheduled</span>
+
+    </div>
+
+    <div class="lesson-list">
+
+        <!-- Lesson Card 1 -->
+        <div class="lesson-card">
+
+            <div class="lesson-date-box">
+                <span class="day">13</span>
+                <span class="month">AUG</span>
+            </div>
+
+            <div class="lesson-details">
+
+                <div class="lesson-top">
+                    <h4>Practical Driving Lesson</h4>
+                    <span class="status-badge confirmed">Confirmed</span>
+                </div>
+
+                <div class="lesson-meta">
+                    <span>
+                        <i class="fa-regular fa-clock"></i>
+                        Tomorrow, 10:00 AM
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-user"></i>
+                        Sarah Johnson
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-car"></i>
+                        Automatic
+                    </span>
+
+                    <span>
+                        <i class="fa-regular fa-hourglass-half"></i>
+                        90 Minutes
+                    </span>
+                </div>
+
+                <div class="lesson-actions">
+                    <a href="booking.html" class="btn btn-outline">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        Reschedule
+                    </a>
+
+                    <a href="#" class="btn btn-danger">
+                        <i class="fa-solid fa-xmark"></i>
+                        Cancel
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Lesson Card 2 -->
+        <div class="lesson-card">
+
+            <div class="lesson-date-box">
+                <span class="day">15</span>
+                <span class="month">AUG</span>
+            </div>
+
+            <div class="lesson-details">
+
+                <div class="lesson-top">
+                    <h4>Parking Practice Session</h4>
+                    <span class="status-badge scheduled">Scheduled</span>
+                </div>
+
+                <div class="lesson-meta">
+                    <span>
+                        <i class="fa-regular fa-clock"></i>
+                        15 Aug, 2:00 PM
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-user"></i>
+                        Michael Lee
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-car"></i>
+                        Manual
+                    </span>
+
+                    <span>
+                        <i class="fa-regular fa-hourglass-half"></i>
+                        60 Minutes
+                    </span>
+                </div>
+
+                <div class="lesson-actions">
+                    <a href="booking.html" class="btn btn-outline">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        Reschedule
+                    </a>
+
+                    <a href="#" class="btn btn-danger">
+                        <i class="fa-solid fa-xmark"></i>
+                        Cancel
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ==================== Completed Lessons ==================== -->
+<section class="completed-lessons-section">
+
+    <div class="section-header">
+
+        <div>
+            <h3>Completed Lessons</h3>
+            <p>Review Priya’s completed driving lessons and instructor feedback</p>
+        </div>
+
+        <span class="section-count completed">18 Completed</span>
+
+    </div>
+
+    <div class="completed-list">
+
+        <!-- Completed Card 1 -->
+        <div class="completed-card">
+
+            <div class="completed-icon">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+
+            <div class="completed-details">
+
+                <div class="completed-top">
+                    <h4>Practical Driving Lesson</h4>
+                    <span class="status-badge completed">Completed</span>
+                </div>
+
+                <div class="completed-meta">
+                    <span>
+                        <i class="fa-regular fa-calendar"></i>
+                        12 Aug 2026
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-user"></i>
+                        Sarah Johnson
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-car"></i>
+                        Automatic
+                    </span>
+
+                    <span>
+                        <i class="fa-regular fa-hourglass-half"></i>
+                        90 Minutes
+                    </span>
+                </div>
+
+                <div class="lesson-rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <span>Excellent progress</span>
+                </div>
+
+                <div class="completed-actions">
+                    <a href="#" class="btn btn-outline">
+                        <i class="fa-regular fa-file-lines"></i>
+                        View Feedback
+                    </a>
+
+                    <a href="#" class="btn btn-outline">
+                        <i class="fa-solid fa-download"></i>
+                        Receipt
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Completed Card 2 -->
+        <div class="completed-card">
+
+            <div class="completed-icon">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+
+            <div class="completed-details">
+
+                <div class="completed-top">
+                    <h4>Parking Practice Session</h4>
+                    <span class="status-badge completed">Completed</span>
+                </div>
+
+                <div class="completed-meta">
+                    <span>
+                        <i class="fa-regular fa-calendar"></i>
+                        10 Aug 2026
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-user"></i>
+                        Michael Lee
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-car"></i>
+                        Manual
+                    </span>
+
+                    <span>
+                        <i class="fa-regular fa-hourglass-half"></i>
+                        60 Minutes
+                    </span>
+                </div>
+
+                <div class="lesson-rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <span>Parking accuracy improved</span>
+                </div>
+
+                <div class="completed-actions">
+                    <a href="#" class="btn btn-outline">
+                        <i class="fa-regular fa-file-lines"></i>
+                        View Feedback
+                    </a>
+
+                    <a href="#" class="btn btn-outline">
+                        <i class="fa-solid fa-download"></i>
+                        Receipt
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ==================== Instructor Feedback & Notes ==================== -->
+<section class="instructor-feedback-section">
+
+    <div class="section-header">
+
+        <div>
+            <h3>Instructor Feedback & Notes</h3>
+            <p>Latest feedback from your driving instructor after recent lessons</p>
+        </div>
+
+        <a href="#" class="section-link">
+            View All Feedback
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+    </div>
+
+    <div class="feedback-card">
+
+        <div class="feedback-header">
+
+            <div class="instructor-profile">
+                <img src="images/instructor-1.jpg" alt="Sarah Johnson">
+
+                <div>
+                    <h4>Sarah Johnson</h4>
+                    <span>Senior Driving Instructor</span>
+                </div>
+            </div>
+
+            <div class="feedback-date">
+                <i class="fa-regular fa-calendar"></i>
+                12 Aug 2026
+            </div>
+
+        </div>
+
+        <div class="feedback-rating">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <span>Excellent Progress</span>
+        </div>
+
+        <div class="feedback-content">
+
+            <p>
+                Priya showed significant improvement in lane discipline,
+                mirror checks, and steering control during today’s practical
+                driving lesson. Her confidence has improved considerably
+                compared to previous sessions.
+            </p>
+
+            <p>
+                Parking accuracy has become more consistent, and she is
+                responding well to traffic observations. Continue practicing
+                smooth clutch control and three-point turns before the next
+                highway driving session.
+            </p>
+
+        </div>
+
+        <div class="feedback-tags">
+            <span>Lane Discipline</span>
+            <span>Parking</span>
+            <span>Mirror Checks</span>
+            <span>Steering Control</span>
+        </div>
+
+        <div class="feedback-footer">
+
+            <div class="next-focus">
+                <i class="fa-solid fa-bullseye"></i>
+                Next Focus: Highway Driving & Test Preparation
+            </div>
+
+            <a href="#" class="btn btn-primary">
+                <i class="fa-regular fa-message"></i>
+                Message Instructor
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+             </main>
+
+    </div>
+<!-- Logout Confirmation Modal -->
+<div class="logout-modal" id="logoutModal">
+    <div class="logout-modal-content">
+
+        <div class="logout-icon">
+            <i class="fa-solid fa-right-from-bracket"></i>
+        </div>
+
+        <h3>Are you sure you want to logout?</h3>
+
+        <div class="logout-actions">
+            <button class="btn btn-danger" id="confirmLogout">Yes</button>
+            <button class="btn btn-outline" id="cancelLogout">No</button>
+        </div>
+
+    </div>
+</div>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
