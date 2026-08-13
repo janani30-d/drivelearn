@@ -1,0 +1,7640 @@
+/* ===================================
+   Responsive Header
+=================================== */
+
+/* ---------- iPad Pro & Tablet (1024px) ---------- */
+@media (max-width:1024px){
+
+    .header .container{
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        height:75px;
+    }
+
+    /* Show hamburger */
+    .menu-toggle{
+        display:block;
+        font-size:28px;
+        color:var(--text);
+        cursor:pointer;
+        z-index:1001;
+    }
+
+    /* Hide desktop buttons */
+    .desktop-btn{
+        display:none;
+    }
+
+    /* Mobile menu */
+    .navbar{
+        position:fixed;
+        top:0;
+        right:-100%;
+        width:280px;
+        height:100vh;
+        background:#FFFFFF;
+        padding:80px 20px 30px;
+        box-shadow:-8px 0 25px rgba(0,0,0,.15);
+        transition:right .35s ease;
+        z-index:1000;
+        display:block;
+        overflow-y:auto;
+    }
+
+    .navbar.active{
+        right:0;
+    }
+
+    .nav-menu{
+        display:flex;
+        flex-direction:column;
+        align-items:flex-start;
+        gap:28px;
+        width:100%;
+        margin-bottom:30px;
+        margin: 0 0 30px 0;
+        padding-left: 0;
+        
+    }
+
+    .nav-menu li{
+        width:100%;
+        font-size: 18px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-link{
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    font-size:16px;
+    color:var(--text);
+    text-decoration:none;
+}
+
+.nav-link i{
+    display:inline-block !important;
+    align-items:center;
+    justify-content:center;
+    width:18px;
+    height:18px;
+    margin-left:10px;
+    font-size:12px;
+
+    color:var(--text);
+    transition:transform .3s ease;
+}
+
+.dropdown.active .nav-link i{
+    transform:rotate(180deg);
+}
+
+    
+
+    /* Mobile dropdown */
+    .dropdown-menu{
+        position:static;
+        width:100%;
+        opacity:1;
+        visibility:visible;
+        display:none;
+        border:none;
+        box-shadow:none;
+        padding:10px 0 0 15px;
+        background:transparent;
+        display: none;
+    }
+
+    .dropdown.active .dropdown-menu{
+        display:block;
+    }
+
+   
+    .nav-link .fa-chevron-down{
+        display: block !important;
+        font-size: 12px;
+        color: var(--text);
+        margin-left: auto;
+        transition: transform 0.3s ease;
+    }
+    .dropdown-menu a{
+        padding:8px 0;
+        font-size:15px;
+        font-size: 15px;
+    }
+
+    /* Mobile buttons */
+    .mobile-btn{
+        display:flex;
+        flex-direction:column;
+        gap:15px;
+        margin-top:20px;
+    }
+
+    .mobile-btn .theme-toggle,
+    .mobile-btn .rtl-toggle{
+        width:50%;
+        height:35px;
+        border-radius:12px;
+        justify-content:flex-start;
+        padding:0 16px;
+        gap:10px;
+    }
+
+    .mobile-btn .dashboard-btn,
+    .mobile-btn .login-btn{
+        width:50%;
+        justify-content:center;
+        height:35px;
+    }
+}
+
+/* ---------- iPad Mini (768px) ---------- */
+@media (max-width:768px){
+
+    .navbar{
+        width:290px;
+        padding:85px 25px;
+    }
+
+    .logo img{
+        width:115px;
+    }
+
+    .menu-toggle{
+        font-size:26px;
+    }
+}
+
+/* ---------- Mobile (480px) ---------- */
+@media (max-width:480px){
+
+    .header .container{
+        height:70px;
+    }
+
+    .logo img{
+        width:100px;
+    }
+
+    .navbar{
+        width:260px;
+        padding:80px 22px;
+    }
+
+    .nav-link{
+        font-size:15px;
+    }
+
+    .mobile-btn .theme-toggle,
+    .mobile-btn .rtl-toggle{
+        height:46px;
+    }
+
+    .mobile-btn .dashboard-btn,
+    .mobile-btn .login-btn{
+        height:48px;
+        font-size:15px;
+    }
+}
+
+/* ---------- Small Mobile (360px) ---------- */
+@media (max-width:360px){
+
+    .logo img{
+        width:90px;
+    }
+
+    .navbar{
+        width:240px;
+        padding:75px 18px;
+    }
+
+    .nav-link{
+        font-size:14px;
+    }
+
+    .menu-toggle{
+        font-size:24px;
+    }
+}
+
+/* ---------- Overlay ---------- */
+.menu-overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.45);
+    opacity:0;
+    visibility:hidden;
+    transition:.3s ease;
+    z-index:999;
+}
+
+.menu-overlay.active{
+    opacity:1;
+    visibility:visible;
+}
+
+/* Prevent body scroll when menu opens */
+body.menu-open{
+    overflow:hidden;
+}
+
+
+/****footer****/
+
+/* ===================================
+   Footer Responsive
+=================================== */
+
+/* ---------- iPad Pro (1024px) ---------- */
+@media (max-width:1024px){
+
+    .footer{
+        padding:60px 0 25px;
+    }
+
+    .footer-grid{
+        grid-template-columns:repeat(2, 1fr);
+        gap:35px;
+    }
+
+    .footer-logo img{
+        width:130px;
+    }
+
+    .footer h4{
+        font-size:17px;
+    }
+
+    .footer-about,
+    .footer-links,
+    .footer-services,
+    .footer-contact{
+        text-align:left;
+    }
+
+    .footer-social{
+        justify-content:flex-start;
+    }
+
+    .footer-contact li{
+        justify-content:flex-start;
+    }
+}
+
+/* ---------- Tablet (768px) ---------- */
+@media (max-width:768px){
+
+    .footer{
+        padding:55px 0 25px;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+        gap:30px;
+    }
+
+    .footer-about,
+    .footer-links,
+    .footer-services,
+    .footer-contact{
+        text-align:left;
+    }
+
+    .footer-social{
+        justify-content:flex-start;
+    }
+
+    .footer-contact li{
+        justify-content:flex-start;
+        text-align:left;
+    }
+
+    .footer-bottom{
+        flex-direction:column;
+        align-items:flex-start;
+        text-align:left;
+        gap:15px;
+    }
+
+    .footer-bottom-links{
+        justify-content:flex-start;
+        flex-wrap:wrap;
+        gap:15px;
+    }
+}
+
+/* ---------- Mobile (480px) ---------- */
+@media (max-width:480px){
+
+    .footer{
+        padding:50px 0 20px;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+        gap:28px;
+    }
+
+    .footer-logo img{
+        width:120px;
+    }
+
+    .footer-about p{
+        font-size:14px;
+        line-height:1.7;
+    }
+
+    .footer h4{
+        font-size:16px;
+        margin-bottom:16px;
+    }
+
+    .footer-links li,
+    .footer-services li,
+    .footer-contact li{
+        margin-bottom:12px;
+    }
+
+    .footer-social{
+        justify-content:flex-start;
+    }
+
+    .footer-social a{
+        width:38px;
+        height:38px;
+        font-size:14px;
+    }
+
+    .footer-bottom{
+        align-items:flex-start;
+        text-align:left;
+    }
+
+    .footer-bottom-links{
+        justify-content:flex-start;
+        gap:12px;
+    }
+}
+
+/* ---------- Small Mobile (360px) ---------- */
+@media (max-width:360px){
+
+    .footer{
+        padding:45px 0 18px;
+    }
+
+    .footer-logo img{
+        width:110px;
+    }
+
+    .footer-about p{
+        font-size:13px;
+    }
+
+    .footer h4{
+        font-size:15px;
+    }
+
+    .footer-social{
+        justify-content:flex-start;
+        gap:10px;
+    }
+
+    .footer-social a{
+        width:36px;
+        height:36px;
+    }
+
+    .footer-contact li{
+        font-size:13px;
+        justify-content:flex-start;
+    }
+
+    .footer-bottom{
+        align-items:flex-start;
+    }
+
+    .footer-bottom-links{
+        justify-content:flex-start;
+        gap:10px;
+    }
+}
+
+
+
+/***home1****/
+
+/* ===================================
+   Hero Responsive
+=================================== */
+
+/* Hide previous button */
+.hero-prev{
+    display:none;
+}
+
+/* ---------- iPad Pro (1024px) ---------- */
+@media (max-width:1024px){
+
+    .hero{
+        height:85vh;
+        margin-top:75px;
+    }
+
+    .hero-container{
+        padding:0 50px;
+    }
+
+    .hero-content{
+        max-width:560px;
+    }
+
+    .hero-content h1{
+        font-size:52px;
+    }
+
+    .hero-content p{
+        font-size:17px;
+    }
+
+    .hero-next{
+        right:25px;
+    }
+}
+
+/* ---------- iPad Mini / Tablet (768px) ---------- */
+@media (max-width:768px){
+
+    .hero{
+        height:80vh;
+    }
+
+    .hero-container{
+        padding:0 35px;
+    }
+
+    .hero-content{
+        max-width:500px;
+    }
+
+    .hero-content h1{
+        font-size:42px;
+        line-height:1.2;
+    }
+
+    .hero-content p{
+        font-size:16px;
+        line-height:1.7;
+    }
+
+    .hero-buttons{
+        flex-wrap:wrap;
+        gap:14px;
+    }
+
+    .hero-buttons .btn{
+        padding:13px 24px;
+        font-size:15px;
+    }
+
+    .hero-next{
+        width:48px;
+        height:48px;
+        right:20px;
+    }
+}
+
+/* ---------- Mobile (480px) ---------- */
+@media (max-width:480px){
+
+    .hero{
+        height:75vh;
+        margin-top:70px;
+    }
+
+    .hero-container{
+        padding:0 24px;
+    }
+
+    .hero-content{
+        max-width:100%;
+    }
+
+    .hero-badge{
+        font-size:13px;
+        padding:8px 14px;
+        margin-bottom:18px;
+    }
+
+    .hero-content h1{
+        font-size:34px;
+        line-height:1.25;
+        margin-bottom:18px;
+    }
+
+    .hero-content p{
+        font-size:15px;
+        line-height:1.7;
+        margin-bottom:28px;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:12px;
+    }
+
+    .hero-buttons .btn{
+        width:180px;
+        justify-content:center;
+        padding:12px 20px;
+    }
+
+    .hero-next{
+        width:44px;
+        height:44px;
+        right:16px;
+        font-size:16px;
+    }
+
+    .hero-dots{
+        bottom:22px;
+    }
+}
+
+/* ---------- Small Mobile (360px) ---------- */
+@media (max-width:360px){
+
+    .hero{
+        height:72vh;
+    }
+
+    .hero-container{
+        padding:0 18px;
+    }
+
+    .hero-content h1{
+        font-size:30px;
+    }
+
+    .hero-content p{
+        font-size:14px;
+    }
+
+    .hero-buttons .btn{
+        width:170px;
+        font-size:14px;
+    }
+
+    .hero-next{
+        width:40px;
+        height:40px;
+        right:12px;
+    }
+}
+
+/* ===================================
+   Why Choose Us Responsive
+=================================== */
+
+/* ---------- iPad Pro (1024px) ---------- */
+@media (max-width:1024px){
+
+    .section{
+        padding:70px 0;
+    }
+
+    .section-header{
+        margin-bottom:45px;
+    }
+
+    .section-title{
+        font-size:36px;
+    }
+
+    .section-description{
+        font-size:16px;
+    }
+
+    .choose-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:24px;
+    }
+
+    .choose-card{
+        padding:30px 24px;
+    }
+
+    .choose-icon{
+        width:64px;
+        height:64px;
+    }
+
+    .choose-icon i{
+        font-size:26px;
+    }
+}
+
+/* ---------- iPad Mini / Tablet (768px) ---------- */
+@media (max-width:768px){
+
+    .section{
+        padding:60px 0;
+    }
+
+    .section-header{
+        text-align:center;
+        margin-bottom:40px;
+    }
+
+    .section-title{
+        font-size:32px;
+    }
+
+    .section-description{
+        font-size:15px;
+    }
+
+    .choose-grid{
+        grid-template-columns:1fr;
+        gap:22px;
+    }
+
+    .choose-card{
+        padding:28px 22px;
+    }
+
+    .choose-card h3{
+        font-size:20px;
+    }
+
+    .choose-card p{
+        font-size:15px;
+    }
+    
+}
+
+/* ---------- Mobile (480px) ---------- */
+@media (max-width:480px){
+
+    .section{
+        padding:50px 0;
+    }
+
+    .section-header{
+        margin-bottom:35px;
+    }
+
+    .section-subtitle{
+        font-size:13px;
+        padding:7px 16px;
+    }
+
+    .section-title{
+        font-size:28px;
+        line-height:1.3;
+    }
+
+    .section-description{
+        font-size:14px;
+        line-height:1.7;
+    }
+
+    .choose-grid{
+        grid-template-columns:1fr;
+        gap:20px;
+    }
+
+    .choose-card{
+        padding:24px 20px;
+        border-radius:20px;
+    }
+
+    .choose-icon{
+        width:58px;
+        height:58px;
+        border-radius:16px;
+        margin-bottom:18px;
+    }
+
+    .choose-icon i{
+        font-size:24px;
+    }
+
+    .choose-card h3{
+        font-size:18px;
+        margin-bottom:12px;
+    }
+
+    .choose-card p{
+        font-size:14px;
+        line-height:1.7;
+    }
+}
+
+/* ---------- Small Mobile (360px) ---------- */
+@media (max-width:360px){
+
+    .section{
+        padding:45px 0;
+    }
+
+    .section-title{
+        font-size:24px;
+    }
+
+    .choose-card{
+        padding:22px 18px;
+    }
+
+    .choose-icon{
+        width:54px;
+        height:54px;
+    }
+
+    .choose-icon i{
+        font-size:22px;
+    }
+
+    .choose-card h3{
+        font-size:17px;
+    }
+
+    .choose-card p{
+        font-size:13px;
+    }
+}
+
+/* ---------- Tablet (769px - 1024px) ---------- */
+@media (min-width:769px) and (max-width:1024px){
+
+    .courses-grid{
+        grid-template-columns:repeat(2, 1fr);
+        gap:24px;
+    }
+
+    /* Center the third card only on tablet */
+    .course-card:last-child{
+        grid-column:1 / -1;
+        max-width:420px;
+        width:100%;
+        justify-self:center;
+    }
+
+    .course-image img{
+        height:200px;
+    }
+
+    .course-content{
+        padding:24px;
+    }
+
+    .course-content h3{
+        font-size:22px;
+    }
+
+    .course-price{
+        font-size:24px;
+    }
+}
+
+/* ---------- Mobile (768px and below) ---------- */
+@media (max-width:768px){
+
+    .courses-grid{
+        grid-template-columns:1fr;
+        gap:22px;
+    }
+
+    .course-card:last-child{
+        grid-column:auto;
+        max-width:100%;
+        justify-self:stretch;
+    }
+
+    .course-card{
+        width:100%;
+    }
+
+    .course-image img{
+        height:220px;
+    }
+
+    .course-content{
+        padding:24px;
+    }
+
+    .course-content h3{
+        font-size:20px;
+    }
+
+    .course-footer{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:14px;
+    }
+
+    
+}
+
+/* ===================================
+   How It Works Responsive
+=================================== */
+
+/* ---------- Tablet (769px - 1024px) ---------- */
+@media (min-width:769px) and (max-width:1024px){
+
+    .steps-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:24px;
+    }
+
+    /* Center the third card */
+    .step-card:last-child{
+        grid-column:1 / -1;
+        max-width:420px;
+        width:100%;
+        justify-self:center;
+    }
+
+    .steps-grid::before{
+        display:none;
+    }
+
+    .step-card{
+        padding:32px 24px;
+    }
+
+    .step-icon{
+        width:80px;
+        height:80px;
+    }
+
+    .step-icon i{
+        font-size:30px;
+    }
+
+    .step-card h3{
+        font-size:22px;
+    }
+}
+
+/* ---------- Mobile (768px and below) ---------- */
+@media (max-width:768px){
+
+    .steps-grid{
+        grid-template-columns:1fr;
+        gap:22px;
+    }
+
+    .step-card:last-child{
+        grid-column:auto;
+        max-width:100%;
+        justify-self:stretch;
+    }
+
+    .steps-grid::before{
+        display:none;
+    }
+
+    .step-card{
+        text-align:left;
+        padding:28px 22px;
+    }
+
+    .step-number{
+        top:16px;
+        right:16px;
+    }
+
+    .step-icon{
+        width:70px;
+        height:70px;
+        margin:0 0 20px;
+    }
+
+    .step-icon i{
+        font-size:28px;
+    }
+
+    .step-card h3{
+        font-size:20px;
+    }
+
+    .step-card p{
+        font-size:15px;
+        line-height:1.7;
+    }
+}
+
+/* ---------- Small Mobile (480px) ---------- */
+@media (max-width:480px){
+
+    .step-card{
+        padding:24px 20px;
+        border-radius:20px;
+    }
+
+    .step-icon{
+        width:64px;
+        height:64px;
+    }
+
+    .step-icon i{
+        font-size:24px;
+    }
+
+    .step-card h3{
+        font-size:18px;
+    }
+
+    .step-card p{
+        font-size:14px;
+    }
+}
+
+/* ---------- Extra Small Mobile (360px) ---------- */
+@media (max-width:360px){
+
+    .step-card{
+        padding:22px 18px;
+    }
+
+    .step-icon{
+        width:58px;
+        height:58px;
+    }
+
+    .step-icon i{
+        font-size:22px;
+    }
+
+    .step-card h3{
+        font-size:17px;
+    }
+
+    .step-card p{
+        font-size:13px;
+    }
+}
+
+/* ===================================
+   Achievements Responsive
+=================================== */
+
+/* ---------- Tablet (769px - 1024px) ---------- */
+@media (min-width:769px) and (max-width:1024px){
+
+    .stats-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:24px;
+    }
+
+    .stat-card{
+        padding:32px 24px;
+    }
+
+    .stat-icon{
+        width:72px;
+        height:72px;
+        margin-bottom:20px;
+    }
+
+    .stat-icon i{
+        font-size:30px;
+    }
+
+    .stat-card h3{
+        font-size:42px;
+    }
+
+    .stat-card span{
+        font-size:26px;
+    }
+
+    .stat-card p{
+        font-size:15px;
+    }
+}
+
+/* ---------- Mobile (768px and below) ---------- */
+@media (max-width:768px){
+
+    .stats-grid{
+        grid-template-columns:1fr;
+        gap:20px;
+    }
+
+    .stat-card{
+        text-align:left;
+        padding:28px 22px;
+        display:flex;
+        align-items:center;
+        gap:20px;
+    }
+
+    .stat-icon{
+        width:64px;
+        height:64px;
+        margin:0;
+        flex-shrink:0;
+    }
+
+    .stat-icon i{
+        font-size:26px;
+    }
+
+    .stat-card h3{
+        font-size:36px;
+        margin:0;
+    }
+
+    .stat-card span{
+        font-size:24px;
+    }
+
+    .stat-card p{
+        font-size:15px;
+        margin-top:6px;
+    }
+}
+
+/* ---------- Small Mobile (480px) ---------- */
+@media (max-width:480px){
+
+    .stat-card{
+        padding:24px 18px;
+        gap:16px;
+        border-radius:20px;
+    }
+
+    .stat-icon{
+        width:58px;
+        height:58px;
+    }
+
+    .stat-icon i{
+        font-size:22px;
+    }
+
+    .stat-card h3{
+        font-size:32px;
+    }
+
+    .stat-card span{
+        font-size:20px;
+    }
+
+    .stat-card p{
+        font-size:14px;
+    }
+}
+
+/* ---------- Extra Small Mobile (360px) ---------- */
+@media (max-width:360px){
+
+    .stat-card{
+        padding:20px 16px;
+    }
+
+    .stat-icon{
+        width:54px;
+        height:54px;
+    }
+
+    .stat-icon i{
+        font-size:20px;
+    }
+
+    .stat-card h3{
+        font-size:28px;
+    }
+
+    .stat-card span{
+        font-size:18px;
+    }
+
+    .stat-card p{
+        font-size:13px;
+    }
+}
+
+/* ===================================
+   Vehicles & Facilities Responsive
+=================================== */
+
+/* ---------- Tablet (769px - 1024px) ---------- */
+@media (min-width:769px) and (max-width:1024px){
+
+    .vehicles-wrapper{
+        grid-template-columns:1fr;
+        gap:40px;
+    }
+
+    .vehicles-images{
+        width:100%;
+    }
+
+    .main-image img{
+        height:360px;
+    }
+
+    .small-images{
+        grid-template-columns:repeat(2,1fr);
+        gap:18px;
+    }
+
+    .small-images img{
+        height:170px;
+    }
+
+    .vehicles-content{
+        text-align:left;
+        gap:22px;
+    }
+
+    /* Fix subtitle width */
+    .vehicles-content .section-subtitle{
+        display:inline-flex;
+        width:fit-content;
+        max-width:max-content;
+        align-self:flex-start;
+        padding:8px 18px;
+    }
+
+    .vehicles-content .section-title{
+        font-size:36px;
+        line-height:1.25;
+    }
+
+    .vehicles-content .section-description{
+        font-size:16px;
+    }
+
+    .facility-item{
+        padding:20px;
+    }
+
+    .vehicles-content .btn{
+        align-self:flex-start;
+    }
+}
+
+/* ---------- Mobile (768px and below) ---------- */
+@media (max-width:768px){
+
+    .vehicles-wrapper{
+        grid-template-columns:1fr;
+        gap:35px;
+    }
+
+    .vehicles-images{
+        width:100%;
+    }
+
+    .main-image img{
+        height:280px;
+    }
+
+    .small-images{
+        grid-template-columns:1fr 1fr;
+        gap:15px;
+    }
+
+    .small-images img{
+        height:140px;
+    }
+
+    .vehicles-content{
+        gap:20px;
+    }
+
+    /* Fix subtitle width */
+    .vehicles-content .section-subtitle{
+        display:inline-flex;
+        width:fit-content;
+        max-width:max-content;
+        align-self:flex-start;
+        padding:7px 16px;
+        font-size:13px;
+    }
+
+    .vehicles-content .section-title{
+        font-size:30px;
+        line-height:1.3;
+    }
+
+    .vehicles-content .section-description{
+        font-size:15px;
+        line-height:1.7;
+    }
+
+    .facility-list{
+        gap:18px;
+    }
+
+    .facility-item{
+        padding:18px;
+        gap:15px;
+        border-radius:18px;
+    }
+
+    .facility-icon{
+        width:52px;
+        height:52px;
+        border-radius:14px;
+    }
+
+    .facility-icon i{
+        font-size:22px;
+    }
+
+    .facility-item h4{
+        font-size:18px;
+        margin-bottom:6px;
+    }
+
+    .facility-item p{
+        font-size:14px;
+        line-height:1.6;
+    }
+
+    
+}
+
+/* ---------- Small Mobile (480px) ---------- */
+@media (max-width:480px){
+
+    .main-image img{
+        height:240px;
+        border-radius:20px;
+    }
+
+    .small-images{
+        grid-template-columns:1fr;
+    }
+
+    .small-images img{
+        height:180px;
+        border-radius:18px;
+    }
+
+    .vehicles-content .section-title{
+        font-size:26px;
+    }
+
+    .facility-item{
+        padding:16px;
+        gap:14px;
+    }
+
+    .facility-icon{
+        width:48px;
+        height:48px;
+    }
+
+    .facility-icon i{
+        font-size:20px;
+    }
+
+    .facility-item h4{
+        font-size:17px;
+    }
+
+    .facility-item p{
+        font-size:13px;
+    }
+
+    
+}
+
+/* ---------- Extra Small Mobile (360px) ---------- */
+@media (max-width:360px){
+
+    .main-image img{
+        height:220px;
+    }
+
+    .small-images img{
+        height:160px;
+    }
+
+    .vehicles-content .section-title{
+        font-size:24px;
+    }
+
+    .facility-item{
+        padding:14px;
+    }
+
+    .facility-icon{
+        width:44px;
+        height:44px;
+    }
+
+    .facility-icon i{
+        font-size:18px;
+    }
+
+    .facility-item h4{
+        font-size:16px;
+    }
+
+    .facility-item p{
+        font-size:12px;
+    }
+
+    
+}
+
+/* ===================================
+   Testimonials Responsive
+=================================== */
+
+/* ---------- Tablet (769px - 1024px) ---------- */
+@media (min-width:769px) and (max-width:1024px){
+
+    .testimonial-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:24px;
+    }
+
+    /* Center the third card */
+    .testimonial-card:last-child{
+        grid-column:1 / -1;
+        max-width:420px;
+        width:100%;
+        justify-self:center;
+    }
+
+    .testimonial-card{
+        padding:28px 24px;
+    }
+
+    .testimonial-card.featured{
+        transform:none;
+    }
+
+    .testimonial-card.featured:hover{
+        transform:translateY(-8px);
+    }
+
+    .testimonial-card::before{
+        font-size:60px;
+        top:16px;
+        right:20px;
+    }
+
+    .testimonial-text{
+        font-size:15px;
+    }
+
+    .testimonial-user img{
+        width:54px;
+        height:54px;
+    }
+
+    .testimonial-user h4{
+        font-size:17px;
+    }
+
+    .testimonial-user span{
+        font-size:13px;
+    }
+}
+
+/* ---------- Mobile (768px and below) ---------- */
+@media (max-width:768px){
+
+    .testimonial-grid{
+        grid-template-columns:1fr;
+        gap:22px;
+    }
+
+    .testimonial-card:last-child{
+        grid-column:auto;
+        max-width:100%;
+        justify-self:stretch;
+    }
+
+    .testimonial-card{
+        padding:26px 22px;
+        border-radius:22px;
+    }
+
+    .testimonial-card.featured{
+        transform:none;
+    }
+
+    .testimonial-card::before{
+        font-size:52px;
+        top:16px;
+        right:18px;
+    }
+
+    .testimonial-rating{
+        margin-bottom:16px;
+    }
+
+    .testimonial-text{
+        font-size:15px;
+        line-height:1.7;
+    }
+
+    .testimonial-user{
+        padding-top:16px;
+        gap:12px;
+    }
+
+    .testimonial-user img{
+        width:52px;
+        height:52px;
+    }
+
+    .testimonial-user h4{
+        font-size:17px;
+    }
+
+    .testimonial-user span{
+        font-size:13px;
+    }
+}
+
+/* ---------- Small Mobile (480px) ---------- */
+@media (max-width:480px){
+
+    .testimonial-card{
+        padding:24px 20px;
+        border-radius:20px;
+    }
+
+    .testimonial-card::before{
+        font-size:46px;
+    }
+
+    .testimonial-text{
+        font-size:14px;
+    }
+
+    .testimonial-user img{
+        width:48px;
+        height:48px;
+    }
+
+    .testimonial-user h4{
+        font-size:16px;
+    }
+
+    .testimonial-user span{
+        font-size:12px;
+    }
+}
+
+/* ---------- Extra Small Mobile (360px) ---------- */
+@media (max-width:360px){
+
+    .testimonial-card{
+        padding:22px 18px;
+    }
+
+    .testimonial-card::before{
+        font-size:40px;
+    }
+
+    .testimonial-text{
+        font-size:13px;
+    }
+
+    .testimonial-user img{
+        width:44px;
+        height:44px;
+    }
+
+    .testimonial-user h4{
+        font-size:15px;
+    }
+
+    .testimonial-user span{
+        font-size:11px;
+    }
+}
+
+
+/*****home2******/
+
+/* ===================================
+   Home 2 Hero Responsive
+=================================== */
+
+/* ---------- Tablet (769px - 1024px) ---------- */
+@media (min-width:769px) and (max-width:1024px){
+
+    .hero-two{
+        padding:140px 0 80px;
+    }
+
+    .hero-two-wrapper{
+        grid-template-columns:1fr;
+        gap:50px;
+    }
+
+    .hero-two-content{
+        max-width:100%;
+        padding:0 24px;
+        text-align:center;
+    }
+
+    .hero-two-content h1{
+        font-size:54px;
+    }
+
+    .hero-two-buttons{
+        justify-content:center;
+    }
+
+    .hero-two-stats{
+        justify-content:center;
+        gap:35px;
+    }
+
+    .hero-image-box img{
+        height:520px;
+    }
+
+    .hero-floating-card{
+        left:50%;
+        transform:translateX(-50%);
+        bottom:24px;
+    }
+}
+
+/* ---------- Mobile (768px and below) ---------- */
+@media (max-width:768px){
+
+    .hero-two{
+        padding:120px 0 70px;
+    }
+
+    .hero-two-wrapper{
+        grid-template-columns:1fr;
+        gap:40px;
+    }
+
+    .hero-two-content{
+        max-width:100%;
+        padding:0 20px;
+        text-align:left;
+    }
+
+    .hero-two-badge{
+        font-size:14px;
+        padding:8px 16px;
+    }
+
+    .hero-two-content h1{
+        font-size:42px;
+        line-height:1.15;
+    }
+
+    .hero-two-content p{
+        font-size:16px;
+        line-height:1.7;
+        margin-bottom:30px;
+    }
+
+    .hero-two-buttons{
+        flex-direction:column;
+        gap:14px;
+        margin-bottom:40px;
+    }
+
+    .hero-two-buttons .btn{
+        width:100%;
+        justify-content:center;
+    }
+
+    .hero-two-stats{
+        justify-content:space-between;
+        gap:20px;
+    }
+
+    .hero-stat{
+        flex:1;
+    }
+
+    .hero-stat h3{
+        font-size:28px;
+    }
+
+    .hero-stat span{
+        font-size:13px;
+    }
+
+    .hero-image-box{
+        border-radius:24px;
+    }
+
+    .hero-image-box img{
+        height:420px;
+    }
+
+    .hero-floating-card{
+        left:20px;
+        right:20px;
+        bottom:20px;
+        transform:none;
+        min-width:auto;
+        width:auto;
+        padding:16px 18px;
+    }
+
+    .hero-floating-card h4{
+        font-size:16px;
+    }
+
+    .hero-floating-card p{
+        font-size:13px;
+    }
+}
+
+/* ---------- Small Mobile (480px) ---------- */
+@media (max-width:480px){
+
+    .hero-two{
+        padding:110px 0 60px;
+    }
+
+    .hero-two-content{
+        padding:0 18px;
+    }
+
+    .hero-two-content h1{
+        font-size:36px;
+    }
+
+    .hero-two-content p{
+        font-size:15px;
+    }
+
+    .hero-two-stats{
+        flex-direction:column;
+        gap:18px;
+    }
+
+    .hero-stat{
+        text-align:left;
+    }
+
+    .hero-image-box img{
+        height:340px;
+    }
+
+    .hero-floating-card{
+        padding:14px 16px;
+    }
+
+    .hero-floating-card i{
+        width:46px;
+        height:46px;
+        font-size:20px;
+    }
+}
+
+/* ---------- Extra Small Mobile (360px) ---------- */
+@media (max-width:360px){
+
+    .hero-two-content h1{
+        font-size:32px;
+    }
+
+    .hero-two-content p{
+        font-size:14px;
+    }
+
+    .hero-two-buttons .btn{
+        height:50px;
+    }
+
+    .hero-image-box img{
+        height:300px;
+    }
+}
+
+
+/* ===================================
+   Home 2 About Responsive
+=================================== */
+
+/* ---------- Tablet (769px - 1024px) ---------- */
+@media (min-width:769px) and (max-width:1024px){
+
+    .about-two-wrapper{
+        grid-template-columns:1fr;
+        gap:50px;
+    }
+
+    .about-two-image{
+        order:1;
+    }
+
+    .about-two-content{
+        order:2;
+        max-width:100%;
+        text-align:center;
+    }
+
+    .about-image-box img{
+        height:520px;
+    }
+
+    .experience-card{
+        left:50%;
+        transform:translateX(-50%);
+        bottom:24px;
+        max-width:240px;
+        text-align:center;
+    }
+
+    .about-two-features{
+        max-width:700px;
+        margin:0 auto 35px;
+    }
+
+    .feature-item{
+        text-align:left;
+    }
+
+    
+}
+
+/* ---------- Mobile (768px and below) ---------- */
+@media (max-width:768px){
+
+    .about-home-two{
+        padding:70px 0;
+    }
+
+    .about-two-wrapper{
+        grid-template-columns:1fr;
+        gap:40px;
+    }
+
+    .about-two-image{
+        order:1;
+    }
+
+    .about-two-content{
+        order:2;
+        max-width:100%;
+    }
+
+    .about-image-box{
+        border-radius:24px;
+    }
+
+    .about-image-box img{
+        height:400px;
+    }
+
+    .experience-card{
+        left:20px;
+        right:20px;
+        bottom:20px;
+        transform:none;
+        max-width:none;
+        width:auto;
+        padding:18px 20px;
+    }
+
+    .experience-card h3{
+        font-size:34px;
+    }
+
+    .experience-card p{
+        font-size:14px;
+    }
+
+    .about-two-content .section-title{
+        font-size:34px;
+        line-height:1.25;
+    }
+
+    .about-two-content .section-description{
+        font-size:16px;
+        line-height:1.7;
+        margin-bottom:28px;
+    }
+
+    .about-two-features{
+        gap:18px;
+        margin-bottom:30px;
+    }
+
+    .feature-item{
+        padding:20px;
+        gap:14px;
+        border-radius:18px;
+    }
+
+    .feature-item i{
+        width:46px;
+        height:46px;
+        font-size:20px;
+    }
+
+    .feature-item h4{
+        font-size:18px;
+    }
+
+    .feature-item p{
+        font-size:14px;
+    }
+
+    
+}
+
+/* ---------- Small Mobile (480px) ---------- */
+@media (max-width:480px){
+
+    .about-home-two{
+        padding:60px 0;
+    }
+
+    .about-image-box img{
+        height:320px;
+    }
+
+    .experience-card{
+        padding:16px 18px;
+    }
+
+    .experience-card h3{
+        font-size:30px;
+    }
+
+    .about-two-content .section-title{
+        font-size:30px;
+    }
+
+    .about-two-content .section-description{
+        font-size:15px;
+    }
+
+    .feature-item{
+        padding:18px;
+    }
+
+    .feature-item h4{
+        font-size:17px;
+    }
+
+    .feature-item p{
+        font-size:13px;
+    }
+}
+
+/* ---------- Extra Small Mobile (360px) ---------- */
+@media (max-width:360px){
+
+    .about-image-box img{
+        height:280px;
+    }
+
+    .experience-card h3{
+        font-size:28px;
+    }
+
+    .about-two-content .section-title{
+        font-size:28px;
+    }
+
+    .feature-item{
+        padding:16px;
+        gap:12px;
+    }
+
+    .feature-item i{
+        width:42px;
+        height:42px;
+        font-size:18px;
+    }
+
+    .feature-item h4{
+        font-size:16px;
+    }
+
+    .feature-item p{
+        font-size:13px;
+    }
+}
+
+/* ===================================
+   Driving Programs Responsive
+=================================== */
+
+/* ---------- Tablet (769px - 1024px) ---------- */
+@media (min-width:769px) and (max-width:1024px){
+
+    .programs-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:24px;
+    }
+
+    .program-card{
+        padding:28px 24px;
+    }
+
+    .program-icon{
+        width:68px;
+        height:68px;
+        border-radius:18px;
+    }
+
+    .program-icon i{
+        font-size:28px;
+    }
+
+    .program-card h3{
+        font-size:20px;
+    }
+
+    .program-card p{
+        font-size:15px;
+    }
+
+    .program-features li{
+        font-size:14px;
+    }
+
+    .program-card.featured{
+        transform:none;
+    }
+
+    .program-card.featured:hover{
+        transform:translateY(-8px);
+    }
+}
+
+/* ---------- Mobile (768px and below) ---------- */
+@media (max-width:768px){
+
+    .programs{
+        padding:70px 0;
+    }
+
+    .programs-grid{
+        grid-template-columns:1fr;
+        gap:22px;
+    }
+
+    .program-card{
+        padding:26px 22px;
+        border-radius:22px;
+    }
+
+    .program-icon{
+        width:64px;
+        height:64px;
+        border-radius:16px;
+        margin-bottom:20px;
+    }
+
+    .program-icon i{
+        font-size:26px;
+    }
+
+    .program-card h3{
+        font-size:20px;
+        line-height:1.35;
+    }
+
+    .program-card p{
+        font-size:15px;
+        line-height:1.7;
+        margin-bottom:20px;
+    }
+
+    .program-features{
+        gap:10px;
+        padding-top:16px;
+    }
+
+    .program-features li{
+        font-size:14px;
+    }
+
+    .program-card.featured{
+        transform:none;
+    }
+
+    .program-card:hover,
+    .program-card.featured:hover{
+        transform:translateY(-6px);
+    }
+}
+
+/* ---------- Small Mobile (480px) ---------- */
+@media (max-width:480px){
+
+    .programs{
+        padding:60px 0;
+    }
+
+    .program-card{
+        padding:24px 20px;
+        border-radius:20px;
+    }
+
+    .program-icon{
+        width:58px;
+        height:58px;
+    }
+
+    .program-icon i{
+        font-size:24px;
+    }
+
+    .program-card h3{
+        font-size:18px;
+    }
+
+    .program-card p{
+        font-size:14px;
+    }
+
+    .program-features li{
+        font-size:13px;
+    }
+}
+
+/* ---------- Extra Small Mobile (360px) ---------- */
+@media (max-width:360px){
+
+    .program-card{
+        padding:22px 18px;
+    }
+
+    .program-icon{
+        width:54px;
+        height:54px;
+    }
+
+    .program-icon i{
+        font-size:22px;
+    }
+
+    .program-card h3{
+        font-size:17px;
+    }
+
+    .program-card p{
+        font-size:13px;
+    }
+
+    .program-features li{
+        font-size:12px;
+    }
+}
+/* ===================================
+   Why Choose Home 2 Responsive
+=================================== */
+
+/* ---------- Tablet (769px - 1024px) ---------- */
+@media (min-width:769px) and (max-width:1024px){
+
+    .why-two-wrapper{
+        grid-template-columns:1fr;
+        gap:50px;
+    }
+
+    .why-two-image{
+        order:1;
+    }
+
+    .why-two-content{
+        order:2;
+        max-width:100%;
+        text-align:center;
+    }
+
+    .why-image-box img{
+        height:520px;
+    }
+
+    .why-floating-card{
+        right:50%;
+        transform:translateX(50%);
+        bottom:24px;
+    }
+
+    .why-two-features{
+        grid-template-columns:repeat(2,1fr);
+        gap:18px;
+        text-align:left;
+    }
+
+    .why-feature-item{
+        padding:20px;
+    }
+}
+
+/* ---------- Mobile (768px and below) ---------- */
+@media (max-width:768px){
+
+    .why-home-two{
+        padding:70px 0;
+    }
+
+    .why-two-wrapper{
+        grid-template-columns:1fr;
+        gap:40px;
+    }
+
+    .why-two-image{
+        order:1;
+    }
+
+    .why-two-content{
+        order:2;
+        max-width:100%;
+    }
+
+    .why-image-box{
+        border-radius:24px;
+    }
+
+    .why-image-box img{
+        height:400px;
+    }
+
+    .why-floating-card{
+        left:20px;
+        right:20px;
+        bottom:20px;
+        transform:none;
+        min-width:auto;
+        width:auto;
+        padding:18px 20px;
+    }
+
+    .why-floating-card h3{
+        font-size:34px;
+    }
+
+    .why-floating-card p{
+        font-size:14px;
+    }
+
+    .why-two-content .section-title{
+        font-size:34px;
+        line-height:1.25;
+    }
+
+    .why-two-content .section-description{
+        font-size:16px;
+        line-height:1.7;
+        margin-bottom:28px;
+    }
+
+    .why-two-features{
+        grid-template-columns:1fr;
+        gap:16px;
+    }
+
+    .why-feature-item{
+        padding:20px;
+        gap:14px;
+        border-radius:18px;
+    }
+
+    .why-feature-item i{
+        width:46px;
+        height:46px;
+        font-size:20px;
+    }
+
+    .why-feature-item h4{
+        font-size:18px;
+    }
+
+    .why-feature-item p{
+        font-size:14px;
+    }
+}
+
+/* ---------- Small Mobile (480px) ---------- */
+@media (max-width:480px){
+
+    .why-home-two{
+        padding:60px 0;
+    }
+
+    .why-image-box img{
+        height:320px;
+    }
+
+    .why-floating-card{
+        padding:16px 18px;
+    }
+
+    .why-floating-card h3{
+        font-size:30px;
+    }
+
+    .why-two-content .section-title{
+        font-size:30px;
+    }
+
+    .why-two-content .section-description{
+        font-size:15px;
+    }
+
+    .why-feature-item{
+        padding:18px;
+    }
+
+    .why-feature-item h4{
+        font-size:17px;
+    }
+
+    .why-feature-item p{
+        font-size:13px;
+    }
+}
+
+/* ---------- Extra Small Mobile (360px) ---------- */
+@media (max-width:360px){
+
+    .why-image-box img{
+        height:280px;
+    }
+
+    .why-floating-card h3{
+        font-size:28px;
+    }
+
+    .why-two-content .section-title{
+        font-size:28px;
+    }
+
+    .why-feature-item{
+        padding:16px;
+        gap:12px;
+    }
+
+    .why-feature-item i{
+        width:42px;
+        height:42px;
+        font-size:18px;
+    }
+
+    .why-feature-item h4{
+        font-size:16px;
+    }
+
+    .why-feature-item p{
+        font-size:13px;
+    }
+}
+
+
+
+
+
+/* ===================================
+   Pricing Responsive
+=================================== */
+
+/* ---------- Tablet (769px - 1024px) ---------- */
+@media (min-width:769px) and (max-width:1024px){
+
+    .pricing-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:24px;
+    }
+
+    /* Center the third card */
+    .pricing-card:last-child{
+        grid-column:1 / -1;
+        max-width:420px;
+        width:100%;
+        justify-self:center;
+    }
+
+    .pricing-card{
+        padding:32px 24px;
+    }
+
+    .pricing-card.featured{
+        transform:none;
+    }
+
+    .pricing-card.featured:hover{
+        transform:translateY(-8px);
+    }
+
+    .pricing-card h3{
+        font-size:22px;
+    }
+
+    .amount{
+        font-size:42px;
+    }
+
+    .package-desc{
+        font-size:15px;
+    }
+
+    .pricing-features li{
+        font-size:15px;
+    }
+}
+
+/* ---------- Mobile (768px and below) ---------- */
+@media (max-width:768px){
+
+    .pricing-grid{
+        grid-template-columns:1fr;
+        gap:22px;
+    }
+
+    .pricing-card:last-child{
+        grid-column:auto;
+        max-width:100%;
+        justify-self:stretch;
+    }
+
+    .pricing-card{
+        padding:28px 22px;
+        border-radius:22px;
+    }
+
+    .pricing-card.featured{
+        transform:none;
+    }
+
+    .pricing-card h3{
+        font-size:21px;
+    }
+
+    .amount{
+        font-size:38px;
+    }
+
+    .currency{
+        font-size:20px;
+    }
+
+    .package-desc{
+        font-size:15px;
+        line-height:1.7;
+    }
+
+    .pricing-features{
+        margin-bottom:24px;
+    }
+
+    .pricing-features li{
+        font-size:14px;
+        margin-bottom:12px;
+    }
+
+    .pricing-btn{
+        height:46px;
+    }
+
+    .pricing-badge{
+        top:16px;
+        right:16px;
+        font-size:12px;
+        padding:7px 12px;
+    }
+}
+
+/* ---------- Small Mobile (480px) ---------- */
+@media (max-width:480px){
+
+    .pricing-card{
+        padding:24px 20px;
+        border-radius:20px;
+    }
+
+    .pricing-card h3{
+        font-size:20px;
+    }
+
+    .amount{
+        font-size:34px;
+    }
+
+    .currency{
+        font-size:18px;
+    }
+
+    .package-desc{
+        font-size:14px;
+    }
+
+    .pricing-features li{
+        font-size:14px;
+    }
+
+    .pricing-btn{
+        height:44px;
+        font-size:15px;
+    }
+}
+
+/* ---------- Extra Small Mobile (360px) ---------- */
+@media (max-width:360px){
+
+    .pricing-card{
+        padding:22px 18px;
+    }
+
+    .pricing-card h3{
+        font-size:18px;
+    }
+
+    .amount{
+        font-size:30px;
+    }
+
+    .pricing-features li{
+        font-size:13px;
+    }
+
+    .pricing-btn{
+        font-size:14px;
+    }
+}
+
+/* ===================================
+   Learning Journey Responsive
+=================================== */
+
+/* ---------- Tablet (769px - 1024px) ---------- */
+@media (min-width:769px) and (max-width:1024px){
+
+    .journey-wrapper{
+        grid-template-columns:1fr;
+        gap:50px;
+    }
+
+    .journey-image{
+        order:1;
+    }
+
+    .journey-content{
+        order:2;
+        max-width:100%;
+        text-align:center;
+    }
+
+    .journey-image-box img{
+        height:520px;
+    }
+
+    .journey-floating-card{
+        left:50%;
+        transform:translateX(-50%);
+        right:auto;
+        bottom:24px;
+        max-width:240px;
+        text-align:center;
+    }
+
+    .journey-timeline{
+        max-width:700px;
+        margin:0 auto;
+    }
+
+    .journey-step{
+        text-align:left;
+    }
+}
+
+/* ---------- Mobile (768px and below) ---------- */
+@media (max-width:768px){
+
+    .journey{
+        padding:70px 0;
+    }
+
+    .journey-wrapper{
+        grid-template-columns:1fr;
+        gap:40px;
+    }
+
+    .journey-image{
+        order:1;
+    }
+
+    .journey-content{
+        order:2;
+        max-width:100%;
+    }
+
+    .journey-image-box{
+        border-radius:24px;
+    }
+
+    .journey-image-box img{
+        height:400px;
+    }
+
+    .journey-floating-card{
+        left:20px;
+        right:20px;
+        bottom:20px;
+        transform:none;
+        max-width:none;
+        width:auto;
+        padding:18px 20px;
+    }
+
+    .journey-floating-card h3{
+        font-size:28px;
+    }
+
+    .journey-floating-card p{
+        font-size:14px;
+    }
+
+    .journey-content .section-title{
+        font-size:34px;
+        line-height:1.25;
+    }
+
+    .journey-content .section-description{
+        font-size:16px;
+        line-height:1.7;
+        margin-bottom:28px;
+    }
+
+    .journey-timeline{
+        gap:22px;
+    }
+
+    .journey-timeline::before{
+        left:24px;
+    }
+
+    .journey-step{
+        gap:16px;
+    }
+
+    .journey-step .step-number{
+        width:48px;
+        height:48px;
+        font-size:15px;
+    }
+
+    .step-content{
+        padding:18px;
+        border-radius:18px;
+    }
+
+    .step-content h4{
+        font-size:18px;
+    }
+
+    .step-content p{
+        font-size:14px;
+    }
+}
+
+/* ---------- Small Mobile (480px) ---------- */
+@media (max-width:480px){
+
+    .journey{
+        padding:60px 0;
+    }
+
+    .journey-image-box img{
+        height:320px;
+    }
+
+    .journey-floating-card{
+        padding:16px 18px;
+    }
+
+    .journey-floating-card h3{
+        font-size:24px;
+    }
+
+    .journey-content .section-title{
+        font-size:30px;
+    }
+
+    .journey-content .section-description{
+        font-size:15px;
+    }
+
+    .journey-step .step-number{
+        width:44px;
+        height:44px;
+        font-size:14px;
+    }
+
+    .step-content{
+        padding:16px;
+    }
+
+    .step-content h4{
+        font-size:17px;
+    }
+
+    .step-content p{
+        font-size:13px;
+    }
+}
+
+/* ---------- Extra Small Mobile (360px) ---------- */
+@media (max-width:360px){
+
+    .journey-image-box img{
+        height:280px;
+    }
+
+    .journey-floating-card h3{
+        font-size:22px;
+    }
+
+    .journey-content .section-title{
+        font-size:28px;
+    }
+
+    .journey-step{
+        gap:14px;
+    }
+
+    .journey-step .step-number{
+        width:40px;
+        height:40px;
+        font-size:13px;
+    }
+
+    .step-content{
+        padding:14px;
+    }
+
+    .step-content h4{
+        font-size:16px;
+    }
+
+    .step-content p{
+        font-size:13px;
+    }
+}
+
+/* ===================================
+   FAQ Responsive
+=================================== */
+
+/* ---------- Tablet (769px - 1024px) ---------- */
+@media (min-width:769px) and (max-width:1024px){
+
+    .faq-wrapper{
+        max-width:100%;
+    }
+
+    .faq-question{
+        padding:22px 24px;
+    }
+
+    .faq-question span{
+        font-size:19px;
+    }
+
+    .faq-answer p{
+        padding:0 24px 22px;
+        font-size:15px;
+    }
+}
+
+/* ---------- Mobile (768px and below) ---------- */
+@media (max-width:768px){
+
+    .faq{
+        padding:70px 0;
+    }
+
+    .faq-wrapper{
+        gap:16px;
+    }
+
+    .faq-question{
+        padding:20px;
+        gap:16px;
+    }
+
+    .faq-question span{
+        font-size:17px;
+        line-height:1.5;
+    }
+
+    .faq-question i{
+        width:36px;
+        height:36px;
+        border-radius:10px;
+        font-size:14px;
+    }
+
+    .faq-answer p{
+        padding:0 20px 20px;
+        font-size:15px;
+        line-height:1.7;
+    }
+
+    .faq-item.active .faq-answer{
+        max-height:300px;
+    }
+}
+
+/* ---------- Small Mobile (480px) ---------- */
+@media (max-width:480px){
+
+    .faq{
+        padding:60px 0;
+    }
+
+    .faq-question{
+        padding:18px;
+    }
+
+    .faq-question span{
+        font-size:16px;
+    }
+
+    .faq-question i{
+        width:34px;
+        height:34px;
+    }
+
+    .faq-answer p{
+        padding:0 18px 18px;
+        font-size:14px;
+    }
+}
+
+/* ---------- Extra Small Mobile (360px) ---------- */
+@media (max-width:360px){
+
+    .faq-question{
+        padding:16px;
+        gap:14px;
+    }
+
+    .faq-question span{
+        font-size:15px;
+    }
+
+    .faq-question i{
+        width:32px;
+        height:32px;
+        font-size:13px;
+    }
+
+    .faq-answer p{
+        padding:0 16px 16px;
+        font-size:13px;
+    }
+}
+
+
+/* ===================================
+   Home 2 CTA Responsive
+=================================== */
+
+/* ---------- Tablet (769px - 1024px) ---------- */
+@media (min-width:769px) and (max-width:1024px){
+
+    .cta-two-box{
+        padding:70px 40px;
+    }
+
+    .cta-two-content{
+        max-width:680px;
+    }
+
+    .cta-two-content h2{
+        font-size:42px;
+    }
+
+    .cta-two-content p{
+        font-size:16px;
+    }
+
+    .cta-two-buttons{
+        gap:16px;
+    }
+
+    .cta-two-buttons .btn{
+        min-width:200px;
+    }
+}
+
+/* ---------- Mobile (768px and below) ---------- */
+@media (max-width:768px){
+
+    .cta-home-two{
+        padding:0;
+    }
+
+    .cta-two-box{
+        padding:60px 24px;
+        border-radius:24px 24px 0 0;
+    }
+
+    .cta-two-content{
+        max-width:100%;
+    }
+
+    .cta-two-content h2{
+        font-size:34px;
+        line-height:1.25;
+    }
+
+    .cta-two-content p{
+        font-size:15px;
+        line-height:1.7;
+        margin-bottom:30px;
+    }
+
+    .cta-two-buttons{
+        flex-direction:column;
+        gap:14px;
+    }
+
+    .cta-two-buttons .btn{
+        width:100%;
+        min-width:auto;
+        height:54px;
+    }
+
+    .cta-two-box::before{
+        width:120px;
+        height:120px;
+        top:-40px;
+        left:-40px;
+    }
+
+    .cta-two-box::after{
+        width:100px;
+        height:100px;
+        bottom:-30px;
+        right:-30px;
+    }
+}
+
+/* ---------- Small Mobile (480px) ---------- */
+@media (max-width:480px){
+
+    .cta-two-box{
+        padding:50px 20px;
+    }
+
+    .cta-two-subtitle{
+        font-size:13px;
+        padding:7px 16px;
+    }
+
+    .cta-two-content h2{
+        font-size:30px;
+    }
+
+    .cta-two-content p{
+        font-size:14px;
+    }
+
+    .cta-two-buttons .btn{
+        height:52px;
+    }
+}
+
+/* ---------- Extra Small Mobile (360px) ---------- */
+@media (max-width:360px){
+
+    .cta-two-box{
+        padding:45px 18px;
+    }
+
+    .cta-two-content h2{
+        font-size:28px;
+    }
+
+    .cta-two-content p{
+        font-size:13px;
+    }
+
+    .cta-two-buttons .btn{
+        height:50px;
+        font-size:15px;
+    }
+}
+
+/* ===================================
+   About Banner Responsive
+=================================== */
+
+/* ---------- Tablet (769px - 1024px) ---------- */
+@media (min-width:769px) and (max-width:1024px){
+
+    .page-banner{
+        min-height:420px;
+    }
+
+    .banner-content{
+        max-width:700px;
+        padding:100px 30px;
+    }
+
+    .banner-content h1{
+        font-size:48px;
+    }
+
+    .banner-content p{
+        font-size:17px;
+    }
+}
+
+/* ---------- Mobile (768px and below) ---------- */
+@media (max-width:768px){
+
+    .page-banner{
+        min-height:380px;
+    }
+
+    .banner-content{
+        max-width:100%;
+        padding:90px 20px;
+    }
+
+    .banner-subtitle{
+        font-size:13px;
+        padding:7px 16px;
+        margin-bottom:18px;
+    }
+
+    .banner-content h1{
+        font-size:36px;
+        line-height:1.2;
+        margin-bottom:18px;
+    }
+
+    .banner-content p{
+        font-size:15px;
+        line-height:1.7;
+        margin-bottom:24px;
+    }
+
+    .breadcrumb{
+        gap:8px;
+    }
+
+    .breadcrumb a,
+    .breadcrumb span{
+        font-size:14px;
+    }
+}
+
+/* ---------- Small Mobile (480px) ---------- */
+@media (max-width:480px){
+
+    .page-banner{
+        min-height:340px;
+    }
+
+    .banner-content{
+        padding:80px 18px;
+    }
+
+    .banner-content h1{
+        font-size:30px;
+    }
+
+    .banner-content p{
+        font-size:14px;
+    }
+
+    .breadcrumb a,
+    .breadcrumb span{
+        font-size:13px;
+    }
+}
+
+/* ---------- Extra Small Mobile (360px) ---------- */
+@media (max-width:360px){
+
+    .page-banner{
+        min-height:320px;
+    }
+
+    .banner-content{
+        padding:75px 16px;
+    }
+
+    .banner-content h1{
+        font-size:26px;
+    }
+
+    .banner-content p{
+        font-size:13px;
+    }
+
+    .breadcrumb{
+        gap:6px;
+    }
+
+    .breadcrumb a,
+    .breadcrumb span{
+        font-size:12px;
+    }
+}
+
+/* ===================================
+   Our Story Responsive
+=================================== */
+
+/* ---------- Tablet (769px - 1024px) ---------- */
+@media (min-width:769px) and (max-width:1024px){
+
+    .story-wrapper{
+        grid-template-columns:1fr;
+        gap:50px;
+    }
+
+    .story-image{
+        order:1;
+    }
+
+    .story-content{
+        order:2;
+        max-width:100%;
+        text-align:center;
+    }
+
+    .story-image-box img{
+        height:520px;
+    }
+
+    .story-badge{
+        left:50%;
+        transform:translateX(-50%);
+        top:24px;
+    }
+
+    .story-stats{
+        grid-template-columns:repeat(3,1fr);
+        gap:16px;
+    }
+}
+
+/* ---------- Mobile (768px and below) ---------- */
+@media (max-width:768px){
+
+    .our-story{
+        padding:70px 0;
+    }
+
+    .story-wrapper{
+        grid-template-columns:1fr;
+        gap:40px;
+    }
+
+    .story-image{
+        order:1;
+    }
+
+    .story-content{
+        order:2;
+        max-width:100%;
+    }
+
+    .story-image-box{
+        border-radius:24px;
+    }
+
+    .story-image-box img{
+        height:400px;
+    }
+
+    .story-badge{
+        top:20px;
+        left:20px;
+        transform:none;
+        padding:12px 16px;
+        font-size:14px;
+    }
+
+    .story-content .section-title{
+        font-size:34px;
+        line-height:1.25;
+    }
+
+    .story-content .section-description{
+        font-size:16px;
+        line-height:1.7;
+    }
+
+    .story-stats{
+        grid-template-columns:1fr;
+        gap:16px;
+        margin-top:30px;
+    }
+
+    .story-stat-card{
+        padding:22px;
+    }
+
+    .story-stat-card h3{
+        font-size:30px;
+    }
+
+    .story-stat-card p{
+        font-size:14px;
+    }
+}
+
+/* ---------- Small Mobile (480px) ---------- */
+@media (max-width:480px){
+
+    .our-story{
+        padding:60px 0;
+    }
+
+    .story-image-box img{
+        height:320px;
+    }
+
+    .story-badge{
+        top:16px;
+        left:16px;
+        padding:10px 14px;
+        font-size:13px;
+    }
+
+    .story-content .section-title{
+        font-size:30px;
+    }
+
+    .story-content .section-description{
+        font-size:15px;
+    }
+
+    .story-stat-card{
+        padding:20px;
+    }
+
+    .story-stat-card h3{
+        font-size:28px;
+    }
+}
+
+/* ---------- Extra Small Mobile (360px) ---------- */
+@media (max-width:360px){
+
+    .story-image-box img{
+        height:280px;
+    }
+
+    .story-badge{
+        font-size:12px;
+        padding:8px 12px;
+    }
+
+    .story-content .section-title{
+        font-size:28px;
+    }
+
+    .story-content .section-description{
+        font-size:14px;
+    }
+
+    .story-stat-card{
+        padding:18px;
+    }
+
+    .story-stat-card h3{
+        font-size:26px;
+    }
+
+    .story-stat-card p{
+        font-size:13px;
+    }
+}
+
+/* ===================================
+   Mission & Vision Responsive
+=================================== */
+
+/* ---------- Tablet (769px - 1024px) ---------- */
+@media (min-width:769px) and (max-width:1024px){
+
+    .mission-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:24px;
+    }
+
+    .mission-card{
+        padding:30px 24px;
+    }
+
+    .mission-icon{
+        width:64px;
+        height:64px;
+        border-radius:18px;
+    }
+
+    .mission-icon i{
+        font-size:26px;
+    }
+
+    .mission-card h3{
+        font-size:24px;
+    }
+
+    .mission-card p{
+        font-size:15px;
+    }
+
+    .mission-list li{
+        font-size:14px;
+    }
+}
+
+/* ---------- Mobile (768px and below) ---------- */
+@media (max-width:768px){
+
+    .mission-vision{
+        padding:70px 0;
+    }
+
+    .mission-grid{
+        grid-template-columns:1fr;
+        gap:22px;
+    }
+
+    .mission-card{
+        padding:28px 22px;
+        border-radius:24px;
+    }
+
+    .mission-icon{
+        width:60px;
+        height:60px;
+        border-radius:16px;
+        margin-bottom:20px;
+    }
+
+    .mission-icon i{
+        font-size:24px;
+    }
+
+    .mission-card h3{
+        font-size:22px;
+        margin-bottom:16px;
+    }
+
+    .mission-card p{
+        font-size:15px;
+        line-height:1.7;
+        margin-bottom:22px;
+    }
+
+    .mission-list{
+        gap:12px;
+        padding-top:18px;
+    }
+
+    .mission-list li{
+        font-size:14px;
+    }
+
+    .mission-card:hover{
+        transform:translateY(-5px);
+    }
+}
+
+/* ---------- Small Mobile (480px) ---------- */
+@media (max-width:480px){
+
+    .mission-vision{
+        padding:60px 0;
+    }
+
+    .mission-card{
+        padding:24px 20px;
+        border-radius:20px;
+    }
+
+    .mission-icon{
+        width:56px;
+        height:56px;
+    }
+
+    .mission-icon i{
+        font-size:22px;
+    }
+
+    .mission-card h3{
+        font-size:20px;
+    }
+
+    .mission-card p{
+        font-size:14px;
+    }
+
+    .mission-list li{
+        font-size:13px;
+    }
+}
+
+/* ---------- Extra Small Mobile (360px) ---------- */
+@media (max-width:360px){
+
+    .mission-card{
+        padding:22px 18px;
+    }
+
+    .mission-icon{
+        width:52px;
+        height:52px;
+    }
+
+    .mission-icon i{
+        font-size:20px;
+    }
+
+    .mission-card h3{
+        font-size:18px;
+    }
+
+    .mission-card p{
+        font-size:13px;
+    }
+
+    .mission-list li{
+        font-size:12px;
+    }
+}
+
+/* ===================================
+   About Instructors Responsive
+=================================== */
+
+/* ---------- Tablet (769px - 1024px) ---------- */
+@media (min-width:769px) and (max-width:1024px){
+
+    .instructors-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:24px;
+    }
+
+    .instructor-image img{
+        height:280px;
+    }
+
+    .instructor-content{
+        padding:22px;
+    }
+
+    .instructor-content h3{
+        font-size:20px;
+    }
+
+    .instructor-content p{
+        font-size:15px;
+    }
+
+    .instructor-info span{
+        font-size:14px;
+    }
+}
+
+/* ---------- Mobile (768px and below) ---------- */
+@media (max-width:768px){
+
+    .about-instructors{
+        padding:70px 0;
+    }
+
+    .instructors-grid{
+        grid-template-columns:1fr;
+        gap:22px;
+    }
+
+    .instructor-card{
+        border-radius:22px;
+    }
+
+    .instructor-image img{
+        height:320px;
+    }
+
+    .instructor-content{
+        padding:22px;
+    }
+
+    .instructor-content h3{
+        font-size:20px;
+    }
+
+    .instructor-role{
+        font-size:13px;
+    }
+
+    .instructor-content p{
+        font-size:15px;
+        line-height:1.7;
+    }
+
+    .instructor-info{
+        gap:10px;
+        padding-top:16px;
+    }
+
+    .instructor-info span{
+        font-size:14px;
+    }
+
+    .instructor-card:hover{
+        transform:translateY(-5px);
+    }
+}
+
+/* ---------- Small Mobile (480px) ---------- */
+@media (max-width:480px){
+
+    .about-instructors{
+        padding:60px 0;
+    }
+
+    .instructor-image img{
+        height:280px;
+    }
+
+    .instructor-content{
+        padding:20px;
+    }
+
+    .instructor-content h3{
+        font-size:18px;
+    }
+
+    .instructor-content p{
+        font-size:14px;
+    }
+
+    .instructor-info span{
+        font-size:13px;
+    }
+}
+
+/* ---------- Extra Small Mobile (360px) ---------- */
+@media (max-width:360px){
+
+    .instructor-image img{
+        height:240px;
+    }
+
+    .instructor-content{
+        padding:18px;
+    }
+
+    .instructor-content h3{
+        font-size:17px;
+    }
+
+    .instructor-role{
+        font-size:12px;
+    }
+
+    .instructor-content p{
+        font-size:13px;
+    }
+
+    .instructor-info span{
+        font-size:12px;
+    }
+}
+
+/* ===================================
+   Training Facilities Responsive
+=================================== */
+
+/* ---------- Tablet (769px - 1024px) ---------- */
+@media (min-width:769px) and (max-width:1024px){
+
+    .facilities-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:24px;
+    }
+
+    .facility-image img{
+        height:220px;
+    }
+
+    .facility-content{
+        padding:22px;
+    }
+
+    .facility-content h3{
+        font-size:20px;
+    }
+
+    .facility-content p{
+        font-size:15px;
+    }
+}
+
+/* ---------- Mobile (768px and below) ---------- */
+@media (max-width:768px){
+
+    .facilities{
+        padding:70px 0;
+    }
+
+    .facilities-grid{
+        grid-template-columns:1fr;
+        gap:22px;
+    }
+
+    .facility-card{
+        border-radius:22px;
+    }
+
+    .facility-image img{
+        height:260px;
+    }
+
+    .facility-content{
+        padding:22px;
+    }
+
+    .facility-content h3{
+        font-size:20px;
+        line-height:1.35;
+    }
+
+    .facility-content p{
+        font-size:15px;
+        line-height:1.7;
+    }
+
+    .facility-card:hover{
+        transform:translateY(-5px);
+    }
+}
+
+/* ---------- Small Mobile (480px) ---------- */
+@media (max-width:480px){
+
+    .facilities{
+        padding:60px 0;
+    }
+
+    .facility-image img{
+        height:220px;
+    }
+
+    .facility-content{
+        padding:20px;
+    }
+
+    .facility-content h3{
+        font-size:18px;
+    }
+
+    .facility-content p{
+        font-size:14px;
+    }
+}
+
+/* ---------- Extra Small Mobile (360px) ---------- */
+@media (max-width:360px){
+
+    .facility-image img{
+        height:190px;
+    }
+
+    .facility-content{
+        padding:18px;
+    }
+
+    .facility-content h3{
+        font-size:17px;
+    }
+
+    .facility-content p{
+        font-size:13px;
+    }
+}
+
+/* ===================================
+   Success Statistics Responsive
+=================================== */
+
+/* ---------- Tablet (769px - 1024px) ---------- */
+@media (min-width:769px) and (max-width:1024px){
+
+    .stats-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:22px;
+    }
+
+    .stat-card{
+        padding:30px 24px;
+    }
+
+    .stat-icon{
+        width:66px;
+        height:66px;
+        border-radius:18px;
+    }
+
+    .stat-icon i{
+        font-size:28px;
+    }
+
+    .stat-card h3{
+        font-size:38px;
+    }
+
+    .stat-card p{
+        font-size:15px;
+    }
+}
+
+/* ---------- Mobile (768px and below) ---------- */
+@media (max-width:768px){
+
+    .success-stats{
+        padding:70px 0;
+    }
+
+    .stats-header{
+        margin-bottom:35px;
+    }
+
+    .stats-grid{
+        grid-template-columns:1fr;
+        gap:20px;
+    }
+
+    .stat-card{
+        padding:28px 22px;
+        border-radius:22px;
+    }
+
+    .stat-icon{
+        width:64px;
+        height:64px;
+        border-radius:16px;
+        margin-bottom:20px;
+    }
+
+    .stat-icon i{
+        font-size:26px;
+    }
+
+    .stat-card h3{
+        font-size:36px;
+        margin-bottom:10px;
+    }
+
+    .stat-card p{
+        font-size:15px;
+    }
+
+    .stat-card:hover{
+        transform:translateY(-5px);
+    }
+
+    .success-stats::before{
+        width:140px;
+        height:140px;
+        top:-40px;
+        left:-40px;
+    }
+
+    .success-stats::after{
+        width:120px;
+        height:120px;
+        bottom:-30px;
+        right:-30px;
+    }
+}
+
+/* ---------- Small Mobile (480px) ---------- */
+@media (max-width:480px){
+
+    .success-stats{
+        padding:60px 0;
+    }
+
+    .stat-card{
+        padding:24px 20px;
+    }
+
+    .stat-icon{
+        width:58px;
+        height:58px;
+    }
+
+    .stat-icon i{
+        font-size:24px;
+    }
+
+    .stat-card h3{
+        font-size:32px;
+    }
+
+    .stat-card p{
+        font-size:14px;
+    }
+}
+
+/* ---------- Extra Small Mobile (360px) ---------- */
+@media (max-width:360px){
+
+    .stat-card{
+        padding:22px 18px;
+    }
+
+    .stat-icon{
+        width:54px;
+        height:54px;
+    }
+
+    .stat-icon i{
+        font-size:22px;
+    }
+
+    .stat-card h3{
+        font-size:28px;
+    }
+
+    .stat-card p{
+        font-size:13px;
+    }
+}
+
+/* ===================================
+   About Why Choose Responsive
+=================================== */
+
+/* ---------- Tablet (769px - 1024px) ---------- */
+@media (min-width:769px) and (max-width:1024px){
+
+    .about-why-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:24px;
+    }
+
+    .about-why-card{
+        padding:28px 24px;
+    }
+
+    .about-why-icon{
+        width:64px;
+        height:64px;
+        border-radius:18px;
+    }
+
+    .about-why-icon i{
+        font-size:26px;
+    }
+
+    .about-why-card h3{
+        font-size:20px;
+    }
+
+    .about-why-card p{
+        font-size:15px;
+    }
+}
+
+/* ---------- Mobile (768px and below) ---------- */
+@media (max-width:768px){
+
+    .about-why{
+        padding:70px 0;
+    }
+
+    .about-why-grid{
+        grid-template-columns:1fr;
+        gap:22px;
+    }
+
+    .about-why-card{
+        padding:28px 22px;
+        border-radius:22px;
+    }
+
+    .about-why-icon{
+        width:60px;
+        height:60px;
+        border-radius:16px;
+        margin-bottom:20px;
+    }
+
+    .about-why-icon i{
+        font-size:24px;
+    }
+
+    .about-why-card h3{
+        font-size:20px;
+        line-height:1.35;
+        margin-bottom:14px;
+    }
+
+    .about-why-card p{
+        font-size:15px;
+        line-height:1.7;
+    }
+
+    .about-why-card:hover{
+        transform:translateY(-5px);
+    }
+}
+
+/* ---------- Small Mobile (480px) ---------- */
+@media (max-width:480px){
+
+    .about-why{
+        padding:60px 0;
+    }
+
+    .about-why-card{
+        padding:24px 20px;
+    }
+
+    .about-why-icon{
+        width:56px;
+        height:56px;
+    }
+
+    .about-why-icon i{
+        font-size:22px;
+    }
+
+    .about-why-card h3{
+        font-size:18px;
+    }
+
+    .about-why-card p{
+        font-size:14px;
+    }
+}
+
+/* ---------- Extra Small Mobile (360px) ---------- */
+@media (max-width:360px){
+
+    .about-why-card{
+        padding:22px 18px;
+    }
+
+    .about-why-icon{
+        width:52px;
+        height:52px;
+    }
+
+    .about-why-icon i{
+        font-size:20px;
+    }
+
+    .about-why-card h3{
+        font-size:17px;
+    }
+
+    .about-why-card p{
+        font-size:13px;
+    }
+}
+
+
+/* ===================================
+   About FAQ Responsive
+=================================== */
+
+/* ---------- Tablet (769px - 1024px) ---------- */
+@media (min-width:769px) and (max-width:1024px){
+
+    .about-faq-wrapper{
+        max-width:100%;
+    }
+
+    .about-faq-question{
+        padding:22px 24px;
+    }
+
+    .about-faq-question span{
+        font-size:19px;
+    }
+
+    .about-faq-answer p{
+        padding:0 24px 22px;
+        font-size:15px;
+    }
+}
+
+/* ---------- Mobile (768px and below) ---------- */
+@media (max-width:768px){
+
+    .about-faq{
+        padding:70px 0;
+    }
+
+    .about-faq-wrapper{
+        gap:16px;
+    }
+
+    .about-faq-question{
+        padding:20px;
+        gap:16px;
+    }
+
+    .about-faq-question span{
+        font-size:17px;
+        line-height:1.5;
+    }
+
+    .about-faq-question i{
+        width:36px;
+        height:36px;
+        border-radius:10px;
+        font-size:14px;
+    }
+
+    .about-faq-answer p{
+        padding:0 20px 20px;
+        font-size:15px;
+        line-height:1.7;
+    }
+
+    .about-faq-item.active .about-faq-answer{
+        max-height:300px;
+    }
+}
+
+/* ---------- Small Mobile (480px) ---------- */
+@media (max-width:480px){
+
+    .about-faq{
+        padding:60px 0;
+    }
+
+    .about-faq-question{
+        padding:18px;
+    }
+
+    .about-faq-question span{
+        font-size:16px;
+    }
+
+    .about-faq-question i{
+        width:34px;
+        height:34px;
+    }
+
+    .about-faq-answer p{
+        padding:0 18px 18px;
+        font-size:14px;
+    }
+}
+
+/* ---------- Extra Small Mobile (360px) ---------- */
+@media (max-width:360px){
+
+    .about-faq-question{
+        padding:16px;
+        gap:14px;
+    }
+
+    .about-faq-question span{
+        font-size:15px;
+    }
+
+    .about-faq-question i{
+        width:32px;
+        height:32px;
+        font-size:13px;
+    }
+
+    .about-faq-answer p{
+        padding:0 16px 16px;
+        font-size:13px;
+    }
+}
+
+/* ===================================
+   About CTA Responsive
+=================================== */
+
+/* ---------- Tablet (769px - 1024px) ---------- */
+@media (min-width:769px) and (max-width:1024px){
+
+    .about-cta-box{
+        padding:70px 40px;
+    }
+
+    .about-cta-content{
+        max-width:680px;
+    }
+
+    .about-cta-content h2{
+        font-size:42px;
+    }
+
+    .about-cta-content p{
+        font-size:16px;
+    }
+
+    .about-cta-buttons{
+        gap:16px;
+    }
+
+    
+}
+
+/* ---------- Mobile (768px and below) ---------- */
+@media (max-width:768px){
+
+    .about-cta{
+        padding:0;
+    }
+
+    .about-cta-box{
+        padding:60px 24px;
+        border-radius:24px 24px 0 0;
+    }
+
+    .about-cta-content{
+        max-width:100%;
+    }
+
+    .about-cta-content h2{
+        font-size:34px;
+        line-height:1.25;
+    }
+
+    .about-cta-content p{
+        font-size:15px;
+        line-height:1.7;
+        margin-bottom:30px;
+    }
+
+    .about-cta-buttons{
+        flex-direction:column;
+        gap:14px;
+    }
+
+    
+
+    .about-cta-box::before{
+        width:140px;
+        height:140px;
+        top:-40px;
+        left:-40px;
+    }
+
+    .about-cta-box::after{
+        width:120px;
+        height:120px;
+        bottom:-30px;
+        right:-30px;
+    }
+}
+
+/* ---------- Small Mobile (480px) ---------- */
+@media (max-width:480px){
+
+    .about-cta-box{
+        padding:50px 20px;
+    }
+
+    .about-cta-subtitle{
+        font-size:13px;
+        padding:7px 16px;
+    }
+
+    .about-cta-content h2{
+        font-size:30px;
+    }
+
+    .about-cta-content p{
+        font-size:14px;
+    }
+
+    
+}
+
+/* ---------- Extra Small Mobile (360px) ---------- */
+@media (max-width:360px){
+
+    .about-cta-box{
+        padding:45px 18px;
+    }
+
+    .about-cta-content h2{
+        font-size:28px;
+    }
+
+    .about-cta-content p{
+        font-size:13px;
+    }
+
+    
+}
+
+
+
+/****lessons page*****/
+/* ===================================
+   Lessons Banner Responsive
+=================================== */
+
+/* ---------- Tablet (769px - 1024px) ---------- */
+@media (min-width:769px) and (max-width:1024px){
+
+    .page-banner{
+        min-height:420px;
+    }
+
+    .banner-content{
+        max-width:720px;
+        padding:100px 30px;
+    }
+
+    .banner-content h1{
+        font-size:48px;
+    }
+
+    .banner-content p{
+        font-size:17px;
+    }
+}
+
+/* ---------- Mobile (768px and below) ---------- */
+@media (max-width:768px){
+
+    .page-banner{
+        min-height:380px;
+    }
+
+    .banner-content{
+        max-width:100%;
+        padding:90px 20px;
+    }
+
+    .banner-subtitle{
+        font-size:13px;
+        padding:7px 16px;
+        margin-bottom:18px;
+    }
+
+    .banner-content h1{
+        font-size:36px;
+        line-height:1.2;
+        margin-bottom:18px;
+    }
+
+    .banner-content p{
+        font-size:15px;
+        line-height:1.7;
+        margin-bottom:24px;
+    }
+
+    .breadcrumb{
+        gap:8px;
+    }
+
+    .breadcrumb a,
+    .breadcrumb span{
+        font-size:14px;
+    }
+}
+
+/* ---------- Small Mobile (480px) ---------- */
+@media (max-width:480px){
+
+    .page-banner{
+        min-height:340px;
+    }
+
+    .banner-content{
+        padding:80px 18px;
+    }
+
+    .banner-content h1{
+        font-size:30px;
+    }
+
+    .banner-content p{
+        font-size:14px;
+    }
+
+    .breadcrumb a,
+    .breadcrumb span{
+        font-size:13px;
+    }
+}
+
+/* ---------- Extra Small Mobile (360px) ---------- */
+@media (max-width:360px){
+
+    .page-banner{
+        min-height:320px;
+    }
+
+    .banner-content{
+        padding:75px 16px;
+    }
+
+    .banner-content h1{
+        font-size:26px;
+    }
+
+    .banner-content p{
+        font-size:13px;
+    }
+
+    .breadcrumb{
+        gap:6px;
+    }
+
+    .breadcrumb a,
+    .breadcrumb span{
+        font-size:12px;
+    }
+}
+
+/* ===================================
+   Lesson Packages Responsive
+=================================== */
+
+/* ---------- Tablet (769px - 1024px) ---------- */
+@media (min-width:769px) and (max-width:1024px){
+
+    .packages-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:24px;
+    }
+
+    .package-card{
+        padding:28px 24px;
+    }
+
+    .package-card h3{
+        font-size:22px;
+    }
+
+    .package-price{
+        font-size:38px;
+    }
+
+    .package-features li{
+        font-size:14px;
+    }
+
+   
+}
+
+/* ---------- Mobile (768px and below) ---------- */
+@media (max-width:768px){
+
+    .lesson-packages{
+        padding:70px 0;
+    }
+
+    .packages-grid{
+        grid-template-columns:1fr;
+        gap:22px;
+    }
+
+    .package-card{
+        padding:28px 22px;
+        border-radius:22px;
+    }
+
+    .package-badge{
+        font-size:12px;
+        padding:7px 14px;
+        margin-bottom:18px;
+    }
+
+    .package-card h3{
+        font-size:22px;
+        margin-bottom:16px;
+    }
+
+    .package-price{
+        font-size:36px;
+        margin-bottom:22px;
+    }
+
+    .package-features{
+        gap:12px;
+        margin-bottom:24px;
+    }
+
+    .package-features li{
+        font-size:14px;
+    }
+
+   
+
+    .package-card:hover{
+        transform:translateY(-5px);
+    }
+}
+
+/* ---------- Small Mobile (480px) ---------- */
+@media (max-width:480px){
+
+    .lesson-packages{
+        padding:60px 0;
+    }
+
+    .package-card{
+        padding:24px 20px;
+    }
+
+    .package-card h3{
+        font-size:20px;
+    }
+
+    .package-price{
+        font-size:32px;
+    }
+
+    .package-features li{
+        font-size:13px;
+    }
+
+    
+}
+
+/* ---------- Extra Small Mobile (360px) ---------- */
+@media (max-width:360px){
+
+    .package-card{
+        padding:22px 18px;
+    }
+
+    .package-card h3{
+        font-size:18px;
+    }
+
+    .package-price{
+        font-size:28px;
+    }
+
+    .package-features li{
+        font-size:12px;
+    }
+
+    
+}
+
+/* ===================================
+   Vehicle Types Responsive
+=================================== */
+
+/* ---------- Tablet (769px - 1024px) ---------- */
+@media (min-width:769px) and (max-width:1024px){
+
+    .vehicle-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:24px;
+    }
+
+    .vehicle-image img{
+        height:240px;
+    }
+
+    .vehicle-content{
+        padding:24px;
+    }
+
+    .vehicle-content h3{
+        font-size:22px;
+    }
+
+    .vehicle-content p{
+        font-size:15px;
+    }
+
+    .vehicle-features li{
+        font-size:14px;
+    }
+}
+
+/* ---------- Mobile (768px and below) ---------- */
+@media (max-width:768px){
+
+    .vehicle-types{
+        padding:70px 0;
+    }
+
+    .vehicle-grid{
+        grid-template-columns:1fr;
+        gap:22px;
+    }
+
+    .vehicle-card{
+        border-radius:24px;
+    }
+
+    .vehicle-image img{
+        height:260px;
+    }
+
+    .vehicle-content{
+        padding:24px;
+    }
+
+    .vehicle-badge{
+        font-size:12px;
+        padding:7px 14px;
+        margin-bottom:16px;
+    }
+
+    .vehicle-content h3{
+        font-size:22px;
+        margin-bottom:14px;
+    }
+
+    .vehicle-content p{
+        font-size:15px;
+        line-height:1.7;
+        margin-bottom:20px;
+    }
+
+    .vehicle-features{
+        gap:12px;
+    }
+
+    .vehicle-features li{
+        font-size:14px;
+    }
+
+    .vehicle-card:hover{
+        transform:translateY(-5px);
+    }
+}
+
+/* ---------- Small Mobile (480px) ---------- */
+@media (max-width:480px){
+
+    .vehicle-types{
+        padding:60px 0;
+    }
+
+    .vehicle-image img{
+        height:220px;
+    }
+
+    .vehicle-content{
+        padding:20px;
+    }
+
+    .vehicle-content h3{
+        font-size:20px;
+    }
+
+    .vehicle-content p{
+        font-size:14px;
+    }
+
+    .vehicle-features li{
+        font-size:13px;
+    }
+}
+
+/* ---------- Extra Small Mobile (360px) ---------- */
+@media (max-width:360px){
+
+    .vehicle-image img{
+        height:190px;
+    }
+
+    .vehicle-content{
+        padding:18px;
+    }
+
+    .vehicle-content h3{
+        font-size:18px;
+    }
+
+    .vehicle-content p{
+        font-size:13px;
+    }
+
+    .vehicle-features li{
+        font-size:12px;
+    }
+}
+
+/* ===================================
+   Lesson Features Responsive
+=================================== */
+
+/* ---------- Tablet (769px - 1024px) ---------- */
+@media (min-width:769px) and (max-width:1024px){
+
+    .lesson-features-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:22px;
+    }
+
+    .lesson-feature-card{
+        padding:26px 22px;
+        min-height:260px;
+    }
+
+    .lesson-feature-icon{
+        width:60px;
+        height:60px;
+        border-radius:16px;
+    }
+
+    .lesson-feature-icon i{
+        font-size:26px;
+    }
+
+    .lesson-feature-card h3{
+        font-size:20px;
+    }
+
+    .lesson-feature-card p{
+        font-size:15px;
+    }
+}
+
+/* ---------- Mobile (768px and below) ---------- */
+@media (max-width:768px){
+
+    .lesson-features{
+        padding:70px 0;
+    }
+
+    .lesson-features-grid{
+        grid-template-columns:1fr;
+        gap:20px;
+    }
+
+    .lesson-feature-card{
+        padding:24px 20px;
+        min-height:auto;
+        border-radius:20px;
+    }
+
+    .lesson-feature-icon{
+        width:56px;
+        height:56px;
+        border-radius:14px;
+        margin-bottom:18px;
+    }
+
+    .lesson-feature-icon i{
+        font-size:24px;
+    }
+
+    .lesson-feature-card h3{
+        font-size:20px;
+        margin-bottom:12px;
+    }
+
+    .lesson-feature-card p{
+        font-size:15px;
+        line-height:1.7;
+    }
+
+    .lesson-feature-card:hover{
+        transform:translateY(-4px);
+    }
+}
+
+/* ---------- Small Mobile (480px) ---------- */
+@media (max-width:480px){
+
+    .lesson-features{
+        padding:60px 0;
+    }
+
+    .lesson-feature-card{
+        padding:22px 18px;
+    }
+
+    .lesson-feature-icon{
+        width:52px;
+        height:52px;
+    }
+
+    .lesson-feature-icon i{
+        font-size:22px;
+    }
+
+    .lesson-feature-card h3{
+        font-size:18px;
+    }
+
+    .lesson-feature-card p{
+        font-size:14px;
+    }
+}
+
+/* ---------- Extra Small Mobile (360px) ---------- */
+@media (max-width:360px){
+
+    .lesson-feature-card{
+        padding:20px 16px;
+    }
+
+    .lesson-feature-icon{
+        width:48px;
+        height:48px;
+    }
+
+    .lesson-feature-icon i{
+        font-size:20px;
+    }
+
+    .lesson-feature-card h3{
+        font-size:17px;
+    }
+
+    .lesson-feature-card p{
+        font-size:13px;
+    }
+}
+
+/* ===================================
+   Lesson Pricing Responsive
+=================================== */
+
+/* ---------- Tablet (769px - 1024px) ---------- */
+@media (min-width:769px) and (max-width:1024px){
+
+    .pricing-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:22px;
+    }
+
+    .pricing-image img{
+        height:170px;
+    }
+
+    .pricing-content{
+        padding:22px;
+    }
+
+    .pricing-content h3{
+        font-size:20px;
+    }
+
+    .pricing-price{
+        font-size:34px;
+    }
+
+    .pricing-features li{
+        font-size:14px;
+    }
+
+    .pricing-card .btn{
+        height:48px;
+    }
+}
+
+/* ---------- Mobile (768px and below) ---------- */
+@media (max-width:768px){
+
+    .lesson-pricing{
+        padding:70px 0;
+    }
+
+    .pricing-grid{
+        grid-template-columns:1fr;
+        gap:20px;
+    }
+
+    .pricing-card{
+        border-radius:22px;
+    }
+
+    .pricing-image img{
+        height:200px;
+    }
+
+    .pricing-content{
+        padding:22px;
+    }
+
+    .pricing-badge{
+        font-size:12px;
+        padding:6px 12px;
+        margin-bottom:14px;
+    }
+
+    .pricing-content h3{
+        font-size:20px;
+        margin-bottom:12px;
+    }
+
+    .pricing-price{
+        font-size:32px;
+        margin-bottom:18px;
+    }
+
+    .pricing-features{
+        gap:10px;
+        margin-bottom:20px;
+    }
+
+    .pricing-features li{
+        font-size:14px;
+    }
+
+    .pricing-card .btn{
+        width:100%;
+        height:48px;
+    }
+
+    .pricing-card:hover{
+        transform:translateY(-4px);
+    }
+}
+
+/* ---------- Small Mobile (480px) ---------- */
+@media (max-width:480px){
+
+    .lesson-pricing{
+        padding:60px 0;
+    }
+
+    .pricing-image img{
+        height:180px;
+    }
+
+    .pricing-content{
+        padding:20px;
+    }
+
+    .pricing-content h3{
+        font-size:18px;
+    }
+
+    .pricing-price{
+        font-size:30px;
+    }
+
+    .pricing-features li{
+        font-size:13px;
+    }
+
+    .pricing-card .btn{
+        height:46px;
+        font-size:15px;
+    }
+}
+
+/* ---------- Extra Small Mobile (360px) ---------- */
+@media (max-width:360px){
+
+    .pricing-image img{
+        height:160px;
+    }
+
+    .pricing-content{
+        padding:18px;
+    }
+
+    .pricing-content h3{
+        font-size:17px;
+    }
+
+    .pricing-price{
+        font-size:28px;
+    }
+
+    .pricing-features li{
+        font-size:12px;
+    }
+
+    .pricing-card .btn{
+        height:44px;
+        font-size:14px;
+    }
+}
+
+
+/* ===================================
+   Pass Rate Responsive
+=================================== */
+
+/* ---------- Tablet (769px - 1024px) ---------- */
+@media (min-width:769px) and (max-width:1024px){
+
+    .pass-rate-wrapper{
+        grid-template-columns:1fr;
+        gap:40px;
+    }
+
+    .pass-rate-image img{
+        height:460px;
+    }
+
+    .pass-rate-content{
+        text-align:center;
+    }
+
+    .pass-rate-description{
+        max-width:700px;
+        margin:0 auto 28px;
+    }
+
+    .pass-stats-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:18px;
+    }
+
+    .pass-rate-content .btn{
+        margin:0 auto;
+    }
+}
+
+/* ---------- Mobile (768px and below) ---------- */
+@media (max-width:768px){
+
+    .pass-rate{
+        padding:70px 0;
+    }
+
+    .pass-rate-wrapper{
+        grid-template-columns:1fr;
+        gap:32px;
+    }
+
+    .pass-rate-image{
+        border-radius:22px;
+    }
+
+    .pass-rate-image img{
+        height:320px;
+    }
+
+    .pass-rate-content{
+        text-align:center;
+    }
+
+    .pass-rate-description{
+        font-size:15px;
+        line-height:1.7;
+        margin-bottom:24px;
+    }
+
+    .pass-stats-grid{
+        grid-template-columns:1fr;
+        gap:16px;
+        margin-bottom:24px;
+    }
+
+    .pass-stat-card{
+        padding:24px 20px;
+        border-radius:20px;
+    }
+
+    .pass-stat-card h3{
+        font-size:34px;
+    }
+
+    .pass-stat-card p{
+        font-size:14px;
+    }
+
+    .pass-rate-content .btn{
+        width:100%;
+        min-width:auto;
+        height:50px;
+    }
+}
+
+/* ---------- Small Mobile (480px) ---------- */
+@media (max-width:480px){
+
+    .pass-rate{
+        padding:60px 0;
+    }
+
+    .pass-rate-image img{
+        height:260px;
+    }
+
+    .pass-stat-card{
+        padding:22px 18px;
+    }
+
+    .pass-stat-card h3{
+        font-size:30px;
+    }
+
+    .pass-stat-card p{
+        font-size:13px;
+    }
+
+    .pass-rate-description{
+        font-size:14px;
+    }
+}
+
+/* ---------- Extra Small Mobile (360px) ---------- */
+@media (max-width:360px){
+
+    .pass-rate-image img{
+        height:220px;
+    }
+
+    .pass-stat-card{
+        padding:20px 16px;
+    }
+
+    .pass-stat-card h3{
+        font-size:28px;
+    }
+
+    .pass-stat-card p{
+        font-size:12px;
+    }
+
+    .pass-rate-description{
+        font-size:13px;
+    }
+}
+
+/* ===================================
+   Student Portal Responsive
+=================================== */
+
+/* ---------- Tablet (769px - 1024px) ---------- */
+@media (min-width:769px) and (max-width:1024px){
+
+    .portal-wrapper{
+        grid-template-columns:1fr;
+        gap:40px;
+    }
+
+    .portal-content{
+        text-align:center;
+    }
+
+    .portal-description{
+        max-width:700px;
+        margin:0 auto 28px;
+    }
+
+    .portal-features{
+        max-width:700px;
+        margin:0 auto 28px;
+    }
+
+    .portal-buttons{
+        justify-content:center;
+    }
+
+    .dashboard-card{
+        max-width:420px;
+    }
+}
+
+/* ---------- Mobile (768px and below) ---------- */
+@media (max-width:768px){
+
+    .student-portal{
+        padding:70px 0;
+    }
+
+    .portal-wrapper{
+        grid-template-columns:1fr;
+        gap:32px;
+    }
+
+    .portal-content{
+        text-align:center;
+    }
+
+    .portal-description{
+        font-size:15px;
+        line-height:1.7;
+        margin-bottom:24px;
+    }
+
+    .portal-features{
+        gap:14px;
+        margin-bottom:24px;
+    }
+
+    .portal-feature{
+        padding:16px;
+        border-radius:16px;
+        text-align:left;
+    }
+
+    .portal-feature i{
+        width:48px;
+        height:48px;
+        border-radius:12px;
+        font-size:20px;
+    }
+
+    .portal-feature h4{
+        font-size:17px;
+    }
+
+    .portal-feature p{
+        font-size:13px;
+    }
+
+    .portal-buttons{
+        flex-direction:column;
+        gap:12px;
+    }
+
+    .portal-buttons .btn{
+        width:100%;
+        min-width:auto;
+        height:50px;
+    }
+
+    .dashboard-card{
+        max-width:100%;
+        padding:24px;
+        border-radius:24px;
+    }
+
+    .dashboard-header h3{
+        font-size:20px;
+    }
+
+    .progress-circle{
+        width:160px;
+        height:160px;
+        margin-bottom:24px;
+    }
+
+    .progress-inner{
+        width:125px;
+        height:125px;
+    }
+
+    .progress-inner strong{
+        font-size:30px;
+    }
+
+    .dashboard-stats{
+        gap:14px;
+        margin-bottom:20px;
+    }
+
+    .dashboard-stat{
+        padding:18px;
+        border-radius:16px;
+    }
+
+    .dashboard-stat h4{
+        font-size:24px;
+    }
+
+    .next-lesson{
+        padding:18px;
+        border-radius:16px;
+    }
+
+    .next-lesson h4{
+        font-size:17px;
+    }
+
+    .next-lesson p{
+        font-size:13px;
+    }
+}
+
+/* ---------- Small Mobile (480px) ---------- */
+@media (max-width:480px){
+
+    .student-portal{
+        padding:60px 0;
+    }
+
+    .portal-feature{
+        padding:14px;
+    }
+
+    .portal-feature i{
+        width:44px;
+        height:44px;
+        font-size:18px;
+    }
+
+    .portal-feature h4{
+        font-size:16px;
+    }
+
+    .dashboard-card{
+        padding:20px;
+    }
+
+    .progress-circle{
+        width:145px;
+        height:145px;
+    }
+
+    .progress-inner{
+        width:112px;
+        height:112px;
+    }
+
+    .progress-inner strong{
+        font-size:26px;
+    }
+
+    .dashboard-stat h4{
+        font-size:22px;
+    }
+}
+
+/* ---------- Extra Small Mobile (360px) ---------- */
+@media (max-width:360px){
+
+    .portal-feature{
+        padding:12px;
+    }
+
+    .portal-feature i{
+        width:40px;
+        height:40px;
+        font-size:16px;
+    }
+
+    .portal-feature h4{
+        font-size:15px;
+    }
+
+    .portal-feature p{
+        font-size:12px;
+    }
+
+    .dashboard-card{
+        padding:18px;
+    }
+
+    .progress-circle{
+        width:130px;
+        height:130px;
+    }
+
+    .progress-inner{
+        width:100px;
+        height:100px;
+    }
+
+    .progress-inner strong{
+        font-size:22px;
+    }
+
+    .dashboard-stat{
+        padding:16px;
+    }
+
+    .dashboard-stat h4{
+        font-size:20px;
+    }
+}
+
+/* ===================================
+   Lessons FAQ Responsive
+=================================== */
+
+/* ---------- Tablet (769px - 1024px) ---------- */
+@media (min-width:769px) and (max-width:1024px){
+
+    .lessons-faq-wrapper{
+        max-width:100%;
+    }
+
+    .lessons-faq-question{
+        padding:22px 24px;
+    }
+
+    .lessons-faq-question span{
+        font-size:19px;
+    }
+
+    .lessons-faq-answer p{
+        padding:0 24px 22px;
+        font-size:15px;
+    }
+}
+
+/* ---------- Mobile (768px and below) ---------- */
+@media (max-width:768px){
+
+    .lessons-faq{
+        padding:70px 0;
+    }
+
+    .lessons-faq-wrapper{
+        gap:16px;
+    }
+
+    .lessons-faq-question{
+        padding:20px;
+        gap:16px;
+    }
+
+    .lessons-faq-question span{
+        font-size:17px;
+        line-height:1.5;
+    }
+
+    .lessons-faq-question i{
+        width:36px;
+        height:36px;
+        border-radius:10px;
+        font-size:14px;
+    }
+
+    .lessons-faq-answer p{
+        padding:0 20px 20px;
+        font-size:15px;
+        line-height:1.7;
+    }
+
+    .lessons-faq-item.active .lessons-faq-answer{
+        max-height:300px;
+    }
+}
+
+/* ---------- Small Mobile (480px) ---------- */
+@media (max-width:480px){
+
+    .lessons-faq{
+        padding:60px 0;
+    }
+
+    .lessons-faq-question{
+        padding:18px;
+    }
+
+    .lessons-faq-question span{
+        font-size:16px;
+    }
+
+    .lessons-faq-question i{
+        width:34px;
+        height:34px;
+    }
+
+    .lessons-faq-answer p{
+        padding:0 18px 18px;
+        font-size:14px;
+    }
+}
+
+/* ---------- Extra Small Mobile (360px) ---------- */
+@media (max-width:360px){
+
+    .lessons-faq-question{
+        padding:16px;
+        gap:14px;
+    }
+
+    .lessons-faq-question span{
+        font-size:15px;
+    }
+
+    .lessons-faq-question i{
+        width:32px;
+        height:32px;
+        font-size:13px;
+    }
+
+    .lessons-faq-answer p{
+        padding:0 16px 16px;
+        font-size:13px;
+    }
+}
+
+/* ===================================
+   Lessons CTA Responsive
+=================================== */
+
+/* ---------- Tablet (769px - 1024px) ---------- */
+@media (min-width:769px) and (max-width:1024px){
+
+    .lessons-cta-box{
+        grid-template-columns:1fr;
+        gap:40px;
+        padding:60px 40px;
+        text-align:center;
+    }
+
+    .lessons-cta-content{
+        max-width:700px;
+        margin:0 auto;
+    }
+
+    .lessons-cta-content h2{
+        font-size:42px;
+    }
+
+    .lessons-cta-content p{
+        font-size:16px;
+    }
+
+    .lessons-cta-buttons{
+        justify-content:center;
+    }
+
+    .lessons-cta-image img{
+        height:320px;
+    }
+}
+
+/* ---------- Mobile (768px and below) ---------- */
+@media (max-width:768px){
+
+    .lessons-cta{
+        padding:0;
+    }
+
+    .lessons-cta-box{
+        grid-template-columns:1fr;
+        gap:32px;
+        padding:50px 24px;
+        border-radius:24px 24px 0 0;
+        text-align:center;
+    }
+
+    .lessons-cta-content h2{
+        font-size:34px;
+        line-height:1.25;
+    }
+
+    .lessons-cta-content p{
+        font-size:15px;
+        line-height:1.7;
+        margin-bottom:28px;
+    }
+
+    .lessons-cta-buttons{
+        flex-direction:column;
+        gap:14px;
+    }
+
+    .lessons-cta-buttons .btn{
+        width:100%;
+        min-width:auto;
+        height:52px;
+    }
+
+    .lessons-cta-image img{
+        height:260px;
+        border-radius:20px;
+    }
+
+    .lessons-cta-box::before{
+        width:140px;
+        height:140px;
+        top:-40px;
+        left:-40px;
+    }
+
+    .lessons-cta-box::after{
+        width:120px;
+        height:120px;
+        bottom:-30px;
+        right:-30px;
+    }
+}
+
+/* ---------- Small Mobile (480px) ---------- */
+@media (max-width:480px){
+
+    .lessons-cta-box{
+        padding:45px 20px;
+    }
+
+    .lessons-cta-subtitle{
+        font-size:13px;
+        padding:7px 16px;
+    }
+
+    .lessons-cta-content h2{
+        font-size:30px;
+    }
+
+    .lessons-cta-content p{
+        font-size:14px;
+    }
+
+    .lessons-cta-image img{
+        height:220px;
+    }
+
+    .lessons-cta-buttons .btn{
+        height:50px;
+    }
+}
+
+/* ---------- Extra Small Mobile (360px) ---------- */
+@media (max-width:360px){
+
+    .lessons-cta-box{
+        padding:40px 18px;
+    }
+
+    .lessons-cta-content h2{
+        font-size:28px;
+    }
+
+    .lessons-cta-content p{
+        font-size:13px;
+    }
+
+    .lessons-cta-image img{
+        height:190px;
+    }
+
+    .lessons-cta-buttons .btn{
+        height:48px;
+        font-size:14px;
+    }
+}
+
+
+
+
+
+/****booking page*****/
+
+/* ===================================
+   Booking Banner Responsive
+=================================== */
+
+/* ---------- Tablet (769px - 1024px) ---------- */
+@media (min-width:769px) and (max-width:1024px){
+
+    .booking-banner{
+        min-height:420px;
+    }
+
+    .booking-banner .banner-content{
+        max-width:720px;
+        padding:100px 30px;
+    }
+
+    .booking-banner .banner-content h1{
+        font-size:48px;
+    }
+
+    .booking-banner .banner-content p{
+        font-size:17px;
+    }
+}
+
+/* ---------- Mobile (768px and below) ---------- */
+@media (max-width:768px){
+
+    .booking-banner{
+        min-height:380px;
+    }
+
+    .booking-banner .banner-content{
+        max-width:100%;
+        padding:90px 20px;
+    }
+
+    .booking-banner .banner-subtitle{
+        font-size:13px;
+        padding:7px 16px;
+        margin-bottom:18px;
+    }
+
+    .booking-banner .banner-content h1{
+        font-size:36px;
+        line-height:1.2;
+        margin-bottom:18px;
+    }
+
+    .booking-banner .banner-content p{
+        font-size:15px;
+        line-height:1.7;
+        margin-bottom:24px;
+    }
+
+    .booking-banner .breadcrumb{
+        gap:8px;
+    }
+
+    .booking-banner .breadcrumb a,
+    .booking-banner .breadcrumb span{
+        font-size:14px;
+    }
+}
+
+/* ---------- Small Mobile (480px) ---------- */
+@media (max-width:480px){
+
+    .booking-banner{
+        min-height:340px;
+    }
+
+    .booking-banner .banner-content{
+        padding:80px 18px;
+    }
+
+    .booking-banner .banner-content h1{
+        font-size:30px;
+    }
+
+    .booking-banner .banner-content p{
+        font-size:14px;
+    }
+
+    .booking-banner .breadcrumb a,
+    .booking-banner .breadcrumb span{
+        font-size:13px;
+    }
+}
+
+/* ---------- Extra Small Mobile (360px) ---------- */
+@media (max-width:360px){
+
+    .booking-banner{
+        min-height:320px;
+    }
+
+    .booking-banner .banner-content{
+        padding:75px 16px;
+    }
+
+    .booking-banner .banner-content h1{
+        font-size:26px;
+    }
+
+    .booking-banner .banner-content p{
+        font-size:13px;
+    }
+
+    .booking-banner .breadcrumb{
+        gap:6px;
+    }
+
+    .booking-banner .breadcrumb a,
+    .booking-banner .breadcrumb span{
+        font-size:12px;
+    }
+}
+
+/* ===================================
+   Booking Form Responsive
+=================================== */
+
+/* ---------- Tablet (769px - 1024px) ---------- */
+@media (min-width:769px) and (max-width:1024px){
+
+    .booking-wrapper{
+        grid-template-columns:1fr;
+        gap:32px;
+    }
+
+    .booking-form-card{
+        padding:32px;
+    }
+
+    .booking-form-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:20px;
+    }
+
+    .booking-info-card{
+        position:static;
+        padding:28px;
+    }
+}
+
+/* ---------- Mobile (768px and below) ---------- */
+@media (max-width:768px){
+
+    .booking-form{
+        padding:70px 0;
+    }
+
+    .booking-wrapper{
+        grid-template-columns:1fr;
+        gap:28px;
+    }
+
+    .booking-form-card{
+        padding:24px;
+        border-radius:22px;
+    }
+
+    .booking-form-grid{
+        grid-template-columns:1fr;
+        gap:18px;
+    }
+
+    .full-width{
+        grid-column:auto;
+    }
+
+    .form-group label{
+        font-size:14px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea{
+        padding:14px 16px;
+        border-radius:14px;
+        font-size:14px;
+    }
+
+    .form-group textarea{
+        min-height:120px;
+    }
+
+    .booking-submit{
+        height:52px;
+        font-size:15px;
+    }
+
+    .booking-info-card{
+        position:static;
+        padding:24px;
+        border-radius:22px;
+    }
+
+    .booking-info-card h3{
+        font-size:22px;
+    }
+
+    .booking-info-item{
+        gap:14px;
+    }
+
+    .booking-info-item i{
+        width:46px;
+        height:46px;
+        border-radius:12px;
+        font-size:18px;
+    }
+
+    .booking-info-item h4{
+        font-size:16px;
+    }
+
+    .booking-info-item p{
+        font-size:13px;
+    }
+
+    .booking-note{
+        padding:16px;
+        border-radius:16px;
+    }
+
+    .booking-note p{
+        font-size:13px;
+    }
+}
+
+/* ---------- Small Mobile (480px) ---------- */
+@media (max-width:480px){
+
+    .booking-form{
+        padding:60px 0;
+    }
+
+    .booking-form-card{
+        padding:20px;
+    }
+
+    .booking-header{
+        margin-bottom:24px;
+    }
+
+    .booking-form-grid{
+        gap:16px;
+    }
+
+    .booking-info-card{
+        padding:20px;
+    }
+
+    .booking-info-card h3{
+        font-size:20px;
+    }
+
+    .booking-info-item i{
+        width:42px;
+        height:42px;
+        font-size:16px;
+    }
+
+    .booking-submit{
+        height:50px;
+    }
+}
+
+/* ---------- Extra Small Mobile (360px) ---------- */
+@media (max-width:360px){
+
+    .booking-form-card{
+        padding:18px;
+    }
+
+    .booking-info-card{
+        padding:18px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea{
+        padding:13px 14px;
+        font-size:13px;
+    }
+
+    .booking-submit{
+        height:48px;
+        font-size:14px;
+    }
+
+    .booking-info-item{
+        gap:12px;
+    }
+
+    .booking-info-item i{
+        width:40px;
+        height:40px;
+        font-size:15px;
+    }
+
+    .booking-info-item h4{
+        font-size:15px;
+    }
+
+    .booking-info-item p{
+        font-size:12px;
+    }
+}
+
+/* ===================================
+   Lesson Schedule Responsive
+=================================== */
+
+/* ---------- Tablet (769px - 1024px) ---------- */
+@media (min-width:769px) and (max-width:1024px){
+
+    .schedule-wrapper{
+        grid-template-columns:1fr;
+        gap:28px;
+    }
+
+    .schedule-calendar,
+    .slots-section,
+    .schedule-summary{
+        max-width:760px;
+        margin:0 auto;
+    }
+
+    .calendar-days button{
+        width:48px;
+        height:48px;
+    }
+
+    .time-slots{
+        grid-template-columns:repeat(3,1fr);
+    }
+}
+
+/* ---------- Mobile (768px and below) ---------- */
+@media (max-width:768px){
+
+    .lesson-schedule{
+        padding:70px 0;
+    }
+
+    .schedule-wrapper{
+        grid-template-columns:1fr;
+        gap:24px;
+    }
+
+    .schedule-calendar,
+    .slots-section,
+    .schedule-summary{
+        padding:22px;
+        border-radius:22px;
+    }
+
+    .calendar-header h3{
+        font-size:20px;
+    }
+
+    .calendar-header button{
+        width:40px;
+        height:40px;
+    }
+
+    .calendar-weekdays{
+        gap:8px;
+    }
+
+    .calendar-weekdays span{
+        font-size:12px;
+    }
+
+    .calendar-days{
+        gap:8px;
+    }
+
+    .calendar-days button{
+        width:42px;
+        height:42px;
+        font-size:14px;
+    }
+
+    .calendar-legend{
+        flex-wrap:wrap;
+        gap:16px;
+        font-size:13px;
+    }
+
+    .slots-section h3{
+        font-size:18px;
+        margin-bottom:16px;
+    }
+
+    .time-slots{
+        grid-template-columns:1fr;
+        gap:12px;
+    }
+
+    .slot-btn{
+        padding:14px;
+        font-size:15px;
+    }
+
+    .schedule-summary h4{
+        font-size:20px;
+    }
+
+    .schedule-summary p{
+        font-size:14px;
+    }
+
+    .schedule-summary .btn{
+        height:50px;
+    }
+}
+
+/* ---------- Small Mobile (480px) ---------- */
+@media (max-width:480px){
+
+    .lesson-schedule{
+        padding:60px 0;
+    }
+
+    .schedule-calendar,
+    .slots-section,
+    .schedule-summary{
+        padding:18px;
+    }
+
+    .calendar-header h3{
+        font-size:18px;
+    }
+
+    .calendar-days button{
+        width:38px;
+        height:38px;
+        font-size:13px;
+        border-radius:10px;
+    }
+
+    .slot-btn{
+        padding:13px;
+        font-size:14px;
+    }
+
+    .schedule-summary h4{
+        font-size:18px;
+    }
+}
+
+/* ---------- Extra Small Mobile (360px) ---------- */
+@media (max-width:360px){
+
+    .schedule-calendar,
+    .slots-section,
+    .schedule-summary{
+        padding:16px;
+    }
+
+    .calendar-header button{
+        width:36px;
+        height:36px;
+    }
+
+    .calendar-weekdays span{
+        font-size:11px;
+    }
+
+    .calendar-days button{
+        width:34px;
+        height:34px;
+        font-size:12px;
+    }
+
+    .slot-btn{
+        padding:12px;
+        font-size:13px;
+    }
+
+    .schedule-summary h4{
+        font-size:17px;
+    }
+
+    .schedule-summary p{
+        font-size:13px;
+    }
+
+    .schedule-summary .btn{
+        height:48px;
+        font-size:14px;
+    }
+}
+
+/* ===================================
+   Booking Summary Responsive
+=================================== */
+
+/* ---------- Tablet (769px - 1024px) ---------- */
+@media (min-width:769px) and (max-width:1024px){
+
+    .summary-wrapper{
+        grid-template-columns:1fr;
+        gap:28px;
+    }
+
+    .summary-details-card,
+    .payment-summary-card{
+        max-width:760px;
+        margin:0 auto;
+    }
+
+    .payment-summary-card{
+        position:static;
+    }
+}
+
+/* ---------- Mobile (768px and below) ---------- */
+@media (max-width:768px){
+
+    .booking-summary{
+        padding:70px 0;
+    }
+
+    .summary-wrapper{
+        grid-template-columns:1fr;
+        gap:24px;
+    }
+
+    .summary-details-card,
+    .payment-summary-card{
+        padding:24px;
+        border-radius:22px;
+    }
+
+    .summary-details-card h3{
+        font-size:24px;
+        margin-bottom:22px;
+    }
+
+    .summary-item{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:8px;
+        padding-bottom:16px;
+    }
+
+    .summary-item strong{
+        text-align:left;
+    }
+
+    .summary-note{
+        padding:18px;
+        border-radius:16px;
+        margin-top:24px;
+    }
+
+    .summary-note p{
+        font-size:13px;
+    }
+
+    .payment-summary-card{
+        position:static;
+    }
+
+    .payment-summary-card h3{
+        font-size:22px;
+        margin-bottom:20px;
+    }
+
+    .payment-row{
+        margin-bottom:16px;
+    }
+
+    .payment-row.total strong{
+        font-size:24px;
+    }
+
+    .deposit-box{
+        padding:20px;
+        border-radius:18px;
+        margin:24px 0;
+    }
+
+    .deposit-amount{
+        font-size:34px;
+    }
+
+    .payment-btn{
+        height:50px;
+        font-size:15px;
+        width: 80%;
+    }
+
+    .secure-payment{
+        font-size:12px;
+        line-height:1.5;
+    }
+}
+
+/* ---------- Small Mobile (480px) ---------- */
+@media (max-width:480px){
+
+    .booking-summary{
+        padding:60px 0;
+    }
+
+    .summary-details-card,
+    .payment-summary-card{
+        padding:20px;
+    }
+
+    .summary-details-card h3{
+        font-size:22px;
+    }
+
+    .summary-item span{
+        font-size:14px;
+    }
+
+    .summary-item strong{
+        font-size:15px;
+    }
+
+    .payment-summary-card h3{
+        font-size:20px;
+    }
+
+    .payment-row span{
+        font-size:14px;
+    }
+
+    .payment-row strong{
+        font-size:15px;
+    }
+
+    .payment-row.total strong{
+        font-size:22px;
+    }
+
+    .deposit-box{
+        padding:18px;
+    }
+
+    .deposit-amount{
+        font-size:30px;
+    }
+
+    .payment-btn{
+        height:48px;
+    }
+}
+
+/* ---------- Extra Small Mobile (360px) ---------- */
+@media (max-width:360px){
+
+    .summary-details-card,
+    .payment-summary-card{
+        padding:18px;
+    }
+
+    .summary-details-card h3{
+        font-size:20px;
+    }
+
+    .summary-item span{
+        font-size:13px;
+    }
+
+    .summary-item strong{
+        font-size:14px;
+    }
+
+    .payment-summary-card h3{
+        font-size:18px;
+    }
+
+    .payment-row.total strong{
+        font-size:20px;
+    }
+
+    .deposit-amount{
+        font-size:28px;
+    }
+
+    .payment-btn{
+        height:46px;
+        font-size:14px;
+    }
+
+    .secure-payment{
+        font-size:11px;
+    }
+}
+
+/* ===================================
+   Booking Policy Responsive
+=================================== */
+
+/* ---------- Tablet (769px - 1024px) ---------- */
+@media (min-width:769px) and (max-width:1024px){
+
+    .policy-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:22px;
+    }
+
+    .policy-card{
+        padding:30px 22px;
+    }
+
+    .policy-card h3{
+        font-size:21px;
+    }
+
+    .policy-note-box{
+        padding:22px;
+    }
+}
+
+/* ---------- Mobile (768px and below) ---------- */
+@media (max-width:768px){
+
+    .booking-policy{
+        padding:70px 0;
+    }
+
+    .policy-grid{
+        grid-template-columns:1fr;
+        gap:18px;
+    }
+
+    .policy-card{
+        padding:26px 20px;
+        border-radius:22px;
+    }
+
+    .policy-icon{
+        width:64px;
+        height:64px;
+        border-radius:18px;
+        font-size:24px;
+        margin-bottom:18px;
+    }
+
+    .policy-card h3{
+        font-size:20px;
+        margin-bottom:12px;
+    }
+
+    .policy-card p{
+        font-size:14px;
+        line-height:1.7;
+    }
+
+    .policy-note-box{
+        margin-top:28px;
+        padding:20px;
+        border-radius:20px;
+        gap:14px;
+    }
+
+    .policy-note-box i{
+        font-size:20px;
+    }
+
+    .policy-note-box p{
+        font-size:14px;
+        line-height:1.7;
+    }
+
+    .policy-card:hover{
+        transform:translateY(-4px);
+    }
+}
+
+/* ---------- Small Mobile (480px) ---------- */
+@media (max-width:480px){
+
+    .booking-policy{
+        padding:60px 0;
+    }
+
+    .policy-card{
+        padding:22px 18px;
+    }
+
+    .policy-icon{
+        width:58px;
+        height:58px;
+        border-radius:16px;
+        font-size:22px;
+    }
+
+    .policy-card h3{
+        font-size:18px;
+    }
+
+    .policy-card p{
+        font-size:13px;
+    }
+
+    .policy-note-box{
+        padding:18px;
+    }
+
+    .policy-note-box p{
+        font-size:13px;
+    }
+}
+
+/* ---------- Extra Small Mobile (360px) ---------- */
+@media (max-width:360px){
+
+    .policy-card{
+        padding:20px 16px;
+    }
+
+    .policy-icon{
+        width:54px;
+        height:54px;
+        font-size:20px;
+    }
+
+    .policy-card h3{
+        font-size:17px;
+    }
+
+    .policy-card p{
+        font-size:12px;
+    }
+
+    .policy-note-box{
+        padding:16px;
+        gap:12px;
+    }
+
+    .policy-note-box i{
+        font-size:18px;
+    }
+
+    .policy-note-box p{
+        font-size:12px;
+    }
+}
+
+/* ===================================
+   Booking CTA Responsive
+=================================== */
+
+/* ---------- Tablet (769px - 1024px) ---------- */
+@media (min-width:769px) and (max-width:1024px){
+
+    .booking-cta-box{
+        grid-template-columns:1fr;
+        gap:40px;
+        padding:60px 40px;
+        text-align:center;
+    }
+
+    .booking-cta-content{
+        max-width:700px;
+        margin:0 auto;
+    }
+
+    .booking-cta-content h2{
+        font-size:42px;
+    }
+
+    .booking-cta-content p{
+        font-size:16px;
+    }
+
+    .booking-cta-buttons{
+        justify-content:center;
+    }
+
+    .booking-cta-image img{
+        height:320px;
+    }
+}
+
+/* ---------- Mobile (768px and below) ---------- */
+@media (max-width:768px){
+
+    .booking-cta{
+        padding:0;
+    }
+
+    .booking-cta-box{
+        grid-template-columns:1fr;
+        gap:32px;
+        padding:50px 24px;
+        border-radius:24px 24px 0 0;
+        text-align:center;
+    }
+
+    .booking-cta-content h2{
+        font-size:34px;
+        line-height:1.25;
+    }
+
+    .booking-cta-content p{
+        font-size:15px;
+        line-height:1.7;
+        margin-bottom:28px;
+    }
+
+    .booking-cta-buttons{
+        flex-direction:column;
+        gap:14px;
+    }
+
+    
+
+    .booking-cta-image img{
+        height:260px;
+        border-radius:20px;
+    }
+
+    .booking-cta-box::before{
+        width:140px;
+        height:140px;
+        top:-40px;
+        left:-40px;
+    }
+
+    .booking-cta-box::after{
+        width:120px;
+        height:120px;
+        bottom:-30px;
+        right:-30px;
+    }
+}
+
+/* ---------- Small Mobile (480px) ---------- */
+@media (max-width:480px){
+
+    .booking-cta-box{
+        padding:45px 20px;
+    }
+
+    .booking-cta-subtitle{
+        font-size:13px;
+        padding:7px 16px;
+    }
+
+    .booking-cta-content h2{
+        font-size:30px;
+    }
+
+    .booking-cta-content p{
+        font-size:14px;
+    }
+
+    .booking-cta-image img{
+        height:220px;
+    }
+
+    .booking-cta-buttons .btn{
+        height:50px;
+    }
+}
+
+/* ---------- Extra Small Mobile (360px) ---------- */
+@media (max-width:360px){
+
+    .booking-cta-box{
+        padding:40px 18px;
+    }
+
+    .booking-cta-content h2{
+        font-size:28px;
+    }
+
+    .booking-cta-content p{
+        font-size:13px;
+    }
+
+    .booking-cta-image img{
+        height:190px;
+    }
+
+    .booking-cta-buttons .btn{
+        height:48px;
+        font-size:14px;
+    }
+}
+
+
+
+
+/****login page*****/
+
+/* ===================================
+   Login Portal Responsive
+=================================== */
+
+/* ---------- Tablet (769px - 1024px) ---------- */
+@media (min-width:769px) and (max-width:1024px){
+
+    .login-card{
+        max-width:520px;
+        padding:45px 36px;
+    }
+
+    .login-logo img{
+        width:68px;
+        height:68px;
+    }
+
+    .login-header h1{
+        font-size:34px;
+    }
+
+    .login-header p{
+        font-size:15px;
+    }
+
+    .social-btn{
+        height:52px;
+    }
+}
+
+/* ---------- Mobile (768px and below) ---------- */
+@media (max-width:768px){
+
+    .login-portal{
+        padding:24px 16px;
+    }
+
+    .login-card{
+        max-width:100%;
+        padding:36px 24px;
+        border-radius:24px;
+    }
+
+    .login-logo{
+        margin-bottom:28px;
+    }
+
+    .login-logo img{
+        width:60px;
+        height:60px;
+    }
+
+    .login-logo h2{
+        font-size:24px;
+    }
+
+    .login-header{
+        margin-bottom:28px;
+    }
+
+    .login-header h1{
+        font-size:30px;
+    }
+
+    .login-header p{
+        font-size:14px;
+        line-height:1.7;
+    }
+
+    .login-form{
+        gap:18px;
+    }
+
+    .login-form input{
+        padding:14px 16px;
+        border-radius:14px;
+        font-size:14px;
+    }
+
+    .login-options{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:12px;
+    }
+
+    .signin-btn{
+        height:52px;
+        font-size:15px;
+    }
+
+    .login-divider{
+        margin:28px 0 20px;
+    }
+
+    .social-btn{
+        height:50px;
+        font-size:14px;
+    }
+
+    .login-footer{
+        margin-top:24px;
+    }
+
+    .login-footer p{
+        font-size:14px;
+    }
+}
+
+/* ---------- Small Mobile (480px) ---------- */
+@media (max-width:480px){
+
+    .login-portal{
+        padding:20px 14px;
+    }
+
+    .login-card{
+        padding:30px 20px;
+        border-radius:22px;
+    }
+
+    .login-logo img{
+        width:54px;
+        height:54px;
+    }
+
+    .login-logo h2{
+        font-size:22px;
+    }
+
+    .login-header h1{
+        font-size:28px;
+    }
+
+    .login-header p{
+        font-size:13px;
+    }
+
+    .signin-btn{
+        height:50px;
+        font-size:14px;
+    }
+
+    .social-btn{
+        height:48px;
+        font-size:13px;
+    }
+}
+
+/* ---------- Extra Small Mobile (360px) ---------- */
+@media (max-width:360px){
+
+    .login-card{
+        padding:26px 18px;
+    }
+
+    .login-logo img{
+        width:50px;
+        height:50px;
+    }
+
+    .login-logo h2{
+        font-size:20px;
+    }
+
+    .login-header h1{
+        font-size:24px;
+    }
+
+    .login-header p{
+        font-size:12px;
+    }
+
+    .login-form input{
+        padding:13px 14px;
+        font-size:13px;
+    }
+
+    .signin-btn{
+        height:48px;
+        font-size:14px;
+    }
+
+    .social-btn{
+        height:46px;
+        font-size:12px;
+    }
+
+    .login-footer p{
+        font-size:13px;
+    }
+}
+
+
+
+/*****register page******/
+
+/* ===================================
+   Register Portal Responsive
+=================================== */
+
+/* ---------- Tablet (769px - 1024px) ---------- */
+@media (min-width:769px) and (max-width:1024px){
+
+    .register-card{
+        max-width:560px;
+        padding:42px 36px;
+    }
+
+    .register-logo img{
+        width:68px;
+        height:68px;
+    }
+
+    .register-header h1{
+        font-size:34px;
+    }
+
+    .register-header p{
+        font-size:15px;
+    }
+
+    .social-btn{
+        height:52px;
+    }
+}
+
+/* ---------- Mobile (768px and below) ---------- */
+@media (max-width:768px){
+
+    .register-portal{
+        padding:24px 16px;
+    }
+
+    .register-card{
+        max-width:100%;
+        padding:34px 24px;
+        border-radius:24px;
+    }
+
+    .register-logo{
+        margin-bottom:24px;
+    }
+
+    .register-logo img{
+        width:60px;
+        height:60px;
+    }
+
+    .register-logo h2{
+        font-size:24px;
+    }
+
+    .register-header{
+        margin-bottom:26px;
+    }
+
+    .register-header h1{
+        font-size:30px;
+    }
+
+    .register-header p{
+        font-size:14px;
+        line-height:1.7;
+    }
+
+    .register-form{
+        gap:16px;
+    }
+
+    .register-group input{
+        padding:14px 16px;
+        border-radius:14px;
+        font-size:14px;
+    }
+
+    .register-terms{
+        font-size:13px;
+    }
+
+    .register-btn{
+        height:52px;
+        font-size:15px;
+    }
+
+    .register-divider{
+        margin:26px 0 20px;
+    }
+
+    .social-btn{
+        height:50px;
+        font-size:14px;
+    }
+
+    .register-footer{
+        margin-top:22px;
+    }
+
+    .register-footer p{
+        font-size:14px;
+    }
+}
+
+/* ---------- Small Mobile (480px) ---------- */
+@media (max-width:480px){
+
+    .register-portal{
+        padding:20px 14px;
+    }
+
+    .register-card{
+        padding:28px 20px;
+        border-radius:22px;
+    }
+
+    .register-logo img{
+        width:54px;
+        height:54px;
+    }
+
+    .register-logo h2{
+        font-size:22px;
+    }
+
+    .register-header h1{
+        font-size:28px;
+    }
+
+    .register-header p{
+        font-size:13px;
+    }
+
+    .register-group input{
+        padding:13px 15px;
+        font-size:13px;
+    }
+
+    .register-btn{
+        height:50px;
+        font-size:14px;
+    }
+
+    .social-btn{
+        height:48px;
+        font-size:13px;
+    }
+}
+
+/* ---------- Extra Small Mobile (360px) ---------- */
+@media (max-width:360px){
+
+    .register-card{
+        padding:24px 18px;
+    }
+
+    .register-logo img{
+        width:50px;
+        height:50px;
+    }
+
+    .register-logo h2{
+        font-size:20px;
+    }
+
+    .register-header h1{
+        font-size:24px;
+    }
+
+    .register-header p{
+        font-size:12px;
+    }
+
+    .register-group input{
+        padding:12px 14px;
+        font-size:13px;
+    }
+
+    .register-terms{
+        font-size:12px;
+    }
+
+    .register-btn{
+        height:48px;
+        font-size:14px;
+    }
+
+    .social-btn{
+        height:46px;
+        font-size:12px;
+    }
+
+    .register-footer p{
+        font-size:13px;
+    }
+}
+
+
+
+
+/******contact page*******/
+
+/* ===================================
+   Contact Banner Responsive
+=================================== */
+
+/* ---------- Tablet (769px - 1024px) ---------- */
+@media (min-width:769px) and (max-width:1024px){
+
+    .contact-banner{
+        padding:100px 0 80px;
+    }
+
+    .contact-banner-content{
+        max-width:700px;
+    }
+
+    .contact-banner-content h1{
+        font-size:46px;
+    }
+
+    .contact-banner-content p{
+        font-size:17px;
+    }
+
+    .banner-buttons .btn{
+        min-width:180px;
+    }
+}
+
+/* ---------- Mobile (768px and below) ---------- */
+@media (max-width:768px){
+
+    .contact-banner{
+        padding:90px 0 70px;
+    }
+
+    .contact-banner-content{
+        max-width:100%;
+    }
+
+    .banner-subtitle{
+        font-size:13px;
+        padding:7px 16px;
+        margin-bottom:18px;
+    }
+
+    .contact-banner-content h1{
+        font-size:36px;
+        line-height:1.2;
+        margin-bottom:18px;
+    }
+
+    .contact-banner-content p{
+        font-size:15px;
+        line-height:1.7;
+        margin-bottom:28px;
+    }
+
+    .banner-buttons{
+        flex-direction:column;
+        gap:14px;
+    }
+
+    .banner-buttons .btn{
+        width:100%;
+        min-width:auto;
+        height:52px;
+    }
+
+    .contact-banner::before{
+        width:160px;
+        height:160px;
+        top:-50px;
+        left:-50px;
+    }
+
+    .contact-banner::after{
+        width:140px;
+        height:140px;
+        bottom:-40px;
+        right:-40px;
+    }
+}
+
+/* ---------- Small Mobile (480px) ---------- */
+@media (max-width:480px){
+
+    .contact-banner{
+        padding:80px 0 60px;
+    }
+
+    .contact-banner-content h1{
+        font-size:30px;
+    }
+
+    .contact-banner-content p{
+        font-size:14px;
+    }
+
+    .banner-buttons .btn{
+        height:50px;
+    }
+}
+
+/* ---------- Extra Small Mobile (360px) ---------- */
+@media (max-width:360px){
+
+    .contact-banner{
+        padding:70px 0 50px;
+    }
+
+    .contact-banner-content h1{
+        font-size:26px;
+    }
+
+    .contact-banner-content p{
+        font-size:13px;
+    }
+
+    .banner-buttons .btn{
+        height:48px;
+        font-size:14px;
+    }
+}
+
+/* ===================================
+   Contact Information Responsive
+=================================== */
+
+/* ---------- Tablet (769px - 1024px) ---------- */
+@media (min-width:769px) and (max-width:1024px){
+
+    .contact-info-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:22px;
+    }
+
+    .contact-info-card{
+        padding:30px 22px;
+    }
+
+    .contact-info-card h3{
+        font-size:21px;
+    }
+}
+
+/* ---------- Mobile (768px and below) ---------- */
+@media (max-width:768px){
+
+    .contact-info{
+        padding:70px 0;
+    }
+
+    .contact-info-grid{
+        grid-template-columns:1fr;
+        gap:18px;
+    }
+
+    .contact-info-card{
+        padding:26px 20px;
+        border-radius:22px;
+    }
+
+    .contact-info-icon{
+        width:64px;
+        height:64px;
+        border-radius:18px;
+        font-size:24px;
+        margin-bottom:18px;
+    }
+
+    .contact-info-card h3{
+        font-size:20px;
+        margin-bottom:12px;
+    }
+
+    .contact-info-card p{
+        font-size:14px;
+        line-height:1.7;
+        margin-bottom:16px;
+    }
+
+    .contact-info-card a{
+        font-size:15px;
+    }
+
+    .contact-info-card:hover{
+        transform:translateY(-4px);
+    }
+}
+
+/* ---------- Small Mobile (480px) ---------- */
+@media (max-width:480px){
+
+    .contact-info{
+        padding:60px 0;
+    }
+
+    .contact-info-card{
+        padding:22px 18px;
+    }
+
+    .contact-info-icon{
+        width:58px;
+        height:58px;
+        border-radius:16px;
+        font-size:22px;
+    }
+
+    .contact-info-card h3{
+        font-size:18px;
+    }
+
+    .contact-info-card p{
+        font-size:13px;
+    }
+
+    .contact-info-card a{
+        font-size:14px;
+    }
+}
+
+/* ---------- Extra Small Mobile (360px) ---------- */
+@media (max-width:360px){
+
+    .contact-info-card{
+        padding:20px 16px;
+    }
+
+    .contact-info-icon{
+        width:54px;
+        height:54px;
+        font-size:20px;
+    }
+
+    .contact-info-card h3{
+        font-size:17px;
+    }
+
+    .contact-info-card p{
+        font-size:12px;
+    }
+
+    .contact-info-card a{
+        font-size:13px;
+    }
+}
+
+/* ===================================
+   Contact Form Responsive
+=================================== */
+
+/* ---------- Tablet (769px - 1024px) ---------- */
+@media (min-width:769px) and (max-width:1024px){
+
+    .contact-wrapper{
+        grid-template-columns:1fr;
+        gap:32px;
+    }
+
+    .contact-form-card{
+        padding:32px;
+    }
+
+    .contact-form-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:20px;
+    }
+
+    .office-info-card{
+        position:static;
+        padding:28px;
+    }
+}
+
+/* ---------- Mobile (768px and below) ---------- */
+@media (max-width:768px){
+
+    .contact-form-section{
+        padding:70px 0;
+    }
+
+    .contact-wrapper{
+        grid-template-columns:1fr;
+        gap:28px;
+    }
+
+    .contact-form-card{
+        padding:24px;
+        border-radius:22px;
+    }
+
+    .contact-form-grid{
+        grid-template-columns:1fr;
+        gap:18px;
+    }
+
+    .full-width{
+        grid-column:auto;
+    }
+
+    .contact-group label{
+        font-size:14px;
+    }
+
+    .contact-group input,
+    .contact-group select,
+    .contact-group textarea{
+        padding:14px 16px;
+        border-radius:14px;
+        font-size:14px;
+    }
+
+    .contact-group textarea{
+        min-height:140px;
+    }
+
+    .contact-submit-btn{
+        height:52px;
+        font-size:15px;
+    }
+
+    .office-info-card{
+        position:static;
+        padding:24px;
+        border-radius:22px;
+    }
+
+    .office-info-card h3{
+        font-size:24px;
+    }
+
+    .office-info-item{
+        gap:14px;
+    }
+
+    .office-info-item i{
+        width:46px;
+        height:46px;
+        border-radius:12px;
+        font-size:18px;
+    }
+
+    .office-info-item h4{
+        font-size:16px;
+    }
+
+    .office-info-item p{
+        font-size:13px;
+    }
+
+    .response-box{
+        padding:18px;
+        border-radius:16px;
+    }
+
+    .response-box h4{
+        font-size:16px;
+    }
+
+    .response-box p{
+        font-size:13px;
+    }
+}
+
+/* ---------- Small Mobile (480px) ---------- */
+@media (max-width:480px){
+
+    .contact-form-section{
+        padding:60px 0;
+    }
+
+    .contact-form-card{
+        padding:20px;
+    }
+
+    .contact-form-header{
+        margin-bottom:24px;
+    }
+
+    .contact-form-grid{
+        gap:16px;
+    }
+
+    .office-info-card{
+        padding:20px;
+    }
+
+    .office-info-card h3{
+        font-size:22px;
+    }
+
+    .office-info-item i{
+        width:42px;
+        height:42px;
+        font-size:16px;
+    }
+
+    .contact-submit-btn{
+        height:50px;
+    }
+}
+
+/* ---------- Extra Small Mobile (360px) ---------- */
+@media (max-width:360px){
+
+    .contact-form-card{
+        padding:18px;
+    }
+
+    .office-info-card{
+        padding:18px;
+    }
+
+    .contact-group input,
+    .contact-group select,
+    .contact-group textarea{
+        padding:13px 14px;
+        font-size:13px;
+    }
+
+    .contact-submit-btn{
+        height:48px;
+        font-size:14px;
+    }
+
+    .office-info-item{
+        gap:12px;
+    }
+
+    .office-info-item i{
+        width:40px;
+        height:40px;
+        font-size:15px;
+    }
+
+    .office-info-item h4{
+        font-size:15px;
+    }
+
+    .office-info-item p{
+        font-size:12px;
+    }
+
+    .response-box h4{
+        font-size:15px;
+    }
+
+    .response-box p{
+        font-size:12px;
+    }
+}
+
+/* ===================================
+   Map & Service Areas Responsive
+=================================== */
+
+/* ---------- Tablet (769px - 1024px) ---------- */
+@media (min-width:769px) and (max-width:1024px){
+
+    .service-area-wrapper{
+        grid-template-columns:1fr;
+        gap:32px;
+    }
+
+    .service-map,
+    .service-info-card{
+        max-width:760px;
+        margin:0 auto;
+    }
+
+    .service-map,
+    .service-map iframe{
+        min-height:460px;
+        height:460px;
+    }
+
+    .service-info-card{
+        position:static;
+        padding:28px;
+    }
+}
+
+/* ---------- Mobile (768px and below) ---------- */
+@media (max-width:768px){
+
+    .service-area{
+        padding:70px 0;
+    }
+
+    .service-area-wrapper{
+        grid-template-columns:1fr;
+        gap:28px;
+    }
+
+    .service-map{
+        border-radius:22px;
+        min-height:320px;
+    }
+
+    .service-map iframe{
+        height:320px;
+    }
+
+    .service-info-card{
+        position:static;
+        padding:24px;
+        border-radius:22px;
+    }
+
+    .service-info-card h3{
+        font-size:24px;
+    }
+
+    .service-item{
+        gap:14px;
+    }
+
+    .service-item i{
+        width:46px;
+        height:46px;
+        border-radius:12px;
+        font-size:18px;
+    }
+
+    .service-item h4{
+        font-size:16px;
+    }
+
+    .service-item p{
+        font-size:13px;
+    }
+
+    .service-note{
+        padding:18px;
+        border-radius:16px;
+    }
+
+    .service-note p{
+        font-size:13px;
+    }
+}
+
+/* ---------- Small Mobile (480px) ---------- */
+@media (max-width:480px){
+
+    .service-area{
+        padding:60px 0;
+    }
+
+    .service-map{
+        border-radius:20px;
+        min-height:260px;
+    }
+
+    .service-map iframe{
+        height:260px;
+    }
+
+    .service-info-card{
+        padding:20px;
+    }
+
+    .service-info-card h3{
+        font-size:22px;
+    }
+
+    .service-item i{
+        width:42px;
+        height:42px;
+        font-size:16px;
+    }
+}
+
+/* ---------- Extra Small Mobile (360px) ---------- */
+@media (max-width:360px){
+
+    .service-map{
+        border-radius:18px;
+        min-height:220px;
+    }
+
+    .service-map iframe{
+        height:220px;
+    }
+
+    .service-info-card{
+        padding:18px;
+    }
+
+    .service-item{
+        gap:12px;
+    }
+
+    .service-item i{
+        width:40px;
+        height:40px;
+        font-size:15px;
+    }
+
+    .service-item h4{
+        font-size:15px;
+    }
+
+    .service-item p{
+        font-size:12px;
+    }
+
+    .service-note p{
+        font-size:12px;
+    }
+}
+
+
+
+
+
+/* ===================================
+   Home2 pricing responsive
+=================================== */
+
+/* ---------- iPad Pro / Tablet ---------- */
+
+@media (max-width:1024px){
+
+    .home2-pricing-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:24px;
+    }
+
+    .home2-pricing-card{
+        padding:36px 28px;
+    }
+
+    .home2-pricing-card.featured{
+        transform:none;
+    }
+
+    .home2-pricing-card.featured:hover{
+        transform:translateY(-8px);
+    }
+
+    .amount{
+        font-size:42px;
+    }
+
+}
+
+/* ---------- iPad Mini / Large Mobile ---------- */
+
+@media (max-width:768px){
+
+    .home2-pricing-grid{
+        grid-template-columns:1fr;
+        gap:22px;
+    }
+
+    .home2-pricing-card{
+        padding:32px 24px;
+    }
+
+    .home2-pricing-card.featured{
+        transform:none;
+    }
+
+    .home2-pricing-card.featured:hover{
+        transform:translateY(-6px);
+    }
+
+    .home2-pricing-card h3{
+        font-size:22px;
+    }
+
+    .amount{
+        font-size:40px;
+    }
+
+    .currency{
+        font-size:22px;
+    }
+
+    .home2-package-desc{
+        font-size:15px;
+    }
+
+    .home2-pricing-features li{
+        font-size:15px;
+    }
+
+    .pricing-btn{
+        height:50px;
+    }
+
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width:480px){
+
+    .home2-pricing{
+        padding:60px 0;
+    }
+
+    .home2-pricing-grid{
+        gap:20px;
+    }
+
+    .home2-pricing-card{
+        padding:28px 20px;
+        border-radius:20px;
+    }
+
+    .home2-pricing-card h3{
+        font-size:20px;
+    }
+
+    .home2-price{
+        margin-bottom:14px;
+    }
+
+    .amount{
+        font-size:36px;
+    }
+
+    .currency{
+        font-size:20px;
+        margin-top:4px;
+    }
+
+    .home2-package-desc{
+        font-size:14px;
+        margin-bottom:24px;
+    }
+
+    .home2-pricing-features{
+        margin-bottom:24px;
+    }
+
+    .home2-pricing-features li{
+        font-size:14px;
+        margin-bottom:12px;
+    }
+
+    .home2-pricing-badge{
+        top:14px;
+        right:14px;
+        font-size:12px;
+        padding:6px 12px;
+    }
+
+    .pricing-btn{
+        height:48px;
+        font-size:15px;
+    }
+
+}

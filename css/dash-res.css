@@ -1,0 +1,4479 @@
+/* ===================================
+   Dashboard Responsive + Dark Mode + RTL
+=================================== */
+
+
+/* ===================================
+   Tablet
+=================================== */
+
+@media (max-width:1024px){
+
+    .dashboard-sidebar{
+        transform:translateX(-100%);
+        transition:transform .3s ease;
+    }
+
+    .dashboard-sidebar.active{
+        transform:translateX(0);
+    }
+
+    .dashboard-main{
+        margin-left:0;
+        width:100%;
+        padding:20px;
+    }
+
+    .sidebar-toggle{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .dashboard-header{
+        top:16px;
+    }
+
+    .dashboard-hero{
+        grid-template-columns:1fr;
+        padding:36px;
+        gap:28px;
+    }
+
+    .hero-content h2{
+        font-size:34px;
+    }
+
+    .hero-image{
+        max-width:560px;
+        margin:0 auto;
+    }
+
+    .user-info{
+        display:none;
+    }
+}
+
+/* ===================================
+   Mobile
+=================================== */
+
+@media (max-width:768px){
+
+    .dashboard-main{
+        padding:16px;
+    }
+
+    .dashboard-header{
+        padding:16px;
+        border-radius:20px;
+    }
+
+    .dashboard-header h1{
+        font-size:24px;
+    }
+
+    .header-right{
+        gap:10px;
+    }
+
+    .header-icon{
+        width:42px;
+        height:42px;
+    }
+
+    .dashboard-hero{
+        padding:28px;
+        border-radius:24px;
+    }
+
+    .hero-content h2{
+        font-size:28px;
+    }
+
+    .hero-content p{
+        font-size:15px;
+    }
+
+    .hero-actions{
+        flex-direction:column;
+    }
+
+    .hero-card{
+        position:static;
+        margin-top:16px;
+    }
+    .dashboard-header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    flex-wrap:nowrap;
+    padding:12px 16px;
+    min-height:70px;
+}
+
+.header-left{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    flex:1;
+    min-width:0;
+}
+
+.header-left h1{
+    font-size:22px;
+    margin:0;
+    white-space:nowrap;
+}
+
+.header-label{
+    display:none;
+}
+
+.header-right{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    flex-wrap:nowrap;
+}
+
+.header-icon{
+    width:40px;
+    height:40px;
+    flex-shrink:0;
+}
+
+.user-profile{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    flex-shrink:0;
+}
+
+.user-profile img{
+    width:40px;
+    height:40px;
+}
+
+.user-info{
+    display:block;
+}
+
+.user-info h4{
+    font-size:14px;
+    margin:0;
+    line-height:1.2;
+}
+
+.user-info span{
+    font-size:12px;
+}
+}
+
+@media (max-width:480px){
+
+    @media (max-width:480px){
+
+    .dashboard-sidebar{
+        width:280px;
+    }
+
+    .dashboard-header{
+        display:flex;
+        flex-direction:row;
+        justify-content:space-between;
+        align-items:center;
+        flex-wrap:nowrap;
+        padding:10px 12px;
+        min-height:60px;
+        gap:8px;
+    }
+
+    .header-left{
+        display:flex;
+        align-items:center;
+        gap:8px;
+        flex:1;
+        min-width:0;
+    }
+
+    .header-left > div{
+        display:flex;
+        align-items:center;
+    }
+
+    .header-label{
+        display:none;
+    }
+
+    .header-left h1{
+        font-size:18px;
+        margin:0;
+        white-space:nowrap;
+    }
+
+    .header-right{
+        display:flex;
+        align-items:center;
+        gap:4px;
+        width:auto;
+        flex-wrap:nowrap;
+        flex-shrink:0;
+    }
+
+    .header-icon,
+    .sidebar-toggle{
+        width:32px;
+        height:32px;
+    }
+
+    .user-profile{
+        display:flex;
+        align-items:center;
+        gap:4px;
+        padding:3px 6px;
+        height:32px;
+    }
+
+    .user-profile img{
+        width:22px;
+        height:22px;
+    }
+
+    .user-info span{
+        display:none;
+    }
+
+    .dashboard-hero{
+        padding:22px;
+    }
+
+    .hero-content h2{
+        font-size:24px;
+    }
+
+    .btn{
+        width:100%;
+        justify-content:center;
+    }
+
+}
+
+    
+    
+
+    .dashboard-hero{
+        padding:22px;
+    }
+
+    .hero-content h2{
+        font-size:24px;
+    }
+
+    .btn{
+        width:100%;
+        justify-content:center;
+    }
+}
+
+/* ===================================
+   Dark Mode
+=================================== */
+
+body.dark-mode{
+    background:#020617;
+    color:#F8FAFC;
+}
+
+body.dark-mode .dashboard-main{
+    background:#020617;
+}
+
+body.dark-mode .dashboard-header{
+    background:rgba(15,23,42,.92);
+    border-color:#1E293B;
+}
+
+body.dark-mode .header-label{
+    color:#7CC4FA;
+}
+
+body.dark-mode .dashboard-header h1{
+    color:#FFFFFF;
+}
+
+body.dark-mode .header-icon{
+    background:#111827;
+    border-color:#334155;
+    color:#F8FAFC;
+}
+
+body.dark-mode .header-icon:hover{
+    background:#2563EB;
+    border-color:#2563EB;
+}
+
+body.dark-mode .user-info h4{
+    color:#FFFFFF;
+}
+
+body.dark-mode .user-info span{
+    color:#94A3B8;
+}
+
+body.dark-mode .dashboard-hero{
+    background:linear-gradient(135deg,#111827,#0F172A);
+    border:1px solid #1E293B;
+}
+
+body.dark-mode .hero-badge{
+    background:rgba(124,196,250,.12);
+    color:#7CC4FA;
+}
+
+body.dark-mode .hero-content h2{
+    color:#FFFFFF;
+}
+
+body.dark-mode .hero-content p{
+    color:#CBD5E1;
+}
+
+body.dark-mode .btn-outline{
+    background:#111827;
+    color:#FFFFFF;
+    border-color:#334155;
+}
+
+body.dark-mode .btn-outline:hover{
+    border-color:#7CC4FA;
+    color:#7CC4FA;
+}
+
+body.dark-mode .hero-card{
+    background:#111827;
+    border:1px solid #334155;
+}
+
+body.dark-mode .hero-card span{
+    color:#94A3B8;
+}
+
+body.dark-mode .hero-card strong{
+    color:#FFFFFF;
+}
+
+body.dark-mode .dashboard-sidebar{
+    background:#020617;
+    border-right-color:#1E293B;
+}
+
+body.dark-mode .nav-item{
+    color:#CBD5E1;
+}
+
+body.dark-mode .nav-item:hover{
+    background:rgba(37,99,235,.15);
+    color:#FFFFFF;
+}
+
+body.dark-mode .logout-btn{
+    color:#FB923C;
+}
+
+body.dark-mode .logout-btn:hover{
+    background:rgba(249,115,22,.12);
+}
+
+/* ===================================
+   RTL Mode
+=================================== */
+
+html[dir="rtl"] body{
+    direction:rtl;
+}
+
+html[dir="rtl"] .dashboard-sidebar{
+    left:auto;
+    right:0;
+    border-right:none;
+    border-left:1px solid rgba(255,255,255,.06);
+}
+
+html[dir="rtl"] .dashboard-main{
+    margin-left:0;
+    margin-right:240px;
+}
+
+html[dir="rtl"] .header-left{
+    flex-direction:row-reverse;
+}
+
+html[dir="rtl"] .header-right{
+    flex-direction:row-reverse;
+}
+
+html[dir="rtl"] .user-profile{
+    flex-direction:row-reverse;
+    padding-left:0;
+    padding-right:10px;
+}
+
+html[dir="rtl"] .hero-content{
+    text-align:right;
+}
+
+html[dir="rtl"] .hero-actions{
+    justify-content:flex-end;
+}
+
+html[dir="rtl"] .top-card{
+    left:auto;
+    right:18px;
+}
+
+html[dir="rtl"] .bottom-card{
+    right:auto;
+    left:18px;
+}
+
+@media (max-width:1024px){
+
+    html[dir="rtl"] .dashboard-sidebar{
+        transform:translateX(100%);
+    }
+
+    html[dir="rtl"] .dashboard-sidebar.active{
+        transform:translateX(0);
+    }
+
+    html[dir="rtl"] .dashboard-main{
+        margin-right:0;
+    }
+}
+
+/* ===================================
+   Dashboard Responsive (Part 3)
+=================================== */
+
+/* ---------- Large Laptop ---------- */
+
+@media (max-width:1440px){
+
+    .dashboard-main{
+        padding:20px;
+    }
+
+    .dashboard-hero{
+        padding:40px;
+        gap:36px;
+    }
+
+    .hero-content h2{
+        font-size:38px;
+    }
+
+}
+
+/* ---------- Tablet Landscape (1024px) ---------- */
+
+@media (max-width:1024px){
+
+    .dashboard-sidebar{
+        transform:translateX(-100%);
+        transition:transform .3s ease;
+    }
+
+    .dashboard-sidebar.active{
+        transform:translateX(0);
+    }
+
+    .dashboard-main{
+        margin-left:0;
+        width:100%;
+        padding:20px;
+    }
+
+    .sidebar-toggle{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .dashboard-header{
+        top:16px;
+        padding:16px 20px;
+    }
+
+    .dashboard-header h1{
+        font-size:26px;
+    }
+
+    .user-info{
+        display:none;
+    }
+
+    .dashboard-hero{
+        grid-template-columns:1fr;
+        padding:36px;
+        gap:28px;
+        text-align:center;
+    }
+
+    .hero-content p{
+        margin:0 auto;
+    }
+
+    .hero-actions{
+        justify-content:center;
+    }
+
+    .hero-image{
+        max-width:650px;
+        margin:0 auto;
+    }
+
+    .overview-grid{
+        grid-template-columns:repeat(2, 1fr);
+    }
+
+}
+
+/* ---------- iPad Mini / Tablet Portrait (768px) ---------- */
+
+@media (max-width:768px){
+
+    .dashboard-main{
+        padding:16px;
+    }
+
+    .dashboard-header{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:16px;
+        border-radius:20px;
+    }
+
+    .header-left{
+        width:100%;
+        justify-content:space-between;
+    }
+
+    .header-right{
+        width:100%;
+        justify-content:flex-end;
+        flex-wrap:wrap;
+    }
+
+    .dashboard-header h1{
+        font-size:24px;
+    }
+
+    .dashboard-hero{
+        padding:28px;
+        border-radius:24px;
+    }
+
+    .hero-content h2{
+        font-size:32px;
+        line-height:1.2;
+    }
+
+    .hero-content p{
+        font-size:16px;
+    }
+
+    .hero-actions{
+        flex-direction:column;
+        width:100%;
+    }
+
+    .hero-actions .btn{
+        width:100%;
+        justify-content:center;
+    }
+
+    .hero-card{
+        position:static;
+        margin-top:16px;
+        width:100%;
+    }
+
+    .section-header{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:12px;
+    }
+
+    .overview-grid{
+        grid-template-columns:1fr;
+        gap:18px;
+    }
+
+    .overview-card{
+        padding:20px;
+    }
+
+}
+
+/* ---------- Mobile (480px) ---------- */
+
+@media (max-width:480px){
+
+    .dashboard-sidebar{
+        width:280px;
+    }
+
+    .dashboard-main{
+        padding:14px;
+    }
+
+    .dashboard-header{
+        padding:16px;
+    }
+
+    .header-right{
+        justify-content:space-between;
+    }
+
+    .header-icon{
+        width:42px;
+        height:42px;
+    }
+
+    .user-profile img{
+        width:42px;
+        height:42px;
+    }
+
+    .dashboard-hero{
+        padding:22px;
+    }
+
+    .hero-badge{
+        font-size:12px;
+        padding:8px 14px;
+    }
+
+    .hero-content h2{
+        font-size:28px;
+    }
+
+    .hero-content p{
+        font-size:15px;
+    }
+
+    .overview-card{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:16px;
+    }
+
+    .overview-content h3{
+        font-size:30px;
+    }
+
+}
+
+/* ---------- Small Mobile (360px) ---------- */
+
+@media (max-width:360px){
+
+    .dashboard-header h1{
+        font-size:22px;
+    }
+
+    .hero-content h2{
+        font-size:24px;
+    }
+
+    .hero-content p{
+        font-size:14px;
+    }
+
+    .header-icon{
+        width:40px;
+        height:40px;
+    }
+
+    .overview-content h3{
+        font-size:28px;
+    }
+
+    .btn{
+        padding:12px 18px;
+        font-size:14px;
+    }
+
+}
+
+/* ===================================
+   RTL Responsive
+=================================== */
+
+html[dir="rtl"] .dashboard-header{
+    direction:rtl;
+}
+
+html[dir="rtl"] .header-left{
+    flex-direction:row-reverse;
+}
+
+html[dir="rtl"] .header-right{
+    flex-direction:row-reverse;
+}
+
+html[dir="rtl"] .overview-card{
+    direction:rtl;
+}
+
+@media (max-width:1024px){
+
+    html[dir="rtl"] .dashboard-sidebar{
+        transform:translateX(100%);
+    }
+
+    html[dir="rtl"] .dashboard-sidebar.active{
+        transform:translateX(0);
+    }
+
+}
+
+/* ===================================
+   Upcoming Lesson Responsive
+=================================== */
+
+/* Large Laptop */
+
+@media (max-width:1440px){
+
+    .dashboard-card{
+        padding:24px;
+    }
+
+    .lesson-info h4{
+        font-size:22px;
+    }
+
+}
+
+/* Tablet Landscape (1024px) */
+
+@media (max-width:1024px){
+
+    .dashboard-activity{
+        margin-top:28px;
+    }
+
+    .dashboard-card{
+        padding:24px;
+    }
+
+    .lesson-main{
+        gap:20px;
+    }
+
+    .lesson-date-box{
+        width:84px;
+        min-width:84px;
+        height:96px;
+    }
+
+    .lesson-date-box .day{
+        font-size:30px;
+    }
+
+    .lesson-info h4{
+        font-size:22px;
+    }
+
+    .lesson-footer{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:18px;
+    }
+
+    .lesson-actions{
+        width:100%;
+        justify-content:flex-start;
+        flex-wrap:wrap;
+    }
+
+}
+
+/* iPad Mini / Tablet Portrait (768px) */
+
+@media (max-width:768px){
+
+    .dashboard-card{
+        padding:22px;
+        border-radius:24px;
+    }
+
+    .card-header{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:14px;
+    }
+
+    .card-header h3{
+        font-size:22px;
+    }
+
+    .lesson-main{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .lesson-date-box{
+        width:80px;
+        height:90px;
+        border-radius:20px;
+    }
+
+    .lesson-date-box .day{
+        font-size:28px;
+    }
+
+    .lesson-date-box .month{
+        font-size:14px;
+    }
+
+    .lesson-info{
+        width:100%;
+    }
+
+    .lesson-info h4{
+        font-size:21px;
+    }
+
+    .lesson-meta{
+        gap:14px;
+    }
+
+    .meta-item{
+        font-size:15px;
+    }
+
+    .lesson-divider{
+        margin:22px 0;
+    }
+
+    .lesson-footer{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:18px;
+    }
+
+    .lesson-note{
+        width:100%;
+    }
+
+    .lesson-actions{
+        width:100%;
+        flex-direction:column;
+    }
+
+    .lesson-actions .btn{
+        width:100%;
+        justify-content:center;
+    }
+
+}
+
+/* Mobile (480px) */
+
+@media (max-width:480px){
+
+    .dashboard-card{
+        padding:18px;
+        border-radius:22px;
+    }
+
+    .card-header h3{
+        font-size:20px;
+    }
+
+    .card-header p{
+        font-size:13px;
+    }
+
+    .status-badge{
+        font-size:12px;
+        padding:7px 12px;
+    }
+
+    .lesson-date-box{
+        width:72px;
+        height:82px;
+    }
+
+    .lesson-date-box .day{
+        font-size:26px;
+    }
+
+    .lesson-info h4{
+        font-size:19px;
+    }
+
+    .meta-item{
+        font-size:14px;
+        align-items:flex-start;
+    }
+
+    .meta-item i{
+        margin-top:3px;
+    }
+
+    .lesson-note{
+        font-size:13px;
+    }
+
+    .lesson-actions{
+        gap:12px;
+    }
+
+}
+
+/* Small Mobile (360px) */
+
+@media (max-width:360px){
+
+    .dashboard-card{
+        padding:16px;
+    }
+
+    .lesson-date-box{
+        width:68px;
+        height:78px;
+    }
+
+    .lesson-date-box .day{
+        font-size:24px;
+    }
+
+    .lesson-info h4{
+        font-size:18px;
+    }
+
+    .meta-item{
+        font-size:13px;
+    }
+
+    .lesson-note{
+        font-size:12px;
+    }
+
+    .lesson-actions .btn{
+        padding:12px 16px;
+        font-size:14px;
+    }
+
+}
+
+/* ===================================
+   RTL Responsive
+=================================== */
+
+html[dir="rtl"] .card-header{
+    direction:rtl;
+}
+
+html[dir="rtl"] .lesson-main{
+    direction:rtl;
+}
+
+html[dir="rtl"] .lesson-info{
+    text-align:right;
+}
+
+html[dir="rtl"] .meta-item{
+    flex-direction:row-reverse;
+    text-align:right;
+}
+
+html[dir="rtl"] .lesson-footer{
+    direction:rtl;
+}
+
+html[dir="rtl"] .lesson-note{
+    text-align:right;
+}
+
+html[dir="rtl"] .lesson-actions{
+    justify-content:flex-end;
+}
+
+@media (max-width:768px){
+
+    html[dir="rtl"] .lesson-actions{
+        align-items:stretch;
+    }
+
+}
+
+/* ===================================
+   Learning Progress Responsive
+=================================== */
+
+/* Large Laptop */
+
+@media (max-width:1440px){
+
+    .lesson-progress-section{
+        gap:22px;
+    }
+
+    .learning-progress-card{
+        padding:26px;
+    }
+
+}
+
+/* Tablet Landscape (1024px) */
+
+@media (max-width:1024px){
+
+    .lesson-progress-section{
+        grid-template-columns:1fr;
+        gap:22px;
+    }
+
+    .learning-progress-card{
+        padding:24px;
+    }
+
+    .progress-circle{
+        width:170px;
+        height:170px;
+    }
+
+    .progress-inner{
+        width:132px;
+        height:132px;
+    }
+
+}
+
+/* iPad Mini / Tablet Portrait (768px) */
+
+@media (max-width:768px){
+
+    .learning-progress-card{
+        padding:22px;
+        border-radius:24px;
+    }
+
+    .card-header{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:12px;
+    }
+
+    .progress-status{
+        align-self:flex-start;
+    }
+
+    .progress-circle-wrapper{
+        margin:24px 0 28px;
+    }
+
+    .progress-circle{
+        width:160px;
+        height:160px;
+    }
+
+    .progress-inner{
+        width:124px;
+        height:124px;
+    }
+
+    .progress-inner h2{
+        font-size:30px;
+    }
+
+    .skill-progress-list{
+        gap:18px;
+    }
+
+}
+
+/* Mobile (480px) */
+
+@media (max-width:480px){
+
+    .learning-progress-card{
+        padding:18px;
+        border-radius:22px;
+    }
+
+    .progress-circle{
+        width:140px;
+        height:140px;
+    }
+
+    .progress-inner{
+        width:108px;
+        height:108px;
+    }
+
+    .progress-inner h2{
+        font-size:26px;
+    }
+
+    .progress-inner span{
+        font-size:13px;
+    }
+
+    .skill-progress-list{
+        gap:16px;
+    }
+
+    .skill-info{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:6px;
+    }
+
+    .skill-bar{
+        height:8px;
+    }
+
+}
+
+/* Small Mobile (360px) */
+
+@media (max-width:360px){
+
+    .learning-progress-card{
+        padding:16px;
+    }
+
+    .progress-circle{
+        width:128px;
+        height:128px;
+    }
+
+    .progress-inner{
+        width:96px;
+        height:96px;
+    }
+
+    .progress-inner h2{
+        font-size:24px;
+    }
+
+    .progress-inner span{
+        font-size:12px;
+    }
+
+    .skill-info span:first-child{
+        font-size:14px;
+    }
+
+    .skill-info span:last-child{
+        font-size:13px;
+    }
+
+}
+
+/* ===================================
+   RTL Responsive
+=================================== */
+
+html[dir="rtl"] .learning-progress-card{
+    direction:rtl;
+}
+
+html[dir="rtl"] .card-header{
+    flex-direction:row-reverse;
+}
+
+html[dir="rtl"] .skill-info{
+    flex-direction:row-reverse;
+    text-align:right;
+}
+
+html[dir="rtl"] .progress-status{
+    direction:ltr;
+}
+
+@media (max-width:768px){
+
+    html[dir="rtl"] .card-header{
+        align-items:flex-end;
+    }
+
+    html[dir="rtl"] .progress-status{
+        align-self:flex-end;
+    }
+
+}
+
+/* ===================================
+   Recent Bookings Responsive
+=================================== */
+
+/* Large Laptop */
+
+@media (max-width:1440px){
+
+    .bookings-card{
+        padding:26px;
+    }
+
+    .bookings-table{
+        min-width:880px;
+    }
+
+}
+
+/* Tablet Landscape (1024px) */
+
+@media (max-width:1024px){
+
+    .recent-bookings{
+        margin-top:28px;
+    }
+
+    .bookings-card{
+        padding:24px;
+    }
+
+    .bookings-table-wrapper{
+        overflow-x:auto;
+        -webkit-overflow-scrolling:touch;
+    }
+
+    .bookings-table{
+        min-width:850px;
+    }
+
+    .bookings-table thead th,
+    .bookings-table tbody td{
+        padding:18px 16px;
+    }
+
+}
+
+/* iPad Mini / Tablet Portrait (768px) */
+
+@media (max-width:768px){
+
+    .bookings-card{
+        padding:22px;
+        border-radius:24px;
+    }
+
+    .card-header{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:12px;
+    }
+
+    .bookings-table{
+        min-width:780px;
+    }
+
+    .bookings-table thead th{
+        font-size:13px;
+        padding:16px 14px;
+    }
+
+    .bookings-table tbody td{
+        padding:18px 14px;
+        font-size:14px;
+    }
+
+    .lesson-cell{
+        gap:12px;
+        min-width:220px;
+    }
+
+    .lesson-icon{
+        width:46px;
+        height:46px;
+        border-radius:16px;
+        font-size:18px;
+    }
+
+    .lesson-cell h4{
+        font-size:15px;
+    }
+
+    .lesson-cell span{
+        font-size:12px;
+    }
+
+}
+
+/* Mobile (480px) */
+
+@media (max-width:480px){
+
+    .bookings-card{
+        padding:18px;
+        border-radius:22px;
+    }
+
+    .bookings-table{
+        min-width:720px;
+    }
+
+    .bookings-table thead th{
+        font-size:12px;
+        padding:14px 12px;
+    }
+
+    .bookings-table tbody td{
+        padding:16px 12px;
+        font-size:13px;
+    }
+
+    .lesson-cell{
+        min-width:200px;
+    }
+
+    .lesson-icon{
+        width:42px;
+        height:42px;
+        border-radius:14px;
+        font-size:16px;
+    }
+
+    .lesson-cell h4{
+        font-size:14px;
+    }
+
+    .payment-badge,
+    .status-badge{
+        font-size:11px;
+        padding:6px 10px;
+    }
+
+    .table-action{
+        font-size:13px;
+    }
+
+}
+
+/* Small Mobile (360px) */
+
+@media (max-width:360px){
+
+    .bookings-card{
+        padding:16px;
+    }
+
+    .bookings-table{
+        min-width:680px;
+    }
+
+    .lesson-cell{
+        gap:10px;
+        min-width:180px;
+    }
+
+    .lesson-icon{
+        width:38px;
+        height:38px;
+        border-radius:12px;
+    }
+
+    .lesson-cell h4{
+        font-size:13px;
+    }
+
+    .lesson-cell span{
+        font-size:11px;
+    }
+
+    .payment-badge,
+    .status-badge{
+        font-size:10px;
+        padding:5px 8px;
+    }
+
+    .table-action{
+        font-size:12px;
+    }
+
+}
+
+/* ===================================
+   RTL Responsive
+=================================== */
+
+html[dir="rtl"] .bookings-card{
+    direction:rtl;
+}
+
+html[dir="rtl"] .card-header{
+    flex-direction:row-reverse;
+}
+
+html[dir="rtl"] .bookings-table thead th,
+html[dir="rtl"] .bookings-table tbody td{
+    text-align:right;
+}
+
+html[dir="rtl"] .lesson-cell{
+    flex-direction:row-reverse;
+}
+
+html[dir="rtl"] .table-action{
+    display:inline-flex;
+    justify-content:flex-end;
+}
+
+@media (max-width:768px){
+
+    html[dir="rtl"] .card-header{
+        align-items:flex-end;
+    }
+
+}
+
+/* ===================================
+   My Lessons Responsive
+=================================== */
+
+/* Large Laptop */
+
+@media (max-width:1440px){
+
+    .lessons-hero{
+        padding:36px;
+    }
+
+    .lessons-hero-content h2{
+        font-size:36px;
+    }
+
+}
+
+/* Tablet Landscape (1024px) */
+
+@media (max-width:1024px){
+
+    .lessons-hero{
+        flex-direction:column;
+        align-items:flex-start;
+        padding:34px;
+        gap:24px;
+    }
+
+    .lessons-hero-content{
+        max-width:100%;
+    }
+
+    .lessons-hero-content h2{
+        font-size:34px;
+    }
+
+    .lessons-hero-action{
+        width:100%;
+    }
+
+    .lesson-summary{
+        grid-template-columns:repeat(2, 1fr);
+    }
+
+}
+
+/* iPad Mini / Tablet Portrait (768px) */
+
+@media (max-width:768px){
+
+    .lessons-hero{
+        padding:28px;
+        border-radius:24px;
+        text-align:center;
+        align-items:center;
+    }
+
+    .lessons-hero-content h2{
+        font-size:30px;
+    }
+
+    .lessons-hero-content p{
+        font-size:15px;
+    }
+
+    .lessons-hero-action{
+        width:100%;
+        justify-content:center;
+    }
+
+    .lessons-hero-action .btn{
+        width:100%;
+        justify-content:center;
+    }
+
+    .lesson-summary{
+        grid-template-columns:1fr;
+        gap:18px;
+    }
+
+    .summary-card{
+        padding:22px;
+    }
+
+}
+
+/* Mobile (480px) */
+
+@media (max-width:480px){
+
+    .lessons-hero{
+        padding:22px;
+        border-radius:22px;
+    }
+
+    .lessons-hero-content h2{
+        font-size:26px;
+        line-height:1.25;
+    }
+
+    .lessons-hero-content p{
+        font-size:14px;
+    }
+
+    .summary-card{
+        padding:18px;
+        border-radius:20px;
+    }
+
+    .summary-icon{
+        width:56px;
+        height:56px;
+        border-radius:18px;
+        font-size:20px;
+    }
+
+    .summary-content h3{
+        font-size:28px;
+    }
+
+    .summary-content span{
+        font-size:13px;
+    }
+
+    .summary-content p{
+        font-size:13px;
+    }
+
+}
+
+/* Small Mobile (360px) */
+
+@media (max-width:360px){
+
+    .lessons-hero{
+        padding:18px;
+    }
+
+    .lessons-hero-content h2{
+        font-size:24px;
+    }
+
+    .summary-card{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:14px;
+    }
+
+    .summary-icon{
+        width:52px;
+        height:52px;
+    }
+
+    .summary-content h3{
+        font-size:26px;
+    }
+
+}
+
+/* ===================================
+   RTL Support
+=================================== */
+
+html[dir="rtl"] .lessons-hero{
+    direction:rtl;
+}
+
+html[dir="rtl"] .lessons-hero-content{
+    text-align:right;
+}
+
+html[dir="rtl"] .summary-card{
+    direction:rtl;
+}
+
+html[dir="rtl"] .summary-content{
+    text-align:right;
+}
+
+@media (max-width:768px){
+
+    html[dir="rtl"] .lessons-hero{
+        text-align:right;
+        align-items:flex-end;
+    }
+
+    html[dir="rtl"] .lessons-hero-action{
+        justify-content:flex-end;
+    }
+
+}
+
+/* ===================================
+   Upcoming Lessons Responsive
+=================================== */
+
+/* Large Laptop */
+
+@media (max-width:1440px){
+
+    .lesson-card{
+        padding:24px;
+    }
+
+    .lesson-top h4{
+        font-size:21px;
+    }
+
+}
+
+/* Tablet Landscape (1024px) */
+
+@media (max-width:1024px){
+
+    .upcoming-lessons-section{
+        margin-top:28px;
+    }
+
+    .lesson-card{
+        padding:24px;
+        gap:20px;
+    }
+
+    .lesson-meta{
+        grid-template-columns:1fr 1fr;
+        gap:14px 18px;
+    }
+
+}
+
+/* iPad Mini / Tablet Portrait (768px) */
+
+@media (max-width:768px){
+
+    .section-header{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:12px;
+    }
+
+    .lesson-card{
+        flex-direction:column;
+        align-items:flex-start;
+        padding:22px;
+        border-radius:24px;
+    }
+
+    .lesson-date-box{
+        width:78px;
+        min-width:78px;
+        height:88px;
+    }
+
+    .lesson-date-box .day{
+        font-size:28px;
+    }
+
+    .lesson-top{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:12px;
+    }
+
+    .lesson-top h4{
+        font-size:20px;
+    }
+
+    .lesson-meta{
+        grid-template-columns:1fr;
+        gap:12px;
+    }
+
+    .lesson-actions{
+        width:100%;
+        flex-direction:column;
+    }
+
+    .lesson-actions .btn{
+        width:100%;
+        justify-content:center;
+    }
+
+}
+
+/* Mobile (480px) */
+
+@media (max-width:480px){
+
+    .section-header h3{
+        font-size:24px;
+    }
+
+    .section-header p{
+        font-size:14px;
+    }
+
+    .lesson-card{
+        padding:18px;
+        border-radius:22px;
+        gap:18px;
+    }
+
+    .lesson-date-box{
+        width:72px;
+        min-width:72px;
+        height:82px;
+        border-radius:18px;
+    }
+
+    .lesson-date-box .day{
+        font-size:26px;
+    }
+
+    .lesson-date-box .month{
+        font-size:13px;
+    }
+
+    .lesson-top h4{
+        font-size:18px;
+        line-height:1.3;
+    }
+
+    .lesson-meta span{
+        font-size:14px;
+    }
+
+    .lesson-actions{
+        gap:12px;
+    }
+
+    .lesson-actions .btn{
+        padding:12px 16px;
+        font-size:14px;
+    }
+
+}
+
+/* Small Mobile (360px) */
+
+@media (max-width:360px){
+
+    .lesson-card{
+        padding:16px;
+    }
+
+    .lesson-date-box{
+        width:68px;
+        min-width:68px;
+        height:76px;
+    }
+
+    .lesson-date-box .day{
+        font-size:24px;
+    }
+
+    .lesson-top h4{
+        font-size:17px;
+    }
+
+    .lesson-meta span{
+        font-size:13px;
+    }
+
+    .lesson-actions .btn{
+        font-size:13px;
+        padding:11px 14px;
+    }
+
+}
+
+/* ===================================
+   RTL Support
+=================================== */
+
+html[dir="rtl"] .upcoming-lessons-section{
+    direction:rtl;
+}
+
+html[dir="rtl"] .section-header{
+    flex-direction:row-reverse;
+}
+
+html[dir="rtl"] .lesson-card{
+    direction:rtl;
+}
+
+html[dir="rtl"] .lesson-top{
+    flex-direction:row-reverse;
+}
+
+html[dir="rtl"] .lesson-meta span{
+    flex-direction:row-reverse;
+    text-align:right;
+}
+
+html[dir="rtl"] .lesson-actions{
+    justify-content:flex-end;
+}
+
+@media (max-width:768px){
+
+    html[dir="rtl"] .section-header{
+        align-items:flex-end;
+    }
+
+    html[dir="rtl"] .lesson-top{
+        align-items:flex-end;
+    }
+
+    html[dir="rtl"] .lesson-actions{
+        align-items:stretch;
+    }
+
+}
+
+/* ===================================
+   Completed Lessons Responsive
+=================================== */
+
+/* Large Laptop */
+
+@media (max-width:1440px){
+
+    .completed-card{
+        padding:24px;
+    }
+
+    .completed-top h4{
+        font-size:21px;
+    }
+
+}
+
+/* Tablet Landscape (1024px) */
+
+@media (max-width:1024px){
+
+    .completed-lessons-section{
+        margin-top:28px;
+    }
+
+    .completed-card{
+        padding:24px;
+        gap:20px;
+    }
+
+    .completed-meta{
+        grid-template-columns:1fr 1fr;
+        gap:14px 18px;
+    }
+
+}
+
+/* iPad Mini / Tablet Portrait (768px) */
+
+@media (max-width:768px){
+
+    .completed-card{
+        flex-direction:column;
+        align-items:flex-start;
+        padding:22px;
+        border-radius:24px;
+    }
+
+    .completed-icon{
+        width:58px;
+        min-width:58px;
+        height:58px;
+        border-radius:18px;
+        font-size:24px;
+    }
+
+    .completed-top{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:12px;
+    }
+
+    .completed-top h4{
+        font-size:20px;
+    }
+
+    .completed-meta{
+        grid-template-columns:1fr;
+        gap:12px;
+    }
+
+    .lesson-rating{
+        gap:5px;
+    }
+
+    .lesson-rating span{
+        margin-left:0;
+        width:100%;
+        margin-top:8px;
+    }
+
+    .completed-actions{
+        width:100%;
+        flex-direction:column;
+    }
+
+    .completed-actions .btn{
+        width:100%;
+        justify-content:center;
+    }
+
+}
+
+/* Mobile (480px) */
+
+@media (max-width:480px){
+
+    .completed-card{
+        padding:18px;
+        border-radius:22px;
+        gap:18px;
+    }
+
+    .completed-icon{
+        width:54px;
+        min-width:54px;
+        height:54px;
+        border-radius:16px;
+        font-size:22px;
+    }
+
+    .completed-top h4{
+        font-size:18px;
+        line-height:1.3;
+    }
+
+    .completed-meta span{
+        font-size:14px;
+    }
+
+    .lesson-rating{
+        font-size:14px;
+    }
+
+    .lesson-rating span{
+        font-size:13px;
+    }
+
+    .completed-actions{
+        gap:12px;
+    }
+
+    .completed-actions .btn{
+        padding:12px 16px;
+        font-size:14px;
+    }
+
+}
+
+/* Small Mobile (360px) */
+
+@media (max-width:360px){
+
+    .completed-card{
+        padding:16px;
+    }
+
+    .completed-icon{
+        width:50px;
+        min-width:50px;
+        height:50px;
+        border-radius:14px;
+        font-size:20px;
+    }
+
+    .completed-top h4{
+        font-size:17px;
+    }
+
+    .completed-meta span{
+        font-size:13px;
+    }
+
+    .lesson-rating{
+        font-size:13px;
+    }
+
+    .lesson-rating span{
+        font-size:12px;
+    }
+
+    .completed-actions .btn{
+        font-size:13px;
+        padding:11px 14px;
+    }
+
+}
+
+/* ===================================
+   RTL Support
+=================================== */
+
+html[dir="rtl"] .completed-lessons-section{
+    direction:rtl;
+}
+
+html[dir="rtl"] .completed-card{
+    direction:rtl;
+}
+
+html[dir="rtl"] .completed-top{
+    flex-direction:row-reverse;
+}
+
+html[dir="rtl"] .completed-meta span{
+    flex-direction:row-reverse;
+    text-align:right;
+}
+
+html[dir="rtl"] .lesson-rating{
+    flex-direction:row-reverse;
+    justify-content:flex-end;
+}
+
+html[dir="rtl"] .lesson-rating span{
+    margin-left:0;
+    margin-right:10px;
+}
+
+html[dir="rtl"] .completed-actions{
+    justify-content:flex-end;
+}
+
+@media (max-width:768px){
+
+    html[dir="rtl"] .completed-top{
+        align-items:flex-end;
+    }
+
+    html[dir="rtl"] .completed-actions{
+        align-items:stretch;
+    }
+
+    html[dir="rtl"] .lesson-rating span{
+        margin-right:0;
+    }
+
+}
+
+
+/* ===================================
+   Instructor Feedback Responsive
+=================================== */
+
+/* Large Laptop */
+
+@media (max-width:1440px){
+
+    .feedback-card{
+        padding:26px;
+    }
+
+}
+
+/* Tablet Landscape (1024px) */
+
+@media (max-width:1024px){
+
+    .instructor-feedback-section{
+        margin-top:28px;
+    }
+
+    .feedback-card{
+        padding:24px;
+    }
+
+    .feedback-footer{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+}
+
+/* iPad Mini / Tablet Portrait (768px) */
+
+@media (max-width:768px){
+
+    .feedback-card{
+        padding:22px;
+        border-radius:24px;
+    }
+
+    .feedback-header{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:16px;
+    }
+
+    .instructor-profile{
+        width:100%;
+    }
+
+    .instructor-profile img{
+        width:58px;
+        height:58px;
+    }
+
+    .instructor-profile h4{
+        font-size:18px;
+    }
+
+    .feedback-rating{
+        gap:5px;
+    }
+
+    .feedback-rating span{
+        width:100%;
+        margin-left:0;
+        margin-top:8px;
+    }
+
+    .feedback-footer{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:16px;
+    }
+
+    .feedback-footer .btn{
+        width:100%;
+        justify-content:center;
+    }
+
+}
+
+/* Mobile (480px) */
+
+@media (max-width:480px){
+
+    .feedback-card{
+        padding:18px;
+        border-radius:22px;
+    }
+
+    .instructor-profile{
+        gap:14px;
+    }
+
+    .instructor-profile img{
+        width:52px;
+        height:52px;
+    }
+
+    .instructor-profile h4{
+        font-size:17px;
+    }
+
+    .feedback-date{
+        font-size:13px;
+    }
+
+    .feedback-content p{
+        font-size:14px;
+        line-height:1.7;
+    }
+
+    .feedback-tags{
+        gap:8px;
+    }
+
+    .feedback-tags span{
+        font-size:12px;
+        padding:8px 12px;
+    }
+
+    .next-focus{
+        font-size:14px;
+        line-height:1.5;
+    }
+
+    .feedback-footer .btn{
+        padding:12px 16px;
+        font-size:14px;
+    }
+
+}
+
+/* Small Mobile (360px) */
+
+@media (max-width:360px){
+
+    .feedback-card{
+        padding:16px;
+    }
+
+    .instructor-profile img{
+        width:48px;
+        height:48px;
+    }
+
+    .instructor-profile h4{
+        font-size:16px;
+    }
+
+    .feedback-content p{
+        font-size:13px;
+    }
+
+    .feedback-tags span{
+        font-size:11px;
+        padding:7px 10px;
+    }
+
+    .next-focus{
+        font-size:13px;
+    }
+
+    .feedback-footer .btn{
+        font-size:13px;
+        padding:11px 14px;
+    }
+
+}
+
+/* ===================================
+   RTL Support
+=================================== */
+
+html[dir="rtl"] .instructor-feedback-section{
+    direction:rtl;
+}
+
+html[dir="rtl"] .feedback-header{
+    flex-direction:row-reverse;
+}
+
+html[dir="rtl"] .instructor-profile{
+    flex-direction:row-reverse;
+}
+
+html[dir="rtl"] .feedback-date{
+    flex-direction:row-reverse;
+}
+
+html[dir="rtl"] .feedback-rating{
+    flex-direction:row-reverse;
+    justify-content:flex-end;
+}
+
+html[dir="rtl"] .feedback-rating span{
+    margin-left:0;
+    margin-right:10px;
+}
+
+html[dir="rtl"] .feedback-content{
+    text-align:right;
+}
+
+html[dir="rtl"] .feedback-footer{
+    flex-direction:row-reverse;
+}
+
+html[dir="rtl"] .next-focus{
+    flex-direction:row-reverse;
+}
+
+@media (max-width:768px){
+
+    html[dir="rtl"] .feedback-header{
+        align-items:flex-end;
+    }
+
+    html[dir="rtl"] .feedback-footer{
+        align-items:stretch;
+    }
+
+    html[dir="rtl"] .feedback-rating span{
+        margin-right:0;
+    }
+
+}
+
+
+
+
+/*****book-lesson*****/
+
+/* ===================================
+   Booking Hero Responsive
+=================================== */
+
+/* Large Laptop */
+
+@media (max-width:1440px){
+
+    .booking-hero{
+        padding:36px;
+    }
+
+    .booking-hero-content h2{
+        font-size:38px;
+    }
+
+}
+
+/* Tablet Landscape (1024px) */
+
+@media (max-width:1024px){
+
+    .booking-hero{
+        grid-template-columns:1fr;
+        padding:34px;
+        gap:24px;
+    }
+
+    .booking-hero-content{
+        max-width:100%;
+    }
+
+    .booking-hero-content h2{
+        font-size:34px;
+    }
+
+    .booking-hero-action{
+        width:100%;
+        justify-content:flex-start;
+    }
+
+}
+
+/* iPad Mini / Tablet Portrait (768px) */
+
+@media (max-width:768px){
+
+    .booking-hero{
+        padding:28px;
+        border-radius:24px;
+        gap:20px;
+    }
+
+    .booking-hero-content h2{
+        font-size:30px;
+        line-height:1.2;
+    }
+
+    .booking-hero-content p{
+        font-size:15px;
+    }
+
+    .booking-hero-action{
+        width:100%;
+    }
+
+    .booking-hero-action .btn{
+        width:100%;
+        justify-content:center;
+    }
+
+}
+
+/* Mobile (480px) */
+
+@media (max-width:480px){
+
+    .booking-hero{
+        padding:22px;
+        border-radius:22px;
+    }
+
+    .booking-hero-content h2{
+        font-size:26px;
+        line-height:1.25;
+    }
+
+    .booking-hero-content p{
+        font-size:14px;
+        line-height:1.6;
+    }
+
+    .booking-hero-action .btn{
+        width:100%;
+        padding:14px 20px;
+        font-size:14px;
+    }
+
+}
+
+/* Small Mobile (360px) */
+
+@media (max-width:360px){
+
+    .booking-hero{
+        padding:18px;
+    }
+
+    .booking-hero-content h2{
+        font-size:24px;
+    }
+
+    .booking-hero-content p{
+        font-size:13px;
+    }
+
+    .booking-hero-action .btn{
+        padding:12px 18px;
+        font-size:13px;
+    }
+
+}
+
+/* ===================================
+   RTL Support
+=================================== */
+
+html[dir="rtl"] .booking-hero{
+    direction:rtl;
+}
+
+html[dir="rtl"] .booking-hero-content{
+    text-align:right;
+}
+
+html[dir="rtl"] .booking-hero-action{
+    justify-content:flex-start;
+}
+
+@media (max-width:768px){
+
+    html[dir="rtl"] .booking-hero{
+        text-align:right;
+    }
+
+    html[dir="rtl"] .booking-hero-action{
+        width:100%;
+    }
+
+}
+
+
+/* ===================================
+   Booking Summary Responsive
+=================================== */
+
+/* Large Laptop */
+
+@media (max-width:1440px){
+
+    .booking-summary-card{
+        padding:26px;
+    }
+
+}
+
+/* Tablet Landscape (1024px) */
+
+@media (max-width:1024px){
+
+    .booking-summary-card{
+        position:static;
+        top:auto;
+        padding:24px;
+        margin-top:24px;
+    }
+
+}
+
+/* iPad Mini / Tablet Portrait (768px) */
+
+@media (max-width:768px){
+
+    .booking-summary-card{
+        padding:22px;
+        border-radius:24px;
+    }
+
+    .booking-summary-card h3{
+        font-size:22px;
+    }
+
+    .summary-item{
+        padding:12px 0;
+    }
+
+    .summary-item span{
+        font-size:14px;
+    }
+
+    .summary-item strong{
+        font-size:15px;
+    }
+
+    .summary-item.total strong{
+        font-size:20px;
+    }
+
+    .booking-note{
+        padding:14px;
+        font-size:13px;
+    }
+
+}
+
+/* Mobile (480px) */
+
+@media (max-width:480px){
+
+    .booking-summary-card{
+        padding:18px;
+        border-radius:22px;
+    }
+
+    .booking-summary-card h3{
+        font-size:20px;
+        margin-bottom:20px;
+    }
+
+    .summary-item{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:6px;
+        padding:12px 0;
+    }
+
+    .summary-item strong{
+        text-align:left;
+        font-size:16px;
+    }
+
+    .summary-item.total span{
+        font-size:16px;
+    }
+
+    .summary-item.total strong{
+        font-size:22px;
+    }
+
+    .booking-note{
+        padding:14px;
+        border-radius:16px;
+        font-size:13px;
+        line-height:1.5;
+    }
+
+}
+
+/* Small Mobile (360px) */
+
+@media (max-width:360px){
+
+    .booking-summary-card{
+        padding:16px;
+    }
+
+    .booking-summary-card h3{
+        font-size:18px;
+    }
+
+    .summary-item span{
+        font-size:13px;
+    }
+
+    .summary-item strong{
+        font-size:15px;
+    }
+
+    .summary-item.total strong{
+        font-size:20px;
+    }
+
+    .booking-note{
+        padding:12px;
+        font-size:12px;
+    }
+
+}
+
+/* ===================================
+   RTL Support
+=================================== */
+
+html[dir="rtl"] .booking-summary-card{
+    direction:rtl;
+}
+
+html[dir="rtl"] .summary-item{
+    flex-direction:row-reverse;
+}
+
+html[dir="rtl"] .summary-item strong{
+    text-align:left;
+}
+
+html[dir="rtl"] .booking-note{
+    flex-direction:row-reverse;
+    text-align:right;
+}
+
+@media (max-width:480px){
+
+    html[dir="rtl"] .summary-item{
+        align-items:flex-end;
+    }
+
+    html[dir="rtl"] .summary-item strong{
+        text-align:right;
+    }
+
+}
+
+/* ===================================
+   Booking Form Responsive
+=================================== */
+
+/* Laptop */
+
+@media (max-width:1200px){
+
+    .booking-layout{
+        grid-template-columns:1.5fr 1fr;
+        gap:24px;
+    }
+
+}
+
+/* Tablet Landscape (1024px) */
+
+@media (max-width:1024px){
+
+    .booking-layout{
+        grid-template-columns:1fr;
+        gap:24px;
+    }
+
+    .booking-form-card,
+    .booking-summary-card{
+        width:100%;
+    }
+
+    .booking-summary-card{
+        position:static;
+        top:auto;
+    }
+
+}
+
+/* iPad Mini / Tablet Portrait (768px) */
+
+@media (max-width:768px){
+
+    .booking-form-card,
+    .booking-summary-card{
+        padding:24px;
+        border-radius:24px;
+    }
+
+    .booking-form-card .section-header{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:10px;
+    }
+
+    .booking-form-card .section-header h3{
+        font-size:24px;
+    }
+
+    .form-grid{
+        grid-template-columns:1fr;
+        gap:18px;
+    }
+
+    .full-width{
+        grid-column:1;
+        margin-top:0;
+    }
+
+    .booking-submit .btn{
+        width:100%;
+        justify-content:center;
+    }
+
+}
+
+/* Mobile (480px) */
+
+@media (max-width:480px){
+
+    .booking-layout{
+        gap:20px;
+    }
+
+    .booking-form-card,
+    .booking-summary-card{
+        padding:18px;
+        border-radius:22px;
+    }
+
+    .booking-form-card .section-header h3{
+        font-size:22px;
+    }
+
+    .booking-form-card .section-header p{
+        font-size:14px;
+    }
+
+    .form-group label{
+        font-size:13px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea{
+        padding:14px 16px;
+        font-size:14px;
+    }
+
+    .booking-submit{
+        margin-top:20px;
+    }
+
+    .booking-submit .btn{
+        padding:14px 18px;
+        font-size:14px;
+    }
+
+    .booking-summary-card h3{
+        font-size:20px;
+    }
+
+    .summary-item{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:6px;
+    }
+
+    .summary-item strong{
+        text-align:left;
+    }
+
+}
+
+/* Small Mobile (360px) */
+
+@media (max-width:360px){
+
+    .booking-form-card,
+    .booking-summary-card{
+        padding:16px;
+    }
+
+    .booking-form-card .section-header h3{
+        font-size:20px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea{
+        padding:12px 14px;
+        font-size:13px;
+    }
+
+    .booking-submit .btn{
+        font-size:13px;
+        padding:12px 16px;
+    }
+
+    .summary-item{
+        padding:10px 0;
+    }
+
+    .summary-item span,
+    .summary-item strong{
+        font-size:13px;
+    }
+
+}
+
+/* ===================================
+   RTL Responsive
+=================================== */
+
+html[dir="rtl"] .booking-layout{
+    direction:rtl;
+}
+
+html[dir="rtl"] .booking-form-card{
+    text-align:right;
+}
+
+html[dir="rtl"] .form-group{
+    text-align:right;
+}
+
+html[dir="rtl"] .summary-item{
+    flex-direction:row-reverse;
+}
+
+@media (max-width:480px){
+
+    html[dir="rtl"] .summary-item{
+        align-items:flex-end;
+    }
+
+    html[dir="rtl"] .summary-item strong{
+        text-align:right;
+    }
+
+}
+
+
+
+/* ===================================
+   Time Slots Responsive
+=================================== */
+
+/* Large Laptop */
+
+@media (max-width:1440px){
+
+    .time-slots-card{
+        padding:26px;
+    }
+
+}
+
+/* Tablet Landscape (1024px) */
+
+@media (max-width:1024px){
+
+    .time-slots-section{
+        margin-top:28px;
+    }
+
+    .time-slots-card{
+        padding:24px;
+    }
+
+    .slots-grid{
+        grid-template-columns:repeat(3, 1fr);
+        gap:12px;
+    }
+
+}
+
+/* iPad Mini / Tablet Portrait (768px) */
+
+@media (max-width:768px){
+
+    .time-slots-card{
+        padding:22px;
+        border-radius:24px;
+    }
+
+    .day-header{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:8px;
+    }
+
+    .day-header h4{
+        font-size:18px;
+    }
+
+    .slots-grid{
+        grid-template-columns:repeat(2, 1fr);
+        gap:12px;
+    }
+
+    .slot-btn{
+        padding:14px;
+        font-size:14px;
+    }
+
+    .slots-legend{
+        gap:18px;
+    }
+
+}
+
+/* Mobile (480px) */
+
+@media (max-width:480px){
+
+    .time-slots-card{
+        padding:18px;
+        border-radius:22px;
+    }
+
+    .day-header h4{
+        font-size:17px;
+    }
+
+    .day-header span{
+        font-size:13px;
+    }
+
+    .slots-grid{
+        grid-template-columns:1fr;
+        gap:10px;
+    }
+
+    .slot-btn{
+        width:100%;
+        padding:14px 16px;
+        font-size:14px;
+        text-align:center;
+    }
+
+    .slots-legend{
+        flex-direction:column;
+        gap:12px;
+        padding-top:18px;
+    }
+
+    .legend-item{
+        font-size:13px;
+    }
+
+}
+
+/* Small Mobile (360px) */
+
+@media (max-width:360px){
+
+    .time-slots-card{
+        padding:16px;
+    }
+
+    .slot-btn{
+        padding:12px 14px;
+        font-size:13px;
+    }
+
+    .legend-item{
+        font-size:12px;
+    }
+
+}
+
+/* ===================================
+   RTL Support
+=================================== */
+
+html[dir="rtl"] .time-slots-section{
+    direction:rtl;
+}
+
+html[dir="rtl"] .day-header{
+    flex-direction:row-reverse;
+}
+
+html[dir="rtl"] .slots-grid{
+    direction:rtl;
+}
+
+html[dir="rtl"] .slot-btn{
+    text-align:center;
+}
+
+html[dir="rtl"] .slots-legend{
+    flex-direction:row-reverse;
+}
+
+html[dir="rtl"] .legend-item{
+    flex-direction:row-reverse;
+}
+
+@media (max-width:768px){
+
+    html[dir="rtl"] .day-header{
+        align-items:flex-end;
+    }
+
+}
+
+@media (max-width:480px){
+
+    html[dir="rtl"] .slots-legend{
+        align-items:flex-end;
+    }
+
+}
+
+
+
+
+
+
+/****progress page*******/
+
+
+/* ===================================
+   Progress Hero Responsive
+=================================== */
+
+/* Large Laptop */
+
+@media (max-width:1440px){
+
+    .progress-hero{
+        padding:36px;
+    }
+
+    .progress-hero-content h2{
+        font-size:38px;
+    }
+
+}
+
+/* Tablet Landscape (1024px) */
+
+@media (max-width:1024px){
+
+    .progress-hero{
+        grid-template-columns:1fr;
+        padding:34px;
+        gap:24px;
+    }
+
+    .progress-hero-content{
+        max-width:100%;
+    }
+
+    .progress-hero-content h2{
+        font-size:34px;
+    }
+
+    .progress-hero-action{
+        width:100%;
+        justify-content:flex-start;
+    }
+
+    .progress-summary{
+        grid-template-columns:repeat(2, 1fr);
+        gap:18px;
+    }
+
+}
+
+/* iPad Mini / Tablet Portrait (768px) */
+
+@media (max-width:768px){
+
+    .progress-hero{
+        padding:28px;
+        border-radius:24px;
+        gap:20px;
+    }
+
+    .progress-hero-content h2{
+        font-size:30px;
+        line-height:1.2;
+    }
+
+    .progress-hero-content p{
+        font-size:15px;
+    }
+
+    .progress-hero-action{
+        width:100%;
+    }
+
+    .progress-hero-action .btn{
+        width:100%;
+        justify-content:center;
+    }
+
+    .progress-summary{
+        grid-template-columns:1fr;
+        gap:18px;
+    }
+
+    .progress-summary .summary-card{
+        padding:22px;
+    }
+
+}
+
+/* Mobile (480px) */
+
+@media (max-width:480px){
+
+    .progress-hero{
+        padding:22px;
+        border-radius:22px;
+    }
+
+    .progress-hero-content h2{
+        font-size:26px;
+        line-height:1.25;
+    }
+
+    .progress-hero-content p{
+        font-size:14px;
+        line-height:1.6;
+    }
+
+    .progress-hero-action .btn{
+        width:100%;
+        padding:14px 20px;
+        font-size:14px;
+    }
+
+    .progress-summary .summary-card{
+        padding:18px;
+        border-radius:20px;
+        gap:16px;
+    }
+
+    .progress-summary .summary-icon{
+        width:56px;
+        height:56px;
+        border-radius:18px;
+        font-size:20px;
+    }
+
+    .progress-summary .summary-content h3{
+        font-size:28px;
+    }
+
+    .progress-summary .summary-content span{
+        font-size:13px;
+    }
+
+    .progress-summary .summary-content p{
+        font-size:13px;
+    }
+
+}
+
+/* Small Mobile (360px) */
+
+@media (max-width:360px){
+
+    .progress-hero{
+        padding:18px;
+    }
+
+    .progress-hero-content h2{
+        font-size:24px;
+    }
+
+    .progress-summary .summary-card{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:14px;
+    }
+
+    .progress-summary .summary-icon{
+        width:52px;
+        height:52px;
+    }
+
+    .progress-summary .summary-content h3{
+        font-size:26px;
+    }
+
+}
+
+/* ===================================
+   RTL Support
+=================================== */
+
+html[dir="rtl"] .progress-hero{
+    direction:rtl;
+}
+
+html[dir="rtl"] .progress-hero-content{
+    text-align:right;
+}
+
+html[dir="rtl"] .progress-summary{
+    direction:rtl;
+}
+
+html[dir="rtl"] .progress-summary .summary-card{
+    text-align:right;
+}
+
+@media (max-width:768px){
+
+    html[dir="rtl"] .progress-hero{
+        text-align:right;
+    }
+
+    html[dir="rtl"] .progress-hero-action{
+        width:100%;
+        justify-content:flex-end;
+    }
+
+}
+
+
+/* ===================================
+   Overall Progress Responsive
+=================================== */
+
+/* Large Laptop */
+
+@media (max-width:1440px){
+
+    .overall-progress-card{
+        padding:28px;
+    }
+
+    .progress-overview{
+        grid-template-columns:240px 1fr;
+        gap:32px;
+    }
+
+    .progress-circle.large{
+        width:200px;
+        height:200px;
+    }
+
+    .progress-circle.large .progress-inner{
+        width:154px;
+        height:154px;
+    }
+
+}
+
+/* Tablet Landscape (1024px) */
+
+@media (max-width:1024px){
+
+    .overall-progress-section{
+        margin-top:28px;
+    }
+
+    .overall-progress-card{
+        padding:24px;
+    }
+
+    .progress-overview{
+        grid-template-columns:1fr;
+        text-align:center;
+        gap:28px;
+    }
+
+    .progress-stats{
+        grid-template-columns:repeat(2, 1fr);
+    }
+
+    .stat-item{
+        padding:20px;
+    }
+
+}
+
+/* iPad Mini / Tablet Portrait (768px) */
+
+@media (max-width:768px){
+
+    .overall-progress-card{
+        padding:22px;
+        border-radius:24px;
+    }
+
+    .progress-circle.large{
+        width:180px;
+        height:180px;
+    }
+
+    .progress-circle.large .progress-inner{
+        width:138px;
+        height:138px;
+    }
+
+    .progress-circle.large .progress-inner h2{
+        font-size:36px;
+    }
+
+    .progress-stats{
+        grid-template-columns:1fr;
+        gap:16px;
+    }
+
+    .stat-item{
+        padding:18px;
+    }
+
+    .stat-item h4{
+        font-size:26px;
+    }
+
+    .skill-progress-section h4{
+        font-size:20px;
+    }
+
+    .skill-progress-list{
+        gap:18px;
+    }
+
+}
+
+/* Mobile (480px) */
+
+@media (max-width:480px){
+
+    .overall-progress-card{
+        padding:18px;
+        border-radius:22px;
+    }
+
+    .progress-circle.large{
+        width:160px;
+        height:160px;
+    }
+
+    .progress-circle.large .progress-inner{
+        width:122px;
+        height:122px;
+    }
+
+    .progress-circle.large .progress-inner h2{
+        font-size:32px;
+    }
+
+    .progress-circle.large .progress-inner span{
+        font-size:13px;
+    }
+
+    .stat-item{
+        padding:16px;
+        border-radius:18px;
+    }
+
+    .stat-item h4{
+        font-size:24px;
+    }
+
+    .stat-item span{
+        font-size:13px;
+    }
+
+    .skill-info{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:6px;
+    }
+
+    .skill-bar{
+        height:8px;
+    }
+
+}
+
+/* Small Mobile (360px) */
+
+@media (max-width:360px){
+
+    .overall-progress-card{
+        padding:16px;
+    }
+
+    .progress-circle.large{
+        width:145px;
+        height:145px;
+    }
+
+    .progress-circle.large .progress-inner{
+        width:110px;
+        height:110px;
+    }
+
+    .progress-circle.large .progress-inner h2{
+        font-size:28px;
+    }
+
+    .stat-item h4{
+        font-size:22px;
+    }
+
+    .skill-progress-section h4{
+        font-size:18px;
+    }
+
+    .skill-info span:first-child{
+        font-size:14px;
+    }
+
+    .skill-info span:last-child{
+        font-size:13px;
+    }
+
+}
+
+/* ===================================
+   RTL Support
+=================================== */
+
+html[dir="rtl"] .overall-progress-section{
+    direction:rtl;
+}
+
+html[dir="rtl"] .progress-overview{
+    direction:rtl;
+}
+
+html[dir="rtl"] .progress-stats{
+    direction:rtl;
+}
+
+html[dir="rtl"] .skill-progress-section{
+    text-align:right;
+}
+
+html[dir="rtl"] .skill-info{
+    flex-direction:row-reverse;
+}
+
+@media (max-width:768px){
+
+    html[dir="rtl"] .progress-overview{
+        text-align:right;
+    }
+
+}
+
+@media (max-width:480px){
+
+    html[dir="rtl"] .skill-info{
+        align-items:flex-end;
+    }
+
+}
+
+
+/* ===================================
+   Test Readiness Responsive
+=================================== */
+
+/* Large Laptop */
+
+@media (max-width:1440px){
+
+    .readiness-card{
+        padding:28px;
+    }
+
+    .readiness-overview{
+        grid-template-columns:220px 1fr;
+        gap:30px;
+    }
+
+    .score-circle{
+        width:180px;
+        height:180px;
+    }
+
+    .score-inner{
+        width:136px;
+        height:136px;
+    }
+
+}
+
+/* Tablet Landscape (1024px) */
+
+@media (max-width:1024px){
+
+    .test-readiness-section{
+        margin-top:28px;
+    }
+
+    .readiness-card{
+        padding:24px;
+    }
+
+    .readiness-overview{
+        grid-template-columns:1fr;
+        text-align:center;
+        gap:28px;
+    }
+
+    .readiness-actions{
+        justify-content:center;
+    }
+
+}
+
+/* iPad Mini / Tablet Portrait (768px) */
+
+@media (max-width:768px){
+
+    .readiness-card{
+        padding:22px;
+        border-radius:24px;
+    }
+
+    .score-circle{
+        width:170px;
+        height:170px;
+    }
+
+    .score-inner{
+        width:128px;
+        height:128px;
+    }
+
+    .score-inner h2{
+        font-size:34px;
+    }
+
+    .readiness-details h4{
+        font-size:24px;
+    }
+
+    .readiness-checklist{
+        gap:12px;
+    }
+
+    .check-item{
+        padding:14px 16px;
+    }
+
+    .readiness-actions{
+        flex-direction:column;
+        align-items:stretch;
+    }
+
+    .readiness-actions .btn{
+        width:100%;
+        justify-content:center;
+    }
+
+}
+
+/* Mobile (480px) */
+
+@media (max-width:480px){
+
+    .readiness-card{
+        padding:18px;
+        border-radius:22px;
+    }
+
+    .score-circle{
+        width:150px;
+        height:150px;
+    }
+
+    .score-inner{
+        width:114px;
+        height:114px;
+    }
+
+    .score-inner h2{
+        font-size:30px;
+    }
+
+    .score-inner span{
+        font-size:13px;
+    }
+
+    .readiness-details h4{
+        font-size:22px;
+        line-height:1.3;
+    }
+
+    .readiness-details p{
+        font-size:14px;
+        line-height:1.7;
+    }
+
+    .check-item{
+        padding:13px 14px;
+        font-size:14px;
+    }
+
+    .readiness-actions .btn{
+        padding:14px 18px;
+        font-size:14px;
+    }
+
+}
+
+/* Small Mobile (360px) */
+
+@media (max-width:360px){
+
+    .readiness-card{
+        padding:16px;
+    }
+
+    .score-circle{
+        width:135px;
+        height:135px;
+    }
+
+    .score-inner{
+        width:102px;
+        height:102px;
+    }
+
+    .score-inner h2{
+        font-size:26px;
+    }
+
+    .readiness-details h4{
+        font-size:20px;
+    }
+
+    .check-item{
+        font-size:13px;
+        padding:12px;
+    }
+
+    .readiness-actions .btn{
+        font-size:13px;
+        padding:12px 16px;
+    }
+
+}
+
+/* ===================================
+   RTL Support
+=================================== */
+
+html[dir="rtl"] .test-readiness-section{
+    direction:rtl;
+}
+
+html[dir="rtl"] .readiness-overview{
+    direction:rtl;
+}
+
+html[dir="rtl"] .readiness-details{
+    text-align:right;
+}
+
+html[dir="rtl"] .check-item{
+    flex-direction:row-reverse;
+}
+
+html[dir="rtl"] .readiness-actions{
+    flex-direction:row-reverse;
+}
+
+@media (max-width:768px){
+
+    html[dir="rtl"] .readiness-overview{
+        text-align:right;
+    }
+
+    html[dir="rtl"] .readiness-actions{
+        align-items:stretch;
+    }
+
+}
+
+
+
+
+
+
+/******payment page********/
+
+/* ===================================
+   Payments Hero Responsive
+=================================== */
+
+/* Large Laptop */
+
+@media (max-width:1440px){
+
+    .payments-hero{
+        padding:36px;
+    }
+
+    .payments-hero-content h2{
+        font-size:38px;
+    }
+
+}
+
+/* Tablet Landscape (1024px) */
+
+@media (max-width:1024px){
+
+    .payments-hero{
+        grid-template-columns:1fr;
+        padding:34px;
+        gap:24px;
+    }
+
+    .payments-hero-content{
+        max-width:100%;
+    }
+
+    .payments-hero-content h2{
+        font-size:34px;
+    }
+
+    .payments-hero-action{
+        width:100%;
+        justify-content:flex-start;
+    }
+
+}
+
+/* iPad Mini / Tablet Portrait (768px) */
+
+@media (max-width:768px){
+
+    .payments-hero{
+        padding:28px;
+        border-radius:24px;
+        gap:20px;
+    }
+
+    .payments-hero-content h2{
+        font-size:30px;
+        line-height:1.2;
+    }
+
+    .payments-hero-content p{
+        font-size:15px;
+    }
+
+    .payments-hero-action{
+        width:100%;
+    }
+
+    .payments-hero-action .btn{
+        width:100%;
+        justify-content:center;
+    }
+
+}
+
+/* Mobile (480px) */
+
+@media (max-width:480px){
+
+    .payments-hero{
+        padding:22px;
+        border-radius:22px;
+    }
+
+    .payments-hero-content h2{
+        font-size:26px;
+        line-height:1.25;
+    }
+
+    .payments-hero-content p{
+        font-size:14px;
+        line-height:1.6;
+    }
+
+    .payments-hero-action .btn{
+        width:100%;
+        padding:14px 20px;
+        font-size:14px;
+    }
+
+}
+
+/* Small Mobile (360px) */
+
+@media (max-width:360px){
+
+    .payments-hero{
+        padding:18px;
+    }
+
+    .payments-hero-content h2{
+        font-size:24px;
+    }
+
+    .payments-hero-content p{
+        font-size:13px;
+    }
+
+    .payments-hero-action .btn{
+        padding:12px 18px;
+        font-size:13px;
+    }
+
+}
+
+/* ===================================
+   RTL Support
+=================================== */
+
+html[dir="rtl"] .payments-hero{
+    direction:rtl;
+}
+
+html[dir="rtl"] .payments-hero-content{
+    text-align:right;
+}
+
+html[dir="rtl"] .payments-hero-action{
+    justify-content:flex-start;
+}
+
+@media (max-width:768px){
+
+    html[dir="rtl"] .payments-hero{
+        text-align:right;
+    }
+
+    html[dir="rtl"] .payments-hero-action{
+        width:100%;
+    }
+
+}
+
+
+/* ===================================
+   Payment Overview Responsive
+=================================== */
+
+/* Large Laptop */
+
+@media (max-width:1440px){
+
+    .payment-overview-grid{
+        grid-template-columns:repeat(2, 1fr);
+        gap:18px;
+    }
+
+    .payment-card{
+        padding:22px;
+    }
+
+}
+
+/* Tablet Landscape (1024px) */
+
+@media (max-width:1024px){
+
+    .payment-overview-section{
+        margin-top:28px;
+    }
+
+    .payment-overview-grid{
+        grid-template-columns:repeat(2, 1fr);
+        gap:18px;
+    }
+
+    .payment-card{
+        padding:22px;
+    }
+
+}
+
+/* iPad Mini / Tablet Portrait (768px) */
+
+@media (max-width:768px){
+
+    .payment-overview-grid{
+        grid-template-columns:1fr;
+        gap:16px;
+    }
+
+    .payment-card{
+        padding:20px;
+        border-radius:22px;
+    }
+
+    .payment-icon{
+        width:58px;
+        height:58px;
+        border-radius:18px;
+        font-size:22px;
+    }
+
+    .payment-info h3{
+        font-size:28px;
+    }
+
+}
+
+/* Mobile (480px) */
+
+@media (max-width:480px){
+
+    .payment-card{
+        padding:18px;
+        border-radius:20px;
+        gap:14px;
+    }
+
+    .payment-icon{
+        width:52px;
+        height:52px;
+        border-radius:16px;
+        font-size:20px;
+    }
+
+    .payment-info h3{
+        font-size:24px;
+    }
+
+    .payment-info span{
+        font-size:13px;
+    }
+
+    .payment-info p{
+        font-size:13px;
+    }
+
+}
+
+/* Small Mobile (360px) */
+
+@media (max-width:360px){
+
+    .payment-card{
+        flex-direction:column;
+        align-items:flex-start;
+        padding:16px;
+        gap:12px;
+    }
+
+    .payment-icon{
+        width:48px;
+        height:48px;
+        border-radius:14px;
+        font-size:18px;
+    }
+
+    .payment-info h3{
+        font-size:22px;
+    }
+
+    .payment-info span,
+    .payment-info p{
+        font-size:12px;
+    }
+
+}
+
+/* ===================================
+   RTL Support
+=================================== */
+
+html[dir="rtl"] .payment-overview-section{
+    direction:rtl;
+}
+
+html[dir="rtl"] .payment-overview-grid{
+    direction:rtl;
+}
+
+html[dir="rtl"] .payment-card{
+    flex-direction:row-reverse;
+    text-align:right;
+}
+
+@media (max-width:360px){
+
+    html[dir="rtl"] .payment-card{
+        align-items:flex-end;
+    }
+
+}
+
+
+/* ===================================
+   Payment History Responsive
+=================================== */
+
+/* Large Laptop */
+
+@media (max-width:1440px){
+
+    .payment-history-card{
+        padding:26px;
+    }
+
+}
+
+/* Tablet Landscape (1024px) */
+
+@media (max-width:1024px){
+
+    .payment-history-section{
+        margin-top:28px;
+    }
+
+    .payment-history-card{
+        padding:24px;
+    }
+
+    .payment-table{
+        min-width:760px;
+    }
+
+    .payment-table thead th,
+    .payment-table tbody td{
+        padding:16px 18px;
+    }
+
+}
+
+/* iPad Mini / Tablet Portrait (768px) */
+
+@media (max-width:768px){
+
+    .payment-history-card{
+        padding:22px;
+        border-radius:24px;
+    }
+
+    .payment-table{
+        min-width:700px;
+    }
+
+    .payment-table thead th{
+        font-size:13px;
+        padding:14px 16px;
+    }
+
+    .payment-table tbody td{
+        font-size:14px;
+        padding:14px 16px;
+    }
+
+    .payment-method{
+        gap:8px;
+    }
+
+    .invoice-link{
+        font-size:13px;
+    }
+
+}
+
+/* Mobile (480px) */
+
+@media (max-width:480px){
+
+    .payment-history-card{
+        padding:18px;
+        border-radius:22px;
+    }
+
+    .payment-table{
+        min-width:640px;
+    }
+
+    .payment-table thead th{
+        font-size:12px;
+        padding:12px 14px;
+    }
+
+    .payment-table tbody td{
+        font-size:13px;
+        padding:12px 14px;
+    }
+
+    .payment-method{
+        font-size:13px;
+    }
+
+    .payment-method i{
+        font-size:14px;
+    }
+
+    .invoice-link{
+        font-size:12px;
+    }
+
+}
+
+/* Small Mobile (360px) */
+
+@media (max-width:360px){
+
+    .payment-history-card{
+        padding:16px;
+    }
+
+    .payment-table{
+        min-width:600px;
+    }
+
+    .payment-table thead th,
+    .payment-table tbody td{
+        padding:10px 12px;
+    }
+
+    .payment-method{
+        gap:6px;
+        font-size:12px;
+    }
+
+    .invoice-link{
+        font-size:11px;
+    }
+
+}
+
+/* ===================================
+   RTL Support
+=================================== */
+
+html[dir="rtl"] .payment-history-section{
+    direction:rtl;
+}
+
+html[dir="rtl"] .payment-table{
+    direction:rtl;
+}
+
+html[dir="rtl"] .payment-table thead th,
+html[dir="rtl"] .payment-table tbody td{
+    text-align:right;
+}
+
+html[dir="rtl"] .payment-method{
+    flex-direction:row-reverse;
+}
+
+html[dir="rtl"] .invoice-link{
+    flex-direction:row-reverse;
+}
+
+
+
+
+@media (max-width:768px){
+
+    .dashboard-header{
+        display:grid !important;
+        grid-template-columns:40px 1fr auto !important;
+        align-items:center !important;
+        padding:10px 14px !important;
+        height:64px !important;
+        border-radius:18px !important;
+        gap:10px !important;
+    }
+
+    .header-left{
+        display:contents !important;
+    }
+
+    .sidebar-toggle{
+        grid-column:1;
+        width:36px !important;
+        height:36px !important;
+    }
+
+    .header-left > div{
+        grid-column:2;
+        display:flex !important;
+        align-items:center !important;
+    }
+
+    .header-label{
+        display:none !important;
+    }
+
+    .header-left h1{
+        margin:0 !important;
+        font-size:20px !important;
+        font-weight:700 !important;
+        line-height:1 !important;
+        white-space:nowrap !important;
+    }
+
+    .header-right{
+        grid-column:3;
+        display:flex !important;
+        align-items:center !important;
+        gap:6px !important;
+        flex-wrap:nowrap !important;
+    }
+
+    .header-icon{
+        width:34px !important;
+        height:34px !important;
+    }
+
+    .user-profile{
+        display:flex !important;
+        align-items:center !important;
+        padding:0 !important;
+        border:none !important;
+        background:transparent !important;
+        height:34px !important;
+    }
+
+    .user-profile img{
+        width:34px !important;
+        height:34px !important;
+        border-radius:50%;
+    }
+
+    .user-info{
+        display:none !important;
+    }
+
+}
+
+/* ===================================
+   Mobile Header (360px)
+=================================== */
+
+@media (max-width:480px){
+
+    .dashboard-header{
+        display:grid !important;
+        grid-template-columns:36px 1fr auto !important;
+        align-items:center !important;
+        padding:10px 12px !important;
+        height:60px !important;
+        border-radius:16px !important;
+        gap:8px !important;
+    }
+
+    .header-left{
+        display:contents !important;
+    }
+
+    .sidebar-toggle{
+        grid-column:1;
+        width:32px !important;
+        height:32px !important;
+    }
+
+    .header-left > div{
+        grid-column:2;
+        display:flex !important;
+        align-items:center !important;
+    }
+
+    .header-label{
+        display:none !important;
+    }
+
+    .header-left h1{
+        font-size:18px !important;
+        margin:0 !important;
+        white-space:nowrap !important;
+        overflow:hidden !important;
+        text-overflow:ellipsis !important;
+    }
+
+    .header-right{
+        grid-column:3;
+        display:flex !important;
+        align-items:center !important;
+        gap:4px !important;
+    }
+
+    .header-icon{
+        width:30px !important;
+        height:30px !important;
+    }
+
+    .header-icon i{
+        font-size:12px !important;
+    }
+
+    .user-profile{
+        padding:0 !important;
+        border:none !important;
+        background:transparent !important;
+        width:30px !important;
+        height:30px !important;
+    }
+
+    .user-profile img{
+        width:30px !important;
+        height:30px !important;
+    }
+
+    .user-info{
+        display:none !important;
+    }
+
+    .notification-badge{
+        width:15px !important;
+        height:15px !important;
+        font-size:8px !important;
+        top:-3px !important;
+        right:-3px !important;
+    }
+
+}
+
+
+
+
+/* ===================================
+   Dashboard Lesson Responsive
+=================================== */
+
+/* Tablet (1024px) */
+
+@media (max-width:1024px){
+
+    .dashboard-lesson-card{
+        padding:24px;
+        border-radius:24px;
+    }
+
+    .dashboard-lesson-header{
+        gap:16px;
+    }
+
+    .dashboard-lesson-body{
+        display:grid;
+        grid-template-columns:90px 1fr;
+        gap:20px;
+    }
+
+    .dashboard-lesson-info h4{
+        font-size:24px;
+    }
+
+    .dashboard-lesson-footer{
+        align-items:flex-start;
+    }
+
+    .dashboard-lesson-note{
+        max-width:60%;
+    }
+
+}
+
+/* iPad Mini */
+
+@media (max-width:768px){
+
+    .dashboard-lesson-card{
+        padding:20px;
+        border-radius:22px;
+    }
+
+    .dashboard-lesson-header{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:12px;
+    }
+
+    .dashboard-lesson-status{
+        align-self:flex-start;
+    }
+
+    .dashboard-lesson-body{
+        display:flex;
+        flex-direction:column;
+        gap:18px;
+    }
+
+    .dashboard-lesson-date{
+        width:80px;
+        min-width:80px;
+        padding:16px 12px;
+    }
+
+    .dashboard-lesson-day{
+        font-size:30px;
+    }
+
+    .dashboard-lesson-info h4{
+        font-size:22px;
+        margin-bottom:16px;
+    }
+
+    .dashboard-meta-item{
+        font-size:15px;
+        gap:10px;
+    }
+
+    .dashboard-lesson-footer{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:16px;
+    }
+
+    .dashboard-lesson-note{
+        max-width:100%;
+    }
+
+    .dashboard-lesson-actions{
+        width:100%;
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        gap:12px;
+    }
+
+    .dashboard-lesson-actions .btn{
+        width:100%;
+        justify-content:center;
+    }
+
+}
+
+/* Mobile */
+
+@media (max-width:480px){
+
+    .dashboard-lesson-card{
+        padding:18px;
+        border-radius:20px;
+    }
+
+    .dashboard-lesson-header h3{
+        font-size:22px;
+    }
+
+    .dashboard-lesson-header p{
+        font-size:14px;
+    }
+
+    .dashboard-lesson-date{
+        width:72px;
+        min-width:72px;
+        padding:14px 10px;
+        border-radius:18px;
+    }
+
+    .dashboard-lesson-day{
+        font-size:26px;
+    }
+
+    .dashboard-lesson-month{
+        font-size:13px;
+    }
+
+    .dashboard-lesson-info h4{
+        font-size:20px;
+    }
+
+    .dashboard-meta-item{
+        font-size:14px;
+    }
+
+    .dashboard-lesson-actions{
+        grid-template-columns:1fr;
+    }
+
+    .dashboard-lesson-actions .btn{
+        width:100%;
+    }
+
+    .dashboard-lesson-note{
+        font-size:13px;
+    }
+
+}
