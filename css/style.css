@@ -9237,3 +9237,92 @@ body.dark-mode .navbar .login-btn{
     background:#F97316;
     color:#FFFFFF;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===================================
+   RTL footer fix - iPad Pro, iPad Mini, Mobile
+   Put this at the END of style.css
+=================================== */
+
+@media (max-width:1024px){
+
+    body.rtl .footer .footer-grid{
+        display:flex !important;
+        flex-direction:column !important;
+        align-items:flex-end !important;
+        text-align:right !important;
+        gap:28px !important;
+    }
+
+    body.rtl .footer .footer-about,
+    body.rtl .footer .footer-links,
+    body.rtl .footer .footer-services,
+    body.rtl .footer .footer-contact{
+        width:100% !important;
+        text-align:right !important;
+    }
+
+    body.rtl .footer .footer-logo{
+        display:flex !important;
+        justify-content:flex-end !important;
+        margin-bottom:16px;
+    }
+
+    body.rtl .footer .footer-about p{
+        text-align:right !important;
+    }
+
+    body.rtl .footer .footer-social{
+        display:flex !important;
+        justify-content:flex-end !important;
+        gap:12px;
+    }
+
+    body.rtl .footer h4{
+        text-align:right !important;
+        margin-bottom:16px;
+    }
+
+    body.rtl .footer ul{
+        padding:0 !important;
+        margin:0 !important;
+        list-style:none;
+    }
+
+    body.rtl .footer li{
+        text-align:right !important;
+        margin-bottom:12px;
+    }
+
+    body.rtl .footer a{
+        text-align:right !important;
+    }
+
+    body.rtl .footer-contact li{
+        display:flex !important;
+        flex-direction:row-reverse !important;
+        justify-content:flex-start !important;
+        align-items:center !important;
+        gap:10px;
+    }
+
+    body.rtl .back-to-top{
+        right:auto !important;
+        left:20px !important;
+    }
+}

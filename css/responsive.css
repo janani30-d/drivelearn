@@ -2314,10 +2314,10 @@ body.menu-open{
 @media (min-width:769px) and (max-width:1024px){
 
     .pricing-grid{
-        grid-template-columns:repeat(2,1fr);
+       grid-template-columns:1fr;
         gap:24px;
     }
-
+    
     /* Center the third card */
     .pricing-card:last-child{
         grid-column:1 / -1;
@@ -7505,15 +7505,22 @@ body.menu-open{
 
 /* ---------- iPad Pro / Tablet ---------- */
 
+/* ===================================
+   Pricing responsive - iPad Pro
+=================================== */
+
 @media (max-width:1024px){
 
     .home2-pricing-grid{
-        grid-template-columns:repeat(2,1fr);
+        display:grid;
+        grid-template-columns:1fr;
+        justify-items:center;
         gap:24px;
     }
 
     .home2-pricing-card{
-        padding:36px 28px;
+        width:100%;
+        max-width:560px;   /* centers the card */
     }
 
     .home2-pricing-card.featured{
@@ -7521,13 +7528,27 @@ body.menu-open{
     }
 
     .home2-pricing-card.featured:hover{
-        transform:translateY(-8px);
+        transform:translateY(-6px);
+    }
+}
+
+
+/* ===================================
+   iPad Mini & Mobile
+=================================== */
+
+@media (max-width:768px){
+
+    .home2-pricing-grid{
+        grid-template-columns:1fr;
+        justify-items:center;
     }
 
-    .amount{
-        font-size:42px;
+    .home2-pricing-card{
+        width:100%;
+        max-width:100%;
+        padding:32px 24px;
     }
-
 }
 
 /* ---------- iPad Mini / Large Mobile ---------- */
@@ -7637,4 +7658,1355 @@ body.menu-open{
         font-size:15px;
     }
 
+}
+
+
+
+
+
+
+
+
+
+/* ===================================
+   Responsive RTL (All sections)
+=================================== */
+
+@media (max-width:1024px){
+
+    body.rtl{
+        direction:rtl;
+    }
+
+    /* ---------- Header ---------- */
+
+    body.rtl .header-container{
+        flex-direction:row-reverse;
+    }
+
+    body.rtl .menu-toggle{
+        order:1;
+        margin-left:0;
+        margin-right:auto;
+    }
+
+    body.rtl .logo{
+        order:2;
+    }
+
+    /* ---------- Mobile Navbar ---------- */
+
+    body.rtl .navbar{
+        right:auto;
+        left:0;
+        transform:translateX(-100%);
+    }
+
+    body.rtl .navbar.active{
+        transform:translateX(0);
+    }
+
+    body.rtl .nav-menu{
+        text-align:right;
+    }
+
+    body.rtl .nav-link{
+        justify-content:space-between;
+        text-align:right;
+    }
+
+    body.rtl .dropdown-menu{
+        right:0;
+        left:auto;
+        text-align:right;
+    }
+
+    /* ---------- Hero ---------- */
+
+    body.rtl .hero-content,
+    body.rtl .hero-text{
+        text-align:center;
+    }
+
+    body.rtl .hero-buttons{
+        flex-direction:column-reverse;
+        justify-content:center;
+        align-items:center;
+        width:100%;
+    }
+
+    body.rtl .hero-buttons .btn{
+        width:100%;
+    }
+
+    /* ---------- CTA ---------- */
+
+    body.rtl .cta-box{
+        text-align:center;
+    }
+
+    body.rtl .cta-title,
+    body.rtl .cta-description{
+        text-align:center !important;
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    body.rtl .cta-buttons{
+        flex-direction:column-reverse;
+        justify-content:center;
+        align-items:center;
+        width:100%;
+    }
+
+    body.rtl .cta-buttons .btn{
+        width:100%;
+    }
+
+    /* ---------- About ---------- */
+
+    body.rtl .about-grid,
+    body.rtl .story-grid,
+    body.rtl .mission-grid,
+    body.rtl .vision-grid{
+        grid-template-columns:1fr;
+    }
+
+    body.rtl .about-content,
+    body.rtl .story-content{
+        text-align:center;
+    }
+
+    /* ---------- Stats ---------- */
+
+    body.rtl .story-stats{
+        grid-template-columns:1fr;
+    }
+
+    body.rtl .story-stat-card{
+        text-align:center;
+    }
+
+    /* ---------- Lessons ---------- */
+
+    body.rtl .lesson-grid,
+    body.rtl .home2-pricing-grid{
+        grid-template-columns:1fr;
+    }
+
+    body.rtl .lesson-card,
+    body.rtl .home2-pricing-card{
+        text-align:center;
+    }
+
+    body.rtl .lesson-meta{
+        align-items:center;
+    }
+
+    body.rtl .lesson-actions{
+        flex-direction:column;
+        width:100%;
+    }
+
+    body.rtl .lesson-actions .btn{
+        width:100%;
+    }
+
+    /* ---------- Booking ---------- */
+
+    body.rtl .booking-grid,
+    body.rtl .booking-summary{
+        grid-template-columns:1fr;
+    }
+
+    body.rtl .summary-card{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    body.rtl .summary-content{
+        text-align:center;
+    }
+
+    body.rtl .booking-form{
+        text-align:right;
+    }
+
+    body.rtl .form-group{
+        text-align:right;
+    }
+
+    body.rtl input,
+    body.rtl select,
+    body.rtl textarea{
+        text-align:right;
+    }
+
+    body.rtl .password-field .toggle-password{
+        right:auto;
+        left:16px;
+    }
+
+    /* ---------- Contact ---------- */
+
+    body.rtl .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    body.rtl .contact-card{
+        text-align:center;
+    }
+
+    body.rtl .contact-item{
+        justify-content:center;
+        text-align:center;
+    }
+
+    /* ---------- Dashboard ---------- */
+
+    body.rtl .dashboard-layout{
+        grid-template-columns:1fr;
+    }
+
+    body.rtl .dashboard-header{
+        flex-direction:row-reverse;
+    }
+
+    body.rtl .dashboard-actions{
+        justify-content:flex-start;
+    }
+
+    body.rtl .lesson-main{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    body.rtl .lesson-info{
+        text-align:center;
+    }
+
+    body.rtl .lesson-footer{
+        flex-direction:column;
+        gap:16px;
+    }
+
+    body.rtl .lesson-note{
+        text-align:center;
+    }
+
+    body.rtl .lesson-actions{
+        width:100%;
+    }
+
+    body.rtl .lesson-actions .btn{
+        width:100%;
+    }
+
+    body.rtl .learning-progress-card{
+        text-align:center;
+    }
+
+    
+}
+
+
+/* ===================================
+   Small Mobile RTL
+=================================== */
+
+@media (max-width:768px){
+
+    body.rtl .container{
+        padding-left:16px;
+        padding-right:16px;
+    }
+
+    body.rtl .hero-title,
+    body.rtl .cta-title{
+        font-size:34px;
+        line-height:1.2;
+    }
+
+    body.rtl .hero-description,
+    body.rtl .cta-description{
+        font-size:16px;
+    }
+
+    body.rtl .hero-buttons,
+    body.rtl .cta-buttons,
+    body.rtl .lesson-actions{
+        gap:14px;
+    }
+
+    
+}
+
+
+
+
+/* ===================================
+   RTL Footer - iPad Pro / iPad Mini / Mobile
+=================================== */
+
+@media (max-width:1024px){
+
+    body.rtl .footer-grid{
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        gap:40px;
+        direction:rtl;
+        text-align:right;
+    }
+
+    /* About section */
+
+    body.rtl .footer-about{
+        grid-column:1 / -1;
+        text-align:right;
+    }
+
+    body.rtl .footer-logo{
+        display:flex;
+        justify-content:flex-start;
+        margin-bottom:16px;
+    }
+
+    body.rtl .footer-about p{
+        text-align:right;
+        margin-bottom:20px;
+    }
+
+    body.rtl .footer-social{
+        display:flex;
+        justify-content:flex-start;
+        gap:12px;
+    }
+
+    /* Quick links */
+
+    body.rtl .footer-links{
+        text-align:right;
+    }
+
+    body.rtl .footer-links h4{
+        text-align:right;
+        margin-bottom:16px;
+    }
+
+    body.rtl .footer-links ul{
+        list-style:none;
+        padding:0;
+        margin:0;
+    }
+
+    body.rtl .footer-links li{
+        margin-bottom:12px;
+    }
+
+    body.rtl .footer-links a{
+        display:block;
+        text-align:right;
+    }
+
+    /* Services */
+
+    body.rtl .footer-services{
+        text-align:right;
+    }
+
+    body.rtl .footer-services h4{
+        text-align:right;
+        margin-bottom:16px;
+    }
+
+    body.rtl .footer-services ul{
+        list-style:none;
+        padding:0;
+        margin:0;
+    }
+
+    body.rtl .footer-services li{
+        margin-bottom:12px;
+    }
+
+    body.rtl .footer-services a{
+        display:block;
+        text-align:right;
+    }
+
+    /* Contact */
+
+    body.rtl .footer-contact{
+        text-align:right;
+    }
+
+    body.rtl .footer-contact h4{
+        text-align:right;
+        margin-bottom:16px;
+    }
+
+    body.rtl .footer-contact ul{
+        list-style:none;
+        padding:0;
+        margin:0;
+    }
+
+    body.rtl .footer-contact li{
+        display:flex;
+        flex-direction:row-reverse;
+        justify-content:flex-start;
+        align-items:center;
+        gap:10px;
+        text-align:right;
+        margin-bottom:12px;
+    }
+
+    body.rtl .back-to-top{
+        right:auto;
+        left:20px;
+    }
+}
+
+
+/* ===================================
+   iPad Mini & Mobile
+=================================== */
+
+@media (max-width:768px){
+
+    body.rtl .footer-grid{
+        grid-template-columns:1fr;
+        gap:32px;
+    }
+
+    body.rtl .footer-about,
+    body.rtl .footer-links,
+    body.rtl .footer-services,
+    body.rtl .footer-contact{
+        text-align:right;
+    }
+
+    body.rtl .footer-logo,
+    body.rtl .footer-social{
+        justify-content:flex-start;
+    }
+
+    body.rtl .footer-contact li{
+        justify-content:flex-start;
+    }
+}
+
+
+/* ===================================
+   Mobile
+=================================== */
+
+@media (max-width:480px){
+
+    body.rtl .footer{
+        padding:40px 20px;
+    }
+
+    body.rtl .footer-grid{
+        gap:28px;
+    }
+
+    body.rtl .footer-logo img{
+        max-width:140px;
+    }
+
+    body.rtl .footer-social a{
+        width:42px;
+        height:42px;
+    }
+
+    body.rtl .back-to-top{
+        left:16px;
+        bottom:16px;
+    }
+}
+
+
+/* ===================================
+   Index Page Responsive RTL Alignment Fix
+   Added at the end so it overrides earlier responsive rules.
+=================================== */
+
+@media (max-width:1024px){
+
+    html[dir="rtl"] body{
+        direction:rtl;
+    }
+
+    html[dir="rtl"] .header .container{
+        direction:rtl;
+        flex-direction:row;
+    }
+
+    html[dir="rtl"] .header .logo{
+        order:1;
+    }
+
+    html[dir="rtl"] .menu-toggle{
+        order:2;
+        margin-right:auto;
+        margin-left:0;
+    }
+
+    html[dir="rtl"] .navbar{
+        right:auto;
+        left:-100%;
+        text-align:right;
+        transition:left .35s ease;
+    }
+
+    html[dir="rtl"] .navbar.active{
+        right:auto;
+        left:0;
+    }
+
+    html[dir="rtl"] .nav-menu{
+        align-items:flex-end;
+        padding-right:0;
+        padding-left:0;
+        text-align:right;
+    }
+
+    html[dir="rtl"] .nav-link{
+        text-align:right;
+    }
+
+    html[dir="rtl"] .nav-link i,
+    html[dir="rtl"] .nav-link .fa-chevron-down{
+        margin-right:auto;
+        margin-left:0;
+    }
+
+    html[dir="rtl"] .dropdown-menu{
+        padding:10px 15px 0 0;
+        text-align:right;
+    }
+
+    html[dir="rtl"] .mobile-btn{
+        align-items:flex-end;
+    }
+
+    html[dir="rtl"] .mobile-btn .theme-toggle,
+    html[dir="rtl"] .mobile-btn .rtl-toggle{
+        justify-content:flex-end;
+    }
+
+    html[dir="rtl"] .hero-container{
+        justify-content:flex-start;
+        text-align:right;
+    }
+
+    html[dir="rtl"] .hero-content{
+        margin-left:auto;
+        margin-right:0;
+        text-align:right;
+    }
+
+    html[dir="rtl"] .hero-badge{
+        flex-direction:row-reverse;
+    }
+
+    html[dir="rtl"] .hero-buttons{
+        justify-content:flex-end;
+        flex-direction:row-reverse;
+    }
+
+    html[dir="rtl"] .section-header,
+    html[dir="rtl"] .section-header .section-title,
+    html[dir="rtl"] .section-header .section-description{
+        text-align:center;
+    }
+
+    html[dir="rtl"] .choose-card,
+    html[dir="rtl"] .course-content,
+    html[dir="rtl"] .vehicles-content,
+    html[dir="rtl"] .testimonial-card{
+        text-align:right;
+    }
+
+    html[dir="rtl"] .choose-icon{
+        margin-left:auto;
+        margin-right:0;
+    }
+
+    html[dir="rtl"] .course-badge{
+        right:auto;
+        left:18px;
+    }
+
+    html[dir="rtl"] .course-features{
+        padding-right:0;
+    }
+
+    html[dir="rtl"] .course-features li,
+    html[dir="rtl"] .facility-item,
+    html[dir="rtl"] .testimonial-user{
+        flex-direction:row-reverse;
+        text-align:right;
+    }
+
+    html[dir="rtl"] .course-footer{
+        flex-direction:row-reverse;
+    }
+
+    html[dir="rtl"] .step-card{
+        text-align:center;
+    }
+
+    html[dir="rtl"] .step-number{
+        right:auto;
+        left:20px;
+    }
+
+    html[dir="rtl"] .vehicles-content .section-subtitle{
+        margin-left:auto;
+        margin-right:0;
+    }
+
+    html[dir="rtl"] .vehicles-content .section-title,
+    html[dir="rtl"] .vehicles-content .section-description{
+        text-align:right;
+    }
+
+    html[dir="rtl"] .cta-box,
+    html[dir="rtl"] .cta-title,
+    html[dir="rtl"] .cta-description{
+        text-align:center;
+    }
+
+    html[dir="rtl"] .cta-buttons{
+        justify-content:center;
+        flex-direction:row-reverse;
+    }
+
+    html[dir="rtl"] .footer-grid,
+    html[dir="rtl"] .footer-about,
+    html[dir="rtl"] .footer-links,
+    html[dir="rtl"] .footer-services,
+    html[dir="rtl"] .footer-contact,
+    html[dir="rtl"] .footer-about p,
+    html[dir="rtl"] .footer h4{
+        text-align:right;
+    }
+
+    html[dir="rtl"] .footer-logo,
+    html[dir="rtl"] .footer-social{
+        justify-content:flex-end;
+    }
+
+    html[dir="rtl"] .footer-links ul,
+    html[dir="rtl"] .footer-services ul,
+    html[dir="rtl"] .footer-contact ul{
+        padding:0;
+    }
+
+    html[dir="rtl"] .footer-links a,
+    html[dir="rtl"] .footer-services a{
+        display:block;
+        text-align:right;
+    }
+
+    html[dir="rtl"] .footer-contact li{
+        flex-direction:row-reverse;
+        justify-content:flex-start;
+        align-items:flex-start;
+        text-align:right;
+    }
+
+    html[dir="rtl"] .footer-contact i{
+        margin-top:4px;
+        margin-left:0;
+        margin-right:0;
+        flex:0 0 auto;
+    }
+}
+
+@media (max-width:768px){
+
+    html[dir="rtl"] .hero-container{
+        justify-content:center;
+    }
+
+    html[dir="rtl"] .hero-content{
+        text-align:center;
+    }
+
+    html[dir="rtl"] .hero-content h1,
+    html[dir="rtl"] .hero-content p{
+        text-align:center;
+    }
+
+    html[dir="rtl"] .hero-buttons{
+        justify-content:center;
+    }
+
+    html[dir="rtl"] .choose-card,
+    html[dir="rtl"] .course-content,
+    html[dir="rtl"] .vehicles-content,
+    html[dir="rtl"] .vehicles-content .section-title,
+    html[dir="rtl"] .vehicles-content .section-description,
+    html[dir="rtl"] .testimonial-card{
+        text-align:center;
+    }
+
+    html[dir="rtl"] .choose-icon,
+    html[dir="rtl"] .vehicles-content .section-subtitle{
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    html[dir="rtl"] .course-features li,
+    html[dir="rtl"] .facility-item,
+    html[dir="rtl"] .testimonial-user{
+        justify-content:center;
+        text-align:center;
+    }
+
+    html[dir="rtl"] .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+    html[dir="rtl"] .footer-contact,
+    html[dir="rtl"] .footer-contact h4,
+    html[dir="rtl"] .footer-contact li{
+        text-align:right;
+    }
+
+    html[dir="rtl"] .footer-contact li{
+        justify-content:flex-start;
+    }
+}
+
+@media (max-width:480px){
+
+    html[dir="rtl"] .hero-buttons,
+    html[dir="rtl"] .cta-buttons{
+        align-items:center;
+        flex-direction:column;
+    }
+
+    html[dir="rtl"] .hero-next{
+        right:auto;
+        left:16px;
+    }
+
+    html[dir="rtl"] .footer{
+        padding-left:20px;
+        padding-right:20px;
+    }
+}
+
+
+/* ===================================
+   RTL Responsive Footer Contact Fix
+=================================== */
+
+@media (max-width:1024px){
+
+    html[dir="rtl"] .footer-contact ul{
+        display:flex;
+        flex-direction:column;
+        align-items:flex-end;
+        width:100%;
+        padding:0;
+        margin:0;
+    }
+
+    html[dir="rtl"] .footer-contact li{
+        direction:rtl;
+        flex-direction:row;
+        justify-content:flex-start;
+        align-items:flex-start;
+        width:auto;
+        max-width:100%;
+        text-align:right;
+    }
+
+    html[dir="rtl"] .footer-contact i{
+        margin:4px 0 0 10px;
+    }
+}
+
+
+/* ===================================
+   Responsive CTA Padding Fix
+   Keep all CTA sections evenly spaced on tablet and mobile.
+=================================== */
+
+@media (max-width:1024px){
+
+    .cta,
+    .cta-home-two,
+    .about-cta,
+    .lessons-cta,
+    .booking-cta{
+        padding-top:70px;
+        padding-bottom:70px;
+    }
+
+    .cta .container,
+    .cta-home-two .container,
+    .about-cta .container,
+    .lessons-cta .container,
+    .booking-cta .container{
+        padding-left:24px;
+        padding-right:24px;
+    }
+
+    .cta-box,
+    .cta-two-box,
+    .about-cta-box,
+    .lessons-cta-box,
+    .booking-cta-box{
+        padding:70px 40px;
+    }
+}
+
+@media (max-width:768px){
+
+    .cta,
+    .cta-home-two,
+    .about-cta,
+    .lessons-cta,
+    .booking-cta{
+        padding-top:56px;
+        padding-bottom:56px;
+    }
+
+    .cta .container,
+    .cta-home-two .container,
+    .about-cta .container,
+    .lessons-cta .container,
+    .booking-cta .container{
+        padding-left:20px;
+        padding-right:20px;
+    }
+
+    .cta-box,
+    .cta-two-box,
+    .about-cta-box,
+    .lessons-cta-box,
+    .booking-cta-box{
+        padding:56px 24px;
+        border-radius:24px;
+    }
+}
+
+@media (max-width:480px){
+
+    .cta,
+    .cta-home-two,
+    .about-cta,
+    .lessons-cta,
+    .booking-cta{
+        padding-top:44px;
+        padding-bottom:44px;
+    }
+
+    .cta .container,
+    .cta-home-two .container,
+    .about-cta .container,
+    .lessons-cta .container,
+    .booking-cta .container{
+        padding-left:16px;
+        padding-right:16px;
+    }
+
+    .cta-box,
+    .cta-two-box,
+    .about-cta-box,
+    .lessons-cta-box,
+    .booking-cta-box{
+        padding:44px 18px;
+        border-radius:20px;
+    }
+
+    .cta-buttons,
+    .cta-two-buttons,
+    .about-cta-buttons,
+    .lessons-cta-buttons,
+    .booking-cta-buttons{
+        width:100%;
+    }
+
+    .cta-buttons .btn,
+    .cta-two-buttons .btn,
+    .about-cta-buttons .btn,
+    .lessons-cta-buttons .btn,
+    .booking-cta-buttons .btn{
+        width:100%;
+        min-width:0;
+    }
+}
+
+@media (max-width:360px){
+
+    .cta,
+    .cta-home-two,
+    .about-cta,
+    .lessons-cta,
+    .booking-cta{
+        padding-top:40px;
+        padding-bottom:40px;
+    }
+
+    .cta-box,
+    .cta-two-box,
+    .about-cta-box,
+    .lessons-cta-box,
+    .booking-cta-box{
+        padding:40px 16px;
+    }
+}
+
+
+/* ===================================
+   Responsive Payment Button Center Fix
+=================================== */
+
+.payment-summary-card .payment-btn{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+}
+
+@media (max-width:768px){
+
+    .payment-summary-card .payment-btn{
+        width:90%;
+    }
+}
+
+@media (max-width:480px){
+
+    .payment-summary-card .payment-btn{
+        width:100%;
+    }
+}
+
+
+/* ===================================
+   Lesson Pricing Responsive Card Arrangement Fix
+=================================== */
+
+@media (min-width:769px) and (max-width:1024px){
+
+    .lesson-pricing .pricing-grid{
+        display:grid;
+        grid-template-columns:repeat(2,minmax(0,1fr));
+        gap:24px;
+        align-items:stretch;
+        justify-items:stretch;
+    }
+
+    .lesson-pricing .pricing-card,
+    .lesson-pricing .pricing-card:last-child{
+        grid-column:auto;
+        width:100%;
+        max-width:none;
+        padding:0;
+        justify-self:stretch;
+    }
+
+    .lesson-pricing .pricing-card.featured{
+        transform:none;
+    }
+
+    .lesson-pricing .pricing-image img{
+        width:100%;
+        height:170px;
+        object-fit:cover;
+    }
+
+    .lesson-pricing .pricing-content{
+        padding:22px;
+    }
+
+    .lesson-pricing .pricing-card .btn{
+        display:flex;
+        margin-left:auto;
+        margin-right:auto;
+    }
+}
+
+@media (max-width:768px){
+
+    .lesson-pricing .pricing-grid{
+        grid-template-columns:1fr;
+        justify-items:stretch;
+    }
+
+    .lesson-pricing .pricing-card,
+    .lesson-pricing .pricing-card:last-child{
+        grid-column:auto;
+        width:100%;
+        max-width:none;
+        padding:0;
+        justify-self:stretch;
+    }
+}
+
+
+/* ===================================
+   Login / Register Responsive RTL Fix
+=================================== */
+
+@media (max-width:1024px){
+
+    html[dir="rtl"] .login-portal,
+    html[dir="rtl"] .register-portal{
+        direction:rtl;
+        padding-top:90px;
+    }
+
+    html[dir="rtl"] .login-card,
+    html[dir="rtl"] .register-card{
+        direction:rtl;
+        text-align:right;
+    }
+
+    html[dir="rtl"] .login-logo,
+    html[dir="rtl"] .register-logo,
+    html[dir="rtl"] .login-header,
+    html[dir="rtl"] .register-header,
+    html[dir="rtl"] .login-divider,
+    html[dir="rtl"] .register-divider,
+    html[dir="rtl"] .login-footer,
+    html[dir="rtl"] .register-footer{
+        text-align:center;
+    }
+
+    html[dir="rtl"] .logo-link,
+    html[dir="rtl"] .register-logo-link{
+        align-items:center;
+    }
+
+    html[dir="rtl"] .login-logo img,
+    html[dir="rtl"] .register-logo img{
+        width:150px;
+        height:72px;
+        object-fit:contain;
+    }
+
+    html[dir="rtl"] .login-form label,
+    html[dir="rtl"] .register-form label,
+    html[dir="rtl"] .register-group label{
+        text-align:right;
+    }
+
+    html[dir="rtl"] .login-form input,
+    html[dir="rtl"] .register-form input,
+    html[dir="rtl"] .register-group input{
+        text-align:right;
+    }
+
+    html[dir="rtl"] .password-field input{
+        padding-right:18px;
+        padding-left:50px;
+    }
+
+    html[dir="rtl"] .password-field .toggle-password{
+        right:auto;
+        left:16px;
+    }
+
+    html[dir="rtl"] .login-options{
+        flex-direction:row-reverse;
+    }
+
+    html[dir="rtl"] .remember-me,
+    html[dir="rtl"] .register-terms{
+        flex-direction:row-reverse;
+        text-align:right;
+    }
+
+    html[dir="rtl"] .social-btn{
+        flex-direction:row-reverse;
+    }
+
+    html[dir="rtl"] .auth-controls{
+        direction:ltr;
+        left:20px;
+        right:auto;
+    }
+}
+
+@media (max-width:768px){
+
+    html[dir="rtl"] .login-portal,
+    html[dir="rtl"] .register-portal{
+        padding:88px 16px 28px;
+    }
+
+    html[dir="rtl"] .login-options{
+        align-items:flex-end;
+    }
+
+    html[dir="rtl"] .forgot-password{
+        text-align:right;
+    }
+
+    html[dir="rtl"] .register-terms{
+        align-items:flex-start;
+    }
+}
+
+@media (max-width:480px){
+
+    html[dir="rtl"] .login-portal,
+    html[dir="rtl"] .register-portal{
+        padding:84px 14px 24px;
+    }
+
+    html[dir="rtl"] .login-card,
+    html[dir="rtl"] .register-card{
+        padding-left:20px;
+        padding-right:20px;
+    }
+
+    html[dir="rtl"] .login-logo img,
+    html[dir="rtl"] .register-logo img{
+        width:130px;
+        height:64px;
+    }
+
+    html[dir="rtl"] .login-footer p,
+    html[dir="rtl"] .register-footer p{
+        line-height:1.6;
+    }
+}
+
+
+/* ===================================
+   Final Responsive RTL Header Menu and Footer Fix
+=================================== */
+
+@media (max-width:1024px){
+
+    html[dir="rtl"] .header .container{
+        direction:rtl;
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        justify-content:space-between;
+    }
+
+    html[dir="rtl"] .header .logo{
+        order:1;
+        margin-left:0;
+        margin-right:0;
+    }
+
+    html[dir="rtl"] .menu-toggle{
+        order:2;
+        margin-right:auto;
+        margin-left:0;
+        text-align:left;
+    }
+
+    html[dir="rtl"] .navbar{
+        right:auto;
+        left:-100%;
+        padding:85px 24px 30px;
+        text-align:right;
+        box-shadow:8px 0 25px rgba(0,0,0,.15);
+        transition:left .35s ease;
+    }
+
+    html[dir="rtl"] .navbar.active{
+        right:auto;
+        left:0;
+    }
+
+    html[dir="rtl"] .nav-menu{
+        align-items:flex-end;
+        padding:0;
+        margin:0 0 28px;
+        text-align:right;
+    }
+
+    html[dir="rtl"] .nav-menu li{
+        text-align:right;
+    }
+
+    html[dir="rtl"] .nav-link{
+        justify-content:flex-start;
+        gap:10px;
+        text-align:right;
+    }
+
+    html[dir="rtl"] .nav-link .fa-chevron-down{
+        margin-right:0;
+        margin-left:auto;
+    }
+
+    html[dir="rtl"] .dropdown-menu{
+        padding:10px 16px 0 0;
+        text-align:right;
+    }
+
+    html[dir="rtl"] .dropdown-menu a{
+        text-align:right;
+    }
+
+    html[dir="rtl"] .mobile-btn{
+        align-items:flex-end;
+        text-align:right;
+    }
+
+    
+    html[dir="rtl"] .mobile-btn .theme-toggle,
+    html[dir="rtl"] .mobile-btn .rtl-toggle{
+        flex-direction:row-reverse;
+        justify-content:left;
+    }
+
+    html[dir="rtl"] .footer .footer-grid{
+        direction:rtl;
+        display:grid;
+        grid-template-columns:repeat(2,minmax(0,1fr));
+        grid-template-areas:
+            "about links"
+            "services contact";
+        gap:36px 44px;
+        align-items:start;
+        text-align:right;
+    }
+
+    html[dir="rtl"] .footer-about{
+        grid-area:about;
+    }
+
+    html[dir="rtl"] .footer-links{
+        grid-area:links;
+    }
+
+    html[dir="rtl"] .footer-services{
+        grid-area:services;
+    }
+
+    html[dir="rtl"] .footer-contact{
+        grid-area:contact;
+    }
+
+    html[dir="rtl"] .footer-about,
+    html[dir="rtl"] .footer-links,
+    html[dir="rtl"] .footer-services,
+    html[dir="rtl"] .footer-contact,
+    html[dir="rtl"] .footer-about p,
+    html[dir="rtl"] .footer h4,
+    html[dir="rtl"] .footer a,
+    html[dir="rtl"] .footer li{
+        text-align:right;
+    }
+
+    html[dir="rtl"] .footer-logo,
+    html[dir="rtl"] .footer-social{
+        display:flex;
+        justify-content:flex-end;
+    }
+
+    html[dir="rtl"] .footer ul{
+        padding:0;
+        margin:0;
+        list-style:none;
+    }
+
+    html[dir="rtl"] .footer-contact ul{
+        align-items:flex-start;
+    }
+
+    html[dir="rtl"] .footer-contact li{
+        direction:rtl;
+        display:flex;
+        flex-direction:row;
+        justify-content:flex-start;
+        align-items:flex-start;
+        gap:10px;
+        width:100%;
+    }
+
+    html[dir="rtl"] .footer-contact i{
+        margin:4px 0 0 0;
+        order:0;
+        flex:0 0 auto;
+    }
+}
+
+@media (max-width:768px){
+
+    html[dir="rtl"] .footer .footer-grid{
+        grid-template-columns:1fr;
+        grid-template-areas:
+            "about"
+            "links"
+            "services"
+            "contact";
+        gap:30px;
+    }
+
+    html[dir="rtl"] .footer-contact ul{
+        align-items:stretch;
+    }
+}
+
+@media (max-width:480px){
+
+    html[dir="rtl"] .navbar{
+        width:260px;
+        padding-left:22px;
+        padding-right:22px;
+    }
+
+    html[dir="rtl"] .footer{
+        padding-left:20px;
+        padding-right:20px;
+    }
+}
+
+
+/* ===================================
+   Login / Register Responsive Logo Size Fix
+=================================== */
+
+@media (max-width:1024px){
+
+    .login-logo img,
+    .register-logo img,
+    html[dir="rtl"] .login-logo img,
+    html[dir="rtl"] .register-logo img{
+        width:170px;
+        height:82px;
+        object-fit:contain;
+    }
+}
+
+@media (max-width:768px){
+
+    .login-logo img,
+    .register-logo img,
+    html[dir="rtl"] .login-logo img,
+    html[dir="rtl"] .register-logo img{
+        width:155px;
+        height:76px;
+    }
+}
+
+@media (max-width:480px){
+
+    .login-logo img,
+    .register-logo img,
+    html[dir="rtl"] .login-logo img,
+    html[dir="rtl"] .register-logo img{
+        width:140px;
+        height:70px;
+    }
 }
