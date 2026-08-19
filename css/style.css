@@ -3766,7 +3766,7 @@ section{
 .vehicle-image img{
     width:100%;
     height:190px;
-    object-fit:fill;
+    object-fit:cover;
     display:block;
     transition:transform .4s ease;
 }
@@ -4697,7 +4697,7 @@ section{
 /* Optional: emphasize the booking subtitle */
 
 .booking-banner .banner-subtitle{
-    background:rgba(255,255,255,0.14);
+    background:white;
     border:1px solid rgba(255,255,255,0.22);
 }
 
@@ -4912,7 +4912,7 @@ section{
 
 .schedule-wrapper{
     display:grid;
-    grid-template-columns:.95fr 1.05fr;
+    grid-template-columns:1fr 1fr;
     gap:32px;
     align-items:start;
 }
@@ -5044,15 +5044,15 @@ section{
 .schedule-slots{
     display:flex;
     flex-direction:column;
-    gap:24px;
-    padding: 32px;
+    gap:18px;
+    padding: 0;
 }
 
 .slots-section{
     background:#FFFFFF;
     border:1px solid var(--border);
-    border-radius:24px;
-    padding:24px;
+    border-radius:20px;
+    padding:20px;
     box-shadow:0 10px 30px rgba(0,0,0,0.05);
 }
 
@@ -5060,12 +5060,13 @@ section{
     font-size:20px;
     color:var(--text);
     margin-bottom:18px;
+    margin: 0 0 14px;
 }
 
 .time-slots{
     display:grid;
     grid-template-columns:repeat(2,1fr);
-    gap:14px;
+    gap:10px;
 }
 
 .slot-btn{
@@ -5101,8 +5102,8 @@ section{
 .schedule-summary{
     background:linear-gradient(135deg,#EAF6FF 0%,#D8EEFF 100%);
     border:1px solid rgba(124,196,250,0.25);
-    border-radius:24px;
-    padding:28px;
+    border-radius:20px;
+    padding:22px;
 }
 
 .schedule-summary h4{
@@ -8574,8 +8575,7 @@ body.dark-mode .booking-policy{
 
 /* Booking form */
 
-body.dark-mode .booking-form-card,
-body.dark-mode .booking-info-card{
+body.dark-mode .booking-form-card{
     background:#111827;
     border:1px solid #334155;
     box-shadow:0 12px 30px rgba(0,0,0,.35);
@@ -8617,12 +8617,7 @@ body.dark-mode .booking-form select:focus{
 
 /* Booking info */
 
-body.dark-mode .booking-info-item{
-    background:#1E293B;
-    border:1px solid #334155;
-    border-radius:16px;
-    padding:18px;
-}
+
 
 body.dark-mode .booking-info-item h4{
     color:#FFFFFF;
