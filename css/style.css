@@ -4925,6 +4925,7 @@ section{
     border-radius:24px;
     padding:24px;
     box-shadow:0 10px 30px rgba(0,0,0,0.05);
+    min-height: 540px;
 }
 
 .calendar-header{
@@ -9322,4 +9323,473 @@ body.dark-mode .navbar .login-btn{
         right:auto !important;
         left:20px !important;
     }
+}
+
+
+
+/* =========================
+   CTA - REMOVE BOTTOM GAP
+========================= */
+
+.cta-section {
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.cta-section > .container {
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.cta-section .cta-box {
+    margin-bottom: 0 !important;
+}
+/* Remove CTA corner curves */
+section.cta.section .cta-box {
+    border-radius: 0 !important;
+}
+/* =========================
+   HOME 2 HERO CTA BUTTONS
+========================= */
+
+.hero-two-buttons {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+}
+
+/* Primary CTA */
+.hero-two-buttons .btn-primary {
+    background: var(--primary);
+    color: #ffffff;
+    border: 1px solid var(--primary);
+}
+
+/* Secondary CTA */
+.hero-two-buttons .btn-outline {
+    background: transparent;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+}
+
+/* Hover */
+.hero-two-buttons .btn-primary:hover {
+    background: var(--primary-dark, var(--primary));
+    color: #ffffff;
+}
+
+.hero-two-buttons .btn-outline:hover {
+    background: var(--primary);
+    color: #ffffff;
+}
+/* Space between CTA and Footer */
+.cta-home-two {
+    margin-bottom: 40px;
+}
+
+
+
+/* ================================
+   OFFICE INFORMATION
+================================ */
+
+.office-info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.office-info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    width: 100%;
+}
+
+.office-info-item > i {
+    flex: 0 0 56px;
+    width: 56px;
+    height: 56px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--primary-light);
+    color: var(--primary);
+
+    border-radius: 14px;
+    font-size: 20px;
+}
+
+.office-info-item > div {
+    flex: 1;
+    min-width: 0;
+}
+
+.office-info-item h4 {
+    margin: 4px 0 6px;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+}
+
+.office-info-item p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--text-muted);
+}
+
+
+/* =================================
+   SERVICE AREA
+================================= */
+
+.service-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.service-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    width: 100%;
+}
+
+.service-item > i {
+    flex: 0 0 56px;
+    width: 56px;
+    height: 56px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--primary-light);
+    color: var(--primary);
+
+    border-radius: 14px;
+    font-size: 20px;
+}
+
+.service-item > div {
+    flex: 1;
+    min-width: 0;
+}
+
+.service-item h4 {
+    margin: 4px 0 6px;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+}
+
+.service-item p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--text-muted);
+}
+
+
+/* =========================================================
+   LOGIN CONTROLS - MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    .auth-controls {
+        position: fixed;
+
+        top: 12px;
+        right: 12px;
+
+        gap: 8px;
+
+        z-index: 99999;
+    }
+
+    .auth-controls button {
+        width: 44px;
+        height: 44px;
+    }
+}
+/* =========================================================
+   LOGIN CONTROLS
+   Outside login card + scrolls with page
+   ========================================================= */
+
+.login-portal {
+    position: relative;
+}
+
+.auth-controls {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    z-index: 100;
+}
+
+.auth-controls button {
+    width: 48px;
+    height: 48px;
+
+    margin: 0;
+    padding: 0;
+
+    border-radius: 50%;
+    border: 1px solid var(--border);
+
+    background: var(--surface);
+    color: var(--text);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,.15);
+
+    transition: all .3s ease;
+}
+
+.auth-controls button:hover {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+}
+/* =========================================================
+   LOGIN PAGE - MOBILE AUTH CONTROLS
+   BUTTONS OUTSIDE LOGIN CARD
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    /* Login page wrapper */
+    .login-portal {
+        position: relative;
+        padding-top: 80px !important;
+    }
+
+    /* Dark mode + RTL buttons */
+    .auth-controls {
+        position: absolute !important;
+
+        top: 15px !important;
+        right: 15px !important;
+        left: auto !important;
+
+        display: flex !important;
+        align-items: center !important;
+        gap: 8px !important;
+
+        z-index: 9999 !important;
+    }
+
+    /* Buttons */
+    .auth-controls button {
+        width: 44px !important;
+        height: 44px !important;
+
+        min-width: 44px !important;
+        min-height: 44px !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        border-radius: 50% !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    /* Login card */
+    .login-card {
+        position: relative !important;
+
+        margin-top: 0 !important;
+    }
+}
+
+@media (max-width: 767px) {
+
+    body.rtl .auth-controls {
+        right: 15px !important;
+        left: auto !important;
+
+        flex-direction: row;
+        direction: rtl;
+    }
+}
+/* =========================================================
+   RTL - AUTH BUTTONS ON RIGHT
+   ========================================================= */
+
+body.rtl .auth-controls {
+    right: 15px !important;
+    left: auto !important;
+
+    direction: rtl;
+}
+
+@media (max-width: 767px) {
+
+    html[dir="rtl"] .auth-controls,
+    body[dir="rtl"] .auth-controls,
+    body.rtl .auth-controls {
+        right: 12px !important;
+        left: auto !important;
+
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+
+        transform: none !important;
+    }
+}
+/* =========================================================
+   AUTH CONTROLS - RTL STAY ON RIGHT
+========================================================= */
+
+.auth-controls {
+    position: absolute !important;
+    top: 24px !important;
+    right: 24px !important;
+    left: auto !important;
+
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 12px !important;
+
+    z-index: 9999 !important;
+}
+
+
+/* RTL - KEEP BUTTONS ON RIGHT */
+html[dir="rtl"] .auth-controls,
+body[dir="rtl"] .auth-controls,
+body.rtl .auth-controls {
+    right: 24px !important;
+    left: auto !important;
+
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+
+    transform: none !important;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+
+    .auth-controls {
+        top: 12px !important;
+        right: 12px !important;
+        left: auto !important;
+
+        gap: 8px !important;
+    }
+
+    html[dir="rtl"] .auth-controls,
+    body[dir="rtl"] .auth-controls,
+    body.rtl .auth-controls {
+        top: 12px !important;
+        right: 12px !important;
+        left: auto !important;
+    }
+
+    .auth-controls button {
+        width: 42px !important;
+        height: 42px !important;
+        flex: 0 0 42px !important;
+    }
+}
+
+
+/* =========================================================
+   PRICING - STRAIGHT BOOK PACKAGE BUTTON
+========================================================= */
+
+.pricing-card .btn,
+.pricing-card .btn-outline {
+    border-radius: 0 !important;
+}
+
+
+/* =========================================================
+   LESSON PACKAGES - BOOK PACKAGE BUTTON
+========================================================= */
+
+.package-card .btn,
+.package-card .btn-outline {
+    white-space: nowrap !important;
+    min-width: 160px !important;
+    width: 160px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+}
+/* Success Stats - Number + Symbol same blue color */
+.success-stats .stat-card h3,
+.success-stats .stat-card h3 .counter,
+.success-stats .stat-card h3 .stat-suffix {
+    color: var(--primary) !important;
+}
+/* =========================================================
+   PAGE BANNER - CURRENT PAGE BREADCRUMB
+   Keep current page name BLUE in dark mode
+========================================================= */
+
+.about-banner .breadcrumb span,
+.lessons-banner .breadcrumb span,
+.booking-banner .breadcrumb span {
+    color: var(--primary) !important;
+}
+/* Gap between About CTA and Footer */
+.about-cta {
+    margin-bottom: 40px !important;
+}
+/* =========================================================
+   WHY HOME TWO - ICON + TEXT ALIGNMENT
+========================================================= */
+
+.why-feature-item {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 20px !important;
+}
+
+.why-feature-item > i {
+    flex: 0 0 62px !important;
+    width: 62px !important;
+    height: 62px !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    margin: 0 !important;
+}
+
+.why-feature-item > div {
+    flex: 1 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.why-feature-item h4 {
+    margin-top: 0 !important;
 }
