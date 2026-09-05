@@ -10893,3 +10893,22 @@ body[dir="rtl"] .auth-controls {
         margin-top: 65px !important;
     }
 }
+
+/* =========================================================
+   CTA VISUAL CARD TEXT COLOR
+========================================================= */
+
+.cta-visual-card span {
+    color: #ffffff !important;
+    opacity: 1 !important;
+}
+
+.cta-visual-card i {
+    color: var(--primary) !important;
+}
+
+/* Dark mode */
+body.dark-mode .cta-visual-card span {
+    color: #ffffff !important;
+    opacity: 1 !important;
+}
