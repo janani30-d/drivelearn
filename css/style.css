@@ -10769,3 +10769,127 @@ body.rtl .auth-controls {
     border-color: var(--primary);
     box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
 }
+
+/* =========================================================
+   REGISTER PAGE - DARK MODE & RTL CONTROLS
+   OUTSIDE THE REGISTER CARD
+========================================================= */
+
+.register-portal {
+    position: relative;
+}
+
+/* Controls */
+.register-portal + .auth-controls,
+.auth-controls {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    left: auto;
+
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+
+    z-index: 1000;
+}
+
+/* Buttons */
+.auth-controls button {
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text);
+
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+/* Keep buttons on RIGHT in RTL */
+html[dir="rtl"] .auth-controls,
+body[dir="rtl"] .auth-controls {
+    right: 20px;
+    left: auto;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+
+    .auth-controls {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        left: auto;
+
+        gap: 8px;
+    }
+
+    .auth-controls button {
+        width: 38px;
+        height: 38px;
+        font-size: 14px;
+    }
+
+    html[dir="rtl"] .auth-controls,
+    body[dir="rtl"] .auth-controls {
+        right: 12px;
+        left: auto;
+    }
+}
+/* =========================================================
+   MOBILE - CONTROLS OUTSIDE REGISTER CARD
+========================================================= */
+
+@media (max-width: 767px) {
+
+    .register-portal {
+        position: relative;
+    }
+
+    .auth-controls {
+        position: absolute !important;
+
+        /* Place above the card */
+        top: 12px !important;
+        right: 12px !important;
+        left: auto !important;
+
+        display: flex !important;
+        flex-direction: row !important;
+        gap: 8px !important;
+
+        z-index: 9999 !important;
+    }
+
+    .auth-controls button {
+        width: 40px !important;
+        height: 40px !important;
+
+        border-radius: 50% !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        box-sizing: border-box !important;
+    }
+
+    /*
+       Push the card down so the controls
+       stay completely OUTSIDE the card
+    */
+    .register-card {
+        margin-top: 65px !important;
+    }
+}
