@@ -9793,3 +9793,979 @@ body.rtl .auth-controls {
 .why-feature-item h4 {
     margin-top: 0 !important;
 }
+
+
+
+
+
+/* =========================================================
+   HOME 1 CTA SECTION
+   PART 2 - MAIN + RESPONSIVE CSS
+========================================================= */
+
+.cta-section {
+    padding: 80px 0;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.cta-box {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 50px;
+    align-items: center;
+
+    min-height: 520px;
+    padding: 60px 70px;
+
+    background: linear-gradient(
+        135deg,
+        #162B5B 0%,
+        #203B82 100%
+    );
+
+    border-radius: 32px;
+    overflow: hidden;
+}
+
+/* LEFT CONTENT */
+
+.cta-content {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+}
+
+.cta-subtitle {
+    display: inline-block;
+    margin-bottom: 28px;
+    padding: 10px 22px;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    color: #7CC4FA;
+    background: rgba(124, 196, 250, 0.12);
+
+    border-radius: 30px;
+}
+
+.cta-title {
+    margin: 0 0 28px;
+
+    font-size: 58px;
+    line-height: 1.15;
+    font-weight: 700;
+
+    color: #FFFFFF;
+}
+
+.cta-title span {
+    display: block;
+    color: #FFFFFF;
+}
+
+.cta-description {
+    max-width: 720px;
+    margin: 0 0 40px;
+
+    font-size: 18px;
+    line-height: 1.8;
+    font-weight: 500;
+
+    color: #E2E8F0;
+}
+
+.cta-buttons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.cta-buttons .btn {
+    min-width: 245px;
+    min-height: 68px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 16px 28px;
+
+    font-size: 17px;
+    font-weight: 600;
+
+    border-radius: 20px;
+    text-decoration: none;
+
+    box-sizing: border-box;
+}
+
+/* PRIMARY BUTTON */
+
+.cta-buttons .btn-primary {
+    background: #FF9638;
+    color: #FFFFFF;
+    border: 1px solid #FF9638;
+}
+
+.cta-buttons .btn-primary:hover {
+    background: #F58220;
+    border-color: #F58220;
+}
+
+/* OUTLINE BUTTON */
+
+.cta-buttons .btn-outline {
+    background: transparent;
+    color: #FFFFFF;
+    border: 1px solid #FFFFFF;
+}
+
+.cta-buttons .btn-outline:hover {
+    background: #FFFFFF;
+    color: #162B5B;
+}
+
+
+/* =========================================================
+   RIGHT DECORATIVE AREA
+========================================================= */
+
+.cta-visual {
+    position: relative;
+    min-height: 380px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 1;
+}
+
+.cta-visual-card {
+    position: relative;
+    z-index: 3;
+
+    width: 300px;
+    min-height: 230px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 22px;
+
+    background: rgba(255, 255, 255, 0.10);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    border-radius: 28px;
+
+    color: #FFFFFF;
+
+    backdrop-filter: blur(8px);
+}
+
+.cta-visual-card i {
+    font-size: 70px;
+    color: #7CC4FA;
+}
+
+.cta-visual-card span {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+/* DECORATIVE CIRCLES */
+
+.cta-circle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(124, 196, 250, 0.12);
+}
+
+.cta-circle-one {
+    width: 280px;
+    height: 280px;
+    top: -80px;
+    right: -70px;
+}
+
+.cta-circle-two {
+    width: 180px;
+    height: 180px;
+    bottom: -60px;
+    left: -40px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1024px) {
+
+    .cta-section {
+        padding: 60px 0;
+        margin-bottom: 50px;
+    }
+
+    .cta-box {
+        grid-template-columns: 1fr 0.8fr;
+        gap: 30px;
+
+        min-height: 480px;
+        padding: 50px 45px;
+    }
+
+    .cta-title {
+        font-size: 46px;
+    }
+
+    .cta-description {
+        font-size: 17px;
+        margin-bottom: 32px;
+    }
+
+    .cta-buttons .btn {
+        min-width: 210px;
+        min-height: 60px;
+        font-size: 16px;
+    }
+
+    .cta-visual {
+        min-height: 320px;
+    }
+
+    .cta-visual-card {
+        width: 250px;
+        min-height: 200px;
+    }
+
+    .cta-visual-card i {
+        font-size: 58px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .cta-section {
+        padding: 45px 0;
+        margin-bottom: 40px;
+    }
+
+    .cta-box {
+        grid-template-columns: 1fr;
+        gap: 35px;
+
+        min-height: auto;
+        padding: 45px 25px;
+
+        border-radius: 24px;
+    }
+
+    .cta-content {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .cta-subtitle {
+        margin-bottom: 20px;
+        font-size: 14px;
+        padding: 9px 18px;
+    }
+
+    .cta-title {
+        margin-bottom: 20px;
+        font-size: 36px;
+        line-height: 1.2;
+    }
+
+    .cta-description {
+        margin-bottom: 28px;
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    .cta-buttons {
+        width: 100%;
+        justify-content: center;
+        gap: 14px;
+    }
+
+    .cta-buttons .btn {
+        width: 100%;
+        min-width: 0;
+        min-height: 56px;
+        font-size: 16px;
+    }
+
+    .cta-visual {
+        min-height: 250px;
+    }
+
+    .cta-visual-card {
+        width: 230px;
+        min-height: 170px;
+    }
+
+    .cta-visual-card i {
+        font-size: 50px;
+    }
+
+    .cta-visual-card span {
+        font-size: 17px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .cta-section {
+        padding: 35px 0;
+        margin-bottom: 30px;
+    }
+
+    .cta-box {
+        padding: 35px 20px;
+        gap: 30px;
+        border-radius: 20px;
+    }
+
+    .cta-title {
+        font-size: 30px;
+    }
+
+    .cta-description {
+        font-size: 15px;
+    }
+
+    .cta-buttons .btn {
+        min-height: 52px;
+        font-size: 15px;
+    }
+
+    .cta-visual {
+        min-height: 210px;
+    }
+
+    .cta-visual-card {
+        width: 200px;
+        min-height: 150px;
+    }
+
+    .cta-visual-card i {
+        font-size: 42px;
+    }
+
+    .cta-visual-card span {
+        font-size: 15px;
+    }
+}
+
+
+/* =========================================================
+   EXTRA SMALL MOBILE
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .cta-section {
+        margin-bottom: 25px;
+    }
+
+    .cta-box {
+        padding: 30px 16px;
+    }
+
+    .cta-title {
+        font-size: 27px;
+    }
+
+    .cta-description {
+        font-size: 14px;
+    }
+
+    .cta-visual-card {
+        width: 180px;
+    }
+}
+
+
+
+/* =========================================================
+   HOME 1 CTA - CENTERED + FOOTER GAP
+========================================================= */
+
+.cta-section {
+    padding: 70px 0 100px !important;
+    margin: 0 !important;
+}
+
+.cta-box {
+    min-height: 560px !important;
+    padding: 70px 80px !important;
+
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    margin: 0 auto !important;
+    box-sizing: border-box !important;
+}
+
+/* Center the left content */
+.cta-content {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+
+    text-align: center !important;
+
+    margin: 0 auto !important;
+    width: 100% !important;
+}
+
+/* Heading */
+.cta-title {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* Description */
+.cta-description {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* Buttons */
+.cta-buttons {
+    justify-content: center !important;
+    align-items: center !important;
+    margin: 0 auto !important;
+}
+
+/* Right decorative area */
+.cta-visual {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    margin: 0 auto !important;
+    width: 100% !important;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1024px) {
+
+    .cta-section {
+        padding: 60px 0 80px !important;
+    }
+
+    .cta-box {
+        min-height: 520px !important;
+        padding: 55px 45px !important;
+        gap: 30px !important;
+    }
+
+    .cta-title {
+        font-size: 46px !important;
+    }
+
+    .cta-description {
+        font-size: 17px !important;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .cta-section {
+        padding: 45px 0 65px !important;
+    }
+
+    .cta-box {
+        grid-template-columns: 1fr !important;
+
+        min-height: auto !important;
+
+        padding: 45px 25px !important;
+
+        gap: 35px !important;
+    }
+
+    .cta-content {
+        text-align: center !important;
+        align-items: center !important;
+    }
+
+    .cta-title {
+        font-size: 36px !important;
+        text-align: center !important;
+    }
+
+    .cta-description {
+        font-size: 16px !important;
+        text-align: center !important;
+    }
+
+    .cta-buttons {
+        width: 100% !important;
+        justify-content: center !important;
+    }
+
+    .cta-visual {
+        min-height: 240px !important;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .cta-section {
+        padding: 35px 0 55px !important;
+    }
+
+    .cta-box {
+        padding: 35px 20px !important;
+        gap: 30px !important;
+    }
+
+    .cta-title {
+        font-size: 30px !important;
+    }
+
+    .cta-description {
+        font-size: 15px !important;
+    }
+
+    .cta-buttons {
+        flex-direction: column !important;
+        width: 100% !important;
+    }
+
+    .cta-buttons .btn {
+        width: 100% !important;
+        min-width: 0 !important;
+    }
+
+    .cta-visual {
+        min-height: 210px !important;
+    }
+}
+
+
+
+/* =========================================================
+   HOME 2 CTA - FIX TOP PADDING
+========================================================= */
+
+.cta-home-two {
+    padding-top: 40px !important;
+    padding-bottom: 60px !important;
+}
+
+.cta-two-box {
+    padding-top: 45px !important;
+    padding-bottom: 55px !important;
+    box-sizing: border-box !important;
+}
+
+.cta-two-content {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1024px) {
+
+    .cta-home-two {
+        padding-top: 35px !important;
+        padding-bottom: 50px !important;
+    }
+
+    .cta-two-box {
+        padding-top: 40px !important;
+        padding-bottom: 45px !important;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .cta-home-two {
+        padding-top: 30px !important;
+        padding-bottom: 40px !important;
+    }
+
+    .cta-two-box {
+        padding-top: 35px !important;
+        padding-bottom: 40px !important;
+    }
+
+    .cta-two-content {
+        padding-top: 0 !important;
+        margin-top: 0 !important;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .cta-home-two {
+        padding-top: 25px !important;
+        padding-bottom: 35px !important;
+    }
+
+    .cta-two-box {
+        padding-top: 30px !important;
+        padding-bottom: 35px !important;
+    }
+}
+
+
+
+
+/* =========================================================
+   LESSONS CTA - FIX BOTTOM PADDING
+========================================================= */
+
+.lessons-cta {
+    padding-bottom: 40px !important;
+}
+
+.lessons-cta-box {
+    padding-top: 32px !important;
+    padding-bottom: 32px !important;
+    margin-bottom: 0 !important;
+}
+
+.lessons-cta-content {
+    padding-bottom: 0 !important;
+}
+
+.lessons-cta-buttons {
+    margin-bottom: 0 !important;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1024px) {
+    .lessons-cta {
+        padding-bottom: 30px !important;
+    }
+
+    .lessons-cta-box {
+        padding-top: 28px !important;
+        padding-bottom: 28px !important;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+    .lessons-cta {
+        padding-bottom: 25px !important;
+    }
+
+    .lessons-cta-box {
+        padding-top: 26px !important;
+        padding-bottom: 26px !important;
+    }
+
+    .lessons-cta-content {
+        padding-bottom: 0 !important;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+    .lessons-cta {
+        padding-bottom: 20px !important;
+    }
+
+    .lessons-cta-box {
+        padding-top: 22px !important;
+        padding-bottom: 22px !important;
+    }
+}
+
+
+
+/* =========================================================
+   HOME 2 HERO CTA BUTTONS
+========================================================= */
+
+.hero-two-buttons .btn-primary {
+    background: #FF9638 !important;
+    border: 2px solid #FF9638 !important;
+    color: #FFFFFF !important;
+}
+
+.hero-two-buttons .btn-primary:hover {
+    background: #E98228 !important;
+    border-color: #E98228 !important;
+    color: #FFFFFF !important;
+}
+
+.hero-two-buttons .btn-outline {
+    background: transparent !important;
+    border: 2px solid var(--primary) !important;
+    color: #FFFFFF !important;
+}
+
+.hero-two-buttons .btn-outline:hover {
+    background: var(--primary) !important;
+    border-color: var(--primary) !important;
+    color: #FFFFFF !important;
+}
+
+
+
+
+/* Pricing card buttons - rounded corners */
+.lesson-pricing .pricing-grid .btn {
+    border-radius: 10px !important;
+}
+
+
+
+/* =========================================================
+   CONTACT BANNER CTA BUTTONS
+========================================================= */
+
+.contact-banner .banner-buttons .btn-primary {
+    background: #FF9638 !important;
+    border: 2px solid #FF9638 !important;
+    color: #FFFFFF !important;
+}
+
+.contact-banner .banner-buttons .btn-primary:hover {
+    background: #E98228 !important;
+    border-color: #E98228 !important;
+    color: #FFFFFF !important;
+}
+
+.contact-banner .banner-buttons .btn-outline {
+    background: transparent !important;
+    border: 2px solid var(--primary) !important;
+    color: #FFFFFF !important;
+}
+
+.contact-banner .banner-buttons .btn-outline:hover {
+    background: var(--primary) !important;
+    border-color: var(--primary) !important;
+    color: #FFFFFF !important;
+}
+
+
+
+/* =========================================================
+   PASS RATE / STAT CARDS
+   ALL CARDS SAME STYLE
+========================================================= */
+
+.pass-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+/* Same design for every card */
+.pass-stat-card,
+.pass-stat-card.featured {
+    background: #ffffff !important;
+    border: 1px solid #E1E5EA !important;
+    border-radius: 26px !important;
+    min-height: 210px;
+    padding: 35px 30px !important;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+    transition: all 0.3s ease;
+}
+
+/* Same hover for all */
+.pass-stat-card:hover,
+.pass-stat-card.featured:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary) !important;
+    box-shadow: 0 15px 35px rgba(15, 23, 42, 0.10);
+}
+
+/* Number */
+.pass-stat-card h3,
+.pass-stat-card.featured h3 {
+    margin: 0 0 12px !important;
+    font-size: 52px !important;
+    line-height: 1 !important;
+    font-weight: 700 !important;
+    color: #6B7280 !important;
+}
+
+/* Number itself */
+.pass-stat-card .counter,
+.pass-stat-card.featured .counter {
+    color: #6B7280 !important;
+}
+
+/* + and % */
+.pass-stat-card h3,
+.pass-stat-card h3 .stat-suffix {
+    color: #6B7280 !important;
+}
+
+/* Paragraph text */
+.pass-stat-card p,
+.pass-stat-card.featured p {
+    margin: 0 !important;
+    font-size: 17px !important;
+    line-height: 1.5 !important;
+    font-weight: 500 !important;
+    color: #64748B !important;
+}
+
+
+
+
+
+
+/* =========================================================
+   ABOUT HOME TWO - FEATURE CARDS
+========================================================= */
+
+.about-two-features {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.about-two-features .feature-item {
+    width: 100%;
+    min-height: 165px;
+    padding: 28px 30px;
+
+    display: flex;
+    align-items: center;
+    gap: 22px;
+
+    background: #F8FAFC;
+    border: 1px solid #DDE3EA;
+    border-radius: 26px;
+
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+/* Icon box */
+.about-two-features .feature-item > i {
+    flex: 0 0 66px;
+    width: 66px;
+    height: 66px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #EAF5FF;
+    color: var(--primary);
+
+    border-radius: 18px;
+    font-size: 26px;
+
+    margin: 0;
+}
+
+/* Text area */
+.about-two-features .feature-item > div {
+    flex: 1;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Heading */
+.about-two-features .feature-item h4 {
+    margin: 0 0 10px;
+
+    font-size: 24px;
+    line-height: 1.3;
+    font-weight: 700;
+
+    color: #0F172A;
+}
+
+/* Description */
+.about-two-features .feature-item p {
+    margin: 0;
+
+    font-size: 17px;
+    line-height: 1.6;
+    font-weight: 400;
+
+    color: #64748B;
+}
+
+/* Hover */
+.about-two-features .feature-item:hover {
+    transform: translateY(-3px);
+    border-color: var(--primary);
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+}
