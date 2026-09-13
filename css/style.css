@@ -11084,3 +11084,11 @@ body.dark-mode .cta-visual-card span {
         padding-bottom: 35px !important;
     }
 }
+
+
+
+
+
+.btn.btn-outline {
+    color: var(--primary-color) !important;
+}
